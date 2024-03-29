@@ -1,1 +1,1 @@
-<img align="right" src="https://git.clp.kr/anbschool/2nd/tech-a/-/raw/main/Tech_A_git_flow_strategy.png?ref_type=heads"/>
+<img align="center" width=400 src="https://git.clp.kr/anbschool/2nd/tech-a/-/raw/main/Tech_A_git_flow_strategy.png?ref_type=heads"/>
