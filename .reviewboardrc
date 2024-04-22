@@ -1,5 +1,7 @@
+
 REVIEWBOARD_URL = "https://review.clp.kr/"
 REPOSITORY = "Tech-A"
 REPOSITORY_TYPE = "git"
 BRANCH = "feature/feature(productDetail)-03-productDetail"
 LAND_DEST_BRANCH = "feature/feature(productDetail)-03-productDetail"
+
