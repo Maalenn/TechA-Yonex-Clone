@@ -6,52 +6,82 @@
   <title>Yonex Clone</title>
   <link rel="stylesheet" href="../assets/css/output.css">
 </head>
-<body class="box-border font-oswald">
+<body class="box-border font-oswald m-0 p-0">
     <!-- start navbar -->
-    <div class="h-[100px] w-full bg-primary-100 text-center">Nav bar</div>
+    <div class="h-[60px] md:h-[100px] w-full bg-primary-100 text-center ">Nav bar</div>
     <!-- end navbar -->
 
     <!-- background -->
-    <div class="absolute z-[-1] h-[1100px] w-[70%] bg-800 left-0 top-0 bg-[#f7f8f9]"></div> 
-    <ul class="w-[50%] px-5 flex mt-6 text-[12px] gap-4 font-sans">
-        <li><a href="">Home</a></li>
+    <div class="absolute z-[-1] h-[1100px]  bg-800 left-0 top-0 bg-[#f7f8f9] md:w-[70%] w-full"></div> 
+    <ul class="hidden md:w-[50%] md:px-5 md:flex md:my-[23px] md:text-[12px] md:gap-4 md:font-sans">
+        <li class="text-primary-100"><a href="">Home</a></li>
         <p>/</p>
-        <li><a href="">Badminton</a></li>
+        <li class="text-primary-100"><a href="">Badminton</a></li>
         <p>/</p>
-        <li>ASTROX 88 Play</li>
+        <li class="uppercase">ASTROX 88 Play</li>
     </ul>
-    <main class=" max-w-[1280px] mx-auto px-5 h-screen">
+    <!-- main page -->
+    <main class=" max-w-[625px] md:max-w-[1280px] mx-auto px-5 h-screen">
         <!-- image container -->
-        <div class="box-border">
-           <div class="max-w-[650px] relative top-[100px] left-[90px] float-left">
-                <img class="" src="../assets/image/productPage/Astrox88.png" alt="Astrox88 Raq">
+        <div class="box-border md:flex justify-between gap-3 ">
+           <div class="w-[600px] max-w-[90%] mx-auto relative block ">
+                <img class="max-w-full  top-[50%] " src="../assets/image/productPage/Astrox88P.png" alt="Astrox88 Raq">
             </div>
             <!-- start product detail -->
-            <div class=" max-w-[360px] float-right w-[40%]">
-                <div class="mt-[55px] ">
-                    <h1 class="uppercase text-[36px]">
-                        <span class="tracking-[7px]">Astrox 88 Play</span>
+            <div class=" md:max-w-[360px] md:w-[40%]">
+                <div class="mt-[32px] max-w-[642px]">
+                    <h1 class="uppercase text-[26px] md:text md:text-[36px] text-center">
+                        <span class="tracking-[5px] md:tracking-[7px]">Astrox 88 Play</span>
                     </h1>
                 </div>
                 <div class="">
                     <button class="flex justify-between w-full relative mt-[60px] pt-[13px] pb-[15px]">
                         <span class="font-semibold uppercase text-[14px]">Specs</span>
-                        <div class="w-[15px] h-[1px] bg-black absolute right-8 top-3"></div>
+                        <div class="w-[15px] h-[1px] bg-black absolute right-8 top-6"></div>
                     </button>
                     
                 </div>
-                <div class="flex gap-12 font-[16px] font-sans mt-6 bg-white py-8 px-4 border-[1px] text-secondary-400 mb-6">
-                    <ul class="flex flex-col text-start gap-5 ml-2">
+                <div class=" flex font-[16px] gap-12 font-sans mt-6 mb-6 bg-white py-8 px-4 border-[1px] text-secondary-400 ">
+                    <!-- <table class="table-fixed">
+                        <tbody>
+                            <tr>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Flex</td>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Medium</td>
+                            </tr>
+                            <tr>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Flex</td>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Medium</td>
+                            </tr>
+                            <tr>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Flex</td>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Medium</td>
+                            </tr>
+                            <tr>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Flex</td>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Medium</td>
+                            </tr>
+                            <tr>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Flex</td>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Medium</td>
+                            </tr>
+                            <tr>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Flex</td>
+                                <td class="pt-[24px] px-[20px] pb-[11px]">Medium</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table> -->
+                    <ul class="flex flex-col text-start gap-5 ml-2 text-[14px]">
                         <li>Flex</li>
                         <li>Frame</li>
                         <li>Shaft</li>
                         <li>Length</li>
-                        <li>Weight/Grip</li>
+                        <li>Weight / Grip</li>
                         <li>Stringing Advice</li>
                         <li>Color(s)</li>
                         <li>Item Code</li>
                     </ul>
-                    <ul class=" flex flex-col text-start gap-5">
+                    <ul class=" flex flex-col text-start gap-5 text-[14px] whitespace-nowrap">
                         <li>Medium</li>
                         <li>Graphite</li>
                         <li>Graphite</li>
@@ -62,23 +92,27 @@
                         <li>3AX88-PL</li>
                     </ul>
                 </div>
+                <!-- start icon container -->
                 <div>
-                    <div class="flex justify-start gap-2">
-                        <a href="">
-                            <img class="w-[30px] h-[30px]" src="../assets/image/icon/fb.png" alt="">
-                        </a>
-                        <a href="">
-                            <img class="w-[28px] h-[28px]" src="../assets/image/icon/x.png" alt="">
-                        </a>
-                        <a href="">
-                            <img class="w-[30px] h-[30px]" src="../assets/image/icon/chain.png" alt="">
-                        </a>
+                    <div>
+                        <!-- issue -->
+                        <div class="flex justify-center md:justify-start gap-2">
+                            <a href="">
+                                <img class="w-[30px] h-[30px]" src="../assets/image/icon/icon-facebook.svg" alt="">
+                            </a>
+                            <a class="" href="">
+                                <img class="w-[30px] h-[30px]" src="../assets/image/icon/icon-twitter.svg" alt="">
+                            </a>
+                            <a href="">
+                                <img class="w-[30px] h-[30px]" src="../assets/image/icon/icon-link.svg" alt="">
+                            </a>
+                        </div>
                     </div>
+                    <!-- start icon container -->
                 </div>
             </div>
         </div>
         
     </main>
-    <!-- end main  -->
 </body>
 </html>
