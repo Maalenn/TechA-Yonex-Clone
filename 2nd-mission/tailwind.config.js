@@ -23,9 +23,10 @@ module.exports = {
           700: '#24292b',
                
         },        
+        
+        },
         fontFamily: {
-          'Oswald': ['Oswald', 'Lato', 'sans-serif']
-        }
+          'oswald': ['Oswald', 'Lato', 'sans-serif']
       }
     },
   },
