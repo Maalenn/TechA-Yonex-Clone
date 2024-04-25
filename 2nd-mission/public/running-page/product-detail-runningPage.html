@@ -6,12 +6,51 @@
     <title>Running - Product detail</title>
     <link rel="stylesheet" href="../../assets/css/styles.css" />
 
-    <!-- Tailwind CDN  -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <!-- start product detail in running page  -->
+    <main class="max-w-[1280px] mx-auto px-5 h-screen">
+      <!-- start technology -->
+      <div class="technology pt-[200px] flex justify-between">
+        <!-- technology left side  -->
+        <div
+          class="technology-left flex flex-col justify-center min-h[600px] w-[50px]">
+          <!-- navigation toggle -->
+          <div
+            class="technology-left-navigation flex flex-col items-center justify-between relative min-h[250px] before:content-[''] before:bg-[#737a7e] before:h-[99%] before:left-[48%] before:absolute before:w-[2px] before:-z-1">
+            <div class="navigation-dot active-technology-dot">01</div>
+          </div>
+        </div>
+        <!-- technology left side  -->
 
+        <!-- technology middle side  -->
+        <div class="technology-middle flex justify-center">
+          <div class="technology-middle-img-wrapper relative">
+            <img
+              class="technology-middle-img h-auto min-w-full"
+              src="../../assets/images/running-page/T_Sh_Power_Cushion_Plus.webp"
+              alt="POWER CUSHION +" />
+          </div>
+        </div>
+        <!-- technology middle side  -->
+
+        <!-- technology right side  -->
+        <div class="technology-right flex flex-col pl-5">
+          <div
+            class="technology-right-numbers text-[#f7f8f9] flex font-bold absolute -z-1">
+            <div class="technology-right--numbers-current--slide">01</div>
+            <div class="technology-right--numbers-slide--count">
+              / 0
+              <span>4</span>
+            </div>
+          </div>
+        </div>
+        <!-- technology right side  -->
+      </div>
+      <!-- end technology -->
+    </main>
     <!-- end product detail in running page  -->
   </body>
 </html>
