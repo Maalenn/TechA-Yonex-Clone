@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 </head>
 <body>
-    
+    <!-- Start Banner -->
+    <section class="relative">
+        <div class="">
+          <img class="max-lg:hidden" src="../assets/images/product-review/heroCover.jpg" alt="" />
+          <img
+            class="w-full hidden max-lg:flex"
+            src="../assets/images/product-review/heroCover-breakPoint.webp"
+            alt=""
+          />
+        </div>
+        <div class="absolute flex gap-5 top-10 left-40 max-lg:left-10">
+          <ul class="flex gap-5 text-[0.75rem] text-[#443e3e]">
+            <li
+              class="hover:border-b-[1px] border-[#050505] max-lg:text-[1.3rem] max-sm:text-[1.2rem]"
+            >
+              <a href=""> Home </a>
+            </li>
+            <span class="text-[0.75rem] max-lg:text-[1.3rem]"> / </span>
+            <li
+              class="hover:border-b-[1px] border-[#050505] max-lg:text-[1.3rem] max-sm:text-[1.2rem]"
+            >
+              <a href=""> Badminton </a>
+            </li>
+            <span class="text-[0.75rem] max-lg:text-[1.3rem]"> / </span>
+          </ul>
+          <h5 class="uppercase text-[0.75rem] max-lg:text-[1.3rem] max-sm:text-[1.2rem]">racquets</h5>
+        </div>
+        <div
+          class="absolute flex gap-5 bottom-10 left-[140px] w-full p-[30px] max-lg:left-0 max-lg:bottom-[-160px] max-lg:bg-[#101010]"
+        >
+          <h1
+            class="uppercase font-[500] text-[1.45rem] tracking-[0.15rem] max-lg:text-white max-md:text-[2.6rem] max-lg:tracking-[0.5rem] max-md:text-[2rem]"
+          >
+            badminton racquets
+          </h1>
+        </div>
+      </section>
+      <!-- End Banner -->
 </body>
 </html>
