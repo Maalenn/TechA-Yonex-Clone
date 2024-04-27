@@ -1,0 +1,5 @@
+REVIEWBOARD_URL = "https://review.clp.kr/"
+REPOSITORY = "Tech-A"
+REPOSITORY_TYPE = "git"
+BRANCH = "feature/feature(homePage)-01-navbar"
+LAND_DEST_BRANCH = "feature/feature(homePage)-01-navbar"
