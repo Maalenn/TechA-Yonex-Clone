@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                    clifford: "#008080",
+                    },
+                },
+            },
+        }
+    </script>
+    <title>Yonex Athletes</title>
+</head>
+
+<body>
+    <!-- *ANCHOR - VavBar -->
+    <header class="items-center sticky top-0 z-40">
+        <div class="bg-pink-800 h-20 text-center mx-auto text-3xl fond-medium">
+            <p class="text-[#fa73e8] bg-clifford">
+                Nav Bar
+            </p>
+        </div>
+    </header>
+    <!-- *!ANCHOR - End VavBar -->
+
+    <!-- *ANCHOR - Main -->
+    <main>
+        <!-- *SECTION - Cover -->
+        <section >
+            <div class="relative">
+                <img class="object-none h-[450px] w-[40000px]" src="../assets/images/athletes/Badminton_Athletes_Hero.webp" alt="Rocketman">
+                <p class="absolute top-[50%] left-[38%] text-white bg-[#00000060] text-4xl p-3">
+                    YONEX BADMINTON ATHLETES
+                </p>
+            </div>
+        </section>
+        <!-- *!SECTION -  End Cover -->
+
+        <!-- *SECTION - Filter Box -->
+        <section class="flex flex-col justify-center items-center class="shadow-md"">
+        
+            <form action="" class="bg-[#00000060] py-4 px-80">
+                <fieldset >
+                    <span class="label">
+                        Filter By          
+                    </span>
+
+                    <!-- *ANCHOR - Region Filter -->
+                    <div class="country-input filter-container">
+                        <label for="athlete-country-filter" class="athlete-filter-label">
+                            Region
+                        </label>
+                        <select class="border border-x-black" name="country" aria-label="Country" id="athlete-country-filter" title="Country">
+                            <option value="">
+                                [Representing - All]
+                            </option>
+                            <option value="Canada">
+                                Canada                        
+                            </option>
+                            <option value="China">
+                                China                        
+                            </option>
+                            <option value="Chinese Taipei">
+                                Chinese Taipei                        
+                            </option>
+                            <option value="Denmark">
+                                Denmark                        
+                            </option>
+                        </select>
+
+                    </div>
+                    <!-- *!ANCHOR - Region Filter -->
+
+                    <!-- *ANCHOR - Athlete Filter -->
+                    <div >
+                        <label >
+                            Athlete
+                        </label>
+                        <select class="border border-x-black" name="name"  aria-label="Athlete" id="athlete-player-filter" title="Athlete">
+                            <option value="">
+                                [Athlete Name]
+                            </option>
+                            <option value="Aaron Chia">
+                                Aaron Chia                 
+                            </option>
+                            <option value="Akane Yamaguchi">
+                                Akane Yamaguchi                    
+                            </option>
+                            <option value="An Se Young">
+                                An Se Young                    
+                            </option>
+                            <option value="Arisa Higashino">
+                                Arisa Higashino                    
+                            </option>
+                        </select>
+                    </div>
+                    <!-- *!ANCHOR - Athlete Filter -->
+                    <button type="submit" id="sort-button">
+                        <span>Apply</span>
+                    </button>
+                </fieldset>
+            </form>
+        </section>
+        <!-- *!SECTION - END Filter Box -->
+    </main>
+</body>
+</html>
