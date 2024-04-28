@@ -1,2 +1,5 @@
-REVIEWBOARD_URL = 'https://review.clp.kr/'
-REPOSITORY = 'Tech-A'
+REVIEWBOARD_URL = "https://review.clp.kr/"
+REPOSITORY = "Tech-A"
+REPOSITORY_TYPE = "git"
+BRANCH = "feature/8-ahthlteProfile-heroCover"
+LAND_DEST_BRANCH = "feature/8-ahthlteProfile-heroCover"
