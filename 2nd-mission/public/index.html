@@ -11,25 +11,112 @@
   <!-- Start Navbar -->
   <nav class=" w-full bg-neutral-800 bg-opacity-40 text-white absolute">
         <div class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] ">
+            <!-- Hamburger Icons -->
             <div class="block cursor-pointer md:hidden ml-3">
                 <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
                 <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
                 <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
             </div>
+
+            <!-- Logo -->
             <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg" alt="" class="size-[100px] Logo ml-3">
-            <ul class="font-semibold text-[14px] md:flex gap-3 hidden">
-                <li><a href="">BADMINTON</a></li>
-                <li><a href="">GOLF</a></li>
-                <li><a href="">TENNIS</a></li>
-                <li><a href="">RUNNING</a></li>
-                <li><a href="">SNOWBOARDING</a></li>
-                <li><a href="">NEWS</a></li>
-                <li><a href="">ABOUT</a></li>
-            </ul>
-            <div class="inline-block cursor-pointer md:hidden mr-3">
-                <img src="../assets/icons/search-interface-symbol (1).png" alt="" class="size-[20px] ">
+
+            <!-- Center Navigation -->
+            <div class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]">
+                <!-- Badminton Hoverdrop -->
+                <div class="group h-[90px] pt-[30px] " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverHide()">
+                    <a href="#"  class="group-hover:opacity-50 relative">BADMINTON</a>
+                    <!-- Badminton section -->
+                    <section class="w-full  bg-white p-[40px] absolute top-[100px] hidden z-[10000] left-0" id="baminton">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <badminton-component></badminton-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Golf Hoverdrop -->
+                <div class="group h-[90px] pt-[30px]  " id="hoverLink" onmouseenter="golfDrop()" onmouseleave="golfHide()">
+                    <a href="#"  class="group-hover:opacity-50 relative">GOLF</a>
+                    <!-- Golf section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] hidden h-[220px] z-[10000] left-0" id="golf">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <golf-component></golf-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Tennis Hoverdrop -->
+                <div class="group h-[90px] pt-[30px]  " id="hoverLink" onmouseenter="tennisDrop()" onmouseleave="tennisHide()">
+                    <a href="#"  class="group-hover:opacity-50 relative">TENNIS</a>
+                    <!-- Tennis section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0" id="tennis">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <tennis-component></tennis-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- running Hoverdrop -->
+                <div class="group h-[90px] pt-[30px]  " id="hoverLink" onmouseenter="runningDrop()" onmouseleave="runningHide()">
+                    <a href="#"  class="group-hover:opacity-50 relative">RUNNING</a>
+                    <!-- running section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] h-[220px] hidden z-[10000] left-0" id="running">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <running-component></running-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- snowboard Hoverdrop -->
+                <div class="group h-[90px] pt-[30px] " id="hoverLink" onmouseenter="snowboardDrop()" onmouseleave="snowboardHide()">
+                    <a href="#"  class="group-hover:opacity-50 relative">SNOWBOARDING</a>
+                    <!-- snowboard section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] justify-center hidden z-[10000] left-0 h-[380px]" id="snowboard">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3">
+                                <snowboard-component></snowboard-component>
+                                <div class="block">
+                                    <div class="flex flex-col items-center justify-center w-[223px]">
+                                        <a href="" class="bg-[#f7f8f9] "><img src="../assets/images/snowboard-images/skate-athlete.webp" alt=""></a>
+                                        <p class="font-semibold text-[14px] text-black">TEAM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="cursor-pointer hover:opacity-80 h-[30px]">
+                    <a href="" class="pt[10px]">NEWS</a>
+                </div>
+                <div class="group h-[90px] pt-[30px]" id="hoverLink" onmouseenter="aboutDrop()" onmouseleave="aboutHide()">
+                    <a href="#"  class="group-hover:opacity-80 relative">ABOUT</a>
+                    <!-- running section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0 " id="about">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto ">
+                            <div class="flex items-center justify-center gap-8 h-[66px]">
+                                <p class="text-[13px] text-black tracking-wide">ABOUT US</p>
+                                <p class="text-[13px] text-black tracking-wide">YONEX GROUP</p>
+                                <p class="text-[13px] text-black tracking-wide">YONEX DISTRIBUTOR</p>
+                                <p class="text-[13px] text-black tracking-wide">INVESTOR RELATION</p>
+                                <p class="text-[13px] text-black tracking-wide">PRODUCT CATALOGS</p>
+                                <p class="text-[13px] text-black tracking-wide">MADE BY YONEX</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
-            <div class="w-[130px] fill-slate-100 flex items-center justify-between md:flex hidden mr-4">
+            <div class="inline-block cursor-pointer md:hidden mr-3">
+                <img src="../assets/images/icons/search-interface-symbol (1).png" alt="" class="size-[20px] ">
+            </div>
+            <div class="w-[120px] fill-slate-100  items-center gap-3 md:flex hidden">
                 <img src="../assets/images/icons/earth.svg" alt="" class="size-[20px] cursor-pointer ">
                 <img src="../assets/images/icons/search-interface-symbol (1).png" alt="" class="size-[20px] cursor-pointer">
                 <img src="../assets/images/icons/accessibility_icon.svg" alt="" class="size-[50px] cursor-pointer">
@@ -38,8 +125,7 @@
     </nav>
   <!-- End Navbar -->
 
-
-  <!-- Start Hover dropdown -->
+<script src="../assets/js/index.js"></script>
 </body>
 </html>
 
