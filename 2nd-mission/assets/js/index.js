@@ -325,3 +325,12 @@ function aboutDrop(){
 function aboutHide(){
     document.querySelector('#about').classList.toggle('hidden')
 }
+
+// Hamburger Sidebar
+function openNav() {
+    document.getElementById("mySidenav").classList.remove('hidden');
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").classList.add('hidden');
+}
