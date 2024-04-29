@@ -33,80 +33,135 @@
     <!-- *ANCHOR - Main -->
     <main>
         <!-- *SECTION - Cover -->
-        <section >
-            <div class="relative">
-                <img class="object-none h-[450px] w-[40000px]" src="../assets/images/athletes/Badminton_Athletes_Hero.webp" alt="Rocketman">
-                <p class="absolute top-[50%] left-[38%] text-white bg-[#00000060] text-4xl p-3">
-                    YONEX BADMINTON ATHLETES
-                </p>
+        <section class="">
+            <div class="relative ">
+                <img class="object-cover h-[450px] w-full" src="../assets/images/athletes/Badminton_Athletes_Hero.webp" alt="Rocketman">
+                <div class="flex justify-center">
+                    <p class="absolute top-[50%]  text-white bg-[#00000060] text-4xl p-3 text-center">
+                        YONEX BADMINTON ATHLETES
+                    </p>
+
+                    <!-- *ANCHOR - Filter -->
+                    <div class="absolute top-[88%] w-full px-[50px]">
+                        <div class="bg-white  shadow-lg flex mx-auto items-center justify-between max-w-[1000px] py-5 px-[20px]">
+                            <div class="">
+                                <p>
+                                    FILTER BY
+                                </p>
+                            </div>
+                            <div>
+                                <p class="pb-2">Region 1</p>
+                                <div class="border" >
+                                    <select class="w-[236] h-[40px] px-[20px] py-[5px]">
+                                        <div class="px-[]">
+                                            <option  value="">
+                                                [Representing - All]
+                                            </option>
+                                            <option value="Canada">
+                                                Canada                        
+                                            </option>
+                                            <option value="China">
+                                                China                        
+                                            </option>
+                                            <option value="Chinese Taipei">
+                                                Chinese Taipei                        
+                                            </option>
+                                            <option value="Denmark">
+                                                Denmark                        
+                                            </option>
+                                            <option value="France">
+                                                France                        
+                                            </option>
+                                            <option value="India">
+                                                India                        
+                                            </option>
+                                            <option value="Indonesia">
+                                                    Indonesia                        
+                                                </option>
+                                            <option value="Japan">
+                                                Japan                        
+                                            </option>
+                                            <option value="Korea">
+                                                Korea                        
+                                            </option>
+                                            <option value="Malaysia">
+                                                Malaysia                        
+                                            </option>
+                                            <option value="Spain">
+                                                Spain                        
+                                            </option>
+                                            <option value="Thailand">
+                                                Thailand                        
+                                            </option>
+                                        </div>
+                                    </select>
+                                        
+                                </div>
+                            </div>
+                            <!-- *ANCHOR - Regin -->
+                            <div>
+                                <p class="pb-2">Region</p>
+                                <div class="border">
+                                    <select class="w-[236] h-[40px] px-[20px] py-[5px]">
+                                        <option value="">
+                                            [Representing - All]
+                                        </option>
+                                        <option value="Canada">
+                                            Canada                        
+                                        </option>
+                                        <option value="China">
+                                            China                        
+                                        </option>
+                                        <option value="Chinese Taipei">
+                                            Chinese Taipei                        
+                                        </option>
+                                        <option value="Denmark">
+                                            Denmark                        
+                                        </option>
+                                        <option value="France">
+                                            France                        
+                                        </option>
+                                        <option value="India">
+                                            India                        
+                                        </option>
+                                        <option value="Indonesia">
+                                                Indonesia                        
+                                            </option>
+                                        <option value="Japan">
+                                            Japan                        
+                                        </option>
+                                        <option value="Korea">
+                                            Korea                        
+                                        </option>
+                                        <option value="Malaysia">
+                                            Malaysia                        
+                                        </option>
+                                        <option value="Spain">
+                                            Spain                        
+                                        </option>
+                                        <option value="Thailand">
+                                            Thailand                        
+                                        </option>
+                                            </select>
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <button class="bg-black text-white  px-8 py-3">
+                                    APPLY
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
         <!-- *!SECTION -  End Cover -->
 
         <!-- *SECTION - Filter Box -->
-        <section class="flex flex-col justify-center items-center shadow-md">
-        
-            <form action="" class="bg-[#00000060] py-4 px-80">
-                <fieldset >
-                    <span class="label">
-                        Filter By          
-                    </span>
-
-                    <!-- *ANCHOR - Region Filter -->
-                    <div class="country-input filter-container">
-                        <label for="athlete-country-filter" class="athlete-filter-label">
-                            Region
-                        </label>
-                        <select class="border border-x-black" name="country" aria-label="Country" id="athlete-country-filter" title="Country">
-                            <option value="">
-                                [Representing - All]
-                            </option>
-                            <option value="Canada">
-                                Canada                        
-                            </option>
-                            <option value="China">
-                                China                        
-                            </option>
-                            <option value="Chinese Taipei">
-                                Chinese Taipei                        
-                            </option>
-                            <option value="Denmark">
-                                Denmark                        
-                            </option>
-                        </select>
-
-                    </div>
-                    <!-- *!ANCHOR - Region Filter -->
-
-                    <!-- *ANCHOR - Athlete Filter -->
-                    <div >
-                        <label >
-                            Athlete
-                        </label>
-                        <select class="border border-x-black" name="name"  aria-label="Athlete" id="athlete-player-filter" title="Athlete">
-                            <option value="">
-                                [Athlete Name]
-                            </option>
-                            <option value="Aaron Chia">
-                                Aaron Chia                 
-                            </option>
-                            <option value="Akane Yamaguchi">
-                                Akane Yamaguchi                    
-                            </option>
-                            <option value="An Se Young">
-                                An Se Young                    
-                            </option>
-                            <option value="Arisa Higashino">
-                                Arisa Higashino                    
-                            </option>
-                        </select>
-                    </div>
-                    <!-- *!ANCHOR - Athlete Filter -->
-                    <button type="submit" id="sort-button">
-                        <span>Apply</span>
-                    </button>
-                </fieldset>
-            </form>
+        <section >
+            
         </section>
         <!-- *!SECTION - END Filter Box -->
     </main>
