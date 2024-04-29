@@ -13,11 +13,10 @@
     <!-- start product detail in running page  -->
     <main class="max-w-[1280px] mx-auto px-5 h-screen">
       <!-- start technology -->
-      <div class="technology pt-[200px] flex justify-between">
+      <div class="technology pt-[200px] flex justify-between max-md:block">
         <!-- technology left side  -->
         <div
-          class="technology-left flex flex-col justify-center min-h[600px] w-[50px]">
-          <!-- navigation toggle -->
+          class="tech-left flex flex-col justify-center min-h[600px] w-[50px] max-md:hidden">
           <div
             class="technology-left-navigation flex flex-col items-center justify-between relative min-h[250px] before:content-[''] before:bg-[#737a7e] before:h-[99%] before:left-[48%] before:absolute before:w-[2px] before:-z-1">
             <div class="navigation-dot active-technology-dot">01</div>
@@ -26,7 +25,8 @@
         <!-- technology left side  -->
 
         <!-- technology middle side  -->
-        <div class="technology-middle w-[calc(50%-50px)] flex justify-center">
+        <div
+          class="tech-middle w-[calc(50%-50px)] flex justify-center max-md:w-full">
           <div class="technology-middle-img-wrapper relative">
             <img
               class="technology-middle-img h-auto min-w-full"
@@ -37,9 +37,11 @@
         <!-- technology middle side  -->
 
         <!-- technology right side  -->
-        <div class="tech-right w-[50%] relative flex flex-col pl-5 ">
+        <div
+          class="tech-right w-[50%] relative flex flex-col pl-5 max-md:w-[100%]">
           <div
-            class="tech-right-numbers text-[#f7f8f9] flex font-extrabold absolute font-['Lato']" style="z-index: -1;">
+            class="tech-right-numbers text-[#f7f8f9] flex font-extrabold absolute font-['Lato'] max-md:hidden"
+            style="z-index: -1">
             <div
               class="technology-right--numbers-current--slide text-[190px] leading-[150px] text-[#f7f8f9] font-bold">
               01
@@ -51,7 +53,8 @@
             </div>
           </div>
 
-          <div class="tech-right-content ml-[125px] max-w-[300px]">
+          <div
+            class="tech-right-content ml-[125px] max-w-[300px] max-md:w-full max-md:ml-0 max-md:max-w-full max-md:text-center">
             <img
               src="../../assets/images/running-page/logo_b.png"
               alt="logo_b"
@@ -66,10 +69,10 @@
                 A raw egg can be dropped from 12 meters above the POWER CUSHION+
                 mat, rebounding to a height of 6 meters without breaking.**
               </p>
-              <p mb-[1.1rem]>
+              <p class="mb-[1.1rem]">
                 POWER CUSHION ™ is a trademark of Yonex Co., Ltd.
               </p>
-              <p>
+              <p class="mb-[1.1rem]">
                 <span class="text-[10px]"
                   >*Research by the Japan Vehicle Inspection Association &
                 </span>
@@ -83,7 +86,7 @@
           </div>
 
           <div
-            class="tech-right-navigation ml-[125px] flex items-end flex-1 pt-[150px] pb-[70px]">
+            class="tech-right-navigation ml-[125px] flex items-end flex-1 pt-[150px] pb-[70px] max-md:ml-0 max-md:pt-0 max-md:justify-center">
             <button
               class="tech-right-navigation--left h-[40px] w-[50px] mr-[10px] bg-white border border-[#e0e0e0] flex justify-center items-center">
               <img src="../../assets/images/running-page/carrot_L.svg" alt="" />
@@ -96,7 +99,7 @@
         </div>
         <!-- technology right side  -->
       </div>
-      <!-- end technology -->
+      <!-- end technology -->>
     </main>
     <!-- end product detail in running page  -->
   </body>
