@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Review</title>
     <!-- Style link  -->
     <link rel="stylesheet" href="../assets/css/styles.css" />
@@ -13,45 +13,67 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-</head>
-<body>
-    <!-- Start Banner -->
-    <section class="relative">
-        <div class="">
-          <img class="max-lg:hidden" src="../assets/images/product-review/heroCover.jpg" alt="" />
-          <img
-            class="w-full hidden max-lg:flex"
-            src="../assets/images/product-review/heroCover-breakPoint.webp"
-            alt=""
-          />
-        </div>
-        <div class="absolute flex gap-5 top-10 left-40 max-lg:left-10">
-          <ul class="flex gap-5 text-[0.75rem] text-[#443e3e]">
-            <li
-              class="hover:border-b-[1px] border-[#050505] max-lg:text-[1.3rem] max-sm:text-[1.2rem]"
+  </head>
+  <body>
+    <!-- Start Hero Cover -->
+    <section class="flex relative w-full justify-center">
+      <div class="w-[100%]">
+        <img
+          class="w-full max-lg:hidden"
+          src="../assets/images/product-review/heroCover.webp"
+          alt=""
+        />
+        <img
+          class="w-full hidden max-lg:block"
+          src="../assets/images/product-review/heroCover-breakPoint.webp"
+          alt=""
+        />
+      </div>
+      <section class="absolute mx-auto w-[81%] h-full max-lg:w-[100%]">
+        <section class="py-12 max-sm:py-5">
+          <div class="flex gap-5  pl-7 py-1">
+            <ul class="flex gap-5 text-[0.75rem]  justify-center">
+              <li
+                class=" flex gap-5 hover:border-b-[1px] border-[#050505] max-lg:text-[1.3rem]"
+              >
+                <a class="max-sm:text-[1.1rem]" href=""> Home </a>
+                <span
+                class="text-[0.75rem] max-lg:text-[1.3rem] max-sm:text-[1.1rem]"
+              >
+                /
+              </span>
+              </li>
+              
+              <li
+                class="flex gap-5 hover:border-b-[1px] border-[#080707] max-lg:text-[1.3rem]"
+              >
+                <a class="max-sm:text-[1.1rem]"> Badminton </a>
+                <span
+                class="text-[0.75rem] max-lg:text-[1.3rem] max-sm:text-[1.1rem]"
+              >
+                /
+              </span>
+              </li>
+              
+              <h5
+              class="uppercase text-[0.75rem] max-lg:text-[1.3rem] max-sm:text-[1.1rem] "
             >
-              <a href=""> Home </a>
-            </li>
-            <span class="text-[0.75rem] max-lg:text-[1.3rem]"> / </span>
-            <li
-              class="hover:border-b-[1px] border-[#050505] max-lg:text-[1.3rem] max-sm:text-[1.2rem]"
-            >
-              <a href=""> Badminton </a>
-            </li>
-            <span class="text-[0.75rem] max-lg:text-[1.3rem]"> / </span>
-          </ul>
-          <h5 class="uppercase text-[0.75rem] max-lg:text-[1.3rem] max-sm:text-[1.2rem]">racquets</h5>
-        </div>
-        <div
-          class="absolute flex gap-5 bottom-10 left-[140px] w-full p-[30px] max-lg:left-0 max-lg:bottom-[-160px] max-lg:bg-[#101010]"
+              racquets
+            </h5>
+          </div>
+          
+          
+        </section>
+        <div class="absolute top-0 h-full w-[45%]   max-lg:left-0 max-lg:bottom-[-160px] max-lg:hidden" >
+        
+      </div>
+      <h1
+          class="absolute  pr-10 w-[45%] bottom-10  uppercase  font-[500] text-[1.6rem] tracking-[0.15rem] max-sm:text-[1.6rem] max-sm:p-4 max-lg:text-white max-lg:tracking-[0.5rem] max-md:text-[2.6rem] max-lg:w-full max-lg:bottom-4 max-lg:bg-black max-lg:text-[2.3rem] max-lg:p-10"
         >
-          <h1
-            class="uppercase font-[500] text-[1.45rem] tracking-[0.15rem] max-lg:text-white max-md:text-[2.6rem] max-lg:tracking-[0.5rem] max-md:text-[2rem]"
-          >
-            badminton racquets
-          </h1>
-        </div>
+          badminton racquets
+        </h1>
       </section>
-      <!-- End Banner -->
-</body>
+    </section>
+    <!-- End Hero Cover -->
+  </body>
 </html>
