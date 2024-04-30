@@ -12,6 +12,13 @@
   <!-- tailwind css cdn link -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+<style>
+  .top-block{
+    grid-template-areas:
+        "main ."
+      "main .";
+  }
+</style>
 
 </head>
 
@@ -27,15 +34,15 @@
         </span>
       </form>
     </div>
-  <!-- end search input form  -->
+    <!-- end search input form  -->
 
-  <!-- start menu tab -->
-    <div class="uppercase">
+    <!-- start menu tab -->
+    <div class="uppercase tracking-[3px]">
       <div class="mx-auto mt-[25px] mb-[50px] px-[80px] flex justify-center">
-        <ul class="max-w-full w-full flex overflow-x-auto overflow-y-hidden">
+        <ul class="max-w-full w-full flex overflow-x-auto overflow-y-hidden ">
           <li class="pl-[8px] flex-1 mb-0 mt-0 list-none whitespace-nowrap">
-            <a href="https://www.yonex.com/news/" class="border-b-2 border-solid border-[#006cb7] h-[51px] text-center" aria-current="page"
-              aria-label="All Stories">
+            <a href="https://www.yonex.com/news/" class="border-b-2 border-solid border-[#006cb7] h-[51px] text-center"
+              aria-current="page" aria-label="All Stories">
               <span>All</span>
             </a>
           </li>
@@ -52,18 +59,11 @@
             </a>
           </li>
           <li class="flex-1 mb-0 mt-0 list-none whitespace-nowrap ">
-            <a href="news-golf.html" class="  border-solid border-b-2 border-[#f7f8f9] h-[51px] text-center"
+            <a href="news-golf.html" class="border-solid border-b-2 border-[#f7f8f9] h-[51px] text-center"
               aria-label="Golf Stories">
               <span>Golf</span>
             </a>
           </li>
-          <!-- <li class="pr-[8px] flex-1 mt-0 list-none whitespace-nowrap ">
-            <a href="https://www.yonex.com/news/general/" class="flex border-b-2 border-solid border-[#f7f8f9] h-[51px] text-center"
-              aria-label="General Stories">
-              <span>General</span>
-            </a>
-          </li> -->
-
           <li class="pr-[50px] flex-1 mb-0 mt-0 list-none whitespace-nowrap ">
             <a href="news-general.html" class="border-solid border-b-2 border-[#f7f8f9] h-[51px] text-center"
               aria-label="General Stories">
@@ -74,11 +74,79 @@
       </div>
     </div>
     <!-- end menu tab -->
+    
+    <!-- top block content -->
+    <div class="top-block mx-[16px] grid grid-cols-10 gap-[10px] ">
+      <!-- start left side  -->
+      <div class="col-span-6 bg-yellow-300">
+        <div class="h-[100%] col-span-7 bg-black" style="grid-area: main;">
+          <div class="h-[100%] flex flex-col pb-[10px] bg-[#FFFFFF]">
+            <div class="h-[100%] p-0 pb-[10px]">
+              <img src="../../assets/images/news-img/1.1.webp" alt="image" 
+                class="block object-cover h-[100%] w-[100%] max-w-[100%]">
+            </div>
+            <p class="p-[2px] pl-[10px] w-full text[16px] text-[#595959] font-[400] leading-[23px] tracking-[2px]">April 15, 2024</p>
+            <h3 class="m-[6px] pl-[4px] w-full text-[20px] font-[700] leading-[26px] mb-[10px] text-[#1f2427]">Yonex announces “Environmental Vision 2050”: To carry sport into the
+              future</h3>
+            <a href="https://www.yonex.com/news/general/yonex-announces-environmental-vision-2050-to-carry-sport-into-the-future/"
+              class="pr-[21px] w-full text-[#006cb7]"
+              aria-label="Yonex announces “Environmental Vision 2050”:  To carry sport into the future">
+              <span class="pl-[10px] text-[16px] font-[700] leading-[3px]">Read Full Story ></span>
+              <span class="box-border"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- end left side -->
 
+      <!-- start right side  -->
+      <div class="col-span-4 ">
+    
+        <!--start top right-side  -->
+        <div class="top-right-side">
+          <div class="flex flex-col bg-[#fff] pb-[10px]">
+            <div class=" pb-[10px]">
+              <img src="../../assets/images/news-img/1.2.webp" alt="image" 
+                class="top-blocks__item__image">
+            </div>
+            <p class="p-[2px] pl-[10px] w-full text[16px] text-[#595959] font-[400] leading-[23px] tracking-[2px]">March 21, 2024</p>
+            <h3 class="m-[6px] pl-[4px] w-full text-[20px] font-[700] leading-[26px] mb-[10px] text-[#1f2427]">Upgrade Your Comfort and Fit Experience with the New POWER CUSHION 88 DIAL
+            </h3>
+            <a href="https://www.yonex.com/news/badminton/upgrade-your-comfort-and-fit-experience-with-the-new-power-cushion-88-dial/"
+              class="pr-[21px] w-full text-[#006cb7]"
+              aria-label="Upgrade Your Comfort and Fit Experience  with the New POWER CUSHION 88 DIAL">
+              <span class="pl-[10px] text-[16px] font-[700] leading-[3px]">Read Full Story ></span>
+              <span class="top-blocks__item__link__gt"></span>
+            </a>
+          </div>
+        </div>
+        <!--end top right-side  -->
 
+        <!-- botton rigth side -->
+        <div class="bottom-right-side">
+          <div class="flex flex-col bg-[#fff] pb-[10px]">
+            <div class="pb-[10px]">
+              <img src="../../assets/images/news-img/1.3.webp" alt="image" 
+                class="top-blocks__item__image">
+            </div>
+            <p class="p-[2px] pl-[10px] w-full text[16px] text-[#595959] font-[400] leading-[23px] tracking-[2px]">March 17, 2024</p>
+            <h3 class="m-[6px] pl-[4px] w-full text-[20px] font-[700] leading-[26px] mb-[10px] text-[#1f2427]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+              class="pr-[21px] w-full text-[#006cb7]"
+              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+              <span class="pl-[10px] text-[16px] font-[700] leading-[3px]">Read Full Story ></span>
+              <span class="top-blocks__item__link__gt"></span>
+            </a>
+          </div>
+        </div>
+        <!-- botton rigth side -->
+      </div>
+      <!-- end right side  -->
+    </div>
+    <!-- end top block content -->
 
-
-
+    
+    
 
 
 
