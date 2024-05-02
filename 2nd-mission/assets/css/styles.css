@@ -558,6 +558,43 @@ video {
   --tw-contain-style:  ;
 }
 
+<<<<<<< HEAD
+=======
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
+>>>>>>> feature/feature(productDetail)-03-productDetail
 .absolute{
   position: absolute;
 }
@@ -566,6 +603,7 @@ video {
   position: relative;
 }
 
+<<<<<<< HEAD
 .bottom-0{
   bottom: 0px;
 }
@@ -580,14 +618,47 @@ video {
 
 .right-\[30px\]{
   right: 30px;
+=======
+.left-0{
+  left: 0px;
+}
+
+.right-8{
+  right: 2rem;
+>>>>>>> feature/feature(productDetail)-03-productDetail
 }
 
 .top-0{
   top: 0px;
 }
 
+<<<<<<< HEAD
 .top-\[58\%\]{
   top: 58%;
+=======
+.top-6{
+  top: 1.5rem;
+}
+
+.top-\[50\%\]{
+  top: 50%;
+}
+
+.left-1{
+  left: 0.25rem;
+}
+
+.top-3{
+  top: 0.75rem;
+}
+
+.z-\[-1\]{
+  z-index: -1;
+}
+
+.m-0{
+  margin: 0px;
+>>>>>>> feature/feature(productDetail)-03-productDetail
 }
 
 .mx-auto{
@@ -595,6 +666,7 @@ video {
   margin-right: auto;
 }
 
+<<<<<<< HEAD
 .mb-\[1\.1rem\]{
   margin-bottom: 1.1rem;
 }
@@ -613,20 +685,66 @@ video {
 
 .mt-\[2\.2rem\]{
   margin-top: 2.2rem;
+=======
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
+.ml-2{
+  margin-left: 0.5rem;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
+}
+
+.mt-\[32px\]{
+  margin-top: 32px;
+}
+
+.mt-\[60px\]{
+  margin-top: 60px;
+}
+
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
+.mr-3{
+  margin-right: 0.75rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.box-border{
+  box-sizing: border-box;
+}
+
+.block{
+  display: block;
+>>>>>>> feature/feature(productDetail)-03-productDetail
 }
 
 .flex{
   display: flex;
 }
 
+<<<<<<< HEAD
 .grid{
   display: grid;
+=======
+.table{
+  display: table;
+>>>>>>> feature/feature(productDetail)-03-productDetail
 }
 
 .hidden{
   display: none;
 }
 
+<<<<<<< HEAD
 .h-\[40px\]{
   height: 40px;
 }
@@ -637,12 +755,29 @@ video {
 
 .h-full{
   height: 100%;
+=======
+.h-\[1100px\]{
+  height: 1100px;
+}
+
+.h-\[1px\]{
+  height: 1px;
+}
+
+.h-\[30px\]{
+  height: 30px;
+}
+
+.h-\[60px\]{
+  height: 60px;
+>>>>>>> feature/feature(productDetail)-03-productDetail
 }
 
 .h-screen{
   height: 100vh;
 }
 
+<<<<<<< HEAD
 .w-\[1\.5rem\]{
   width: 1.5rem;
 }
@@ -673,12 +808,41 @@ video {
 
 .w-\[calc\(50\%-50px\)\]{
   width: calc(50% - 50px);
+=======
+.h-\[36px\]{
+  height: 36px;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.h-\[27px\]{
+  height: 27px;
+}
+
+.h-\[362px\]{
+  height: 362px;
+}
+
+.w-\[15px\]{
+  width: 15px;
+}
+
+.w-\[30px\]{
+  width: 30px;
+}
+
+.w-\[600px\]{
+  width: 600px;
+>>>>>>> feature/feature(productDetail)-03-productDetail
 }
 
 .w-full{
   width: 100%;
 }
 
+<<<<<<< HEAD
 .min-w-\[300px\]{
   min-width: 300px;
 }
@@ -693,24 +857,72 @@ video {
 
 .max-w-\[300px\]{
   max-width: 300px;
+=======
+.w-\[180px\]{
+  width: 180px;
+}
+
+.w-\[24px\]{
+  width: 24px;
+}
+
+.w-\[38px\]{
+  width: 38px;
+}
+
+.w-\[60px\]{
+  width: 60px;
+}
+
+.w-\[284px\]{
+  width: 284px;
+}
+
+.max-w-\[625px\]{
+  max-width: 625px;
+}
+
+.max-w-\[642px\]{
+  max-width: 642px;
+}
+
+.max-w-\[90\%\]{
+  max-width: 90%;
+>>>>>>> feature/feature(productDetail)-03-productDetail
 }
 
 .max-w-full{
   max-width: 100%;
 }
 
+<<<<<<< HEAD
 .flex-1{
   flex: 1 1 0%;
+=======
+.max-w-\[1800px\]{
+  max-width: 1800px;
+}
+
+.max-w-\[800px\]{
+  max-width: 800px;
+}
+
+.table-fixed{
+  table-layout: fixed;
+>>>>>>> feature/feature(productDetail)-03-productDetail
 }
 
 .flex-col{
   flex-direction: column;
 }
 
+<<<<<<< HEAD
 .items-end{
   align-items: flex-end;
 }
 
+=======
+>>>>>>> feature/feature(productDetail)-03-productDetail
 .items-center{
   align-items: center;
 }
@@ -723,10 +935,26 @@ video {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
+=======
+.gap-12{
+  gap: 3rem;
+}
+
+.gap-2{
+  gap: 0.5rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
+}
+
+>>>>>>> feature/feature(productDetail)-03-productDetail
 .gap-5{
   gap: 1.25rem;
 }
 
+<<<<<<< HEAD
 .overflow-auto{
   overflow: auto;
 }
@@ -751,10 +979,43 @@ video {
 }
 
 .bg-\[\#f3f2f2\]{
+=======
+.gap-4{
+  gap: 1rem;
+}
+
+.gap-\[5px\]{
+  gap: 5px;
+}
+
+.whitespace-nowrap{
+  white-space: nowrap;
+}
+
+.rounded-full{
+  border-radius: 9999px;
+}
+
+.border-\[1px\]{
+  border-width: 1px;
+}
+
+.border-none{
+  border-style: none;
+}
+
+.bg-\[\#f7f8f9\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 248 249 / var(--tw-bg-opacity));
+}
+
+.bg-black{
+>>>>>>> feature/feature(productDetail)-03-productDetail
   --tw-bg-opacity: 1;
   background-color: rgb(243 242 242 / var(--tw-bg-opacity));
 }
 
+<<<<<<< HEAD
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -919,10 +1180,153 @@ video {
 .text-\[\#ffffff\]{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+=======
+.bg-primary-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 108 183 / var(--tw-bg-opacity));
 }
 
-.text-white{
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-slate-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
+.p-0{
+  padding: 0px;
+}
+
+.p-3{
+  padding: 0.75rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-\[20px\]{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-\[11px\]{
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.pb-\[11px\]{
+  padding-bottom: 11px;
+}
+
+.pb-\[15px\]{
+  padding-bottom: 15px;
+}
+
+.pt-\[13px\]{
+  padding-top: 13px;
+}
+
+.pt-\[24px\]{
+  padding-top: 24px;
+}
+
+.pl-10{
+  padding-left: 2.5rem;
+}
+
+.pl-2{
+  padding-left: 0.5rem;
+}
+
+.pr-8{
+  padding-right: 2rem;
+}
+
+.pt-2{
+  padding-top: 0.5rem;
+}
+
+.pb-\[24px\]{
+  padding-bottom: 24px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-start{
+  text-align: start;
+}
+
+.align-middle{
+  vertical-align: middle;
+}
+
+.align-bottom{
+  vertical-align: bottom;
+}
+
+.font-oswald{
+  font-family: Oswald, Lato, sans-serif;
+}
+
+.font-sans{
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-\[14px\]{
+  font-size: 14px;
+>>>>>>> feature/feature(productDetail)-03-productDetail
+}
+
+.text-\[26px\]{
+  font-size: 26px;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-\[16px\]{
+  font-weight: 16px;
+}
+
+.font-semibold{
+  font-weight: 600;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.tracking-\[5px\]{
+  letter-spacing: 5px;
+}
+
+.text-primary-100{
   --tw-text-opacity: 1;
+<<<<<<< HEAD
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
@@ -1099,10 +1503,59 @@ video {
 @media (min-width: 600px){
   .smd\:grid-cols-\[repeat\(34\2c 450px\)\]{
     grid-template-columns: repeat(34,450px);
+=======
+  color: rgb(0 108 183 / var(--tw-text-opacity));
+}
+
+.text-secondary-400{
+  --tw-text-opacity: 1;
+  color: rgb(89 89 89 / var(--tw-text-opacity));
+}
+
+.outline-none{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.hover\:underline:hover{
+  text-decoration-line: underline;
+}
+
+@media (min-width: 640px){
+  .sm\:my-\[23px\]{
+    margin-top: 23px;
+    margin-bottom: 23px;
+  }
+
+  .sm\:flex{
+    display: flex;
+  }
+
+  .sm\:w-\[50\%\]{
+    width: 50%;
+  }
+
+  .sm\:gap-4{
+    gap: 1rem;
+  }
+
+  .sm\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .sm\:font-sans{
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  .sm\:text-\[12px\]{
+    font-size: 12px;
+>>>>>>> feature/feature(productDetail)-03-productDetail
   }
 }
 
 @media (min-width: 768px){
+<<<<<<< HEAD
   .md\:right-\[20px\]{
     right: 20px;
   }
@@ -1116,10 +1569,81 @@ video {
   .slg\:px-\[20px\]{
     padding-left: 20px;
     padding-right: 20px;
+=======
+  .md\:my-\[23px\]{
+    margin-top: 23px;
+    margin-bottom: 23px;
+  }
+
+  .md\:flex{
+    display: flex;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
+
+  .md\:h-\[100px\]{
+    height: 100px;
+  }
+
+  .md\:w-\[40\%\]{
+    width: 40%;
+  }
+
+  .md\:w-\[50\%\]{
+    width: 50%;
+  }
+
+  .md\:w-\[70\%\]{
+    width: 70%;
+  }
+
+  .md\:max-w-\[1280px\]{
+    max-width: 1280px;
+  }
+
+  .md\:max-w-\[360px\]{
+    max-width: 360px;
+  }
+
+  .md\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .md\:gap-4{
+    gap: 1rem;
+  }
+
+  .md\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .md\:text-start{
+    text-align: start;
+  }
+
+  .md\:font-sans{
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  .md\:text-\[12px\]{
+    font-size: 12px;
+  }
+
+  .md\:text-\[36px\]{
+    font-size: 36px;
+  }
+
+  .md\:tracking-\[7px\]{
+    letter-spacing: 7px;
+>>>>>>> feature/feature(productDetail)-03-productDetail
   }
 }
 
 @media (min-width: 1024px){
+<<<<<<< HEAD
   .lg\:text-\[1\.5rem\]{
     font-size: 1.5rem;
   }
@@ -1132,5 +1656,9 @@ video {
 @media (min-width: 1200px){
   .sxl\:grid-cols-\[repeat\(34\2c 300px\)\]{
     grid-template-columns: repeat(34,300px);
+=======
+  .lg\:flex{
+    display: flex;
+>>>>>>> feature/feature(productDetail)-03-productDetail
   }
 }
