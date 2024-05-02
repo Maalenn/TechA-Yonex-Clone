@@ -66,7 +66,7 @@ const badmintonObj = [
 const golfObj = [
     {
         img: "../assets/images/golf-images/thm_club_ezone.webp",
-        title: "RAQUEST"
+        title: "CLUBS"
         
     },
     {
@@ -81,7 +81,7 @@ const golfObj = [
     },
     {
         img: "../assets/images/golf-images/golf-athletes.webp",
-        title: "APPAREL"
+        title: "ATHLETES"
         
     }
 ]
@@ -333,4 +333,59 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mySidenav").classList.add('hidden');
+}
+
+
+// Dropdown in sidebar
+function showDropdown(x){
+    if (x === 1){
+        let dropdownside = document.getElementById('badminton-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === 2){
+        let dropdownside = document.getElementById('golf-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === 3){
+        let dropdownside = document.getElementById('tennis-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === 4){
+        let dropdownside = document.getElementById('running-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === 5){
+        let dropdownside = document.getElementById('snowboard-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === 6){
+        let dropdownside = document.getElementById('about-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+}
+function hideDropDown(x){
+    if (x === -1){
+        let dropdownside = document.getElementById('badminton-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === -2){
+        let dropdownside = document.getElementById('golf-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === -3){
+        let dropdownside = document.getElementById('tennis-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === -4){
+        let dropdownside = document.getElementById('running-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === -5){
+        let dropdownside = document.getElementById('snowboard-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === -6){
+        let dropdownside = document.getElementById('about-drop');
+        dropdownside.classList.toggle('hidden')
+    }
 }
