@@ -1,18 +1,42 @@
-const SPEC_BTN = document.querySelector('.specsBtn')
-const DETAIL_CARD = document.querySelector('.detailCard')
-const PLUS_ICON = document.querySelector('.plusIcon')
-const MINUS_ICON = document.querySelector('.minusIcon')
 // show card and close card function
-function showCard(){
-    if (DETAIL_CARD.classList.contains('hidden')){
-        DETAIL_CARD.classList.remove('hidden')
-        PLUS_ICON.classList.add('hidden')
+const specsBtn = document.querySelector('.specsBtn')
+const detailCard = document.querySelector('.detailCard')
+const plusIcon = document.querySelector('.plusIcon')
+const minusIcon = document.querySelector('.minusIcon')
+function showCard(){detailCard
+    if (detailCard.classList.contains('hidden')){
+        detailCard.classList.remove('hidden')
+        plusIcon.classList.add('hidden')
     }
     else{
-        DETAIL_CARD.classList.add('hidden')
-        PLUS_ICON.classList.remove('hidden')
+        detailCard.classList.add('hidden')
+        plusIcon.classList.remove('hidden')
     }
     
 }
-
-SPEC_BTN.addEventListener('click', showCard)
+specsBtn.addEventListener('click', showCard)
+// show modal and close modal
+const stringBtn = document.querySelector('#stringBtn')
+const modal = document.querySelector('#modal')
+const overlay =  document.querySelector('.overlay')
+const closeBtn = document.querySelector('#xBtn')
+function showModal(){
+    modal.classList.remove('hidden')
+    overlay.classList.remove('hidden')
+}
+function closeModal(){
+    console.log('close');
+    modal.classList.add('hidden')
+    overlay.classList.add('hidden')
+}
+stringBtn.addEventListener('click', showModal)
+closeBtn.addEventListener('click', closeModal)
+overlay.addEventListener('click', 
+closeModal)
+document.addEventListener('keydown', function (e) {
+    // console.log(e.key);
+  
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
