@@ -19,11 +19,9 @@ const sliderData = [
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
-    title: "POWER CUSHION +",
+    title: "3D Power Graphite",
     description: [
-      "A raw egg can be dropped from 12 meters above the POWER CUSHION+ mat, rebounding to a height of 6 meters without breaking.",
-      "POWER CUSHION ™ is a trademark of Yonex Co., Ltd.",
-      "*Research by the Japan Vehicle Inspection Association & Boken Quality Evaluation (based on JIS standards) in comparison to conventional cushioning material (EVA).**Tested by YONEX",
+      "Incorporated from the heel to midsole to stabilize landing and reduce strain on the muscles.",
     ],
   },
 
@@ -32,11 +30,9 @@ const sliderData = [
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
-    title: "POWER CUSHION +",
+    title: "msLITE X",
     description: [
-      "A raw egg can be dropped from 12 meters above the POWER CUSHION+ mat, rebounding to a height of 6 meters without breaking.",
-      "POWER CUSHION ™ is a trademark of Yonex Co., Ltd.",
-      "*Research by the Japan Vehicle Inspection Association & Boken Quality Evaluation (based on JIS standards) in comparison to conventional cushioning material (EVA).**Tested by YONEX",
+      "The lightest midsole material in Yonex history features a thick bottom with added shock absorption.",
     ],
   },
 
@@ -45,11 +41,10 @@ const sliderData = [
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
-    title: "POWER CUSHION +",
+    title: "Durable Skin Light",
     description: [
-      "A raw egg can be dropped from 12 meters above the POWER CUSHION+ mat, rebounding to a height of 6 meters without breaking.",
-      "POWER CUSHION ™ is a trademark of Yonex Co., Ltd.",
-      "*Research by the Japan Vehicle Inspection Association & Boken Quality Evaluation (based on JIS standards) in comparison to conventional cushioning material (EVA).**Tested by YONEX",
+      "Great Fit Leaves you Light on your Feet",
+      "Combining rubber-like flexibility with the stiffness of hard plastic, the polyurethane-based Durable Skin Light lets you play light on your feet while maintaining a robust fit."
     ],
   },
   // Add more slide objects here following the same structure
@@ -77,7 +72,7 @@ function slider() {
   const maxSlide = sliderData.length;
   // console.log(maxSlide)
 
-  console.log(`slide length ${slides.length}`);
+  // console.log(`slide length ${slides.length}`);
 
   const createDots = function () {
     slides.forEach(function (_, i) {
@@ -114,7 +109,7 @@ function slider() {
       technologyRightDescription.appendChild(paragraph);
     });
 
-    currentSlide.textContent = curSlide + 1; // Update current slide number
+    currentSlide.textContent = "0" + (curSlide + 1);
     slideCount.textContent = maxSlide;
   };
 
@@ -137,12 +132,13 @@ function slider() {
     }
     // curSlide = (curSlide - 1 + maxSlide) % maxSlide;
     updateSlideInfo();
+    activateDot(curSlide);
   };
 
   const init = function () {
-    createDots();
-    activateDot(0);
     updateSlideInfo();
+    createDots(); // Create dots after slides are loaded
+    activateDot(0);
   };
   init();
 
