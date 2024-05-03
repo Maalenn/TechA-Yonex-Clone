@@ -29,11 +29,11 @@
 <body class=" bg-[#F7F8F9]">
   <!--start search input form -->
   <main class="w-full z-50 box-border mx-auto max-w-[1280px] grow" class="block">
-    <div class="relative m-[25px] bg-transparent w-full max-w-[1095px] font-[Oswald]">
-      <form action="https://www.yonex.com/news/search" class="relative" method="get" role="search">
-        <input type="text" class="border-[1px] border-[#222831] input-text relative h-[50px] w-full text-[16px] p-2 "
+    <div class="relative m-[25px] mb-[10px] bg-transparent font-[Oswald]">
+      <form action="https://www.yonex.com/news/search" class="relative w-[calc(100%-160px)] mx-auto max-md:w-full" method="get" role="search">
+        <input type="text" class="border-[0.1px] border-[#878787] input-text relative h-[50px] !w-full text-[16px] p-2 text-[#878787]"
           placeholder="Search News..." name="search" role="combobox" aria-required="true" minlength="3" maxlength="128">
-        <span class="material-symbols-outlined font-normal absolute top-3 right-3">
+        <span class="material-symbols-outlined font-normal absolute top-3 right-3 max-sm:hidden text-[#878787]">
           search
         </span>
       </form>
@@ -41,51 +41,49 @@
     <!-- end search input form  -->
 
     <!-- start menu tab -->
-    <div class="uppercase tracking-[3px] font-[Oswald]">
-      <div class="md:mx-auto md:mt-[25px] md:mb-[50px] lg:px-[80px] flex justify-center">
-        <ul class="md:max-w-full w-full m-0 flex">
-          <li class="pl-[8px] flex-1 mb-0 mt-0">
-            <a href="https://www.yonex.com/news/"
-              class="block md:flex md:flex-row h-[51px] md:justify-center md:mr-[17px];" aria-current="page"
-              aria-label="All Stories">
-              <span class="flex items-center">All</span>
-            </a>
-          </li>
-          <li class=" mb-0 mt-0 list-none whitespace-nowrap">
-            <a href="news-badminton.html"
-              class="block text-center md:flex md:flex-row md:justify-center md:mr-[17px] h-[51px] border-b-2 border-solid border-[#f7f8f9]  "
-              aria-label="Badminton Stories">
-              <span class="flex items-center">Badminton</span>
-            </a>
-          </li>
-          <li class="flex-1 mb-0 mt-0 list-none whitespace-nowrap ">
-            <a href="news-tennis.html"
-              class="block text-center md:flex md:flex-row md:justify-center md:mr-[17px] border-b-2 border-solid border-[#f7f8f9] h-[51px] "
-              aria-label="Tennis Stories">
-              <span class="flex items-center">Tennis</span>
-            </a>
-          </li>
-          <li class="flex-1 mb-0 mt-0 list-none whitespace-nowrap ">
-            <a href="news-golf.html"
-              class="block text-center md:flex md:flex-row md:justify-center md:mr-[17px] border-solid border-b-2 border-[#f7f8f9] h-[51px] "
-              aria-label="Golf Stories">
-              <span class="flex items-center">Golf</span>
-            </a>
-          </li>
-          <li class="pr-[50px] flex-1 mb-0 mt-0 list-none whitespace-nowrap ">
-            <a href="news-general.html"
-              class="block text-center md:flex md:flex-row md:justify-center md:mr-[17px] border-solid border-b-2 border-[#f7f8f9] h-[51px] "
-              aria-label="General Stories">
-              <span class="flex items-center">General</span>
-            </a>
-          </li>
-        </ul>
+<div class=" border-b-[1px] text-[#6e7677] font-[Oswald] uppercase font-[400]">
+  <div class="container mx-auto px-4">
+      <div class="flex justify-center"> 
+          <ul id="tab-all" class="flex items-center space-x-1 sm:space-x-[40px] md:space-x-[60px] lg:space-x-[90px] text-sm md:text-md lg:text-lg text-[16px]">
+              <li>
+                  <a href="news.html"
+                     class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
+                     aria-current="page" aria-label="All Stories">All</a>
+              </li>
+              <li>
+                  <a href="news-badminton.html"
+                     class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
+                     aria-label="Badminton Stories">Badminton</a>
+              </li>
+              <li>
+                  <a href="news-tennis.html"
+                     class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
+                     aria-label="Tennis Stories">Tennis</a>
+              </li>
+              <li>
+                  <a href="news-golf.html"
+                     class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
+                     aria-label="Golf Stories">Golf</a>
+              </li>
+              <li>
+                  <a href="news-general.html"
+                     class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
+                     aria-label="General Stories">General</a>
+              </li>
+          </ul>
       </div>
-    </div>
+  </div>
+</div>
+
+
+
+
+
+
     <!-- end menu tab -->
 
     <!-- top block content -->
-    <div class="top-block mx-[16px] grid-cols-10 gap-[10px] md:mr-[16px] md:grid block">
+    <div class="top-block mx-[16px] grid-cols-10 gap-[10px] md:mr-[16px] md:grid block mt-[10px]">
       <!-- start left side  -->
       <div class="col-span-6">
         <div class="h-[100%] col-span-7 bg-black" style="grid-area: main;">
@@ -274,6 +272,7 @@
 
 
   </main>
+  <script src="../../assets/js/news.js"></script>
 </body>
 
 </html>
