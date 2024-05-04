@@ -329,10 +329,12 @@ function aboutHide(){
 // Hamburger Sidebar
 function openNav() {
     document.getElementById("mySidenav").classList.remove('hidden');
+    document.getElementById('overlay-blur').classList.toggle('hidden');
 }
 
 function closeNav() {
     document.getElementById("mySidenav").classList.add('hidden');
+    document.getElementById('overlay-blur').classList.toggle('hidden');
 }
 
 
