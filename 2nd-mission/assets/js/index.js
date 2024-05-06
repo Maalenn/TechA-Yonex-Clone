@@ -419,3 +419,21 @@ function pushArrow(n) {
   currentSlide1 = Math.max(0, Math.min(currentSlide1 + n, images.length - 1));
   carousel.scrollTo({ left: currentSlide1 * imageWidth, behavior: "smooth" });
 }
+
+// function for switching news
+let slideIndexRecent = 0;
+showSlidesRecent();
+
+function showSlidesRecent() {
+    let i;
+    let slides = document.getElementsByClassName("recent-slide");
+    let dots = document.getElementsByClassName("dot-recent");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndexRecent++;
+    if (slideIndexRecent > slides.length) {slideIndexRecent = 1}    
+    slides[slideIndexRecent-1].style.display = "flex";  
+    dots[slideIndexRecent-1].className += " active";
+    setTimeout(showSlidesRecent, 4000);
+}
