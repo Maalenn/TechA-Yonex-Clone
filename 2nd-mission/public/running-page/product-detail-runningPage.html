@@ -159,7 +159,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="font-Oswald h-[500vh]">
     <!-- start product detail in running page  -->
 
     <!-- background wrapper in product section -->
@@ -184,17 +184,17 @@
     <main class="max-w-[1280px] mx-auto px-5 h-screen">
       <!-- start product detail container  -->
       <div
-        class="product-card box-border md:flex justify-between gap-3 mb-[20rem]"
+        class="product-card box-border md:flex justify-between gap-3 mb-[20rem] max-md:mb-[5rem]"
         id="product-description"
       >
         <!-- product image - small vertical  -->
-        <div class="absolute inline-block z-10">
+        <div class="absolute inline-block z-10 max-md:hidden">
           <div class="vertical-product-img">
             <img
-                class="top-[50%] h-auto w-full object-cover"
-                src="../../assets/images/running-page/shr100xm_440_1 (1).webp"
-                alt="shr100xm_440_1"
-              />
+              class="top-[50%] h-auto w-full object-cover"
+              src="../../assets/images/running-page/shr100xm_440_1 (1).webp"
+              alt="shr100xm_440_1"
+            />
           </div>
           <div class="vertical-product-img">
             <img
@@ -209,7 +209,7 @@
           <div id="productSlider" class="overflow-x-auto flex">
             <div class="product-img-slide relative">
               <img
-                class="top-[50%] h-auto w-full object-cover"
+                class="top-[50%] h-auto w-full object-cover max-md:scale-140"
                 src="../../assets/images/running-page/shr100xm_440_1.webp"
                 alt="shr100xm_440_1"
               />
@@ -243,7 +243,7 @@
             />
           </button>
 
-          <div
+          <!-- <div
             class="bottom-navigaion flex justify-center items-center md:hidden"
           >
             <div class="dots-container flex gap-3 p-4">
@@ -260,6 +260,26 @@
                   class="dot-nav bg-[#adadad] rounded-full round-[12px] w-[6px] h-[6px]"
                 ></div>
               </div>
+            </div>
+          </div> -->
+        </div>
+
+        <div
+          class="bottom-navigaion flex justify-center items-center md:hidden pt-[130px]"
+        >
+          <div class="dots-container flex gap-3 p-4">
+            <div
+              class="dot-status dot-active relative flex justify-center items-center"
+            >
+              <div class="dot-nav"></div>
+            </div>
+
+            <div
+              class="dot-status w-[24px] h-[24px] rounded-full relative flex justify-center items-center"
+            >
+              <div
+                class="dot-nav bg-[#adadad] rounded-full round-[12px] w-[6px] h-[6px]"
+              ></div>
             </div>
           </div>
         </div>
@@ -292,7 +312,7 @@
           </div>
 
           <div
-            class="flex justify-center md:justify-start gap-2 max-w-[800px] mx-auto"
+            class="flex justify-center max-md:justify-start gap-2 max-w-[800px] mx-auto"
           >
             <div class="product-img-group">
               <a href="">
@@ -439,45 +459,45 @@
       </div>
       <!-- start product detail container  -->
 
-            <!-- start sticky nav container  -->
-            <div
-            class="sticky-nav-container bg-white z-[2] h-[90px] px-[60px] w-full flex items-center justify-center border absolute left-0 max-lg:p-0 max-lg:h-[50px]"
+      <!-- start sticky nav container  -->
+      <div
+        class="sticky-nav-container bg-white z-[2] h-[90px] px-[60px] w-full flex items-center justify-center border absolute left-0 max-lg:p-0 max-lg:h-[50px]"
+      >
+        <div class="navigation-bar flex justify-between items-center flex-1">
+          <div
+            class="product-name text-[#1f2427] text-[20px] uppercase tracking-widest max-lg:hidden"
           >
-            <div class="navigation-bar flex justify-between items-center flex-1">
-              <div
-                class="product-name text-[#1f2427] text-[20px] uppercase tracking-widest max-lg:hidden"
-              >
-                <span class="">SAFERUN 100X MEN</span>
-              </div>
-              <ul
-                class="sticky-nav-elements flex flex-1 items-center justify-around h-full mx-auto max-w-[700px]"
-              >
-                <li>
-                  <a
-                    href="#product-description"
-                    class="sticky-nav-element text-[#6e7677] relative uppercase transition duration-600 ease-linear"
-                    >Discription</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#product-technology"
-                    class="sticky-nav-element text-[#6e7677] relative uppercase transition duration-600 ease-linear"
-                    >Technology</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <a
-              class="add-compare relative w-[11%] min-w-[130px] mx-[25px] max-lg:hidden text-nowrap"
-            >
-              <span
-                class="text-[#595959] text-[15px] font-bold relative capitalize font-['Lato']"
-                >Add To Compare</span
-              >
-            </a>
+            <span class="">SAFERUN 100X MEN</span>
           </div>
-          <!-- end sticky nav container  -->
+          <ul
+            class="sticky-nav-elements flex flex-1 items-center justify-around h-full mx-auto max-w-[700px]"
+          >
+            <li>
+              <a
+                href="#product-description"
+                class="sticky-nav-element text-[#6e7677] relative uppercase transition duration-600 ease-linear"
+                >Discription</a
+              >
+            </li>
+            <li>
+              <a
+                href="#product-technology"
+                class="sticky-nav-element text-[#6e7677] relative uppercase transition duration-600 ease-linear"
+                >Technology</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a
+          class="add-compare relative w-[11%] min-w-[130px] mx-[25px] max-lg:hidden text-nowrap"
+        >
+          <span
+            class="text-[#595959] text-[15px] font-bold relative capitalize font-['Lato']"
+            >Add To Compare</span
+          >
+        </a>
+      </div>
+      <!-- end sticky nav container  -->
 
       <!-- start technology -->
       <div
