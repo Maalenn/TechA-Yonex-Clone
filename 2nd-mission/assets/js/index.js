@@ -342,53 +342,27 @@ function closeNav() {
 function showDropdown(x){
     if (x === 1){
         let dropdownside = document.getElementById('badminton-drop');
-        dropdownside.classList.toggle('hidden')
+        dropdownside.classList.toggle('max-h-[300px]')
     }
     if (x === 2){
         let dropdownside = document.getElementById('golf-drop');
-        dropdownside.classList.toggle('hidden')
+        dropdownside.classList.toggle('max-h-[300px]')
     }
     if (x === 3){
         let dropdownside = document.getElementById('tennis-drop');
-        dropdownside.classList.toggle('hidden')
+        dropdownside.classList.toggle('max-h-[300px]')
     }
     if (x === 4){
         let dropdownside = document.getElementById('running-drop');
-        dropdownside.classList.toggle('hidden')
+        dropdownside.classList.toggle('max-h-[300px]')
     }
     if (x === 5){
         let dropdownside = document.getElementById('snowboard-drop');
-        dropdownside.classList.toggle('hidden')
+        dropdownside.classList.toggle('max-h-[300px]')
     }
     if (x === 6){
         let dropdownside = document.getElementById('about-drop');
-        dropdownside.classList.toggle('hidden')
-    }
-}
-function hideDropDown(x){
-    if (x === -1){
-        let dropdownside = document.getElementById('badminton-drop');
-        dropdownside.classList.toggle('hidden')
-    }
-    if (x === -2){
-        let dropdownside = document.getElementById('golf-drop');
-        dropdownside.classList.toggle('hidden')
-    }
-    if (x === -3){
-        let dropdownside = document.getElementById('tennis-drop');
-        dropdownside.classList.toggle('hidden')
-    }
-    if (x === -4){
-        let dropdownside = document.getElementById('running-drop');
-        dropdownside.classList.toggle('hidden')
-    }
-    if (x === -5){
-        let dropdownside = document.getElementById('snowboard-drop');
-        dropdownside.classList.toggle('hidden')
-    }
-    if (x === -6){
-        let dropdownside = document.getElementById('about-drop');
-        dropdownside.classList.toggle('hidden')
+        dropdownside.classList.toggle('max-h-[300px]')
     }
 }
 
@@ -434,4 +408,14 @@ function showSlides1() {
     slides[slideIndex1-1].style.display = "block";  
     dots[slideIndex1-1].className += " active";
     setTimeout(showSlides1, 2000);
+}
+
+// functions for slideshow sport
+let currentSlide1 = 0;
+function pushArrow(n) {
+  const carousel = document.querySelector(" .slideShow ");
+  const images = carousel.querySelectorAll(".slide-list");
+  const imageWidth = images[0].clientWidth;
+  currentSlide1 = Math.max(0, Math.min(currentSlide1 + n, images.length - 1));
+  carousel.scrollTo({ left: currentSlide1 * imageWidth, behavior: "smooth" });
 }
