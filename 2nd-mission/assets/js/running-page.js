@@ -1,77 +1,113 @@
-// start product slider 
+// start product slider
 const productSlider = document.getElementById("productSlider");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-      const productImgSlide = productSlider.querySelectorAll(".product-img-slide");
-      const dots = document.querySelectorAll(".dot-status");
-      let currentIndex = 0;
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const productImgSlide = productSlider.querySelectorAll(".product-img-slide");
+const dots = document.querySelectorAll(".dot-status");
+let currentIndex = 0;
 
-      // Function to show the current image
-      function showImage(index) {
-        productImgSlide.forEach((slide, i) => {
-          if (i === index) {
-            slide.style.display = "block";
-          } else {
-            slide.style.display = "none";
-          }
-        });
-      }
+function showImage(index) {
+  productImgSlide.forEach((slide, i) => {
+    if (i === index) {
+      slide.style.display = "block";
+    } else {
+      slide.style.display = "none";
+    }
+  });
+}
 
-      function activateDot(index) {
-        dots.forEach((dot, i) => {
-          if (i === index) {
-            dot.classList.add("dot-active");
-            // document.querySelector('.dot-nav').style.backgroundColor = "#000";
-          } else {
-            dot.classList.remove("dot-active");
-          }
-        });
-      }
+function activeDot(index) {
+  dots.forEach((dot, i) => {
+    if (i === index) {
+      dot.classList.add("dot-active");
+      // document.querySelector('.dot-nav').style.backgroundColor = "#000";
+    } else {
+      dot.classList.remove("dot-active");
+    }
+  });
+}
 
-      // Initial display
-      showImage(currentIndex);
-      activateDot(currentIndex);
+// Initial display
+showImage(currentIndex);
+activeDot(currentIndex);
 
-      // Event listeners for next and previous buttons
-      prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + 2) % 2;
-        showImage(currentIndex);
-        activateDot(currentIndex);
-      });
+// Event listeners for next and previous buttons
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + 2) % 2;
+  showImage(currentIndex);
+  activeDot(currentIndex);
+});
 
-      nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % 2;
-        showImage(currentIndex);
-        activateDot(currentIndex);
-      });
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % 2;
+  showImage(currentIndex);
+  activeDot(currentIndex);
+});
 
-      // Event listeners for mouse enter and mouse leave on images
-      productImgSlide.forEach((slide, i) => {
-        slide.addEventListener("mouseenter", () => {
-          console.log(currentIndex);
-          if (i === 0) {
-            prevBtn.classList.add("hidden");
-            nextBtn.classList.remove("hidden");
-          } else if (i === 1) {
-            nextBtn.classList.add("hidden");
-            prevBtn.classList.remove("hidden");
-          }
-        });
+// Event listeners for mouse enter and mouse leave on images
+productImgSlide.forEach((slide, i) => {
+  slide.addEventListener("mouseenter", () => {
+    console.log(currentIndex);
+    if (i === 0) {
+      prevBtn.classList.add("hidden");
+      nextBtn.classList.remove("hidden");
+    } else if (i === 1) {
+      nextBtn.classList.add("hidden");
+      prevBtn.classList.remove("hidden");
+    }
+  });
 
-        slide.addEventListener("mouseleave", () => {
-          prevBtn.classList.add("hidden");
-          nextBtn.classList.add("hidden");
-        });
-      });
+  slide.addEventListener("mouseleave", () => {
+    prevBtn.classList.add("hidden");
+    nextBtn.classList.add("hidden");
+  });
+});
 
-      dots.forEach((dot, i) => {
-        dot.addEventListener("click", () => {
-          currentIndex = i;
-          showImage(currentIndex);
-          activateDot(currentIndex);
-        });
-      });
-// end product slider 
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    currentIndex = i;
+    showImage(currentIndex);
+    activeDot(currentIndex);
+  });
+});
+// end product slider
+
+// Sticky navigation: Intersection Observer API
+const nav = document.querySelector(".sticky-nav-container");
+const header = document.querySelector(".product-card");
+// const navHeight = nav.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) nav.classList.add("nav-sticky");
+  else nav.classList.remove("nav-sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  // rootMargin: `-${navHeight}px`,
+});
+
+headerObserver.observe(header);
+
+// Page navigation
+document
+  .querySelector(".sticky-nav-elements")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Matching strategy
+    if (e.target.classList.contains("sticky-nav-element")) {
+      const id = e.target.getAttribute("href");
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+
+      const clickedNavItem = document.querySelector(id);
+      console.log("clicked nav items");
+      clickedNavItem.classList.add("active");
+    }
+  });
 
 // start technology slider
 const sliderData = [
@@ -118,7 +154,7 @@ const sliderData = [
     title: "Durable Skin Light",
     description: [
       "Great Fit Leaves you Light on your Feet",
-      "Combining rubber-like flexibility with the stiffness of hard plastic, the polyurethane-based Durable Skin Light lets you play light on your feet while maintaining a robust fit."
+      "Combining rubber-like flexibility with the stiffness of hard plastic, the polyurethane-based Durable Skin Light lets you play light on your feet while maintaining a robust fit.",
     ],
   },
   // Add more slide objects here following the same structure
@@ -221,5 +257,3 @@ function slider() {
 }
 slider();
 // end technology slider
-
-
