@@ -13,7 +13,7 @@
     <!-- Start Navbar -->
     <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
     <nav
-      class="w-full md:bg-neutral-800 md:bg-opacity-40 text-white absolute hover:bg-white hover:text-black bg-white border border-1"
+      class="w-full md:bg-neutral-800 md:bg-opacity-40 absolute text-white hover:bg-white hover:text-black bg-white border border-1 md:border-none top-0 z-10"
     >
       <div
         class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10"
@@ -472,84 +472,185 @@
     </div>
     <!-- End Sidebar -->
 
-    <!-- Start Footer -->
-    <footer
-      class="bg-[#24292b] h-[870px] md:h-[370px] absolute w-full bottom-0"
-    >
-      <div class="max-w-[1300px] mx-auto">
-        <div class="md:justify-between md:items-center md:flex md:h-[50%] gap-[30px]">
-          <div class="flex items-center justify-center">
-            <img
-              src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
-              alt=""
-              class="items-center flex justify-center size-[130px] Logo ml-3"
-            />
-          </div>
+    <!-- Start Hero Banner -->
+    <div class="hidden md:relative md:block">
 
-          <div
-            class="flex justify-between items-center max-w-[400px] mx-auto md:mr-[30px] md:gap-6"
-          >
-            <img
-              src="../assets/images/icons/facebook-icon.svg"
-              alt="facebook-icon"
-              class="size-[40px] ml-4"
-            />
-            <img
-              src="../assets/images/icons/twitter_icon.svg"
-              alt="twittter-icon"
-              class="size-[40px]"
-            />
-            <img
-              src="../assets/images/icons/youtube_icon.svg"
-              alt="youtube-icon"
-              class="size-[40px]"
-            />
-            <img
-              src="../assets/images/icons/instagram_icon.svg"
-              alt="instagram-icon"
-              class="size-[40px] mr-4"
-            />
-          </div>
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/Lucas.webp" class="w-full h-auto relative" alt="">
+        <button class=" bg-black absolute top-[50%] left-[50%] text-white py-3 w-[110px]">WATCH VIDEO</button>
+      </div>
+      
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/badminton-cover.webp" class="w-full h-auto relative object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 w-[110px]">READ MORE</button>
+      </div>
+      
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/badminton-image.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[50%] text-white py-3 w-[110px]">LEARN MORE</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/beyond-i-see.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[50%] text-white py-3 w-[110px]">LEARN MORE</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/bwis_manifest_1002.webp" class="w-full h-auto object-cover" alt="">
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/counter-drive.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 w-[110px]">NEWS</button>
+        <button class=" bg-black absolute top-[40%] left-[40%] text-white py-3 w-[110px]">LEARN MORE</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/ezong.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[55%] text-white py-3 w-[110px]">LEARN MORE</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/fly-direction.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 w-[110px]">READ MORE</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/made-by-yonex-desktop.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 w-[110px]">LEARN MORE</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/new-dawn.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 w-[110px]">NEWS</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/shoes.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 w-[110px]">LEARN MORE</button>
+      </div>
+      
+      <button href="#" class="prev absolute top-1/2 left-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light ml-2 text-white pb-1 pr-1" onclick="plusSlides(-1)">❮</button>
+      <button href="#" class="next absolute top-1/2 right-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light mr-2 text-white pb-1 pl-1" onclick="plusSlides(1)">❯</button>
+      
+    </div>
+    <!-- End Hero Banner -->
+
+    <!-- Start Hero Banner responsive -->
+    <div class="slideshow-container md:hidden block">
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/lucas.webp" style="width:100%">
+      </div>
+      
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/badminton-1000.webp" style="width:100%">
+      </div>
+      
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/beyond-what-i-see.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/craft.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/counter-drive.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/craft.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/cover.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/ezone.webp" style="width:100%">
+
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/far-beyond.webp" style="width:100%">
+
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/mobile_375_500.webp" style="width:100%">
+
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/new-eclipson.webp" style="width:100%">
+      </div>
+  
+    </div>
+    <!-- End Hero Banner responsive -->
+    
+    <!-- Start Footer -->
+    <footer class="bg-[#24292b] h-[870px] md:h-[370px] mt-[200px]">
+      <div class="max-w-[1300px] mx-auto">
+          <div class="md:justify-between md:items-center md:flex md:h-[50%]">
+              <div class="flex items-center justify-center">
+                  <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg" alt="" class="items-center flex justify-center size-[130px] Logo ml-3">
+              </div>
+              
+              <div
+          class="flex justify-between items-center max-w-[400px] mx-auto md:mr-[30px] md:gap-6"
+        >
+          <img
+            src="../assets/images/icons/facebook-icon.svg"
+            alt="facebook-icon"
+            class="size-[40px] ml-4"
+          />
+          <img
+            src="../assets/images/icons/twitter_icon.svg"
+            alt="twittter-icon"
+            class="size-[40px]"
+          />
+          <img
+            src="../assets/images/icons/youtube_icon.svg"
+            alt="youtube-icon"
+            class="size-[40px]"
+          />
+          <img
+            src="../assets/images/icons/instagram_icon.svg"
+            alt="instagram-icon"
+            class="size-[40px] mr-4"
+          />
         </div>
-        <hr class="my-4 border-gray-500 opacity-30" />
-        <div class="md:flex md:justify-between md:items-center">
-          <div>
-            <ul
-              class="md:flex md:flex-row gap-4 text-[#f5f5f5] text-[16px] py-2 flex flex-col justify-center items-center font-[Oswald] ml-4"
-            >
-              <li class="tracking-[2px]">BADMINTON</li>
-              <li class="tracking-[2px]">GOLF</li>
-              <li class="tracking-[2px]">TENNIS</li>
-              <li class="tracking-[2px]">RUNNING</li>
-              <li class="tracking-[2px]">SNOWBOARDING</li>
-            </ul>
           </div>
-          <hr class="md:hidden my-4 border-gray-500 opacity-30" />
-          <div class="flex items-center justify-center">
-            <img
-              src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/menu-icons/accessibility_icon.svg"
-              alt=""
-              class="size-[50px] cursor-pointer mr-10"
-            />
+          <hr class="my-4 border-gray-500 opacity-30">
+          <div class="md:flex md:justify-between md:items-center">
+              <div>
+                  <ul class="md:flex md:flex-row gap-4 text-[#f5f5f5] text-[15px] py-2 flex flex-col justify-center items-center font-[Oswald]">
+                      <li class="tracking-[2px]">BADMINTON</li>
+                      <li class="tracking-[2px]">GOLF</li>
+                      <li class="tracking-[2px]">TENNIS</li>
+                      <li class="tracking-[2px]">RUNNING</li>
+                      <li class="tracking-[2px]">SNOWBOARDING</li>
+                  </ul>
+              </div>
+              <hr class="md:hidden my-4 border-gray-500 opacity-30 ">
+              <div class="flex items-center justify-center">
+                  <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/menu-icons/accessibility_icon.svg" alt="" class="size-[50px] cursor-pointer">
+              </div>
           </div>
-        </div>
-        <hr class="my-4 border-gray-500 opacity-30" />
-        <div class="md:flex md:justify-between md:items-center">
-          <div
-            class="md:flex md:flex-row gap-4 text-[#a8a8a8] text-[14px] py-2 flex flex-col justify-center items-center"
-          >
-            © 2012-2024 YONEX Co., Ltd.
+          <hr class="my-4 border-gray-500 opacity-30">
+          <div class="md:flex md:justify-between md:items-center">
+              <div class="md:flex md:flex-row gap-4 text-[#a8a8a8] text-[14px] py-2 flex flex-col justify-center items-center">
+                  © 2012-2024 YONEX Co., Ltd.
+              </div>
+              <hr class="md:hidden my-4 border-gray-500 opacity-30">
+              <div class="md:flex md:flex-row gap-4 text-[#a8a8a8] text-[14px] py-2 flex flex-col justify-center items-center">
+                  <a href="">Terms & Conditions</a>
+                  <a href=""> Accessibility </a>
+                  <a href="">Privacy Policy</a>
+                  <a href="">Using Yonex Products Safely</a>
+              </div>
           </div>
-          <hr class="md:hidden my-4 border-gray-500 opacity-30" />
-          <div
-            class="md:flex md:flex-row gap-4 text-[#a8a8a8] text-[14px] py-2 flex flex-col justify-center items-center"
-          >
-            <a href="">Terms & Conditions</a>
-            <a href=""> Accessibility </a>
-            <a href="">Privacy Policy</a>
-            <a href="">Using Yonex Products Safely</a>
-          </div>
-        </div>
       </div>
     </footer>
     <!-- End Footer -->
