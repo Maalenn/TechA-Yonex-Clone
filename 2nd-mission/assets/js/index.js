@@ -419,6 +419,15 @@ function pushArrow(n) {
   currentSlide1 = Math.max(0, Math.min(currentSlide1 + n, images.length - 1));
   carousel.scrollTo({ left: currentSlide1 * imageWidth, behavior: "smooth" });
 }
+// functions for new arrival
+let currentSlide2 = 0;
+function pushArrow1(n) {
+  const carousel = document.querySelector(" .slideShow1");
+  const images = carousel.querySelectorAll(".slide-list1");
+  const imageWidth = images[0].clientWidth;
+  currentSlide2 = Math.max(0, Math.min(currentSlide2 + n, images.length - 1));
+  carousel.scrollTo({ left: currentSlide2 * imageWidth, behavior: "smooth" });
+}
 
 // function for switching news
 let slideIndexRecent = 0;
