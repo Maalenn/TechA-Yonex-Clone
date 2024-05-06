@@ -7,9 +7,16 @@ function pushArrow(n) {
   carousel.scrollTo({ left: currentSlide * imageWidth, behavior: "smooth" });
 }
 
-function clickSlide() {
-  document.getElementsByClassName("list-Slide").classList.add("bg-blue-400");
-}
 
-let slideIndex = 1;
-showSlides(slideIndex);
+
+// Pagination
+const allBtn = document.querySelectorAll(".btn");
+const paginationContainer = document.querySelector(".pagination-container");
+
+paginationContainer.addEventListener("click", (e) => {
+  const btnTarget = e.target;
+  allBtn.forEach((btn) => {
+    btn.classList.remove("activeBg");
+    btnTarget.classList.add("activeBg")
+  });
+});
