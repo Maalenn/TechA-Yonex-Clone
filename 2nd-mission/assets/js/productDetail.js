@@ -40,3 +40,46 @@ document.addEventListener('keydown', function (e) {
       closeModal();
     }
   });
+// img frame 
+const imageClick = document.querySelector('#imageClick')
+const imgZoom = document.querySelector('#imgZoom')
+const xClose = document.querySelector('#xClose')
+
+function showImg() {
+    imgZoom.classList.remove('hidden')
+}
+function closeImg() {
+    imgZoom.classList.add('hidden')
+}
+  
+  
+  
+let currentZoom = 1; 
+let minZoom = 1; 
+let maxZoom = 3; 
+let stepSize = 0.1;
+let container = document.querySelector('#image-container'); 
+
+// Zoom image function
+function zoomImage(direction) { 
+    let newZoom = currentZoom + direction * stepSize; 
+
+    // Limit the zoom level to the minimum and maximum values 
+    if (newZoom < minZoom || newZoom > maxZoom) { 
+        return; 
+    } 
+
+    currentZoom = newZoom; 
+    console.log(currentZoom);
+
+    // Update the CSS transform of the image to scale it 
+    let image = document.querySelector('#image-container img'); 
+    image.style.transform = 'scale(' + currentZoom + ')'; 
+}
+
+container.addEventListener('wheel', function (event) { 
+    // Zoom in or out based on the scroll direction 
+    let direction = event.deltaY > 0 ? -1 : 1; 
+    // console.log(direction)
+    zoomImage(direction); 
+});
