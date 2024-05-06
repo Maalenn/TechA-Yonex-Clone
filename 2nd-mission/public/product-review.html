@@ -106,7 +106,7 @@
   
           <section class="mx-auto px-[50px] py-[45px]">
             <ul
-              class="w-[100%] slideShow relative grid grid-cols-[repeat(34,300px)] ssm:grid-cols-[repeat(34,330px)] smd:grid-cols-[repeat(34,450px)] slg:grid-cols-[repeat(34,399px)] sxl:grid-cols-[repeat(34,300px)] max-sm:grid-cols-[repeat(34,280px)] max-md:grid-cols-[repeat(34,340px)] max-lg:grid-cols-[repeat(34,360px)] overflow-auto"
+              class="no-scrollbar w-[100%] slideShow relative grid grid-cols-[repeat(34,300px)] ssm:grid-cols-[repeat(34,330px)] smd:grid-cols-[repeat(34,450px)] slg:grid-cols-[repeat(34,399px)] sxl:grid-cols-[repeat(34,300px)] max-sm:grid-cols-[repeat(34,280px)] max-md:grid-cols-[repeat(34,340px)] max-lg:grid-cols-[repeat(34,360px)] overflow-auto"
             >
               <li class="slide-list slg:px-[20px]">
                 <a> 
@@ -1177,8 +1177,28 @@
           </section>
       </section>
       <!-- End Athletes Information -->
-  
-      
+      <!-- Start Pagination -->
+      <section class="w-[500px] flex justify-center items-center mb-40 gap-10">
+        <div class="w-[20px] h-[20px] flex justify-center items-center text-[#5c5959]">
+          <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z" fill="#000000" /></svg>
+        </div>
+
+        <section class="pagination-container flex  gap-1 cursor-pointer">
+          <button class="btn py-2 px-4 activeBg">1</button>
+          <button class="btn py-2 px-4 ">2</button>
+          <button class="btn py-2 px-4 ">3</button>
+          <button class="btn py-2 px-4 ">4</button>
+          <button class="btn py-2 px-4 ">5</button>
+          <button class="btn py-2 px-4 ">6</button>
+          <button class="btn py-2 px-4 ">7</button>
+        </section>
+
+        <div class="class="w-[45px] h-[45px] flex justify-center items-center text-[#5c5959]">
+          <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z" fill="#000000" /></svg>
+        </div>
+
+      </section>
+      <!-- End Pagination -->
 
     </body>
     <script src="../assets/js/prodroct-reveiw.js"></script>
