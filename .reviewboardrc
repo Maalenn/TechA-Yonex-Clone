@@ -1,3 +1,0 @@
-REVIEWBOARD_URL = "https://review.clp.kr/"
-REPOSITORY = "Tech-A"
-REPOSITORY_TYPE = "git"
