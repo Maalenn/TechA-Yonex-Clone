@@ -2,11 +2,13 @@
 const arrObj = [
     {
         img: "https://www.yonex.com/media/catalog/category/NANOFLARE_800.png",
-        title: "BADMINTON"
+        title: "BADMINTON",
+        link: ""
     },
     {
         img: "https://www.yonex.com/media/catalog/category/ezone-100.png",
-        title: "TENNIS"
+        title: "TENNIS",
+        link: ""
     },
     {
         img: "https://www.yonex.com/media/catalog/category/EZONE_GT_d_ts_Head.png",
@@ -14,7 +16,8 @@ const arrObj = [
     },
     {
         img: "https://www.yonex.com/media/catalog/category/Carbon-Cruise-Aerus.png",
-        title: "RUNNING"
+        title: "RUNNING",
+        link: ""
         
     },
     
@@ -23,7 +26,8 @@ const arrObj = [
 const badmintonObj = [
     {
         img: "../assets/images/badminton-images/racquets_240306.png",
-        title: "RAQUEST"
+        title: "RAQUEST",
+        link: "../public/product-review.html"
         
     },
     {
@@ -196,7 +200,7 @@ class BadmintonComponent extends HTMLElement {
                 ${badmintonObj.map((card) => {
                     return `
                         <div class="flex flex-col items-center justify-center bg-[#f7f8f9]">
-                            <a href=""><img src="${card.img}" alt=""></a>
+                            <a href="${card.link}"><img src="${card.img}" alt=""></a>
                             <p class="font-semibold text-[15px] text-black">${card.title}</p>
                         </div>
                     `
