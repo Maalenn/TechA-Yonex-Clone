@@ -21,3 +21,12 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+/* dot active for product  */
+.dot-active{
+  @apply border border-[#1f2427] w-[24px] h-[24px] rounded-full
+}
+
+.dot-nav {
+  @apply bg-[#adadad] rounded-full w-[6px] h-[6px];
+}
