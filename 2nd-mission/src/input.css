@@ -29,6 +29,7 @@
 
 .dot-nav {
   @apply bg-[#adadad] rounded-full w-[6px] h-[6px];
+
 }
 
 
@@ -59,6 +60,7 @@
   animation: line-appear 0.2s ease-in-out;
 }
 /* end sticky nav container in Running Page  */
+
 
 
 
@@ -162,3 +164,5 @@ button {
     font-size: 20px !important;
     color: rgb(163, 158, 158) !important;
   }
+
+
