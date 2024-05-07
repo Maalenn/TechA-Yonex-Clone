@@ -778,6 +778,7 @@ video {
   z-index: 100;
 }
 
+
 .z-\[2\]{
   z-index: 2;
 }
@@ -824,6 +825,7 @@ video {
   margin-left: 16px;
   margin-right: 16px;
 }
+
 
 .mx-\[25px\]{
   margin-left: 25px;
@@ -1207,6 +1209,7 @@ video {
   width: 100%;
 }
 
+
 .w-\[11\%\]{
   width: 11%;
 }
@@ -1472,9 +1475,11 @@ video {
   justify-content: space-between;
 }
 
+
 .justify-around{
   justify-content: space-around;
 }
+
 
 .gap-2{
   gap: 0.5rem;
@@ -1541,6 +1546,7 @@ video {
 .whitespace-nowrap{
   white-space: nowrap;
 }
+
 
 .text-nowrap{
   text-wrap: nowrap;
@@ -2047,6 +2053,7 @@ video {
 
 .text-\[14px\]{
   font-size: 14px;
+
 }
 
 .text-\[15px\]{
@@ -2144,6 +2151,7 @@ video {
 .uppercase{
   text-transform: uppercase;
 }
+
 
 .capitalize{
   text-transform: capitalize;
@@ -2359,6 +2367,7 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 .ease-linear{
   transition-timing-function: linear;
 }
@@ -2381,6 +2390,7 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(173 173 173 / var(--tw-bg-opacity));
 }
+
 
 /* start sticky nav container in Running Page  */
 
@@ -2419,6 +2429,7 @@ video {
 }
 
 /* end sticky nav container in Running Page  */
+
 
 .before\:absolute::before{
   content: var(--tw-content);
