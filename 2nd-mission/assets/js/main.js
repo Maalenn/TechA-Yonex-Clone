@@ -12,7 +12,9 @@ class Footer extends HTMLElement {
             <div class="max-w-[1300px] mx-auto">
                 <div class="md:justify-between md:items-center md:flex md:h-[50%]">
                     <div class="flex items-center justify-center">
+                        <a href="index.html">
                         <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg" alt="" class="items-center flex justify-center size-[130px] Logo ml-3">
+                        </a>
                     </div>
                     
                     <div
