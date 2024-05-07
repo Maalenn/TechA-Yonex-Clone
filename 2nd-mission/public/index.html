@@ -27,11 +27,11 @@
 
         <!-- Logo -->
         <div>
-          <img
+          <a href="index.html"><img
             src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
             alt=""
             class="w-[140px] Logo ml-3 py-3"
-          />
+          /></a>
           <p class="my-0 text-xs text-center hidden md:block">
             far beyond ordinary
           </p>
@@ -43,12 +43,12 @@
         >
           <!-- Badminton Hoverdrop -->
           <div
-            class="group h-[90px] pt-[30px]"
+            class="group h-full pt-[30px]"
             id="hoverLink"
             onmouseenter="hoverDrop()"
             onmouseleave="hoverHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative">BADMINTON</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">BADMINTON</a>
             <!-- Badminton section -->
             <section
               class="w-full bg-white p-[40px] absolute top-[100px] hidden z-[10000] left-0"
@@ -64,12 +64,12 @@
 
           <!-- Golf Hoverdrop -->
           <div
-            class="group h-[90px] pt-[30px]"
+            class="group h-full pt-[30px]"
             id="hoverLink"
             onmouseenter="golfDrop()"
             onmouseleave="golfHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative">GOLF</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">GOLF</a>
             <!-- Golf section -->
             <section
               class="w-full bg-white p-[30px] absolute top-[100px] hidden h-[220px] z-[10000] left-0"
@@ -85,12 +85,12 @@
 
           <!-- Tennis Hoverdrop -->
           <div
-            class="group h-[90px] pt-[30px]"
+            class="group h-full pt-[30px]"
             id="hoverLink"
             onmouseenter="tennisDrop()"
             onmouseleave="tennisHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative">TENNIS</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">TENNIS</a>
             <!-- Tennis section -->
             <section
               class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
@@ -106,12 +106,12 @@
 
           <!-- running Hoverdrop -->
           <div
-            class="group h-[90px] pt-[30px]"
+            class="group h-full pt-[30px]"
             id="hoverLink"
             onmouseenter="runningDrop()"
             onmouseleave="runningHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative">RUNNING</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
             <!-- running section -->
             <section
               class="w-full bg-white p-[30px] absolute top-[100px] h-[220px] hidden z-[10000] left-0"
@@ -127,12 +127,12 @@
 
           <!-- snowboard Hoverdrop -->
           <div
-            class="group h-[90px] pt-[30px]"
+            class="group h-full pt-[30px]"
             id="hoverLink"
             onmouseenter="snowboardDrop()"
             onmouseleave="snowboardHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative">SNOWBOARDING</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">SNOWBOARDING</a>
             <!-- snowboard section -->
             <section
               class="w-full bg-white p-[30px] absolute top-[100px] justify-center hidden z-[10000] left-0 h-[380px]"
@@ -160,39 +160,22 @@
             </section>
           </div>
           <div class="cursor-pointer hover:opacity-80 h-[30px]">
-            <a href="" class="pt[10px]">NEWS</a>
+            <a href="" class="pt-[10px] ">NEWS</a>
           </div>
           <div
-            class="group h-[90px] pt-[30px]"
+            class="group h-full pt-[30px]"
             id="hoverLink"
             onmouseenter="aboutDrop()"
             onmouseleave="aboutHide()"
           >
-            <a href="#" class="group-hover:opacity-80 relative">ABOUT</a>
-            <!-- running section -->
+            <a href="tech-a-project/2nd-mission/public/about-page/about-us.html" class="group-hover:opacity-80 relative top-[7%]">ABOUT</a>
+            <!-- about section -->
             <section
               class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
               id="about"
             >
-              <div id="HoverBox" class="max-w-[95%] mx-auto">
-                <div class="flex items-center justify-center gap-8 h-[66px]">
-                  <p class="text-[13px] text-black tracking-wide">ABOUT US</p>
-                  <p class="text-[13px] text-black tracking-wide">
-                    YONEX GROUP
-                  </p>
-                  <p class="text-[13px] text-black tracking-wide">
-                    YONEX DISTRIBUTOR
-                  </p>
-                  <p class="text-[13px] text-black tracking-wide">
-                    INVESTOR RELATION
-                  </p>
-                  <p class="text-[13px] text-black tracking-wide">
-                    PRODUCT CATALOGS
-                  </p>
-                  <p class="text-[13px] text-black tracking-wide">
-                    MADE BY YONEX
-                  </p>
-                </div>
+              <div id="HoverBox" class="max-w-[1600px] mx-auto  flex justify-center">
+                <about-component></about-component>
               </div>
             </section>
           </div>
@@ -231,7 +214,7 @@
 
       <div class="mySlides fade relative">
         <img src="../assets/images/homePage-hero/Lucas.webp" class="w-full h-auto relative" alt="">
-        <button class=" bg-black absolute top-[50%] left-[50%] text-white py-3 w-[110px]">WATCH VIDEO</button>
+        <button class=" bg-black absolute top-[50%] left-[45%] text-white py-3 hover:bg-white hover:text-black px-8">WATCH VIDEO</button>
       </div>
       
       <div class="mySlides fade relative">
@@ -626,9 +609,9 @@
     <!-- end Golf sections -->
 
     <!-- start arrival section -->
-    <section class="md:flex relative w-full justify-center hidden"> 
+    <section class="md:flex relative w-full justify-center"> 
       <section
-        class="relative mx-auto max-w-[1280px] min-w-[300px] h-full max-lg:w-[100%]"
+        class="relative mx-auto max-w-[1280px] min-w-[300px] h-full max-lg:w-[100%] max-md:max-w-[500px]"
       >
         <div class="flex w-[100%] mt-24 justify-center">
           <h1 class="text-[25px] font-[Oswald]">NEW ARRIVALS</h1>
@@ -636,88 +619,88 @@
 
         <section class="mx-auto px-[50px] py-[45px] ">
           <ul
-            class="overflow-x-hidden w-[100%] slideShow1 relative grid grid-cols-[repeat(5,300px)] ssm:grid-cols-[repeat(34,330px)] smd:grid-cols-[repeat(34,450px)] slg:grid-cols-[repeat(34,399px)] sxl:grid-cols-[repeat(34,300px)] max-sm:grid-cols-[repeat(34,280px)] max-md:grid-cols-[repeat(34,340px)] max-lg:grid-cols-[repeat(34,360px)] overflow-auto font-[Oswald]"
+            class="overflow-x-hidden w-[100%] slideShow1 relative grid grid-cols-[repeat(5,300px)] max-md:grid-cols-[repeat(5,400px)] overflow-auto font-[Oswald]"
           >
-            <li class="slide-list1 slg:px-[20px]">
+            <li class="slide-list1 slg:px-[20px] max-md:mx-auto">
               <a> 
                 <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/orange-shoes.webp"
+                  class="w-[260px] bg-[#f7f8f9] max-md:w-[450px]"
+                  src="../assets/images/new-arrival-image/shoes.webp"
                   alt=""
                 />
                   <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] mx-auto"
                   >
-                    RUNNING
+                  POWER CUSHION 88 DIAL UNISEX
                   </h3>
               </a>
             </li> 
-            <li class="slide-list1 slg:px-[20px] ">
+            <li class="slide-list1 slg:px-[20px] max-md:mx-auto">
               <a> 
                 <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/snowboard.webp"
+                  class="w-[260px] bg-[#f7f8f9] max-md:w-[450px]"
+                  src="../assets/images/new-arrival-image/snowboard.webp"
                   alt=""
                 />
                 <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] mx-auto"
                   >
-                    SNOWBOARDING
+                  NEXTAGE NX23
                   </h3>
               </a>
             </li>
-            <li class="slide-list1 slg:px-[20px] ">
-              <a> 
+            <li class="slide-list1 slg:px-[20px] max-md:mx-auto">
+              <a class=""> 
                 <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/badminton.webp"
+                  class="w-[260px] bg-[#f7f8f9] max-md:w-[450px]"
+                  src="../assets/images/new-arrival-image/raquest.webp"
                   alt=""
                 />
                 <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] mx-auto"
                   >
-                    BADMINTON
+                  NANOFLARE 800 PRO
                   </h3>
               </a>
             </li>
-            <li class="slide-list1 slg:px-[20px] ">
+            <li class="slide-list1 slg:px-[20px] max-md:mx-auto">
               <a> 
                 <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/tennis.webp"
+                  class="w-[260px] bg-[#f7f8f9] max-md:w-[450px]"
+                  src="../assets/images/new-arrival-image/golf.webp"
                   alt=""
                 />
                 <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] mx-auto"
                   >
-                    TENNIS
+                  Fiore IRON
                   </h3>
               </a>
             </li>
-            <li class="slide-list1 slg:px-[20px] ">
+            <li class="slide-list1 slg:px-[20px] max-md:mx-auto">
               <a> 
                 <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/golf.webp"
+                  class="w-[260px] bg-[#f7f8f9] max-md:w-[450px]"
+                  src="../assets/images/new-arrival-image/tennis.webp"
                   alt=""
                 />
                 <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] mx-auto"
                   >
-                    GOLF
+                  POLYTOUR AIR 125
                   </h3>
               </a>
             </li>
           </ul>
         </section>
         <div
-          class="back absolute top-[58%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5"
+          class="back absolute md:top-[58%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5 top-[45%]"
           onclick="pushArrow1(1)"
         >
           <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
         </div>
         <div
-          class="next absolute top-[58%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5"
+          class="next absolute md:top-[58%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5 top-[45%]"
           onclick="pushArrow1(-1)"
         >
           <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
@@ -804,80 +787,108 @@
         class="relative mx-auto max-w-[1280px] min-w-[300px] h-full max-lg:w-[100%]"
       >
         <div class="flex w-[100%] mt-24 justify-center">
-          <h1 class="text-[25px] font-[Oswald]">NEW ARRIVALS</h1>
+          <h1 class="text-[25px] font-[Oswald]">BROSWE BY ATHLETE</h1>
         </div>
 
         <section class="mx-auto px-[50px] py-[45px] ">
           <ul
-            class="overflow-x-hidden w-[100%] slideShow1 relative grid grid-cols-[repeat(5,300px)] ssm:grid-cols-[repeat(34,330px)] smd:grid-cols-[repeat(34,450px)] slg:grid-cols-[repeat(34,399px)] sxl:grid-cols-[repeat(34,300px)] max-sm:grid-cols-[repeat(34,280px)] max-md:grid-cols-[repeat(34,340px)] max-lg:grid-cols-[repeat(34,360px)] overflow-auto font-[Oswald]"
+            class="overflow-x-hidden w-[100%] slideShow2 relative grid grid-cols-[repeat(7,300px)] ssm:grid-cols-[repeat(34,330px)] smd:grid-cols-[repeat(34,450px)] slg:grid-cols-[repeat(34,399px)] sxl:grid-cols-[repeat(34,300px)] max-sm:grid-cols-[repeat(34,280px)] max-md:grid-cols-[repeat(34,340px)] max-lg:grid-cols-[repeat(34,360px)] overflow-auto font-[Oswald]"
           >
             <li class="slide-list1 slg:px-[20px]">
-              <a> 
+              <a class="relative"> 
                 <img
                   class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/orange-shoes.webp"
+                  src="../assets/images/product-review/al29.webp"
                   alt=""
                 />
                   <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
                   >
-                    RUNNING
+                    KENTO MOMOTA
                   </h3>
               </a>
             </li> 
-            <li class="slide-list1 slg:px-[20px] ">
-              <a> 
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
                 <img
                   class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/snowboard.webp"
+                  src="../assets/images/product-review/al3.webp"
                   alt=""
                 />
                 <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
                   >
-                    SNOWBOARDING
+                    AKANE YAMAGUCHI
                   </h3>
               </a>
             </li>
-            <li class="slide-list1 slg:px-[20px] ">
-              <a> 
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
                 <img
                   class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/badminton.webp"
+                  src="../assets/images/product-review/nakashima_570x570.webp"
                   alt=""
                 />
                 <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
                   >
-                    BADMINTON
+                    BRANDOM NAKASHIMA
                   </h3>
               </a>
             </li>
-            <li class="slide-list1 slg:px-[20px] ">
-              <a> 
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
                 <img
                   class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/tennis.webp"
+                  src="../assets/images/product-review/vekic_570x570.webp"
                   alt=""
                 />
                 <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
                   >
-                    TENNIS
+                    DONNA VEKIC
                   </h3>
               </a>
             </li>
-            <li class="slide-list1 slg:px-[20px] ">
-              <a> 
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
                 <img
                   class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/golf.webp"
+                  src="../assets/images/product-review/kim_570x570_.webp"
                   alt=""
                 />
                 <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
                   >
-                    GOLF
+                    HYOO JOO KIM
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/product-review/athlete1.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
+                  >
+                    VIKTOR AXELSON
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/product-review/Osaka_570x570_07.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
+                  >
+                    NAOMI OSAKAS
                   </h3>
               </a>
             </li>
@@ -885,13 +896,13 @@
         </section>
         <div
           class="back absolute top-[58%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5"
-          onclick="pushArrow1(1)"
+          onclick="pushArrow2(1)"
         >
           <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
         </div>
         <div
           class="next absolute top-[58%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5"
-          onclick="pushArrow1(-1)"
+          onclick="pushArrow2(-1)"
         >
           <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
         </div>
