@@ -1,6 +1,78 @@
+// start product slider
+const productSlider = document.getElementById("productSlider");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const productImgSlide = productSlider.querySelectorAll(".product-img-slide");
+const dots = document.querySelectorAll(".dot-status");
+let currentIndex = 0;
 
+function showImage(index) {
+  productImgSlide.forEach((slide, i) => {
+    if (i === index) {
+      slide.style.display = "block";
+    } else {
+      slide.style.display = "none";
+    }
+  });
+}
 
-// Sticky navigation: Intersection Observer API
+function activeDot(index) {
+  dots.forEach((dot, i) => {
+    if (i === index) {
+      dot.classList.add("dot-active");
+      // document.querySelector('.dot-nav').style.backgroundColor = "#000";
+    } else {
+      dot.classList.remove("dot-active");
+    }
+  });
+}
+
+// Initial display
+showImage(currentIndex);
+activeDot(currentIndex);
+
+// Event listeners for next and previous buttons
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + 2) % 2;
+  showImage(currentIndex);
+  activeDot(currentIndex);
+});
+
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % 2;
+  showImage(currentIndex);
+  activeDot(currentIndex);
+});
+
+// Event listeners for mouse enter and mouse leave on images
+productImgSlide.forEach((slide, i) => {
+  slide.addEventListener("mouseenter", () => {
+    console.log(currentIndex);
+    if (i === 0) {
+      prevBtn.classList.add("hidden");
+      nextBtn.classList.remove("hidden");
+    } else if (i === 1) {
+      nextBtn.classList.add("hidden");
+      prevBtn.classList.remove("hidden");
+    }
+  });
+
+  slide.addEventListener("mouseleave", () => {
+    prevBtn.classList.add("hidden");
+    nextBtn.classList.add("hidden");
+  });
+});
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    currentIndex = i;
+    showImage(currentIndex);
+    activeDot(currentIndex);
+  });
+});
+// end product slider
+
+// Sticky navigation
 const nav = document.querySelector(".sticky-nav-container");
 const header = document.querySelector(".product-card");
 // const navHeight = nav.getBoundingClientRect().height;
@@ -46,9 +118,9 @@ const sliderData = [
     logoAlt: "logo_b",
     title: "POWER CUSHION +",
     description: [
-      "A raw egg can be dropped from 12 meters above the POWER CUSHION+ mat, rebounding to a height of 6 meters without breaking.",
-      "POWER CUSHION ™ is a trademark of Yonex Co., Ltd.",
-      "*Research by the Japan Vehicle Inspection Association & Boken Quality Evaluation (based on JIS standards) in comparison to conventional cushioning material (EVA).**Tested by YONEX",
+      "A raw egg can be dropped from 12 meters above the POWER CUSHION+ mat, rebounding to a height of 6 meters without breaking.**",
+      "<br>POWER CUSHION ™ is a trademark of Yonex Co., Ltd.",
+      "<br><span class=text-[10px]>*Research by the Japan Vehicle Inspection Association & Boken Quality Evaluation (based on JIS standards) in comparison to conventional cushioning material (EVA).**Tested by YONEX</span>",
     ],
   },
 
@@ -85,7 +157,6 @@ const sliderData = [
       "Combining rubber-like flexibility with the stiffness of hard plastic, the polyurethane-based Durable Skin Light lets you play light on your feet while maintaining a robust fit.",
     ],
   },
-  // Add more slide objects here following the same structure
 ];
 
 function slider() {
@@ -102,6 +173,7 @@ function slider() {
   const technologyRightDescription = document.getElementById(
     "technology-right-description"
   );
+
   const btnLeft = document.querySelector(".slider__btn--left");
   const btnRight = document.querySelector(".slider__btn--right");
   const dotContainer = document.querySelector(".dots");
@@ -134,18 +206,22 @@ function slider() {
 
   const updateSlideInfo = () => {
     const data = sliderData[curSlide];
-    console.log(data);
     technologyMiddleImg.setAttribute("src", data.image);
     technologyMiddleImg.setAttribute("alt", data.alt);
     technologyRightTitle.textContent = data.title;
-    technologyRightDescription.innerHTML = ""; // Clear previous content
+    technologyRightDescription.innerHTML = data.description;
 
-    data.description.forEach((desc) => {
-      const paragraph = document.createElement("p");
-      paragraph.textContent = desc;
-      paragraph.classList.add("mb-[1.1rem]");
-      technologyRightDescription.appendChild(paragraph);
-    });
+
+    // data.description.forEach((desc) => {
+    //   technologyRightDescription.innerHTML = desc + "<br>";
+    // })
+
+    // data.description.forEach((desc) => {
+    //   const paragraph = document.createElement("p");
+    //   paragraph.textContent = desc;
+    //   paragraph.classList.add("mb-[1.1rem]");
+    //   technologyRightDescription.appendChild(paragraph);
+    // });
 
     currentSlide.textContent = "0" + (curSlide + 1);
     slideCount.textContent = maxSlide;
