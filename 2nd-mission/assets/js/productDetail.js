@@ -14,6 +14,8 @@ function showCard(){detailCard
     }
     
 }
+
+
 specsBtn.addEventListener('click', showCard)
 // show modal and close modal
 const stringBtn = document.querySelector('#stringBtn')
@@ -117,7 +119,6 @@ document
       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
 
       const clickedNavItem = document.querySelector(id);
-      console.log("clicked nav items");
       clickedNavItem.classList.add("active");
     }
   });
@@ -125,87 +126,180 @@ document
 // start technology slider
 const sliderData = [
   {
-    image: "../../assets/images/productPage/boxFrame.png", // Replace with actual image path
-    alt: "POWER CUSHION +",
-    logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
+    image: "../assets/images/productPage/tech-01.png", // Replace with actual image path
+    alt: "Box frame",
+    logo: "../assets/images/productPage/tech-01.png", // Replace with actual image path
     logoAlt: "logo_b",
-    title: "POWER CUSHION +",
+    title: "AERO+BOX Frame",
     description: [
-      "A raw egg can be dropped from 12 meters above the POWER CUSHION+ mat, rebounding to a height of 6 meters without breaking.**",
-      "<br>POWER CUSHION ™ is a trademark of Yonex Co., Ltd.",
-      "<br><span class=text-[10px]>*Research by the Japan Vehicle Inspection Association & Boken Quality Evaluation (based on JIS standards) in comparison to conventional cushioning material (EVA).**Tested by YONEX</span>",
+      "A combination of faster swing speeds and a solid feel.",
     ],
   },
 
   {
-    image: "../../assets/images/running-page/R_3D_Power_Graphite_.webp", // Replace with actual image path
+    image: "../assets/images/productPage/tech-02.png", // Replace with actual image path
+    alt: "ISOMETRIC",
+    logo: "../assets/images/productPage/isometric.png", // Replace with actual image path
+    logoAlt: "logo_b",
+    title: "ISOMETRIC",
+    imgText : "../assets/images/productPage/isometric.png",
+    description: [
+        "ISOMETRICTM technology continues to help the world’s greatest players achieve global success.",
+        "",
+        "Developed over 30 years ago, the ISOMETRICTM design increases the sweet spot by 7%*. Compared to a conventional round frame, a square-shaped ISOMETRICTM racquet generates a larger sweet spot by optimizing the intersection of the main and cross strings.",
+        "",
+        "ISOMETRICTM delivers greater control without sacrificing power. ISOMETRICTM is a Trademark of Yonex CO., LTD.",
+        "*Tested by Yonex"
+      ]
+  },
+
+  {
+    image: "../assets/images/productPage/logo_b.png", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
-    title: "3D Power Graphite",
+    title: "ROTATIONAL GENERATOR SYSTEM + 2G-NANOMESH NEO",
     description: [
-      "Incorporated from the heel to midsole to stabilize landing and reduce strain on the muscles.",
+      "By applying the counterbalance theory, weight is carefully distributed throughout the grip end, frame top and joint, enabling smooth transition between powerful shots for rapid, successive attacks.",
+    'The innovative graphite, "2G-NANOMESH NEO" used in the shaft, characterized by its quick flex and snapback, maximizes shot power and advances the performance of the Rotational Generator System.',
     ],
   },
 
   {
-    image: "../../assets/images/running-page/tec_saferun100x_1.webp", // Replace with actual image path
+    image: "../assets/images/productPage/logo_b.png", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
-    title: "msLITE X",
+    title: "POWER-ASSIST BUMPER",
     description: [
-      "The lightest midsole material in Yonex history features a thick bottom with added shock absorption.",
+      "Boosted power with a tungsten-infused weighted bumper,",
+      "adding 55%* more weight than conventional grommets.",
+      "The POWER-ASSIST BUMPER enhances the Rotational",
+      "Generator System, quickly transferring more weight to the shuttle.",
+      "*Measured by Yonex"
     ],
   },
 
   {
-    image: "../../assets/images/running-page/tec_saferun100x_2.webp", // Replace with actual image path
+    image: "../assets/images/productPage/tech-05.png", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
-    title: "Durable Skin Light",
+    title: "Super Slim Shaft",
+    imgText : "../assets/images/productPage/slim-shaft.png",
     description: [
-      "Great Fit Leaves you Light on your Feet",
-      "Combining rubber-like flexibility with the stiffness of hard plastic, the polyurethane-based Durable Skin Light lets you play light on your feet while maintaining a robust fit.",
+      "Reduced Air Resistance",
+      "Designed to slice through the air, generating speedy power.",
+    ],
+  },
+  {
+    image: "../assets/images/productPage/logo_b.png", // Replace with actual image path
+    alt: "POWER CUSHION +",
+    logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
+    logoAlt: "logo_b",
+    title: "Energy Boost CAP PLUS",
+    description: [
+      "Uniquely shaped cap which maximizes shaft performance. The front allows the shaft to flex, while the sides archshaped curve stabilizes the racquet face by preventing the shaft from twisting.",
     ],
   },
 ];
 
 function slider() {
-  // const slide = document.querySelector(".slide");
-  const slides = document.querySelectorAll(".slide");
-  const technologyMiddleImg = document.getElementById("technology-middle-img");
-  const currentSlide = document.getElementById("current-slide");
-  const slideCount = document
-    .getElementById("slide-count")
-    .querySelector("span");
-  const technologyRightTitle = document.getElementById(
-    "technology-right-title"
-  );
-  const technologyRightDescription = document.getElementById(
-    "technology-right-description"
-  );
-
-  const btnLeft = document.querySelector(".slider__btn--left");
-  const btnRight = document.querySelector(".slider__btn--right");
-  const dotContainer = document.querySelector(".dots");
-
-  let curSlide = 0;
-  const maxSlide = sliderData.length;
-  // console.log(maxSlide)
-
-  // console.log(`slide length ${slides.length}`);
-
-  const init = function () {
-    updateSlideInfo();
-    createDots(); // Create dots after slides are loaded
-    activateDot(0);
-  };
-  init();
-
-  btnRight.addEventListener("click", nextSlide);
-  btnLeft.addEventListener("click", prevSlide);
-}
-slider();
+    // const slide = document.querySelector(".slide");
+    const slides = document.querySelectorAll(".slide");
+    const technologyMiddleImg = document.getElementById("technology-middle-img");
+    const currentSlide = document.getElementById("current-slide");
+    const slideCount = document
+      .getElementById("slide-count")
+      .querySelector("span");
+    const technologyRightTitle = document.getElementById(
+      "technology-right-title"
+    );
+    const imgText = document.getElementById('img-text') 
+    const technologyRightDescription = document.getElementById(
+      "technology-right-description"
+    );
+    const btnLeft = document.querySelector(".slider__btn--left");
+    const btnRight = document.querySelector(".slider__btn--right");
+    const dotContainer = document.querySelector(".dots");
+  
+    let curSlide = 0;
+    const maxSlide = sliderData.length;
+    // console.log(maxSlide)
+  
+    // console.log(`slide length ${slides.length}`);
+  
+    const createDots = function () {
+      slides.forEach(function (_, i) {
+        // console.log(i)
+        dotContainer.insertAdjacentHTML(
+          "beforeend",
+          `<button class="dots__dot" data-slide="${i}"></button>`
+        );
+      });
+    };
+  
+    const activateDot = function (slide) {
+      document
+        .querySelectorAll(".dots__dot")
+        .forEach((dot) => dot.classList.remove("dots__dot--active"));
+  
+      document
+        .querySelector(`.dots__dot[data-slide="${slide}"]`)
+        .classList.add("dots__dot--active");
+    };
+  
+    const updateSlideInfo = () => {
+      const data = sliderData[curSlide];
+      console.log(data);
+      technologyMiddleImg.setAttribute("src", data.image);
+      technologyMiddleImg.setAttribute("alt", data.alt);
+      technologyRightTitle.textContent = data.title;
+      imgText.setAttribute('src',data.imgText); 
+      technologyRightDescription.innerHTML = ""; // Clear previous content
+  
+      data.description.forEach((desc) => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = desc;
+        paragraph.classList.add("mb-[1.1rem]");
+        technologyRightDescription.appendChild(paragraph);
+      });
+  
+      currentSlide.textContent = "0" + (curSlide + 1);
+      slideCount.textContent = maxSlide;
+    };
+  
+    const nextSlide = () => {
+      if (curSlide === maxSlide - 1) {
+        curSlide = 0;
+      } else {
+        curSlide++;
+      }
+      // curSlide = (curSlide + 1) % maxSlide;
+      updateSlideInfo();
+      activateDot(curSlide); // Update total slide count
+    };
+  
+    const prevSlide = () => {
+      if (curSlide === 0) {
+        curSlide = maxSlide - 1;
+      } else {
+        curSlide--;
+      }
+      // curSlide = (curSlide - 1 + maxSlide) % maxSlide;
+      updateSlideInfo();
+      activateDot(curSlide);
+    };
+  
+    const init = function () {
+      updateSlideInfo();
+      createDots(); // Create dots after slides are loaded
+      activateDot(0);
+    };
+    init();
+  
+    btnRight.addEventListener("click", nextSlide);
+    btnLeft.addEventListener("click", prevSlide);
+  }
+  slider();
 // end technology slider
