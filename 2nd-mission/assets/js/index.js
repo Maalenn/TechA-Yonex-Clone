@@ -1,27 +1,4 @@
-// Sport card object
-const arrObj = [
-    {
-        img: "https://www.yonex.com/media/catalog/category/NANOFLARE_800.png",
-        title: "BADMINTON",
-        link: ""
-    },
-    {
-        img: "https://www.yonex.com/media/catalog/category/ezone-100.png",
-        title: "TENNIS",
-        link: ""
-    },
-    {
-        img: "https://www.yonex.com/media/catalog/category/EZONE_GT_d_ts_Head.png",
-        title: "GOLF"
-    },
-    {
-        img: "https://www.yonex.com/media/catalog/category/Carbon-Cruise-Aerus.png",
-        title: "RUNNING",
-        link: ""
-        
-    },
-    
-]
+
 // Badminton object
 const badmintonObj = [
     {
@@ -63,7 +40,7 @@ const badmintonObj = [
     {
         img: "../assets/images/badminton-images/athletes_240306.webp",
         title: "ATHLETES",
-        link: "/2nd-mission/public/athletes.html"
+        link: "../public/athletes.html"
     },
 ]
 // golfobj
@@ -171,6 +148,33 @@ const snowboardObj = [
         img: "../assets/images/snowboard-images/skate-glove.webp",
         title: "ACCESSORIES",
         link: ""
+    },
+]
+// about obj
+const aboutObj=[
+    {
+        title: "ABOUT US",
+        link: "./about-page/about-us.html",
+    },
+    {
+        title: "YONEX GROUP",
+        link: "./about-page/yonex-group.html",
+    },
+    {
+        title: "YONEX DISTRIBUTOR",
+        link: "./about-page/yonex-distributors.html",
+    },
+    {
+        title: "INVESTOR RELATION",
+        link: "",
+    },
+    {
+        title: "PRODUCT CATALOGS",
+        link: "",
+    },
+    {
+        title: "MADE BY YONEX",
+        link: "",
     },
 ]
 // Sports card component
@@ -287,6 +291,22 @@ class SnowboardComponent extends HTMLElement {
 }
 customElements.define("snowboard-component", SnowboardComponent);
 
+class AboutComponent extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML = `
+        <div class="flex justify-center gap-4 max-w-[1600px] items-center w-[900px] flex-1 ">
+        ${aboutObj.map((card) => {
+            return `
+                <div class="flex  items-center justify-center ">
+                    <a href="${card.link}">${card.title}</a>
+                </div>
+            `
+        }).join("")}
+        </div>
+        `
+    }
+}
+customElements.define('about-component', AboutComponent);
 // badminton
 function hoverDrop(){
     document.querySelector('#baminton').classList.toggle('hidden')
@@ -449,4 +469,14 @@ function showSlidesRecent() {
     slides[slideIndexRecent-1].style.display = "flex";  
     dots[slideIndexRecent-1].className += " active";
     setTimeout(showSlidesRecent, 4000);
+}
+
+// functions for slider3 
+let currentSlide3 = 0;
+function pushArrow2(n) {
+  const carousel = document.querySelector(" .slideShow2");
+  const images = carousel.querySelectorAll(".slide-list2");
+  const imageWidth = images[0].clientWidth;
+  currentSlide3 = Math.max(0, Math.min(currentSlide3 + n, images.length - 1));
+  carousel.scrollTo({ left: currentSlide3 * imageWidth, behavior: "smooth" });
 }
