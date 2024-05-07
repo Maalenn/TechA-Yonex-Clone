@@ -32,145 +32,145 @@ const badmintonObj = [
     },
     {
         img: "../assets/images/badminton-images/strings_240306.webp",
-        title: "STRINGS"
-        
+        title: "STRINGS",
+        link: ""
     },
     {
         img: "../assets/images/badminton-images/shuttlecocks_img.webp",
-        title: "SHUTTLECOCKS"
-        
+        title: "SHUTTLECOCKS",
+        link: ""
     },
     {
         img: "../assets/images/badminton-images/10566_011_520x320.webp",
-        title: "APPAREL"
-        
+        title: "APPAREL",
+        link: ""
     },
     {
         img: "../assets/images/badminton-images/shoes_240306.webp",
-        title: "SHOES"
-        
+        title: "SHOES",
+        link: ""
     },
     {
         img: "../assets/images/badminton-images/bag.webp",
-        title: "BAGS"
-        
+        title: "BAGS",
+        link: ""
     },
     {
         img: "../assets/images/badminton-images/accessories_img2.webp",
-        title: "ACCESSORIES"
-        
+        title: "ACCESSORIES",
+        link: ""
     },
     {
         img: "../assets/images/badminton-images/athletes_240306.webp",
-        title: "ATHLETES"
-        
+        title: "ATHLETES",
+        link: "/2nd-mission/public/athletes.html"
     },
 ]
 // golfobj
 const golfObj = [
     {
         img: "../assets/images/golf-images/thm_club_ezone.webp",
-        title: "CLUBS"
-        
+        title: "CLUBS",
+        link: ""
     },
     {
         img: "../assets/images/golf-images/Mega-Menu-Golf-Shaft_1.webp",
-        title: "SHAFTS"
-        
+        title: "SHAFTS",
+        link: ""
     },
     {
         img: "../assets/images/golf-images/Mega-Golf-Bag.webp",
-        title: "GEAR"
-        
+        title: "GEAR",
+        link: ""
     },
     {
         img: "../assets/images/golf-images/golf-athletes.webp",
-        title: "ATHLETES"
-        
+        title: "ATHLETES",
+        link: ""
     }
 ]
 // tennisobj
 const tennisObj = [
     {
         img: "../assets/images/tennis-images/raquet-tennis.webp",
-        title: "RAQUEST"
-        
+        title: "RAQUEST",
+        link: ""
     },
     {
         img: "../assets/images/tennis-images/strings-tennis.webp",
-        title: "SHAFTS"
-        
+        title: "SHAFTS",
+        link: ""
     },
     {
         img: "../assets/images/tennis-images/tennis-ball.webp",
-        title: "BALLS"
-        
+        title: "BALLS",
+        link: ""
     },
     {
         img: "../assets/images/tennis-images/apparel-tennis.webp",
-        title: "APPAREL"
-        
+        title: "APPAREL",
+        link: ""
     },
     {
         img: "../assets/images/tennis-images/shoes-tennis.webp",
-        title: "SHOES"
-        
+        title: "SHOES",
+        link: ""
     },
     {
         img: "../assets/images/tennis-images/tennis_Bag_.webp",
-        title: "BAGS"
-        
+        title: "BAGS",
+        link: ""
     },
     {
         img: "../assets/images/tennis-images/accessories-tennis.webp",
-        title: "ACCESSORIES"
-        
+        title: "ACCESSORIES",
+        link: ""
     },
     {
         img: "../assets/images/tennis-images/tennis-athlete.webp",
-        title: "ATHLETES"
-        
+        title: "ATHLETES",
+        link: ""
     },
 ]
 // runningobj
 const runningObj = [
     {
         img: "../assets/images/running-images/shoe-orange.webp",
-        title: "MEN"
-        
+        title: "MEN",
+        link: ""
     },
     {
         img: "../assets/images/running-images/shoe-white.webp",
-        title: "WOMEN"
-        
+        title: "WOMEN",
+        link: ""
     },
     {
         img: "../assets/images/running-images/shoe-brown.webp",
-        title: "UNISEX"
-        
+        title: "UNISEX",
+        link: ""
     },
 ]
 // snowboardobj
 const snowboardObj = [
     {
         img: "../assets/images/snowboard-images/skate.webp",
-        title: "BOARD"
-        
+        title: "BOARD",
+        link: ""
     },
     {
         img: "../assets/images/snowboard-images/skate-shoe.webp",
-        title: "BOOT & BINDING"
-        
+        title: "BOOT & BINDING",
+        link: ""
     },
     {
         img: "../assets/images/snowboard-images/skate-coat.webp",
-        title: "APPAREL"
-        
+        title: "APPAREL",
+        link: ""
     },
     {
         img: "../assets/images/snowboard-images/skate-glove.webp",
-        title: "ACCESSORIES"
-        
+        title: "ACCESSORIES",
+        link: ""
     },
 ]
 // Sports card component
