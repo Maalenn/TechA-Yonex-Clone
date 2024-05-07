@@ -5,3 +5,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* dot active for product  */
+.dot-active{
+    @apply border border-[#1f2427] w-[24px] h-[24px] rounded-full
+  }
+  
+  .dot-nav {
+    @apply bg-[#adadad] rounded-full w-[6px] h-[6px];
+  }
+  
+  
+  /* start sticky nav container in Running Page  */
+  .nav-sticky {
+    @apply !fixed;
+    @apply z-10;
+    @apply top-0;
+  }
+  
+  .sticky-nav-element::after{
+    @apply bg-[#006cb7];
+    @apply content-[''];
+    @apply block;
+    @apply h-[2px];
+    @apply absolute;
+    @apply right-0;
+    @apply w-full;
+    @apply mt-[32px];
+    @apply max-lg:mt-[13px]
+  }
+  
+  .active{
+    @apply text-[#1f2427];
+  }
+  
+  .sticky-nav-element-active::after {
+    animation: line-appear 0.2s ease-in-out;
+  }
+  /* end sticky nav container in Running Page  */
