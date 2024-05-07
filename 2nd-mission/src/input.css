@@ -22,6 +22,7 @@
     scrollbar-width: none;  /* Firefox */
 }
 
+
 /* dot active for product  */
 .dot-active{
   @apply border border-[#1f2427] w-[24px] h-[24px] rounded-full
@@ -59,3 +60,107 @@
   animation: line-appear 0.2s ease-in-out;
 }
 /* end sticky nav container in Running Page  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button {
+    background: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .page-btn {
+    color: #2c303a;
+    height: 35px;
+    border-radius: 2px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: background 0.3s ease;
+    margin: 0 2px
+  }
+  
+  .page-btn:first-of-type {
+    margin-left: 0;
+  }
+  
+  .page-btn:last-of-type {
+    margin-right: 0;
+  }
+  
+  .page-btn:not([class$="-page"]) {
+    width: 35px;
+  }
+  
+  .pagination-buttons {
+    display: flex;
+    justify-content: end;
+    padding: 0px 100px;
+    margin-bottom: 200px;
+  }
+  
+  .page-btn[class*="-page"] {
+    font-size: 0.6em;
+    font-weight: 700;
+  }
+  
+  .page-btn.active {
+    background: black;
+    color: #fff;
+  }
+  
+  .page-btn[disabled] {
+    opacity: 0.3;
+  }
+  .prev-page, .next-page{
+    font-size: 20px !important;
+    color: rgb(163, 158, 158) !important;
+  }
+>>>>>>> feature/26-clickable-pagination
