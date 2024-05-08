@@ -7,8 +7,155 @@
   <link rel="stylesheet" href="../assets/css/styles.css">
   <!-- CDN tailwind link -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .slider {
+      max-width: 100rem;
+      height: 50rem;
+      margin: 0 auto;
+      position: relative;
+
+      /* IN THE END */
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 50rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      /* THIS creates the animation! */
+      /* transition: transform 1s; */
+    }
+
+    .slide > img {
+      /* Only for images that have different size than slide */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* .slider__btn {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+
+      border: none;
+      font-family: inherit;
+      color: #333;
+      border-radius: 50%;
+      height: 5.5rem;
+      width: 5.5rem;
+      font-size: 3.25rem;
+      cursor: pointer;
+    }
+
+    .slider__btn--left {
+      left: 6%;
+      transform: translate(-50%, -50%);
+    }
+
+    .slider__btn--right {
+      right: 6%;
+      transform: translate(50%, -50%);
+    } */
+
+    .dots::before {
+      content: "";
+      background-color: #737a7e;
+      height: 99%;
+      left: 48%;
+      position: absolute;
+      width: 2px;
+      z-index: -1;
+    }
+
+    /* .dots {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+    } */
+
+    .dots__dot {
+      /* border: none;
+      background-color: #b9b9b9;
+      opacity: 0.7;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      margin-right: 1.75rem;
+      cursor: pointer;
+      transition: all 0.5s; */
+
+      background: radial-gradient(
+        closest-side,
+        #737a7e 35%,
+        rgba(0, 0, 0, 0) 0%
+      );
+      border-radius: 50%;
+      content: "";
+      height: 36px;
+      width: 36px;
+
+      /* Only necessary when overlying images */
+      /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+    }
+
+    .dots__dot:last-child {
+      margin: 0;
+    }
+
+    .dots__dot--active {
+      background-color: #fff;
+      background-color: #888;
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #006cb7;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 7px rgba(0, 108, 183, 0.4);
+      color: #fff;
+      font-weight: 700;
+      height: 36px;
+      width: 36px;
+      padding: 5px;
+    }
+
+    .add-compare::before {
+      border: 1px solid #737a7e;
+      position: relative;
+      bottom: 0;
+      left: -25px;
+      background: transparent;
+      border-radius: 3px;
+      content: "";
+      display: inline-block;
+      height: 15px;
+      width: 19px;
+    }
+
+    .add-compare::after {
+      border: 1px dashed #737a7e;
+      position: absolute;
+      left: -20px;
+      background: transparent;
+      border-radius: 3px;
+      content: "";
+      display: inline-block;
+      height: 15px;
+      width: 19px;
+    }
+  </style>
 </head>
-<body class="box-border font-oswald m-0 p-0">
+<body class="box-border font-oswald m-0 p-0 h-[200vh]">
     <!-- start image zoom -->
     <div id="imgZoom" class="w-full h-screen fixed top-0 left-0 bg-white hidden z-50 cursor-zoom-in">
         <div class="relative">
@@ -55,7 +202,7 @@
     </ul>
     <!--start main page -->
     <main class=" max-w-[625px] md:max-w-[1280px] mx-auto px-5 h-screen">       
-        <div class="box-border md:flex justify-between gap-3 ">
+        <div class="box-border md:flex justify-between gap-3 product-card mb-[20rem] max-md:mb-[5rem] " id="product-description">
             <!-- image container left-side-->
             <div id="imageClick" onclick="showImg()" class="w-[600px] max-w-[90%] mx-auto relative block cursor-zoom-in ">
                 <img class="max-w-full  top-[50%] " src="../assets/images/productPage/Astrox88.png" alt="Astrox88 Raq">
@@ -145,7 +292,156 @@
                 <!-- end icon container -->                       
             </div>
             <!-- end product detail right-side -->
-        </div>       
+        </div>
+        <!-- start sticky nav container  -->
+        <div
+      class="sticky-nav-container bg-white z-[2] h-[90px] px-[60px] w-full flex items-center justify-center border absolute left-0 max-lg:p-0 max-lg:h-[50px]"
+    >
+      <div class="navigation-bar flex justify-between items-center flex-1">
+        <div
+          class="product-name text-[#1f2427] text-[20px] uppercase tracking-widest max-lg:hidden"
+        >
+          <span class="">SAFERUN 100X MEN</span>
+        </div>
+        <ul
+          class="sticky-nav-elements flex flex-1 items-center justify-around h-full mx-auto max-w-[700px]"
+        >
+          <li>
+            <a
+              href="#product-description"
+              class="sticky-nav-element text-[#6e7677] relative uppercase transition duration-600 ease-linear"
+              >Discription</a
+            >
+          </li>
+          <li>
+            <a
+              href="#product-technology"
+              class="sticky-nav-element text-[#6e7677] relative uppercase transition duration-600 ease-linear"
+              >Technology</a
+            >
+          </li>
+        </ul>
+      </div>
+      <a
+        class="add-compare relative w-[11%] min-w-[130px] mx-[25px] max-lg:hidden text-nowrap"
+      >
+        <span
+          class="text-[#595959] text-[15px] font-bold relative capitalize font-['Lato']"
+          >Add To Compare</span
+        >
+      </a>
+        </div>
+        <!-- start technology -->
+        <div
+        class="slider technology pt-[200px] flex justify-between max-md:block max-md:h-[67rem]"
+        id="product-technology"
+        >
+        <!-- technology left side dot nav  -->
+        <div
+        class="tech-left absolute z-10 flex flex-col justify-center min-h-[600px] w-[50px] max-md:hidden"
+        >
+        <!-- navigation toggle -->
+        <!-- <div
+                class="dots technology-left-navigation flex flex-col items-center justify-between relative min-h[250px] before:content-[''] before:bg-[#737a7e] before:h-[99%] before:left-[48%] before:absolute before:w-[2px] before:-z-1">
+                <div class="navigation-dot active-technology-dot">01</div>
+            </div> -->
+
+        <div
+            class="dots technology-left-navigation flex flex-col items-center justify-between relative min-h-[250px]"
+        >
+            <!-- <div class="dots__dot--active">01</div> -->
+        </div>
+        </div>
+        <!-- technology left side dot nav -->
+
+        <!-- <button class="dots__dot dots_dot--active" data-slide="1">01</button> -->
+        <div
+        class="slide absolute w-full flex items-center justify-center max-md:block max-md:relative"
+        >
+        <!-- middle content  -->
+        <div
+            class="tech-middle w-[calc(50%-50px)] flex justify-center max-md:w-full"
+        >
+            <div class="technology-middle-img-wrapper relative">
+            <img
+                class="technology-middle-img h-auto min-w-full"
+                id="technology-middle-img"
+                alt="POWER CUSHION +"
+            />
+            </div>
+        </div>
+        <!-- middle content  -->
+
+        <!-- right content  -->
+        <div
+            class="tech-right w-[50%] relative flex flex-col pl-5 max-md:w-[100%]"
+        >
+            <div
+            class="tech-right-numbers text-[#f7f8f9] flex font-extrabold absolute font-['Lato'] max-md:hidden"
+            style="z-index: -1"
+            >
+            <div
+                class="technology-right--numbers-current--slide text-[190px] leading-[150px] text-[#f7f8f9] font-bold"
+                id="current-slide"
+            >
+                01
+            </div>
+            <div
+                class="technology-right--numbers-slide--count text-[24px] text-[#f7f8f9] font-bold"
+                id="slide-count"
+            >
+                / 0
+                <span></span>
+            </div>
+            </div>
+
+            <div
+            class="tech-right-content ml-[125px] max-w-[300px] max-md:w-full max-md:ml-0 max-md:max-w-full max-md:text-center max-md:absolute "
+            >
+            <img
+                src="../assets/images/running-page/logo_b.png"
+                alt="logo_b"
+                class="technology__right__content__image max-w-full h-auto"
+            />
+            <img id="img-text" src="../assets/images/productPage/isometric.png" alt="">
+            <h3
+                class="tech-right-content-title text-[#1f2427] text-[26px] font-normal tracking-[3px] mt-[2.2rem] mb-[1.1rem] font-Oswald"
+                id="technology-right-title"
+            >
+                POWER CUSHION +
+            </h3>
+            <div
+                class="tech-right-content-description text-[#595959] text-[16px] font-['Lato'] leading-relaxed"
+                id="technology-right-description"
+            >
+                <p class="mb-[1rem]"></p>
+                <p class="mb-[1rem]"></p>
+                <p class="mb-[1rem]"><span class="text-[10px] sm-description"></span></p>
+            </div>
+            </div>
+        </div>
+        <!-- right content  -->
+
+
+        </div>
+        <!-- arrow nav  -->
+        <div
+            class="tech-right-navigation ml-[125px] flex items-end flex-1 pt-[150px] pb-[70px] max-md:ml-0 max-md:pt-0 absolute left-[50%] top-[70%] max-md:top-[90%] max-md:left-[40%]"
+        >
+            <button
+            class="slider__btn slider__btn--left relative h-[40px] w-[50px] mr-[10px] bg-white border border-[#e0e0e0] flex justify-center items-center"
+            >
+            <img src="../assets/images/running-page/carrot_L.svg" alt="" />
+            </button>
+            <button
+            class="slider__btn slider__btn--right relative h-[40px] w-[50px] mr-[10px] bg-white border border-[#e0e0e0] flex justify-center items-center"
+            >
+            <img src="../assets/images/running-page/carrot_R.svg" alt="" />
+            </button>
+        </div>
+        </div>
+    <!-- arrow nav  -->
+    <!-- end sticky nav container  -->    
     </main>
     <!-- end main page -->
     <!-- start modal -->
@@ -202,7 +498,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section> 
     <!--end modal  -->
