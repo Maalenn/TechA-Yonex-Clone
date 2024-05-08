@@ -414,9 +414,11 @@
 
     <!-- menu link -->
     <ul
-      class="hidden sm:w-[50%] sm:px-5 sm:flex sm:my-[23px] sm:text-[12px] sm:gap-4 sm:font-sans"
+      class="hidden sm:w-[50%] sm:px-5 sm:flex sm:my-[23px] sm:text-[12px] sm:gap-4 sm:font-sans pt-[40px]"
     >
-      <li class="text-primary-100 hover:underline"><a href="">Home</a></li>
+      <li class="text-primary-100 hover:underline">
+        <a href="../index.html">Home</a>
+      </li>
       <p>/</p>
       <li class="text-primary-100 hover:underline"><a href="">Badminton</a></li>
       <p>/</p>
@@ -599,21 +601,21 @@
               </a>
             </div>
           </div>
-          <div class="">
-            <button
-              class="flex justify-between w-full relative mt-[30px] pt-[13px] pb-[15px]"
-            >
-              <span class="font-semibold uppercase text-[14px]">Specs</span>
-              <div
-                class="w-[15px] h-[1px] bg-black absolute right-8 top-6"
-              ></div>
-            </button>
-          </div>
+          <button class="specsBtn flex justify-between w-full relative mt-[60px] pt-[13px] pb-[15px]">
+            <span class="font-semibold uppercase text-[14px]">Specs</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="minusIcon w-4 h-6 absolute right-3 top-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+            </svg> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="plusIcon w-4 h-6 hidden absolute right-3 top-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+            
+        </button> 
 
           <!-- start product detail card -->
 
           <div
-            class="h-[362px] text-[14px] font-sans bg-white border-[1px] text-secondary-400 mb-6"
+            class="detailCard h-[362px] text-[14px] font-sans bg-white border-[1px] text-secondary-400 mb-6"
           >
             <table class="table-fixed w-[284px]">
               <tbody>
@@ -663,7 +665,7 @@
             <a class="flex gap-2 hover:underline" href="">
               <img
                 class="w-[30px] h-[27px]"
-                src="../assets/image/icon/compare.svg"
+                src="../../assets/images/icon/compare.svg"
                 alt=""
               />
               <span class="">Add to compare</span>
@@ -677,21 +679,21 @@
             <a href="">
               <img
                 class="w-[30px] h-[30px]"
-                src="../assets/image/icon/icon-facebook.svg"
+                src="../../assets/images/icon/icon-facebook.svg"
                 alt=""
               />
             </a>
             <a class="" href="">
               <img
                 class="w-[30px] h-[30px]"
-                src="../assets/image/icon/icon-twitter.svg"
+                src="../../assets/images/icon/icon-twitter.svg"
                 alt=""
               />
             </a>
             <a href="">
               <img
                 class="w-[30px] h-[30px]"
-                src="../assets/image/icon/icon-link.svg"
+                src="../../assets/images/icon/icon-link.svg"
                 alt=""
               />
             </a>
@@ -854,6 +856,202 @@
       <!-- end technology -->
     </main>
     <!-- end product detail in running page  -->
+
+    <!-- start modal -->
+    <section
+      id="modal"
+      class="w-full h-full absolute top-[20%] flex justify-center hidden"
+    >
+      <!-- modal -->
+      <div
+        class="modal bg-white max-w-[710px] max-h-[1835px] md:max-h-[719px] relative"
+      >
+        <!--x button -->
+        <button
+          id="xBtn"
+          class="bg-white absolute right-[-40px] top-[-40px] z-10 w-[30px] h-[30px] rounded-full flex items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <div class="px-[30px] pb-[30px] flex flex-col gap-5">
+          <!-- upper content -->
+          <div
+            class="flex flex-col md:flex-row md:justify-between font-semibold uppercase my-[35px]"
+          >
+            <div class="flex flex-col items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 490 490"
+                width="25"
+                height="25"
+                fill="#F5EB43"
+              >
+                <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path>
+              </svg>
+              <span>Main start</span>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 512 512"
+                width="25"
+                height="25"
+                fill="#F5EB43"
+              >
+                <path
+                  d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"
+                ></path>
+              </svg>
+              <span>Main tie off</span>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 490 490"
+                width="25"
+                height="25"
+                fill="#c5d0db"
+              >
+                <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path>
+              </svg>
+              <span>Cross Start</span>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 512 512"
+                width="25"
+                height="25"
+                fill="#c5d0db"
+              >
+                <path
+                  d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"
+                ></path>
+              </svg>
+              <span>Cross Tie off</span>
+            </div>
+          </div>
+          <!-- bottom content -->
+          <div class="flex flex-col md:flex-row md:justify-between font-oswald">
+            <div class="flex flex-col">
+              <h3
+                class="mb-[11px] mt-[22px] font-extrabold text-[24px] uppercase"
+              >
+                Astrox 88 D game
+              </h3>
+              <table>
+                <td class="p-[11px] border">
+                  <h5 class="my-[22px] font-semibold uppercase">
+                    Main tie off:
+                  </h5>
+                  <p class="font-sans text-[14px] text-secondary-200">b8, B8</p>
+                </td>
+                <td class="p-[11px] border">
+                  <h5 class="my-[22px] font-semibold uppercase">
+                    Cross tie off:
+                  </h5>
+                  <p class="font-sans text-[14px] text-secondary-200">A5</p>
+                </td>
+              </table>
+              <h4 class="my-[18px] font-bold text-[18px] uppercase">Mains</h4>
+              <p class="font-sans text-[14px] text-secondary-200">
+                Start from top center, keep on stringing until B9 (skip A7, A9 &
+                A11). Go through B12, directly to A16, and then straight to A14,
+                down to B10 and tie off at B8. (Opposite side: the same
+                procedure).
+              </p>
+              <h4 class="my-[18px] font-bold text-[18px] uppercase">Crosses</h4>
+              <p class="font-sans text-[14px] text-secondary-200">
+                Make a knot at B6 and start crosses from B9. Keep on stringing
+                until A7 (skip A12 & A10), then directly to A5 and tie off .
+              </p>
+            </div>
+            <div class="shrink-0">
+              <img
+                src="../assets/images/productPage/stringDetail.png"
+                class="md:w-[345px] md:h-[527px]"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end modal  -->
+
+    <section id="modal" class=" w-full h-full absolute top-[20%] flex justify-center hidden">                
+        <!-- modal -->
+        <div class="modal bg-white max-w-[710px] max-h-[1835px] md:max-h-[719px] relative">
+            <!--x button -->
+            <button id="xBtn" class="bg-white absolute right-[-40px] top-[-40px] z-10 w-[30px] h-[30px] rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>                      
+            </button>
+            <div class="px-[30px] pb-[30px] flex flex-col gap-5">
+                <!-- upper content -->
+                <div class="flex flex-col md:flex-row md:justify-between font-semibold uppercase my-[35px]">
+                    <div class="flex flex-col items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" width="25" height="25" fill="#F5EB43"> <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path> </svg>
+                        <span>Main start</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" width="25" height="25" fill="#F5EB43"> <path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"></path> </svg>
+                        <span>Main tie off</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" width="25" height="25" fill="#c5d0db"> <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path></svg>
+                        <span>Cross Start</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" width="25" height="25" fill="#c5d0db"> <path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"></path> </svg>
+                        <span>Cross Tie off</span>
+                    </div>
+                </div>
+                <!-- bottom content -->
+                <div class="flex flex-col  md:flex-row md:justify-between font-oswald">
+                    <div class="flex flex-col">
+                        <h3 class="mb-[11px] mt-[22px] font-extrabold text-[24px] uppercase">Astrox 88 D game</h3>
+                        <table>
+                            <td class="p-[11px] border">
+                                <h5 class="my-[22px] font-semibold uppercase">Main tie off:</h5>
+                                <p class="font-sans text-[14px] text-secondary-200">b8, B8</p>
+                            </td>
+                            <td class="p-[11px] border ">
+                                <h5 class="my-[22px] font-semibold uppercase">Cross tie off:</h5>
+                                <p class="font-sans text-[14px] text-secondary-200 ">A5</p>
+                            </td>
+                        </table>
+                        <h4 class="my-[18px] font-bold text-[18px] uppercase">Mains</h4>
+                        <p class="font-sans text-[14px] text-secondary-200">Start from top center, keep on stringing until B9 (skip A7, A9 & A11). Go through B12, directly to A16, and then straight to A14, down to B10 and tie off at B8. (Opposite side: the same procedure).</p>
+                        <h4 class="my-[18px] font-bold text-[18px] uppercase">Crosses</h4>
+                        <p class="font-sans text-[14px] text-secondary-200">Make a knot at B6 and start crosses from B9. Keep on stringing until A7 (skip A12 & A10), then directly to A5 and tie off .</p>
+                    </div>
+                    <div class="shrink-0">
+                        <img src="../assets/images/productPage/stringDetail.png" class="md:w-[345px] md:h-[527px]" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!--end modal  -->
 
     <!-- Start Footer -->
     <my-footer></my-footer>
