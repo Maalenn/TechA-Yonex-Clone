@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running - Product detail</title>
+
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .slider {
+        max-width: 100rem;
+        height: 50rem;
+        margin: 0 auto;
+        position: relative;
+
+        /* IN THE END */
+        overflow: hidden;
+      }
+
+      .slide {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 50rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* THIS creates the animation! */
+        /* transition: transform 1s; */
+      }
+
+      .slide > img {
+        /* Only for images that have different size than slide */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* .slider__btn {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+
+        border: none;
+        font-family: inherit;
+        color: #333;
+        border-radius: 50%;
+        height: 5.5rem;
+        width: 5.5rem;
+        font-size: 3.25rem;
+        cursor: pointer;
+      }
+
+      .slider__btn--left {
+        left: 6%;
+        transform: translate(-50%, -50%);
+      }
+
+      .slider__btn--right {
+        right: 6%;
+        transform: translate(50%, -50%);
+      } */
+
+      .dots::before {
+        content: "";
+        background-color: #737a7e;
+        height: 99%;
+        left: 48%;
+        position: absolute;
+        width: 2px;
+        z-index: -1;
+      }
+
+      /* .dots {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+      } */
+
+      .dots__dot {
+        /* border: none;
+        background-color: #b9b9b9;
+        opacity: 0.7;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        margin-right: 1.75rem;
+        cursor: pointer;
+        transition: all 0.5s; */
+
+        background: radial-gradient(
+          closest-side,
+          #737a7e 35%,
+          rgba(0, 0, 0, 0) 0%
+        );
+        border-radius: 50%;
+        content: "";
+        height: 36px;
+        width: 36px;
+
+        /* Only necessary when overlying images */
+        /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+      }
+
+      .dots__dot:last-child {
+        margin: 0;
+      }
+
+      .dots__dot--active {
+        background-color: #fff;
+        background-color: #888;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #006cb7;
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 7px rgba(0, 108, 183, 0.4);
+        color: #fff;
+        font-weight: 700;
+        height: 36px;
+        width: 36px;
+        padding: 5px;
+      }
+
+      .add-compare::before {
+        border: 1px solid #737a7e;
+        position: relative;
+        bottom: 0;
+        left: -25px;
+        background: transparent;
+        border-radius: 3px;
+        content: "";
+        display: inline-block;
+        height: 15px;
+        width: 19px;
+      }
+
+      .add-compare::after {
+        border: 1px dashed #737a7e;
+        position: absolute;
+        left: -20px;
+        background: transparent;
+        border-radius: 3px;
+        content: "";
+        display: inline-block;
+        height: 15px;
+        width: 19px;
+      }
+    </style>
+  </head>
+  <body class="font-Oswald">
+    <!-- Start Navbar -->
+    <div
+      class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]"
+      id="overlay-blur"
+    ></div>
+    <nav
+      class="w-full  md:bg-white md:bg-opacity-40 absolute text-[#33333] hover:bg-white hover:text-black bg-white border border-1 top-0 z-50"
+    >
+      <div
+        class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10"
+      >
+        <!-- Hamburger Icons -->
+        <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()">
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+        </div>
+
+        <!-- Logo -->
+        <div>
+          <a href="index.html"
+            ><img
+              src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
+              alt=""
+              class="w-[140px] Logo ml-3 py-3"
+          /></a>
+          <p class="my-0 text-xs text-center hidden md:block">
+            far beyond ordinary
+          </p>
+        </div>
+
+        <!-- Center Navigation -->
+        <div
+          class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]"
+        >
+          <!-- Badminton Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="hoverDrop()"
+            onmouseleave="hoverHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+              >BADMINTON</a
+            >
+            <!-- Badminton section -->
+            <section
+              class="w-full bg-white p-[40px] absolute top-[100px] hidden z-[10000] left-0"
+              id="baminton"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <badminton-component></badminton-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Golf Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="golfDrop()"
+            onmouseleave="golfHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+              >GOLF</a
+            >
+            <!-- Golf section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] hidden h-[220px] z-[10000] left-0"
+              id="golf"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <golf-component></golf-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Tennis Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="tennisDrop()"
+            onmouseleave="tennisHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+              >TENNIS</a
+            >
+            <!-- Tennis section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
+              id="tennis"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <tennis-component></tennis-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- running Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="runningDrop()"
+            onmouseleave="runningHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+              >RUNNING</a
+            >
+            <!-- running section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] h-[220px] hidden z-[10000] left-0"
+              id="running"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <running-component></running-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- snowboard Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="snowboardDrop()"
+            onmouseleave="snowboardHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+              >SNOWBOARDING</a
+            >
+            <!-- snowboard section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] justify-center hidden z-[10000] left-0 h-[380px]"
+              id="snowboard"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div
+                  class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3"
+                >
+                  <snowboard-component></snowboard-component>
+                  <div class="block">
+                    <div
+                      class="flex flex-col items-center justify-center w-[223px]"
+                    >
+                      <a href="" class="bg-[#f7f8f9]"
+                        ><img
+                          src="../assets/images/snowboard-images/skate-athlete.webp"
+                          alt=""
+                      /></a>
+                      <p class="font-semibold text-[14px] text-black">TEAM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="cursor-pointer hover:opacity-80 h-[30px]">
+            <a href="" class="pt-[10px]">NEWS</a>
+          </div>
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="aboutDrop()"
+            onmouseleave="aboutHide()"
+          >
+            <a
+              href="tech-a-project/2nd-mission/public/about-page/about-us.html"
+              class="group-hover:opacity-80 relative top-[7%]"
+              >ABOUT</a
+            >
+            <!-- about section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
+              id="about"
+            >
+              <div
+                id="HoverBox"
+                class="max-w-[1600px] mx-auto flex justify-center"
+              >
+                <about-component></about-component>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="inline-block cursor-pointer md:hidden mr-3">
+          <img
+            src="../assets/images/icons/search-interface-symbol (1).png"
+            alt=""
+            class="size-[20px]"
+          />
+        </div>
+        <div class="w-[120px] fill-slate-100 items-center gap-3 md:flex hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 mb-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 mb-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+
+          <img
+            src="../assets/images/icons/accessibility_icon.svg"
+            alt=""
+            class="size-[50px] cursor-pointer mb-[7.5px]"
+          />
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start SideBar -->
+    <my-sidebar></my-sidebar>
+    <!-- End Sidebar -->
+
+    <!-- start product detail in running page  -->
+
+    <!-- background wrapper in product section -->
+    <div class="mb-[100px]">
+      <div
+        class="absolute z-[-1] h-[1100px] bg-800 left-0 top-0 bg-[#f7f8f9] md:w-[70%] w-full"
+      ></div>
+    </div>
+    <!-- background wrapper in product section -->
+
+    <!-- menu link -->
+    <ul
+      class="hidden sm:w-[50%] sm:px-5 sm:flex sm:my-[23px] sm:text-[12px] sm:gap-4 sm:font-sans pt-[40px]"
+    >
+      <li class="text-primary-100 hover:underline">
+        <a href="../index.html">Home</a>
+      </li>
+      <p>/</p>
+      <li class="text-primary-100 hover:underline"><a href="">Badminton</a></li>
+      <p>/</p>
+      <li class="uppercase">ASTROX 88 Play</li>
+    </ul>
+    <!-- menu link -->
+    <main class="max-w-[1280px] mx-auto px-5">
+      <!-- start product detail container  -->
+      <div
+        class="product-card box-border md:flex justify-between gap-3 mb-[20rem] max-md:mb-[5rem]"
+        id="product-description"
+      >
+        <!-- product image - small vertical  -->
+        <div class="absolute inline-block z-10 max-md:hidden">
+          <div class="vertical-product-img">
+            <img
+              class="top-[50%] h-auto w-full object-cover"
+              src="../../assets/images/running-page/shr100xm_440_1 (1).webp"
+              alt="shr100xm_440_1"
+            />
+          </div>
+          <div class="vertical-product-img">
+            <img
+              src="../../assets/images/running-page/shr100xm_440_sl_2.webp"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- Product image  -->
+        <div class="w-[600px] max-w-[90%] mx-auto relative">
+          <div id="productSlider" class="overflow-x-auto flex">
+            <div class="product-img-slide relative">
+              <img
+                class="top-[50%] h-auto w-full object-cover max-md:scale-140"
+                src="../../assets/images/running-page/shr100xm_440_1.webp"
+                alt="shr100xm_440_1"
+              />
+            </div>
+            <div class="product-img-slide relative">
+              <img
+                class="max-w-full top-[50%] h-auto w-full object-cover"
+                src="https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_sl_2.png?quality=80&fit=bounds&height=819&width=600&canvas=600:819"
+                alt="shr100xm_440_1"
+              />
+            </div>
+          </div>
+          <button
+            id="prevBtn"
+            class="absolute w-[80px] left-0 top-1/2 transform -translate-y-1/2 hidden z-50"
+          >
+            <img
+              src="../../assets/images/running-page/carrot_L.svg"
+              alt=""
+              class="w-[30px] opacity-30"
+            />
+          </button>
+          <button
+            id="nextBtn"
+            class="absolute w-[80px] right-0 top-1/2 transform -translate-y-1/2 hidden z-50"
+          >
+            <img
+              src="../../assets/images/running-page/carrot_R.svg"
+              alt=""
+              class="w-[30px] opacity-30"
+            />
+          </button>
+
+          <!-- <div
+            class="bottom-navigaion flex justify-center items-center md:hidden"
+          >
+            <div class="dots-container flex gap-3 p-4">
+              <div
+                class="dot-status dot-active relative flex justify-center items-center"
+              >
+                <div class="dot-nav"></div>
+              </div>
+
+              <div
+                class="dot-status w-[24px] h-[24px] rounded-full relative flex justify-center items-center"
+              >
+                <div
+                  class="dot-nav bg-[#adadad] rounded-full round-[12px] w-[6px] h-[6px]"
+                ></div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <div
+          class="bottom-navigaion flex justify-center items-center md:hidden pt-[130px]"
+        >
+          <div class="dots-container flex gap-3 p-4">
+            <div
+              class="dot-status dot-active relative flex justify-center items-center"
+            >
+              <div class="dot-nav"></div>
+            </div>
+
+            <div
+              class="dot-status w-[24px] h-[24px] rounded-full relative flex justify-center items-center"
+            >
+              <div
+                class="dot-nav bg-[#adadad] rounded-full round-[12px] w-[6px] h-[6px]"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- start product detail -->
+
+        <div class="md:max-w-[360px] md:w-[40%]">
+          <div class="mt-[32px] max-w-[642px]">
+            <h1
+              class="uppercase text-[26px] md:text md:text-[36px] md:text-start text-center"
+            >
+              <span class="tracking-[5px] md:tracking-[7px]"
+                >SAFERUN 100X MEN</span
+              >
+            </h1>
+            <p class="text-[#4f4a47] mt-2">
+              For serious runners looking for excellent cushioning and
+              repulsion.
+            </p>
+          </div>
+
+          <div class="">
+            <button
+              class="flex justify-between w-full relative mt-[30px] pt-[13px] pb-[15px]"
+            >
+              <span class="font-semibold uppercase text-[14px] text-[#4f4a47]"
+                >colors:</span
+              >
+            </button>
+          </div>
+
+          <div
+            class="flex justify-center max-md:justify-start gap-2 max-w-[800px] mx-auto"
+          >
+            <div class="product-img-group">
+              <a href="">
+                <img
+                  class="w-[50px] h-[50px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                  src="../../assets/images/running-page/shr100xm_w_1.webp"
+                  alt=""
+                />
+                <!-- <img
+                  class="w-[80px] h-[80px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 absolute top-[20]"
+                  src="../../assets/images/running-page/shr100xm_w_1.webp"
+                  alt=""
+                /> -->
+              </a>
+            </div>
+
+            <div class="product-img-group">
+              <a href="">
+                <img
+                  class="w-[50px] h-[50px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                  src="../../assets/images/running-page/shr100xm_440_2.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-img-group">
+              <a href="">
+                <img
+                  class="w-[50px] h-[50px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                  src="../../assets/images/running-page/shr100xm_a.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="product-img-group">
+              <a href="">
+                <img
+                  class="w-[50px] h-[50px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                  src="../../assets/images/running-page/shr100xm_b.webp"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <button class="specsBtn flex justify-between w-full relative mt-[60px] pt-[13px] pb-[15px]">
+            <span class="font-semibold uppercase text-[14px]">Specs</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="minusIcon w-4 h-6 absolute right-3 top-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+            </svg> 
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="plusIcon w-4 h-6 hidden absolute right-3 top-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+            
+        </button> 
+
+          <!-- start product detail card -->
+
+          <div
+            class="detailCard h-[362px] text-[14px] font-sans bg-white border-[1px] text-secondary-400 mb-6"
+          >
+            <table class="table-fixed w-[284px]">
+              <tbody>
+                <tr>
+                  <td class="pt-[24px] px-[20px] pb-[11px]">Flex</td>
+                  <td class="pt-[24px] px-[20px] pb-[11px]">Medium</td>
+                </tr>
+                <tr>
+                  <td class="px-[20px] py-[11px]">Frame</td>
+                  <td class="px-[20px] py-[11px]">Graphite</td>
+                </tr>
+                <tr>
+                  <td class="px-[20px] py-[11px]">Shaft</td>
+                  <td class="px-[20px] py-[11px]">Graphite</td>
+                </tr>
+                <tr>
+                  <td class="px-[20px] py-[11px]">Length</td>
+                  <td class="px-[20px] py-[11px]">10 mm longer</td>
+                </tr>
+                <tr>
+                  <td class="px-[20px] py-[11px]">Weight / Grip</td>
+                  <td class="px-[20px] py-[11px]">4U(Avg.83g)G5</td>
+                </tr>
+                <tr>
+                  <td class="px-[20px] py-[11px] whitespace-nowrap">
+                    Stringing Advice
+                  </td>
+                  <td class="px-[20px] py-[11px]">4U: 20 - 28 lbs</td>
+                </tr>
+                <tr>
+                  <td class="px-[20px] py-[11px]">Color(s)</td>
+                  <td class="px-[20px] py-[11px]">Black Silve</td>
+                </tr>
+                <tr>
+                  <td class="px-[20px] py-[11px] pb-[24px]">Item Code</td>
+                  <td class="px-[20px] py-[11px] pb-[24px]">3AX88-PL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- end product detail card -->
+
+          <div
+            class="font-sans font-semibold text-[14px] flex md:hidden text-secondary-400"
+          >
+            <a class="flex gap-2 hover:underline" href="">
+              <img
+                class="w-[30px] h-[27px]"
+                src="../../assets/images/icon/compare.svg"
+                alt=""
+              />
+              <span class="">Add to compare</span>
+            </a>
+          </div>
+
+          <!-- start icon container -->
+          <div
+            class="flex justify-center md:justify-start gap-2 max-w-[800px] mx-auto"
+          >
+            <a href="">
+              <img
+                class="w-[30px] h-[30px]"
+                src="../../assets/images/icon/icon-facebook.svg"
+                alt=""
+              />
+            </a>
+            <a class="" href="">
+              <img
+                class="w-[30px] h-[30px]"
+                src="../../assets/images/icon/icon-twitter.svg"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                class="w-[30px] h-[30px]"
+                src="../../assets/images/icon/icon-link.svg"
+                alt=""
+              />
+            </a>
+          </div>
+          <!-- end icon container -->
+        </div>
+      </div>
+      <!-- start product detail container  -->
+
+      <!-- start sticky nav container  -->
+      <div
+        class="sticky-nav-container bg-white z-[2] h-[90px] px-[60px] w-full flex items-center justify-center border absolute left-0 max-lg:p-0 max-lg:h-[50px]"
+      >
+        <div class="navigation-bar flex justify-between items-center flex-1">
+          <div
+            class="product-name text-[#1f2427] text-[20px] uppercase tracking-widest max-lg:hidden"
+          >
+            <span class="">SAFERUN 100X MEN</span>
+          </div>
+          <ul
+            class="sticky-nav-elements flex flex-1 items-center justify-around h-full mx-auto max-w-[700px]"
+          >
+            <li>
+              <a
+                href="#product-description"
+                class="sticky-nav-element text-[#6e7677] relative uppercase transition duration-600 ease-linear"
+                >Discription</a
+              >
+            </li>
+            <li>
+              <a
+                href="#product-technology"
+                class="sticky-nav-element text-[#6e7677] relative uppercase transition duration-600 ease-linear"
+                >Technology</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a
+          class="add-compare relative w-[11%] min-w-[130px] mx-[25px] max-lg:hidden text-nowrap"
+        >
+          <span
+            class="text-[#595959] text-[15px] font-bold relative capitalize font-['Lato']"
+            >Add To Compare</span
+          >
+        </a>
+      </div>
+      <!-- end sticky nav container  -->
+
+      <!-- start technology -->
+      <div
+        class="slider technology pt-[200px] flex justify-between max-md:block max-md:h-[67rem] relative"
+        id="product-technology"
+      >
+        <!-- technology left side dot nav  -->
+        <div
+          class="tech-left absolute flex flex-col justify-center min-h-[600px] w-[50px] max-md:hidden"
+        >
+          <!-- navigation toggle -->
+          <!-- <div
+                class="dots technology-left-navigation flex flex-col items-center justify-between relative min-h[250px] before:content-[''] before:bg-[#737a7e] before:h-[99%] before:left-[48%] before:absolute before:w-[2px] before:-z-1">
+                <div class="navigation-dot active-technology-dot">01</div>
+              </div> -->
+
+          <div
+            class="dots technology-left-navigation flex flex-col items-center justify-between relative min-h-[250px]"
+          >
+            <!-- <div class="dots__dot--active">01</div> -->
+          </div>
+        </div>
+        <!-- technology left side dot nav -->
+
+        <!-- <button class="dots__dot dots_dot--active" data-slide="1">01</button> -->
+        <div
+          class="slide absolute w-full flex items-center justify-center max-md:block max-md:relative"
+        >
+          <!-- middle content  -->
+          <div
+            class="tech-middle w-[calc(50%-50px)] flex justify-center max-md:w-full"
+          >
+            <div class="technology-middle-img-wrapper relative">
+              <img
+                class="technology-middle-img h-auto min-w-full"
+                id="technology-middle-img"
+                alt="POWER CUSHION +"
+              />
+            </div>
+          </div>
+          <!-- middle content  -->
+
+          <!-- right content  -->
+          <div
+            class="tech-right w-[50%] relative flex flex-col pl-5 max-md:w-[100%]"
+          >
+            <div
+              class="tech-right-numbers text-[#f7f8f9] flex font-extrabold absolute font-['Lato'] max-md:hidden"
+              style="z-index: -1"
+            >
+              <div
+                class="technology-right--numbers-current--slide text-[190px] leading-[150px] text-[#f7f8f9] font-bold"
+                id="current-slide"
+              >
+                01
+              </div>
+              <div
+                class="technology-right--numbers-slide--count text-[24px] text-[#f7f8f9] font-bold"
+                id="slide-count"
+              >
+                / 0
+                <span></span>
+              </div>
+            </div>
+
+            <div
+              class="tech-right-content ml-[125px] max-w-[300px] max-md:w-full max-md:ml-0 max-md:max-w-full max-md:text-center max-md:absolute"
+            >
+              <img
+                src="../../assets/images/running-page/logo_b.png"
+                alt="logo_b"
+                class="technology__right__content__image max-w-full h-auto"
+              />
+              <h3
+                class="tech-right-content-title text-[#1f2427] text-[26px] font-normal tracking-[3px] mt-[2.2rem] mb-[1.1rem] font-Oswald"
+                id="technology-right-title"
+              >
+                POWER CUSHION +
+              </h3>
+              <div
+                class="tech-right-content-description text-[#595959] text-[16px] font-['Lato'] leading-relaxed"
+                id="technology-right-description"
+              >
+                <p class="mb-[1rem]"></p>
+                <p class="mb-[1rem]"></p>
+                <p class="mb-[1rem]">
+                  <span class="text-[10px] sm-description"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- right content  -->
+        </div>
+
+        <!-- arrow nav  -->
+        <div
+          class="tech-right-navigation ml-[125px] flex items-end flex-1 pt-[150px] pb-[70px] max-md:ml-0 max-md:pt-0 absolute left-[50%] top-[70%] max-md:top-[90%] max-md:left-[40%]"
+        >
+          <button
+            class="slider__btn slider__btn--left relative h-[40px] w-[50px] mr-[10px] bg-white border border-[#e0e0e0] flex justify-center items-center"
+          >
+            <img src="../../assets/images/running-page/carrot_L.svg" alt="" />
+          </button>
+          <button
+            class="slider__btn slider__btn--right relative h-[40px] w-[50px] mr-[10px] bg-white border border-[#e0e0e0] flex justify-center items-center"
+          >
+            <img src="../../assets/images/running-page/carrot_R.svg" alt="" />
+          </button>
+        </div>
+        <!-- arrow nav  -->
+      </div>
+      <!-- end technology -->
+    </main>
+    <!-- end product detail in running page  -->
+
+    <!-- start modal -->
+    <section
+      id="modal"
+      class="w-full h-full absolute top-[20%] flex justify-center hidden"
+    >
+      <!-- modal -->
+      <div
+        class="modal bg-white max-w-[710px] max-h-[1835px] md:max-h-[719px] relative"
+      >
+        <!--x button -->
+        <button
+          id="xBtn"
+          class="bg-white absolute right-[-40px] top-[-40px] z-10 w-[30px] h-[30px] rounded-full flex items-center justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <div class="px-[30px] pb-[30px] flex flex-col gap-5">
+          <!-- upper content -->
+          <div
+            class="flex flex-col md:flex-row md:justify-between font-semibold uppercase my-[35px]"
+          >
+            <div class="flex flex-col items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 490 490"
+                width="25"
+                height="25"
+                fill="#F5EB43"
+              >
+                <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path>
+              </svg>
+              <span>Main start</span>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 512 512"
+                width="25"
+                height="25"
+                fill="#F5EB43"
+              >
+                <path
+                  d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"
+                ></path>
+              </svg>
+              <span>Main tie off</span>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 490 490"
+                width="25"
+                height="25"
+                fill="#c5d0db"
+              >
+                <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path>
+              </svg>
+              <span>Cross Start</span>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 512 512"
+                width="25"
+                height="25"
+                fill="#c5d0db"
+              >
+                <path
+                  d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"
+                ></path>
+              </svg>
+              <span>Cross Tie off</span>
+            </div>
+          </div>
+          <!-- bottom content -->
+          <div class="flex flex-col md:flex-row md:justify-between font-oswald">
+            <div class="flex flex-col">
+              <h3
+                class="mb-[11px] mt-[22px] font-extrabold text-[24px] uppercase"
+              >
+                Astrox 88 D game
+              </h3>
+              <table>
+                <td class="p-[11px] border">
+                  <h5 class="my-[22px] font-semibold uppercase">
+                    Main tie off:
+                  </h5>
+                  <p class="font-sans text-[14px] text-secondary-200">b8, B8</p>
+                </td>
+                <td class="p-[11px] border">
+                  <h5 class="my-[22px] font-semibold uppercase">
+                    Cross tie off:
+                  </h5>
+                  <p class="font-sans text-[14px] text-secondary-200">A5</p>
+                </td>
+              </table>
+              <h4 class="my-[18px] font-bold text-[18px] uppercase">Mains</h4>
+              <p class="font-sans text-[14px] text-secondary-200">
+                Start from top center, keep on stringing until B9 (skip A7, A9 &
+                A11). Go through B12, directly to A16, and then straight to A14,
+                down to B10 and tie off at B8. (Opposite side: the same
+                procedure).
+              </p>
+              <h4 class="my-[18px] font-bold text-[18px] uppercase">Crosses</h4>
+              <p class="font-sans text-[14px] text-secondary-200">
+                Make a knot at B6 and start crosses from B9. Keep on stringing
+                until A7 (skip A12 & A10), then directly to A5 and tie off .
+              </p>
+            </div>
+            <div class="shrink-0">
+              <img
+                src="../assets/images/productPage/stringDetail.png"
+                class="md:w-[345px] md:h-[527px]"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end modal  -->
+
+    <section id="modal" class=" w-full h-full absolute top-[20%] flex justify-center hidden">                
+        <!-- modal -->
+        <div class="modal bg-white max-w-[710px] max-h-[1835px] md:max-h-[719px] relative">
+            <!--x button -->
+            <button id="xBtn" class="bg-white absolute right-[-40px] top-[-40px] z-10 w-[30px] h-[30px] rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>                      
+            </button>
+            <div class="px-[30px] pb-[30px] flex flex-col gap-5">
+                <!-- upper content -->
+                <div class="flex flex-col md:flex-row md:justify-between font-semibold uppercase my-[35px]">
+                    <div class="flex flex-col items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" width="25" height="25" fill="#F5EB43"> <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path> </svg>
+                        <span>Main start</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" width="25" height="25" fill="#F5EB43"> <path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"></path> </svg>
+                        <span>Main tie off</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" width="25" height="25" fill="#c5d0db"> <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path></svg>
+                        <span>Cross Start</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" width="25" height="25" fill="#c5d0db"> <path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"></path> </svg>
+                        <span>Cross Tie off</span>
+                    </div>
+                </div>
+                <!-- bottom content -->
+                <div class="flex flex-col  md:flex-row md:justify-between font-oswald">
+                    <div class="flex flex-col">
+                        <h3 class="mb-[11px] mt-[22px] font-extrabold text-[24px] uppercase">Astrox 88 D game</h3>
+                        <table>
+                            <td class="p-[11px] border">
+                                <h5 class="my-[22px] font-semibold uppercase">Main tie off:</h5>
+                                <p class="font-sans text-[14px] text-secondary-200">b8, B8</p>
+                            </td>
+                            <td class="p-[11px] border ">
+                                <h5 class="my-[22px] font-semibold uppercase">Cross tie off:</h5>
+                                <p class="font-sans text-[14px] text-secondary-200 ">A5</p>
+                            </td>
+                        </table>
+                        <h4 class="my-[18px] font-bold text-[18px] uppercase">Mains</h4>
+                        <p class="font-sans text-[14px] text-secondary-200">Start from top center, keep on stringing until B9 (skip A7, A9 & A11). Go through B12, directly to A16, and then straight to A14, down to B10 and tie off at B8. (Opposite side: the same procedure).</p>
+                        <h4 class="my-[18px] font-bold text-[18px] uppercase">Crosses</h4>
+                        <p class="font-sans text-[14px] text-secondary-200">Make a knot at B6 and start crosses from B9. Keep on stringing until A7 (skip A12 & A10), then directly to A5 and tie off .</p>
+                    </div>
+                    <div class="shrink-0">
+                        <img src="../assets/images/productPage/stringDetail.png" class="md:w-[345px] md:h-[527px]" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!--end modal  -->
+
+    <!-- Start Footer -->
+    <my-footer></my-footer>
+    <!-- End Footer -->
+
+    <script src="../../assets/js/index.js"></script>
+    <script src="../../assets/js/main.js"></script>
+
+    <!-- JavaScript for Running page link -->
+    <script src="../../assets/js/running-page.js"></script>
+  </body>
+</html>
