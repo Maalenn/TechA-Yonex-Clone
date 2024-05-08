@@ -6,6 +6,8 @@
     <title>Product Review</title>
     <!-- Style link  -->
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <!-- yonex logo -->
+    <link rel="icon" href="../assets/images/icon/yonex.png" type="image/icon type" >
     <!-- CDN tailwind style -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- font awesome link -->
@@ -29,7 +31,7 @@
       />
       <link rel="stylesheet" href="../src/input.css">
     </head>
-    <body class="bg-[white]">
+    <body class="bg-[white] font-Oswald">
       <!-- Start Header -->
       <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
       <nav
@@ -50,7 +52,11 @@
           <a href="index.html"><img
             src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
             alt=""
-            class="w-[140px] Logo ml-3 py-3"
+
+            class="w-[140px] Logo px-[10px] py-3"
+
+            class="w-[140px] md:w-[100px] Logo ml-3 py-3"
+>
           /></a>
           <p class="my-0 text-xs text-center hidden md:block">
             far beyond ordinary
@@ -188,7 +194,7 @@
             onmouseenter="aboutDrop()"
             onmouseleave="aboutHide()"
           >
-            <a href="tech-a-project/2nd-mission/public/about-page/about-us.html" class="group-hover:opacity-80 relative top-[7%]">ABOUT</a>
+            <a href="../public/about-us.html" class="group-hover:opacity-80 relative top-[7%]">ABOUT</a>
             <!-- about section -->
             <section
               class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
@@ -239,7 +245,7 @@
             src="../assets/images/product-review/heroCover-breakPoint.webp"
             alt=""
           />
-          <ul class=" top-10 left-20 absolute flex gap-5 text-[0.75rem] justify-center">
+          <ul class="max-[500px]:left-5 top-10 left-20 absolute flex gap-5 text-[0.75rem] justify-center">
             <li class=" flex gap-5  max-lg:text-[1.5rem]">
               <a href="index.html" class="hover:border-b-[1px] border-[#050505] max-sm:text-[1.3rem] lg:text-[1.5rem]" > Home </a>
               <span class="text-[0.75rem] max-lg:text-[1.5rem] max-sm:text-[1.3rem] lg:text-[1.5rem]">/</span>
@@ -252,7 +258,7 @@
             <h5 class="uppercase text-[0.75rem] max-lg:text-[1.5rem] max-sm:text-[1.3rem] lg:text-[1.5rem]"> racquet </h5>
           </ul>
           <h1
-            class="absolute  pr-10 w-[100%] bottom-10  uppercase  font-[500] text-[1.6rem] tracking-[0.15rem] max-sm:text-[1.6rem] max-sm:p-4 max-lg:text-white max-lg:tracking-[0.5rem] max-md:text-[2.6rem] max-lg:w-full max-lg:bottom-4 max-lg:bg-black max-lg:text-[2.3rem] max-lg:p-10 lg:text-[2.2rem]"
+            class="max-[1000px]:left-0 absolute left-20 pr-10 w-[70%] bottom-10  uppercase  font-[500] text-[1.6rem] tracking-[0.15rem] max-sm:text-[1.6rem] max-sm:p-4 max-lg:text-white max-lg:tracking-[0.5rem] max-md:text-[2.6rem] max-lg:w-full max-lg:bottom-4 max-lg:bg-black max-lg:text-[2.3rem] max-lg:p-10 lg:text-[2.2rem]"
           >
             badminton racquets
           </h1>

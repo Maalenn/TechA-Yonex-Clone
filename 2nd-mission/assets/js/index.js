@@ -114,7 +114,7 @@ const runningObj = [
     {
         img: "../assets/images/running-images/shoe-orange.webp",
         title: "MEN",
-        link: ""
+        link: "../public/product-review-runningPage.html"
     },
     {
         img: "../assets/images/running-images/shoe-white.webp",
@@ -154,15 +154,15 @@ const snowboardObj = [
 const aboutObj=[
     {
         title: "ABOUT US",
-        link: "./about-page/about-us.html",
+        link: "../public/about-us.html",
     },
     {
         title: "YONEX GROUP",
-        link: "./about-page/yonex-group.html",
+        link: "../public/yonex-group.html",
     },
     {
         title: "YONEX DISTRIBUTOR",
-        link: "./about-page/yonex-distributors.html",
+        link: "../public/yonex-distributors.html",
     },
     {
         title: "INVESTOR RELATION",
@@ -261,7 +261,7 @@ class RunningComponent extends HTMLElement {
         ${runningObj.map((card) => {
             return `
                 <div class="flex flex-col items-center justify-center gap-2">
-                    <a href="" class="bg-[#f7f8f9]"><img src="${card.img}" alt=""></a>
+                <a href="${card.link}"><img src="${card.img}" alt=""></a>
                     <p class="font-semibold text-[15px] text-black">${card.title}</p>
                 </div>
             `

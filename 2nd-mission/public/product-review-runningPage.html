@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running Page</title>
+    <!-- Style link  -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <!-- CDN tailwind style -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../src/input.css" />
+  </head>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="../assets/css/styles.css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      />
+      <link rel="stylesheet" href="../src/input.css" />
+    </head>
+    <body class="font-Oswald bg-[white]">
+      <!-- Start Header -->
+      <div
+        class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]"
+        id="overlay-blur"
+      ></div>
+      <nav
+        class="w-full md:bg-white absolute text-black hover:bg-white hover:text-black bg-white border border-1 md:border-none top-0 z-10"
+      >
+        <div
+          class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10"
+        >
+          <!-- Hamburger Icons -->
+          <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()">
+            <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+            <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+            <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+          </div>
+
+          <!-- Logo -->
+          <div>
+            <a href="index.html"
+              ><img
+                src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
+                alt=""
+                class="w-[140px] Logo ml-3 py-3"
+            /></a>
+            <p class="my-0 text-xs text-center hidden md:block">
+              far beyond ordinary
+            </p>
+          </div>
+
+          <!-- Center Navigation -->
+          <div
+            class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]"
+          >
+            <!-- Badminton Hoverdrop -->
+            <div
+              class="group h-full pt-[30px]"
+              id="hoverLink"
+              onmouseenter="hoverDrop()"
+              onmouseleave="hoverHide()"
+            >
+              <a href="" class="group-hover:opacity-50 relative top-[7%]"
+                >BADMINTON</a
+              >
+              <!-- Badminton section -->
+              <section
+                class="w-full bg-white p-[40px] absolute top-[100px] hidden z-[10000] left-0"
+                id="baminton"
+              >
+                <div id="HoverBox" class="max-w-[95%] mx-auto">
+                  <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                    <badminton-component></badminton-component>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- Golf Hoverdrop -->
+            <div
+              class="group h-full pt-[30px]"
+              id="hoverLink"
+              onmouseenter="golfDrop()"
+              onmouseleave="golfHide()"
+            >
+              <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+                >GOLF</a
+              >
+              <!-- Golf section -->
+              <section
+                class="w-full bg-white p-[30px] absolute top-[100px] hidden h-[220px] z-[10000] left-0"
+                id="golf"
+              >
+                <div id="HoverBox" class="max-w-[95%] mx-auto">
+                  <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                    <golf-component></golf-component>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- Tennis Hoverdrop -->
+            <div
+              class="group h-full pt-[30px]"
+              id="hoverLink"
+              onmouseenter="tennisDrop()"
+              onmouseleave="tennisHide()"
+            >
+              <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+                >TENNIS</a
+              >
+              <!-- Tennis section -->
+              <section
+                class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
+                id="tennis"
+              >
+                <div id="HoverBox" class="max-w-[95%] mx-auto">
+                  <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                    <tennis-component></tennis-component>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- running Hoverdrop -->
+            <div
+              class="group h-full pt-[30px]"
+              id="hoverLink"
+              onmouseenter="runningDrop()"
+              onmouseleave="runningHide()"
+            >
+              <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+                >RUNNING</a
+              >
+              <!-- running section -->
+              <section
+                class="w-full bg-white p-[30px] absolute top-[100px] h-[220px] hidden z-[10000] left-0"
+                id="running"
+              >
+                <div id="HoverBox" class="max-w-[95%] mx-auto">
+                  <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                    <running-component></running-component>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- snowboard Hoverdrop -->
+            <div
+              class="group h-full pt-[30px]"
+              id="hoverLink"
+              onmouseenter="snowboardDrop()"
+              onmouseleave="snowboardHide()"
+            >
+              <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+                >SNOWBOARDING</a
+              >
+              <!-- snowboard section -->
+              <section
+                class="w-full bg-white p-[30px] absolute top-[100px] justify-center hidden z-[10000] left-0 h-[380px]"
+                id="snowboard"
+              >
+                <div id="HoverBox" class="max-w-[95%] mx-auto">
+                  <div
+                    class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3"
+                  >
+                    <snowboard-component></snowboard-component>
+                    <div class="block">
+                      <div
+                        class="flex flex-col items-center justify-center w-[223px]"
+                      >
+                        <a href="" class="bg-[#f7f8f9]"
+                          ><img
+                            src="../assets/images/snowboard-images/skate-athlete.webp"
+                            alt=""
+                        /></a>
+                        <p class="font-semibold text-[14px] text-black">TEAM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="cursor-pointer hover:opacity-80 h-[30px]">
+              <a href="" class="pt-[10px]">NEWS</a>
+            </div>
+            <div
+              class="group h-full pt-[30px]"
+              id="hoverLink"
+              onmouseenter="aboutDrop()"
+              onmouseleave="aboutHide()"
+            >
+              <a
+                href="tech-a-project/2nd-mission/public/about-page/about-us.html"
+                class="group-hover:opacity-80 relative top-[7%]"
+                >ABOUT</a
+              >
+              <!-- about section -->
+              <section
+                class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
+                id="about"
+              >
+                <div
+                  id="HoverBox"
+                  class="max-w-[1600px] mx-auto flex justify-center"
+                >
+                  <about-component></about-component>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="inline-block cursor-pointer md:hidden mr-3">
+            <img
+              src="../assets/images/icons/search-interface-symbol (1).png"
+              alt=""
+              class="size-[20px]"
+            />
+          </div>
+          <div
+            class="w-[120px] fill-slate-100 items-center gap-3 md:flex hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 mb-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 mb-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+
+            <img
+              src="../assets/images/icons/accessibility_icon.svg"
+              alt=""
+              class="size-[40px] cursor-pointer mb-[7.5px]"
+            />
+          </div>
+        </div>
+      </nav>
+      <!-- End header -->
+      <my-sidebar></my-sidebar>
+
+      <!-- Start Hero Cover -->
+      <section class="top-24 flex relative w-full justify-center">
+        <secton class="w-[100%]">
+          <img
+            class="w-full max-lg:hidden"
+            src="https://www.yonex.com/media/catalog/category/CCAerus_PC.jpeg"
+            alt=""
+          />
+          <img
+            class="w-full hidden max-lg:block"
+            src="https://www.yonex.com/media/catalog/category/CCAERUS_mobile.jpeg"
+            alt=""
+          />
+          <ul
+            class="top-10 left-20 absolute flex gap-5 text-[0.75rem] justify-center"
+          >
+            <li class="flex gap-5 max-lg:text-[1.5rem]">
+              <a
+                href="index.html"
+                class="hover:border-b-[1px] border-[#050505] max-sm:text-[1.3rem] lg:text-[1.5rem]"
+              >
+                Home
+              </a>
+              <span
+                class="text-[0.75rem] max-lg:text-[1.5rem] max-sm:text-[1.3rem] lg:text-[1.5rem]"
+                >/</span
+              >
+            </li>
+            <li class="flex gap-5 ] max-lg:text-[1.5rem]">
+              <a
+                href="product-review-runningPage.html"
+                class="max-sm:text-[1.3rem] lg:text-[1.5rem] hover:border-b-[1px] border-[#080707]"
+              >
+                RUNNING
+              </a>
+
+
+          </ul>
+          <h1
+            class="absolute pr-10 w-[100%] uppercase text-[0.8rem] tracking-[0.4rem] max-sm:text-[1.6rem] max-sm:p-4 max-lg:text-white max-lg:tracking-[0.5rem] max-md:text-[2.6rem] max-lg:w-full max-lg:bottom-4 max-lg:bg-black max-lg:text-[2.3rem] max-lg:p-10 lg:text-[2.2rem]"
+          >
+            Running
+          </h1>
+        </secton>
+      </section>
+
+      <!-- End Hero Cover -->
+
+      <!-- Start slider -->
+
+      <!-- Start side bar drop down -->
+      <section
+        class="flex w-full justify-end max-w-[1280px] mx-auto pr-10 mt-40">
+    
+        <form class="">
+          <select
+            id="countries"
+            class="text-[16px] p-3 bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full dark:border-[#1b1a1a] dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option selected><a class="">All Racquets</a></option>
+            <option value="ASTROX"><a href="">ASTROX</a></option>
+            <option value="NANORAY"><a href="">NANORAY</a></option>
+            <option value="DUORA"><a href=""></a>DUORA</option>
+            <option value="ARCSABER"><a href="">ARCSABER</a></option>
+            <option value="ISOMETRIC"><a href="">ISMETRIC</a></option>
+            <option value="MUSCLE POWER"><a href="">MUSCLE POWER</a></option>
+            <option value="B-Series"><a href="">B-Series</a></option>
+            <option value="Junior"><a href="">Junior</a></option>
+          </select>
+        </form>
+      </section>
+      <section
+        class="flex w-full justify-center max-w-[1280px] mx-auto pr-10"
+      >
+        <div class="text-[14px] text-[gray]">Item 1-12 of 33</div>
+      </section>
+      <!-- End side bar drop down -->
+
+      <!-- Start Athletes Information section -->
+      <section
+        class="flex flex-col relative w-full justify-center max-lg:w-[100%] mt-[140px]"
+      >
+        <!-- Product Shopping Chart -->
+        <section
+          class="max-w-[1280px] mx-auto grid grid-cols-[1fr,3fr] max-md:grid-cols-1"
+        >
+          <!-- Start Side bar -->
+          <section class="sm:hidden md:flex max-sm:hidden pl-10">
+            <ul class="flex flex-col gap-6 text-[#575555] w-[100%]">
+              <li class=""><a href="">All Recquets</a></li>
+              <li class=""><a href="">ASTROX</a></li>
+              <li class=""><a href="">NANOFLARE</a></li>
+              <li class=""><a href="">DUORA</a></li>
+              <li class=""><a href="">NANORAY</a></li>
+              <li class=""><a href="">ARCSABER</a></li>
+              <li class=""><a href="">ISOMETRIC</a></li>
+              <li class=""><a href="">MUSCLE POWER</a></li>
+              <li class=""><a href="">B-Series</a></li>
+              <li class=""><a href="">Junior</a></li>
+              <h4 class="text-black font-[500]">COMPARE PRODUCTS</h4>
+              <h4>Select up to 5 Products</h4>
+            </ul>
+          </section>
+          <!-- End side bar -->
+
+          <!-- Start card container -->
+          <section class="p-10">
+            <section
+              class="w-[100%] grid grid-cols-3 max-sm:grid-cols-2 gap-10 mb-20"
+            >
+              <aside
+                class="relative w-[100%] flex flex-col justify-center pt-[1.5rem] pb-5 group z-[1000] mt-10"
+              >
+                <a href="product-detail-runningPage.html">
+                  <!-- scale background -->
+                  <div
+                    role="hidden"
+                    class="absolute w-full h-full group-hover:shadow-2xl bg-[white] group-hover:-scale-x-125"
+                  ></div>
+                  <!-- Card -->
+                  <aside class="relative">
+                    <div class="pb-1 lg:max-w-[300px]">
+                      <img
+                        src="https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300"
+                        alt=""
+                      />
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                      <h4 class="">Astrox 88 S PRO</h4>
+                    </div>
+                    <div
+                      class="flex justify-center max-md:justify-start gap-2 max-w-[800px] mx-auto pt-4"
+                    >
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                            src="../assets/images/running-page/shr100xm_w_1.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                            src="../assets/images/running-page/shr100xm_440_2.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                            src="../assets/images/running-page/shr100xm_a.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                            src="../assets/images/running-page/shr100xm_b.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0"
+                    >
+                      <div class="">
+                        <div
+                          class="relative w-[20px] h-[15px] rounded-[3px] border-black border-[1px]"
+                        >
+                          <div
+                            class="absolute w-[20px] h-[15px] rounded-[3px] border-black border-[1px] bottom-[-10px] border-dashed right-[-15px]"
+                          ></div>
+                        </div>
+                      </div>
+                      <a href="" class="text-[16px] underline text-[gray]"
+                        >Add to compare</a
+                      >
+                    </div>
+                  </aside>
+                </a>
+                <!-- End card -->
+              </aside>
+              <aside
+                class="relative w-[100%] flex flex-col justify-center pt-[1.5rem] pb-5 group z-[1000] mt-10"
+              >
+                <a href="product-detail-runningPage.html">
+                  <!-- scale background -->
+                  <div
+                    role="hidden"
+                    class="absolute w-full h-full group-hover:shadow-2xl bg-[white] group-hover:-scale-x-125"
+                  ></div>
+                  <!-- Card -->
+                  <aside class="relative">
+                    <div class="pb-1 lg:max-w-[300px]">
+                      <img
+                        src="https://www.yonex.com/media/catalog/product/s/h/shra1m_502_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300"
+                        alt=""
+                      />
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                      <h4 class="">Astrox 88 S PRO</h4>
+                    </div>
+                    <div
+                      class="flex justify-center max-md:justify-start gap-2 max-w-[800px] mx-auto pt-4"
+                    >
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                            src="../assets/images/running-page/shr100xm_w_1.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                            src="../assets/images/running-page/shr100xm_440_2.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                            src="../assets/images/running-page/shr100xm_a.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                            src="../assets/images/running-page/shr100xm_b.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0"
+                    >
+                      <div class="">
+                        <div
+                          class="relative w-[20px] h-[15px] rounded-[3px] border-black border-[1px]"
+                        >
+                          <div
+                            class="absolute w-[20px] h-[15px] rounded-[3px] border-black border-[1px] bottom-[-10px] border-dashed right-[-15px]"
+                          ></div>
+                        </div>
+                      </div>
+                      <a href="" class="text-[16px] underline text-[gray]"
+                        >Add to compare</a
+                      >
+                    </div>
+                  </aside>
+                </a>
+                <!-- End card -->
+              </aside>
+              <aside
+                class="relative w-[100%] flex flex-col justify-center pt-[1.5rem] pb-5 group z-[1000] mt-10"
+              >
+                <a href="product-detail-runningPage.html">
+                  <!-- scale background -->
+                  <div
+                    role="hidden"
+                    class="absolute w-full h-full group-hover:shadow-2xl bg-[white] group-hover:-scale-x-125"
+                  ></div>
+                  <!-- Card -->
+                  <aside class="relative">
+                    <div class="pb-1 lg:max-w-[300px]">
+                      <img
+                        src="https://www.yonex.com/media/catalog/product/s/h/shr200xm_011_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300"
+                        alt=""
+                      />
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                      <h4 class="">Astrox 88 S PRO</h4>
+                    </div>
+                    <div
+                      class="flex justify-center max-md:justify-start gap-2 max-w-[800px] mx-auto pt-4"
+                    >
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                            src="../assets/images/running-page/shr100xm_w_1.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                            src="../assets/images/running-page/shr100xm_440_2.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                            src="../assets/images/running-page/shr100xm_a.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                            src="../assets/images/running-page/shr100xm_b.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0"
+                    >
+                      <div class="">
+                        <div
+                          class="relative w-[20px] h-[15px] rounded-[3px] border-black border-[1px]"
+                        >
+                          <div
+                            class="absolute w-[20px] h-[15px] rounded-[3px] border-black border-[1px] bottom-[-10px] border-dashed right-[-15px]"
+                          ></div>
+                        </div>
+                      </div>
+                      <a href="" class="text-[16px] underline text-[gray]"
+                        >Add to compare</a
+                      >
+                    </div>
+                  </aside>
+                </a>
+                <!-- End card -->
+              </aside>
+              <aside
+                class="relative w-[100%] flex flex-col justify-center pt-[1.5rem] pb-5 group z-[1000] mt-10"
+              >
+                <a href="product-detail-runningPage.html">
+                  <!-- scale background -->
+                  <div
+                    role="hidden"
+                    class="absolute w-full h-full group-hover:shadow-2xl bg-[white] group-hover:-scale-x-125"
+                  ></div>
+                  <!-- Card -->
+                  <aside class="relative">
+                    <div class="pb-1 lg:max-w-[300px]">
+                      <img
+                        src="https://www.yonex.com/media/catalog/product/s/h/shrfj1m_des_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="mt-4 flex justify-center">
+                      <h4 class="">Astrox 88 S PRO</h4>
+                    </div>
+
+                    <div
+                      class="flex justify-center max-md:justify-start gap-2 max-w-[800px] mx-auto pt-4"
+                    >
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                            src="../assets/images/running-page/shr100xm_w_1.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                            src="../assets/images/running-page/shr100xm_440_2.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                            src="../assets/images/running-page/shr100xm_a.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                            src="../assets/images/running-page/shr100xm_b.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0"
+                    >
+                      <div class="">
+                        <div
+                          class="relative w-[20px] h-[15px] rounded-[3px] border-black border-[1px]"
+                        >
+                          <div
+                            class="absolute w-[20px] h-[15px] rounded-[3px] border-black border-[1px] bottom-[-10px] border-dashed right-[-15px]"
+                          ></div>
+                        </div>
+                      </div>
+                      <a href="" class="text-[16px] underline text-[gray]"
+                        >Add to compare</a
+                      >
+                    </div>
+                  </aside>
+                </a>
+                <!-- End card -->
+              </aside>
+              <aside
+                class="relative w-[100%] flex flex-col justify-center pt-[1.5rem] pb-5 group z-[1000] mt-10"
+              >
+                <a href="product-detail-runningPage.html">
+                  <!-- scale background -->
+                  <div
+                    role="hidden"
+                    class="absolute w-full h-full group-hover:shadow-2xl bg-[white] group-hover:-scale-x-125"
+                  ></div>
+                  <!-- Card -->
+                  <aside class="relative">
+                    <div class="pb-1 lg:max-w-[300px]">
+                      <img
+                        src="https://www.yonex.com/media/catalog/product/s/h/shra2m_mag_476_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300"
+                        alt=""
+                      />
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                      <h4 class="">Astrox 88 S PRO</h4>
+                    </div>
+                    <div
+                      class="flex justify-center max-md:justify-start gap-2 max-w-[800px] mx-auto pt-4"
+                    >
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                            src="../assets/images/running-page/shr100xm_w_1.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                            src="../assets/images/running-page/shr100xm_440_2.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2 relative"
+                            src="../assets/images/running-page/shr100xm_a.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                      <div class="product-img-group ">
+                        <a href="">
+                          <img
+                            class="w-[40px] h-[40px] bg-white border border-[#dadada] hover:border-blue-900 hover:border-2"
+                            src="../assets/images/running-page/shr100xm_b.webp"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0"
+                    >
+                      <div class="">
+                        <div
+                          class="relative w-[20px] h-[15px] rounded-[3px] border-black border-[1px]"
+                        >
+                          <div
+                            class="absolute w-[20px] h-[15px] rounded-[3px] border-black border-[1px] bottom-[-10px] border-dashed right-[-15px]"
+                          ></div>
+                        </div>
+                      </div>
+                      <a href="" class="text-[16px] underline text-[gray]"
+                        >Add to compare</a
+                      >
+                    </div>
+                  </aside>
+                </a>
+                <!-- End card -->
+              </aside>
+            </section>
+
+            <!-- End card container -->
+          </section>
+        </section>
+        <!-- End Athletes Information -->
+      </section>
+      <!--End Athletes Information section   -->
+
+      <!-- Start Pagination -->
+      <script src="../assets/js/pagination.js"></script>
+      <!-- End pagination -->
+
+      <!-- Start footer -->
+      <my-footer></my-footer>
+      <!-- End footer -->
+
+      <script src="../assets/js/prodroct-reveiw.js"></script>
+
+      <script src="../assets/js/index.js"></script>
+      <script src="../assets/js/main.js"></script>
+    </body>
+  </html>
+</html>

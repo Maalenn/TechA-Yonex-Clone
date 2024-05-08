@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <title>Athlete Profile</title>
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../src/input.css">
+
     <link rel="stylesheet" href="../assets/css/athlete-profile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -42,7 +43,7 @@
             <div>
                 <a href="index.html"><img
                         src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
-                        alt="" class="w-[140px] Logo ml-3 py-3" /></a>
+                        alt="" class="w-[140px] md:w-[100px] Logo ml-3 py-3" /></a>
                 <p class="my-0 text-xs text-center hidden md:block">
                     far beyond ordinary
                 </p>
@@ -362,11 +363,11 @@
                             </h2>
                             <!-- product list -->
                             <div
-                                class="slideShow  grid grid-cols-[repeat(2,400px)] min-[475px]:grid-cols-[repeat(2,700px)] overflow-auto md:flex md:justify-between my-0 mx-auto max-w-[1160px] ">
+                                class="slideShow no-scrollbar grid grid-cols-[repeat(2,400px)] min-[345px]:grid-cols-[repeat(2,500px)] min-[475px]:grid-cols-[repeat(2,700px)]  overflow-auto md:flex md:justify-between my-0 mx-auto max-w-[1160px] ">
                                 <!-- product item -->
                                 <div
                                     class="slide-list flex flex-col w-[100%] items-center md:max-w[400px] md:mx-[60px] ">
-                                    <a href="#equip"><img class="w-[350px] md:w-[300px]"
+                                    <a href="#equip"><img class="w-[350px] md:w-[300px] mx-auto"
                                             src="../assets/images/athlete-profile.img/nanoflare.webp" alt=""></a>
                                     <span
                                         class="h-[50px] text-[18px] md:mt-[26px] md:mr-auto md:mb-[170px] md:ml-auto md:min-h[50px] md:text-center">
@@ -374,7 +375,7 @@
                                     </span>
                                 </div>
                                 <div
-                                    class="slide-list  flex flex-col w-[100%] items-center md:max-w[400px] md:mx-[60px]  ">
+                                    class="slide-list  flex flex-col w-[100%] items-center md:max-w[400px] md:mx-[60px] ">
                                     <a href=""><img class=" w-[350px] md:w-[300px]"
                                             src="../assets/images/athlete-profile.img/bgab_114_ex_pac_1_1.webp"
                                             alt=""></a>
@@ -384,11 +385,11 @@
                                     </span>
                                 </div>
 
-                                <div class="back absolute top-[55%] right-[30px] bg-[#f3f2f2] p-5 md:hidden"
+                                <div class="back absolute top-[47%] right-[30px] bg-[#f3f2f2] p-5 md:hidden"
                                     onclick="slideArrow(1)">
                                     <img class="w-[1.5rem]" src="../assets/images/icon/arrow-right.svg" alt="" />
                                 </div>
-                                <div class="next absolute top-[55%] left-[30px] bg-[#f3f2f2] p-5 md:hidden"
+                                <div class="next absolute top-[47%] left-[30px] bg-[#f3f2f2] p-5 md:hidden"
                                     onclick="slideArrow(-1)">
                                     <img class="w-[1.5rem]" src="../assets/images/icon/arrow-left.svg"" alt="" />
                                 </div>
