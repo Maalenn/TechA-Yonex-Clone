@@ -31,6 +31,7 @@
     </head>
     <body class="bg-[white]">
       <!-- Start Header -->
+      <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
       <nav
       class="w-full md:bg-white  absolute text-black hover:bg-white hover:text-black bg-white border border-1 md:border-none top-0 z-10"
     >
@@ -1020,13 +1021,13 @@
           </section>
           <div
             class="back absolute top-[58%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5"
-            onclick="pushArrow(1)"
+            onclick="pushArrows(1)"
           >
             <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
           </div>
           <div
             class="next absolute top-[58%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5"
-            onclick="pushArrow(-1)"
+            onclick="pushArrows(-1)"
           >
             <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
           </div>

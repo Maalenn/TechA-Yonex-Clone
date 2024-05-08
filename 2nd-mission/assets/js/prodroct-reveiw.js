@@ -1,5 +1,5 @@
 let currentSlides = 0;
-function pushArrow(n) {
+function pushArrows(n) {
   const carousel = document.querySelector(" .slideShow ");
   const images = carousel.querySelectorAll(".slide-list");
   const imageWidth = images[0].clientWidth;
