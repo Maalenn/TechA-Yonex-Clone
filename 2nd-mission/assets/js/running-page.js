@@ -112,7 +112,7 @@ document
 // start technology slider
 const sliderData = [
   {
-    image: "../../assets/images/running-page/T_Sh_Power_Cushion_Plus.webp", // Replace with actual image path
+    image: "../assets/images/running-page/T_Sh_Power_Cushion_Plus.webp", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
@@ -125,7 +125,7 @@ const sliderData = [
   },
 
   {
-    image: "../../assets/images/running-page/R_3D_Power_Graphite_.webp", // Replace with actual image path
+    image: "../assets/images/running-page/R_3D_Power_Graphite_.webp", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
@@ -136,7 +136,7 @@ const sliderData = [
   },
 
   {
-    image: "../../assets/images/running-page/tec_saferun100x_1.webp", // Replace with actual image path
+    image: "../assets/images/running-page/tec_saferun100x_1.webp", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
@@ -147,7 +147,7 @@ const sliderData = [
   },
 
   {
-    image: "../../assets/images/running-page/tec_saferun100x_2.webp", // Replace with actual image path
+    image: "../assets/images/running-page/tec_saferun100x_2.webp", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
