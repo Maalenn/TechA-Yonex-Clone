@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yonex Clone</title>
+  <title>ASTROX 88 S GAME</title>
+  <!-- yonex logo -->
+  <link rel="icon" href="../assets/images/icon/yonex.png" type="image/icon type" >
+  <!-- style CLI for using npm -->
   <link rel="stylesheet" href="../assets/css/styles.css">
   <!-- CDN tailwind link -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -155,7 +158,7 @@
     }
   </style>
 </head>
-<body class="box-border font-oswald m-0 p-0 h-[200vh]">
+<body class="box-border font-oswald m-0 p-0 ">
     <!-- start image zoom -->
     <div id="imgZoom" class="w-full h-screen fixed top-0 left-0 bg-white hidden z-50 cursor-zoom-in">
         <div class="relative">
@@ -185,23 +188,261 @@
         </div>
     </div>
     <!-- end image zoom -->
-    <!-- start navbar -->
-    <div class="h-[60px] md:h-[100px] w-full bg-primary-100 text-center ">Nav bar</div>
-    <!-- end navbar -->
+    <!-- Start Navbar -->
+    <div
+      class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]"
+      id="overlay-blur"
+    ></div>
+    <nav
+      class="w-full  md:bg-white md:bg-opacity-40  text-[#33333] hover:bg-white hover:text-black bg-white border border-1 top-0 z-50 font-Oswald"
+    >
+      <div
+        class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10"
+      >
+        <!-- Hamburger Icons -->
+        <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()">
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+        </div>
+
+        <!-- Logo -->
+        <div>
+          <a href="index.html"
+            ><img
+              src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
+              alt=""
+              class="w-[140px] Logo ml-3 py-3"
+          /></a>
+          <p class="my-0 text-xs text-center hidden md:block">
+            far beyond ordinary
+          </p>
+        </div>
+
+        <!-- Center Navigation -->
+        <div
+          class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]"
+        >
+          <!-- Badminton Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="hoverDrop()"
+            onmouseleave="hoverHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+              >BADMINTON</a
+            >
+            <!-- Badminton section -->
+            <section
+              class="w-full bg-white p-[40px] absolute top-[100px] hidden z-[10000] left-0"
+              id="baminton"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <badminton-component></badminton-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Golf Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="golfDrop()"
+            onmouseleave="golfHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+              >GOLF</a
+            >
+            <!-- Golf section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] hidden h-[220px] z-[10000] left-0"
+              id="golf"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <golf-component></golf-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Tennis Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="tennisDrop()"
+            onmouseleave="tennisHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+              >TENNIS</a
+            >
+            <!-- Tennis section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
+              id="tennis"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <tennis-component></tennis-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- running Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="runningDrop()"
+            onmouseleave="runningHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+              >RUNNING</a
+            >
+            <!-- running section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] h-[220px] hidden z-[10000] left-0"
+              id="running"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <running-component></running-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- snowboard Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="snowboardDrop()"
+            onmouseleave="snowboardHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]"
+              >SNOWBOARDING</a
+            >
+            <!-- snowboard section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] justify-center hidden z-[10000] left-0 h-[380px]"
+              id="snowboard"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div
+                  class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3"
+                >
+                  <snowboard-component></snowboard-component>
+                  <div class="block">
+                    <div
+                      class="flex flex-col items-center justify-center w-[223px]"
+                    >
+                      <a href="" class="bg-[#f7f8f9]"
+                        ><img
+                          src="../assets/images/snowboard-images/skate-athlete.webp"
+                          alt=""
+                      /></a>
+                      <p class="font-semibold text-[14px] text-black">TEAM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="cursor-pointer hover:opacity-80 h-[30px]">
+            <a href="" class="pt-[10px]">NEWS</a>
+          </div>
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="aboutDrop()"
+            onmouseleave="aboutHide()"
+          >
+            <a
+              href="tech-a-project/2nd-mission/public/about-page/about-us.html"
+              class="group-hover:opacity-80 relative top-[7%]"
+              >ABOUT</a
+            >
+            <!-- about section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
+              id="about"
+            >
+              <div
+                id="HoverBox"
+                class="max-w-[1600px] mx-auto flex justify-center"
+              >
+                <about-component></about-component>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="inline-block cursor-pointer md:hidden mr-3">
+          <img
+            src="../assets/images/icons/search-interface-symbol (1).png"
+            alt=""
+            class="size-[20px]"
+          />
+        </div>
+        <div class="w-[120px] fill-slate-100 items-center gap-3 md:flex hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 mb-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 mb-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+
+          <img
+            src="../assets/images/icons/accessibility_icon.svg"
+            alt=""
+            class="size-[50px] cursor-pointer mb-[7.5px]"
+          />
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start SideBar -->
+    <my-sidebar></my-sidebar>
+    <!-- End Sidebar -->
     <!-- background -->
     <div class="absolute z-[-1] h-[1100px]  bg-800 left-0 top-0 bg-[#f7f8f9] md:w-[70%] w-full"></div>   
       <!--menu bar  -->
     <ul class="hidden sm:w-[50%] sm:px-5 sm:flex sm:my-[23px] sm:text-[12px] sm:gap-4 sm:font-sans">
-        <li class="text-[#0A56C2] hover:underline"><a href="">Home</a></li>
+        <li class="text-[#0A56C2] hover:underline"><a href="./index.html">Home</a></li>
         <p>/</p>
-        <li class="text-[#0A56C2] hover:underline"><a href="">Badminton</a></li>
+        <li class="text-[#0A56C2] hover:underline"><a href="./product-review.html">Badminton</a></li>
         <p>/</p>
-        <li class="text-[#0A56C2] hover:underline"><a href=""> Racquets</a></li>
+        <li class="text-[#0A56C2] hover:underline"><a href="./product-review.html"> Racquets</a></li>
         <p>/</p>
-        <li class="uppercase">Astrox 88 S Game</li>
+        <li class="uppercase whitespace-nowrap">Astrox 88 S Game</li>
     </ul>
     <!--start main page -->
-    <main class=" max-w-[625px] md:max-w-[1280px] mx-auto px-5 h-screen">       
+    <main class=" max-w-[625px] md:max-w-[1280px] mx-auto px-5">       
         <div class="box-border md:flex justify-between gap-3 product-card mb-[20rem] max-md:mb-[5rem] " id="product-description">
             <!-- image container left-side-->
             <div id="imageClick" onclick="showImg()" class="w-[600px] max-w-[90%] mx-auto relative block cursor-zoom-in ">
@@ -211,7 +452,7 @@
             <!-- start product detail right-side-->
             <div class=" md:max-w-[360px] md:w-[40%]">
                 <div class="mt-[32px] max-w-[642px]">
-                    <h1 class="uppercase text-[26px] md:text md:text-[36px] md:text-start text-center">
+                    <h1 class="uppercase text-[26px] md:text md:text-[36px] md:text-start text-center font-Oswald">
                         <span class="tracking-[5px] md:tracking-[7px]">Astrox 88 S Game</span>
                     </h1>
                 </div>
@@ -295,13 +536,13 @@
         </div>
         <!-- start sticky nav container  -->
         <div
-      class="sticky-nav-container bg-white z-[2] h-[90px] px-[60px] w-full flex items-center justify-center border absolute left-0 max-lg:p-0 max-lg:h-[50px]"
+      class="sticky-nav-container bg-white z-[2] h-[90px] px-[60px] w-full flex items-center justify-center border absolute left-0 max-lg:p-0 max-lg:h-[50px] font-Oswald"
     >
       <div class="navigation-bar flex justify-between items-center flex-1">
         <div
           class="product-name text-[#1f2427] text-[20px] uppercase tracking-widest max-lg:hidden"
         >
-          <span class="">SAFERUN 100X MEN</span>
+          <span class="">Astrox 88 S game</span>
         </div>
         <ul
           class="sticky-nav-elements flex flex-1 items-center justify-around h-full mx-auto max-w-[700px]"
@@ -443,9 +684,10 @@
     <!-- arrow nav  -->
     <!-- end sticky nav container  -->    
     </main>
+    
     <!-- end main page -->
     <!-- start modal -->
-    <section id="modal" class=" w-full h-full absolute top-[20%] flex justify-center hidden">                
+    <section id="modal" class=" w-full h-full absolute top-[20%] flex justify-center hidden z-[1000]">                
         <!-- modal -->
         <div class="modal bg-white max-w-[710px] max-h-[1835px] md:max-h-[719px] relative">
             <!--x button -->
@@ -499,11 +741,13 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>  
     <!--end modal  -->
     <!-- overlay for modal-->
     <div id="overlayModal" class="overlay fixed top-0 left-0 w-full h-full z-5 hidden"></div>
-    
+    <my-footer></my-footer>
+    <script src="../assets/js/main.js"></script>
     <script src="../assets/js/productDetail.js"></script>
+    <script src="../assets/js/index.js"></script>
 </body>
 </html>
