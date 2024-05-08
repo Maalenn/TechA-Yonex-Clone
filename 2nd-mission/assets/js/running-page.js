@@ -112,7 +112,7 @@ document
 // start technology slider
 const sliderData = [
   {
-    image: "../../assets/images/running-page/T_Sh_Power_Cushion_Plus.webp", // Replace with actual image path
+    image: "../assets/images/running-page/T_Sh_Power_Cushion_Plus.webp", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
@@ -125,7 +125,7 @@ const sliderData = [
   },
 
   {
-    image: "../../assets/images/running-page/R_3D_Power_Graphite_.webp", // Replace with actual image path
+    image: "../assets/images/running-page/R_3D_Power_Graphite_.webp", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
@@ -136,7 +136,7 @@ const sliderData = [
   },
 
   {
-    image: "../../assets/images/running-page/tec_saferun100x_1.webp", // Replace with actual image path
+    image: "../assets/images/running-page/tec_saferun100x_1.webp", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
@@ -147,7 +147,7 @@ const sliderData = [
   },
 
   {
-    image: "../../assets/images/running-page/tec_saferun100x_2.webp", // Replace with actual image path
+    image: "../assets/images/running-page/tec_saferun100x_2.webp", // Replace with actual image path
     alt: "POWER CUSHION +",
     logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
     logoAlt: "logo_b",
@@ -261,3 +261,53 @@ function slider() {
 }
 slider();
 // end technology slider
+
+
+// show card and close card function
+const specsBtn = document.querySelector('.specsBtn')
+const detailCard = document.querySelector('.detailCard')
+const plusIcon = document.querySelector('.plusIcon')
+const minusIcon = document.querySelector('.minusIcon')
+
+console.log(specsBtn)
+function showCard(){detailCard
+    if (detailCard.classList.contains('hidden')){
+        detailCard.classList.remove('hidden')
+        plusIcon.classList.add('hidden')
+    }
+    else{
+        detailCard.classList.add('hidden')
+        plusIcon.classList.remove('hidden')
+    }
+    
+}
+
+
+specsBtn.addEventListener('click', showCard)
+// show modal and close modal
+const stringBtn = document.querySelector('#stringBtn')
+const modal = document.querySelector('#modal')
+const overlay =  document.querySelector('.overlay')
+const closeBtn = document.querySelector('#xBtn')
+
+
+function showModal(){
+    modal.classList.remove('hidden')
+    overlay.classList.remove('hidden')
+}
+function closeModal(){
+    console.log('close');
+    modal.classList.add('hidden')
+    overlay.classList.add('hidden')
+}
+stringBtn.addEventListener('click', showModal)
+closeBtn.addEventListener('click', closeModal)
+overlay.addEventListener('click', 
+closeModal)
+document.addEventListener('keydown', function (e) {
+    // console.log(e.key);
+  
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
