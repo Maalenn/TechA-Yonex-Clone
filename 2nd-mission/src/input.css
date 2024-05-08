@@ -22,7 +22,6 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-
 /* dot active for product  */
 .dot-active{
   @apply border border-[#1f2427] w-[24px] h-[24px] rounded-full
