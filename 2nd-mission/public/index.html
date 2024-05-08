@@ -1,14 +1,923 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yonex Clone</title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yonex Clone</title>
+    <!-- Link styles.css -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <!-- Link cdn of tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Start Navbar -->
+    <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
+    <nav
+      class="w-full md:bg-neutral-800 md:bg-opacity-40 absolute text-white hover:bg-white hover:text-black bg-white border border-1 md:border-none top-0 z-10"
+    >
+      <div
+        class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10"
+      >
+        <!-- Hamburger Icons -->
+        <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()">
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+        </div>
+
+        <!-- Logo -->
+        <div>
+          <a href="index.html"><img
+            src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
+            alt=""
+            class="w-[140px] Logo ml-3 py-3"
+          /></a>
+          <p class="my-0 text-xs text-center hidden md:block">
+            far beyond ordinary
+          </p>
+        </div>
+
+        <!-- Center Navigation -->
+        <div
+          class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]"
+        >
+          <!-- Badminton Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="hoverDrop()"
+            onmouseleave="hoverHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">BADMINTON</a>
+            <!-- Badminton section -->
+            <section
+              class="w-full bg-white p-[40px] absolute top-[100px] hidden z-[10000] left-0"
+              id="baminton"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <badminton-component></badminton-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Golf Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="golfDrop()"
+            onmouseleave="golfHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">GOLF</a>
+            <!-- Golf section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] hidden h-[220px] z-[10000] left-0"
+              id="golf"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <golf-component></golf-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Tennis Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="tennisDrop()"
+            onmouseleave="tennisHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">TENNIS</a>
+            <!-- Tennis section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
+              id="tennis"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <tennis-component></tennis-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- running Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="runningDrop()"
+            onmouseleave="runningHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
+            <!-- running section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] h-[220px] hidden z-[10000] left-0"
+              id="running"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <running-component></running-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- snowboard Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="snowboardDrop()"
+            onmouseleave="snowboardHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">SNOWBOARDING</a>
+            <!-- snowboard section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] justify-center hidden z-[10000] left-0 h-[380px]"
+              id="snowboard"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto">
+                <div
+                  class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3"
+                >
+                  <snowboard-component></snowboard-component>
+                  <div class="block">
+                    <div
+                      class="flex flex-col items-center justify-center w-[223px]"
+                    >
+                      <a href="" class="bg-[#f7f8f9]"
+                        ><img
+                          src="../assets/images/snowboard-images/skate-athlete.webp"
+                          alt=""
+                      /></a>
+                      <p class="font-semibold text-[14px] text-black">TEAM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="cursor-pointer hover:opacity-80 h-[30px]">
+            <a href="" class="pt-[10px] ">NEWS</a>
+          </div>
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="aboutDrop()"
+            onmouseleave="aboutHide()"
+          >
+            <a href="tech-a-project/2nd-mission/public/about-page/about-us.html" class="group-hover:opacity-80 relative top-[7%]">ABOUT</a>
+            <!-- about section -->
+            <section
+              class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0"
+              id="about"
+            >
+              <div id="HoverBox" class="max-w-[1600px] mx-auto  flex justify-center">
+                <about-component></about-component>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="inline-block cursor-pointer md:hidden mr-3">
+          <img
+            src="../assets/images/icons/search-interface-symbol (1).png"
+            alt=""
+            class="size-[20px]"
+          />
+        </div>
+        <div class="w-[120px] fill-slate-100 items-center gap-3 md:flex hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+          </svg>          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>       
+             
+          <img
+            src="../assets/images/icons/accessibility_icon.svg"
+            alt=""
+            class="size-[50px] cursor-pointer mb-[7.5px]"
+          />
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start SideBar -->
+    <my-sidebar></my-sidebar>
+    <!-- End Sidebar -->
+
+    <!-- Start Hero Banner -->
+    <div class="hidden md:relative md:block">
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/Lucas.webp" class="w-full h-auto relative" alt="">
+        <button class=" bg-black absolute top-[50%] left-[45%] text-white py-3 hover:bg-white hover:text-black px-8">WATCH VIDEO</button>
+      </div>
+      
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/badminton-cover.webp" class="w-full h-auto relative object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 hover:bg-white hover:text-black px-8">READ MORE</button>
+      </div>
+      
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/badminton-image.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 hover:bg-white hover:text-black px-10">NEWS</button>
+        <button class=" bg-black absolute top-[65%] left-[40%] text-white py-3 hover:bg-white hover:text-black px-6">PRODUCT</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/beyond-i-see.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-white absolute top-[45%] left-[40%] text-black py-3 hover:bg-black hover:text-white px-8">WATCH VIDEO</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/bwis_manifest_1002.webp" class="w-full h-auto object-cover" alt="">
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/counter-drive.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 hover:bg-white hover:text-black px-[50px]">NEWS</button>
+        <button class=" bg-black absolute top-[30%] left-[40%] text-white py-3 hover:bg-white hover:text-black px-6">LEARN MORE</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/ezong.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[55%] text-white py-3 hover:bg-white hover:text-black px-8">LEARN MORE</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/fly-direction.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 hover:bg-white hover:text-black px-8">READ MORE</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/made-by-yonex-desktop.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 hover:bg-white hover:text-black px-8">LEARN MORE</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/new-dawn.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 hover:bg-white hover:text-black px-8">NEWS</button>
+      </div>
+
+      <div class="mySlides fade relative">
+        <img src="../assets/images/homePage-hero/shoes.webp" class="w-full h-auto object-cover" alt="">
+        <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 hover:bg-white hover:text-black px-8">LEARN MORE</button>
+      </div>
+      
+      <button href="#" class="prev absolute top-1/2 left-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light ml-2 text-white pb-1 pr-1" onclick="plusSlides(-1)">❮</button>
+      <button href="#" class="next absolute top-1/2 right-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light mr-2 text-white pb-1 pl-1" onclick="plusSlides(1)">❯</button>
+      
+    </div>
+    <!-- End Hero Banner -->
+
+    <!-- Start Hero Banner responsive -->
+    <div class="slideshow-container md:hidden block">
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/lucas.webp" style="width:100%">
+      </div>
+      
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/badminton-1000.webp" style="width:100%">
+      </div>
+      
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/beyond-what-i-see.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/craft.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/counter-drive.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/craft.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/cover.webp" style="width:100%">
+      </div>
+
+      <div class="mySlides1 fade dot">
+      <img src="../assets/images/homePage-hero/responsive/far-beyond.webp" style="width:100%">
+
+      </div>
+
+    </div>
+    <!-- End Hero Banner responsive -->
+
+    <!-- Start shop by sport sections-->
+    <section class="md:flex relative w-full justify-center hidden"> 
+      <section
+        class="relative mx-auto max-w-[1280px] min-w-[300px] h-full max-lg:w-[100%]"
+      >
+        <div class="flex w-[100%] mt-24 justify-center">
+          <h1 class="text-[25px] font-[Oswald]">BROWSE BY SPORTS</h1>
+        </div>
+
+        <section class="mx-auto px-[50px] py-[45px] ">
+          <ul
+            class="overflow-x-hidden w-[100%] slideShow relative grid grid-cols-[repeat(5,300px)] ssm:grid-cols-[repeat(34,330px)] smd:grid-cols-[repeat(34,450px)] slg:grid-cols-[repeat(34,399px)] sxl:grid-cols-[repeat(34,300px)] max-sm:grid-cols-[repeat(34,280px)] max-md:grid-cols-[repeat(34,340px)] max-lg:grid-cols-[repeat(34,360px)] overflow-auto font-[Oswald]"
+          >
+            <li class="slide-list slg:px-[20px]">
+              <a> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/sport-image/orange-shoes.webp"
+                  alt=""
+                />
+                  <h3
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                  >
+                    RUNNING
+                  </h3>
+              </a>
+            </li> 
+            <li class="slide-list slg:px-[20px] ">
+              <a> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/sport-image/snowboard.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                  >
+                    SNOWBOARDING
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list slg:px-[20px] ">
+              <a> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/sport-image/badminton.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                  >
+                    BADMINTON
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list slg:px-[20px] ">
+              <a> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/sport-image/tennis.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                  >
+                    TENNIS
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list slg:px-[20px] ">
+              <a> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/sport-image/golf.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
+                  >
+                    GOLF
+                  </h3>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <div
+          class="back absolute top-[58%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5"
+          onclick="pushArrow(1)"
+        >
+          <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
+        </div>
+        <div
+          class="next absolute top-[58%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5"
+          onclick="pushArrow(-1)"
+        >
+          <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
+        </div>
+      </section>
+    </section>
+    <!-- end browse by sport -->
+
+    <!-- start recent new section -->
+    <div class="max-w-[1200px] mx-auto mt-20 md:block flex flex-col justify-center items-center">
+      <h2 class="font-normal text-[20px] text-center mb-6 md:text-[26px] font-[Oswald] tracking-[3px]">RECENT NEWS</h2>
+      <div class="slideshow-container-recent">
+          <!-- new shoes -->
+          <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide ">
+              <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px] bg-black">
+                  <img class="w-full h-full object-cover" src="../assets/images/recent-images/news240221_600.webp" alt="" >
+              </div>
+              <div class="text-center font-[Oswald] max-w-[400px] ">
+                  <p class="font-light pt-3 md:p-0 md:text-start text-center">General  April 10, 2024</p>
+                  <h2 class="text-[32px] md:font-normal tracking-[2.5px] pb-4 md:pb-0 text-start">
+                    ASTROX 88 S/D:  A new dawn for doubles
+                  </h2>
+                  <p class="font-light text-wrap  pt-3 text-start font-sans">
+                      TOKYO, Japan – A new dawn is here for doubles players with the introduction of the brand new ASTROX 88 S and ASTROX 88 D. <br>
+                  </p>
+                  <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">READ MORE</button>
+              </div>
+          </div>
+          <!-- new -->
+          
+          <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide">
+              <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px]">
+                  <img class="w-full h-full object-cover" src="../assets/images/recent-images/news240226_600.webp" alt="" >
+              </div>
+              <div class="text-center font-[Oswald] max-w-[400px] ">
+                <p class="font-light pt-3 md:p-0 md:text-start text-center">Tennis February 25, 2024</p>
+                <h2 class="text-[32px] md:font-normal tracking-[2.5px] pb-4 md:pb-0 text-start">
+                  All smiles for Paolini after her first WTA 1000 title in Dubai 
+                </h2>
+                <p class="font-light text-wrap  pt-3 text-start font-sans">
+                  DUBAI, UNITED ARAB EMIRATES – In a moment of pure happiness for Jasmine Paolini (ITA)<br>
+                </p>
+                <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">READ MORE</button>
+            </div>
+          </div>
+          
+          <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide">
+              <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px]"">
+                  <img class="w-full h-full object-cover" src="../assets/images/recent-images/news240312_600.webp" alt="">
+              </div>
+              <div class="text-center font-[Oswald] max-w-[400px] ">
+                <p class="font-light pt-3 md:p-0 md:text-start text-center">Badminton  March 11, 2024</p>
+                <h2 class="text-[32px] md:font-normal tracking-[2.5px] pb-4 md:pb-0 text-start">
+                  New traditions at the historic All England Open 
+                </h2>
+                <p class="font-light text-wrap  pt-3 text-start font-sans">
+                  BIRMINGHAM, England – The prestigious YONEX All England Open Badminton Championships,<br>
+                </p>
+                <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">READ MORE</button>
+            </div>
+          </div>
+          
+          <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide">
+              <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px]"">
+                  <img class="w-full h-full object-cover" src="../assets/images/recent-images/news240318_600.webp" alt="">
+              </div>
+              <div class="text-center font-[Oswald] max-w-[400px] ">
+                <p class="font-light pt-3 md:p-0 md:text-start text-center">Badminton March 17, 2024</p>
+                <h2 class="text-[32px] md:font-normal tracking-[2.5px] pb-4 md:pb-0 text-start">
+                  YONEX All England 2024:  Team Yonex Collecting titles and trophies
+                </h2>
+                <p class="font-light text-wrap  pt-3 text-start font-sans">
+                  BIRMINGHAM, England – The YONEX All England Open Badminton Championships 2024 came to an exciting conclusion on Sunday <br>
+                </p>
+                <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">READ MORE</button>
+            </div>
+          </div>
+          
+          <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide">
+              <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px]"">
+                  <img class="w-full h-full object-cover" src="../assets/images/recent-images/news240411_600x600.webp" alt="">
+              </div>
+              <div class="text-center font-[Oswald] max-w-[400px] ">
+                <p class="font-light pt-3 md:p-0 md:text-start text-center">General  April 10, 2024</p>
+                <h2 class="text-[32px] md:font-normal tracking-[2.5px] pb-4 md:pb-0 text-start">
+                  ASTROX 88 S/D:  A new dawn for doubles
+                </h2>
+                <p class="font-light text-wrap  pt-3 text-start font-sans">
+                    TOKYO, Japan – A new dawn is here for doubles players with the introduction of the brand new ASTROX 88 S and ASTROX 88 D. <br>
+                </p>
+                <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">READ MORE</button>
+            </div>
+          </div>
+          
+          <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide">
+              <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px]"">
+                  <img class="w-full h-full object-cover" src="../assets/images/recent-images/news_240312_600_2.webp" alt="">
+              </div>
+              <div class="text-center font-[Oswald] max-w-[400px] ">
+                <p class="font-light pt-3 md:p-0 md:text-start text-center">General  April 10, 2024</p>
+                <h2 class="text-[32px] md:font-normal tracking-[2.5px] pb-4 md:pb-0 text-start">
+                  Team Yonex Secures Wins in All Five Categories  at YONEX French Open 2024
+                </h2>
+                <p class="font-light text-wrap  pt-3 text-start font-sans">
+                  PARIS, France – The YONEX French Open 2024 concluded with an exciting finale on Sunday, March 10th.  <br>
+                </p>
+                <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">READ MORE</button>
+            </div>
+          </div>
+          
+          <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide">
+              <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px]"">
+                  <img class="w-full h-full object-cover" src="../assets/images/recent-images/news_240501_600.webp" alt="">
+              </div>
+              <div class="text-center font-[Oswald] max-w-[400px] ">
+                <p class="font-light pt-3 md:p-0 md:text-start text-center">General  April 10, 2024</p>
+                <h2 class="text-[32px] md:font-normal tracking-[2.5px] pb-4 md:pb-0 text-start">
+                  Team Yonex star De Groot wins 2024 Laureus Award
+                </h2>
+                <p class="font-light text-wrap  pt-3 text-start font-sans">
+                  MADRID, Spain— Diede de Groot (NED), one of the stars of Team Yonex, has won a 2024 Laureus World Sports Award in recognition <br>
+                </p>
+                <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">READ MORE</button>
+            </div>
+          </div>
+          
+      </div>
+    </div> 
+    <!-- end recent news sections -->
+
+    <!-- Start Badminton section -->
+    <div class="max-w-[1800px] mx-auto md:mt-6">
+      <div class="md:flex justify-between items-center flex-col md:flex-row">
+          <div class="md:flex md:flex-col hidden xl:ml-[349px] md:ml-[40px] md:size-[350px] md:mt-[40px]">
+              <a href=" " class="bg-[#1c5dad] py-1 px-5 font-sans text-white text-nowrap w-fit" >NEW BADMINTON</a>
+              <p class="font-normal text-3xl py-5 tracking-[4px] text-nowrap">NANOFLARE 1000</p>
+              <p class="font-normal font-sans text-sm text-[#737a7e] pb-6 text-nowrap">Engineered to improve swing speed and <br> 
+                  maneuverability, the NANOFLARE is the only <br> 
+                  head-light racquet proven to provide unrivaled <br> 
+                  power and increased shuttle acceleration. <br>
+              </p>
+              <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold w-fit hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">LEARN MORE</button>
+          </div>
+          <div class=" md:flex items-center md:max-w-[1100px] md:min-w-[500px] mt-5 flex-1 ">
+              <img src="../assets/images/main-content-images/badminton-cover.webp" alt="">
+          </div>
+          <div class="md:hidden block text-center my-[30px]">
+              <a href="" class="bg-[#1c5dad] py-1 px-5 font-sans text-white" >NEW BADMINTON</a>
+              <p class="font-normal text-3xl py-5 tracking-[4px]">NANOFLARE 1000</p>
+              <p class="font-normal font-sans text-sm text-[#737a7e]">Engineered to improve swing speed and <br> 
+                  maneuverability, the NANOFLARE is the only <br> 
+                  head-light racquet proven to provide unrivaled <br> 
+                  power and increased shuttle acceleration. <br>
+              </p>
+              <button class="bg-[#1f2427] py-2 px-4 text-white font-sans font-semibold mt-3 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">LEARN MORE</button>
+          </div>
+      </div>
+    </div>
+    <!-- End badminton section -->
+    
+    <!-- Start Golf Section -->
+    <div class="md:flex justify-between flex-1 items-center  md:max-w-[1800px] mx-auto">
+      <div class="relative flex items-center max-w-[800px] right-1 flex-1" >
+          <img src="../assets/images/main-content-images/EZONE_GT_d_ts_Head_Horizontal.webp" alt="" class="w-full">
+      </div>
+      <div class="xl:mr-[390px] md:block hidden md:mr-[40px] ">
+          <a href="" class="bg-[#1c5dad] py-1 px-5 font-sans text-white">NEW GOLF</a>
+          <p class="font-normal text-3xl py-5 tracking-[4px]">EZONE GT DRIVER TYPE S</p>
+          <p class="font-normal font-sans text-sm text-[#737a7e] pb-6">Engineered to improve swing speed and <br> 
+              maneuverability, the NANOFLARE is the only <br> 
+              head-light racquet proven to provide unrivaled <br> 
+              power and increased shuttle acceleration. <br>
+          </p>
+          <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">LEARN MORE</button>
+      </div>
+      <div class="md:hidden block my-[30px] text-center">
+          <a href="" class="bg-[#1c5dad] py-1 px-5 font-sans text-white" >NEW GOLF</a>
+          <p class="font-normal tracking-[4px] text-3xl py-5">EZONE GT DRIVER TYPE S</p>
+          <p class="font-normal font-sans text-sm text-[#737a7e] text-wrap text-center ">
+              Engineered to improve swing speed and <br> 
+              maneuverability, the NANOFLARE is the only <br> 
+              head-light racquet proven to provide unrivaled <br> 
+              power and increased shuttle acceleration. <br>
+          </p>
+          <button class="bg-[#1f2427] py-2 px-4 text-white font-sans font-semibold mt-3 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">LEARN MORE</button>
+      </div>
+    </div>
+    <!-- end Golf sections -->
+
+    <!-- start arrival section -->
+    <section class="md:flex relative w-full justify-center"> 
+      <section
+        class="relative mx-auto max-w-[1280px] min-w-[300px] h-full max-lg:w-[100%] max-md:max-w-[500px]"
+      >
+        <div class="flex w-[100%] mt-24 justify-center">
+          <h1 class="text-[25px] font-[Oswald]">NEW ARRIVALS</h1>
+        </div>
+
+        <section class="mx-auto px-[50px] py-[45px] ">
+          <ul
+            class="overflow-x-hidden w-[100%] slideShow1 relative grid grid-cols-[repeat(5,300px)] max-md:grid-cols-[repeat(5,400px)] overflow-auto font-[Oswald]"
+          >
+            <li class="slide-list1 slg:px-[20px] max-md:mx-auto">
+              <a> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9] max-md:w-[450px]"
+                  src="../assets/images/new-arrival-image/shoes.webp"
+                  alt=""
+                />
+                  <h3
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] mx-auto"
+                  >
+                  POWER CUSHION 88 DIAL UNISEX
+                  </h3>
+              </a>
+            </li> 
+            <li class="slide-list1 slg:px-[20px] max-md:mx-auto">
+              <a> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9] max-md:w-[450px]"
+                  src="../assets/images/new-arrival-image/snowboard.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] mx-auto"
+                  >
+                  NEXTAGE NX23
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list1 slg:px-[20px] max-md:mx-auto">
+              <a class=""> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9] max-md:w-[450px]"
+                  src="../assets/images/new-arrival-image/raquest.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] mx-auto"
+                  >
+                  NANOFLARE 800 PRO
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list1 slg:px-[20px] max-md:mx-auto">
+              <a> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9] max-md:w-[450px]"
+                  src="../assets/images/new-arrival-image/golf.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] mx-auto"
+                  >
+                  Fiore IRON
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list1 slg:px-[20px] max-md:mx-auto">
+              <a> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9] max-md:w-[450px]"
+                  src="../assets/images/new-arrival-image/tennis.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] mx-auto"
+                  >
+                  POLYTOUR AIR 125
+                  </h3>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <div
+          class="back absolute md:top-[58%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5 top-[45%]"
+          onclick="pushArrow1(1)"
+        >
+          <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
+        </div>
+        <div
+          class="next absolute md:top-[58%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5 top-[45%]"
+          onclick="pushArrow1(-1)"
+        >
+          <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
+        </div>
+      </section>
+    </section>
+    <!-- End new arrival sections -->
+
+    <!-- Start Tennis -->
+    <div class="max-w-[1800px] mx-auto md:mt-6">
+      <div class="md:flex justify-between items-center flex-col md:flex-row">
+          <div class="md:flex md:flex-col hidden xl:ml-[349px] md:ml-[40px] md:size-[350px] md:mt-[40px]">
+              <a href=" " class="bg-[#1c5dad] py-1 px-5 font-sans text-white text-nowrap w-fit" >NEW TENNIS</a>
+              <p class="font-normal text-3xl py-5 tracking-[4px] text-nowrap">EZONE 100</p>
+              <p class="font-normal font-sans text-sm text-[#737a7e] pb-6 text-nowrap">
+                  The 7th-generation EZONE series delivers easy<br>
+                  power and an improved, comfortable feel. Now<br>
+                  available in two colors, this series is suitable for a<br>
+                  wide range of players, from juniors and <br>
+                  recreational players to the top players in the <br>
+                  world.
+              </p>
+              <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold w-fit hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">LEARN MORE</button>
+          </div>
+          <div class=" md:flex items-center md:max-w-[1100px] md:min-w-[500px] mt-5 flex-1 ">
+              <img src="../assets/images/main-content-images/ezone-100.webp" alt="">
+          </div>
+          <div class="md:hidden block text-center my-[30px]">
+              <a href="" class="bg-[#1c5dad] py-1 px-5 font-sans text-white" >NEW TENNIS</a>
+              <p class="font-normal text-3xl py-5 tracking-[4px]">EZONE 100</p>
+              <p class="font-normal font-sans text-sm text-[#737a7e]">
+                  The 7th-generation EZONE series delivers easy<br>
+                  power and an improved, comfortable feel. Now<br>
+                  available in two colors, this series is suitable for a<br>
+                  wide range of players, from juniors and <br>
+                  recreational players to the top players in the <br>
+                  world.
+              </p>
+              <button class="bg-[#1f2427] py-2 px-4 text-white font-sans font-semibold mt-3 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">LEARN MORE</button>
+          </div>
+      </div>
+    </div>
+    <!-- End Tennis -->
+
+    <!-- Start Shoes section -->
+    <div class="md:flex justify-between md:mt-[80px] flex-1 items-center  md:max-w-[1800px] mx-auto mb-[100px]">
+      <div class="relative flex items-center max-w-[1000px] right-1 flex-1" >
+          <img src="../assets/images/main-content-images/Shoe-cover.webp" alt="" class="w-[900px]">
+      </div>
+      <div class="mr-[120px] md:block hidden w-[400px] shrink-0">
+          <a href="" class="bg-[#1c5dad] py-1 px-5 font-sans text-white">NEW RUNNING</a>
+          <p class="font-normal text-3xl py-5 tracking-[4px]">SAFERUN AERUS MEN</p>
+          <p class="font-normal font-sans text-sm text-[#737a7e] pb-6">Engineered to improve swing speed and <br> 
+              Yonex running shoes are designed to help non- <br>
+              runners train in good form while preventing <br>
+              injuries. With our expertise in graphite applied to <br>
+              running shoes, every step, whether from heel-to- <br>
+              toe or midfoot-to-toe, will comfortably propel you <br>
+              forward for more efficient, effective and safe <br>
+              training.
+          </p>
+          <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">LEARN MORE</button>
+      </div>
+      <div class="md:hidden block mt-[70px] text-center">
+          <a href="" class="bg-[#1c5dad] py-1 px-5 font-sans text-white" >NEW RUNNING</a>
+          <p class="font-normal tracking-[4px] text-3xl py-5">SAFERUN AERUS MEN</p>
+          <p class="font-normal font-sans text-sm text-[#737a7e]">Engineered to improve swing speed and <br> 
+              Yonex running shoes are designed to help non- <br>
+              runners train in good form while preventing <br>
+              injuries. With our expertise in graphite applied to <br>
+              running shoes, every step, whether from heel-to- <br>
+              toe or midfoot-to-toe, will comfortably propel you <br>
+              forward for more efficient, effective and safe <br>
+              training.
+          </p>
+          <button class="bg-[#1f2427] py-2 px-4 text-white font-sans font-semibold mt-3 hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">LEARN MORE</button>
+      </div>
+    </div>
+    <!-- end shoes section -->
+
+    <!-- start athlete sections -->
+    <section class="md:flex relative w-full justify-center hidden"> 
+      <section
+        class="relative mx-auto max-w-[1280px] min-w-[300px] h-full max-lg:w-[100%]"
+      >
+        <div class="flex w-[100%] mt-24 justify-center">
+          <h1 class="text-[25px] font-[Oswald]">BROSWE BY ATHLETE</h1>
+        </div>
+
+        <section class="mx-auto px-[50px] py-[45px] ">
+          <ul
+            class="overflow-x-hidden w-[100%] slideShow2 relative grid grid-cols-[repeat(7,300px)] ssm:grid-cols-[repeat(34,330px)] smd:grid-cols-[repeat(34,450px)] slg:grid-cols-[repeat(34,399px)] sxl:grid-cols-[repeat(34,300px)] max-sm:grid-cols-[repeat(34,280px)] max-md:grid-cols-[repeat(34,340px)] max-lg:grid-cols-[repeat(34,360px)] overflow-auto font-[Oswald]"
+          >
+            <li class="slide-list1 slg:px-[20px]">
+              <a class="relative"> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/product-review/al29.webp"
+                  alt=""
+                />
+                  <h3
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
+                  >
+                    KENTO MOMOTA
+                  </h3>
+              </a>
+            </li> 
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/product-review/al3.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
+                  >
+                    AKANE YAMAGUCHI
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/product-review/nakashima_570x570.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
+                  >
+                    BRANDOM NAKASHIMA
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/product-review/vekic_570x570.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
+                  >
+                    DONNA VEKIC
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/product-review/kim_570x570_.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
+                  >
+                    HYOO JOO KIM
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/product-review/athlete1.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
+                  >
+                    VIKTOR AXELSON
+                  </h3>
+              </a>
+            </li>
+            <li class="slide-list2 slg:px-[20px] ">
+              <a class="relative"> 
+                <img
+                  class="w-[260px] bg-[#f7f8f9]"
+                  src="../assets/images/product-review/Osaka_570x570_07.webp"
+                  alt=""
+                />
+                <h3
+                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
+                  >
+                    NAOMI OSAKAS
+                  </h3>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <div
+          class="back absolute top-[58%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5"
+          onclick="pushArrow2(1)"
+        >
+          <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
+        </div>
+        <div
+          class="next absolute top-[58%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5"
+          onclick="pushArrow2(-1)"
+        >
+          <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
+        </div>
+      </section>
+    </section>
+    <!-- end athlete sections -->
+
+    <!-- Start apparel section -->
+    <div class="md:flex justify-center lg:mt-[100px] flex-1 items-center mx-auto lg:h-">
+      <div class="flex-1 max-w-[1600px] min-w-[200px]" >
+          <img src="../assets/images/main-content-images/Yonex_Apparel.webp" alt="" class="w-full">
+      </div>
+      <div class="md:block hidden">
+          <p class="font-normal text-3xl py-5 tracking-[4px]">SAFERUN AERUS MEN</p>
+          <p class="font-normal font-sans text-sm text-[#737a7e] pb-6">Engineered to improve swing speed and <br> 
+              Athletic apparel designed to support each <br>
+              movement in every environment is key to <br>
+              achieving peak-performance on the court. <br>
+          </p>
+          <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold">LEARN MORE</button>
+      </div>
+      <div class="max-w-[1000px]"></div>
+    </div>
+    <!-- End apparel section -->
+    <!-- Start Footer -->
+    <my-footer></my-footer>
+    <!-- End Footer -->
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>
-
-
-
