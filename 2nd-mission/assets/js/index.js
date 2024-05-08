@@ -130,7 +130,7 @@ const runningObj = [
 // snowboardobj
 const snowboardObj = [
     {
-        img: "../assets/images/snowboard-images/skate.webp",
+        img: "../assets/images/snowboard-images/skate-athlete.webp",
         title: "BOARD",
         link: ""
     },
