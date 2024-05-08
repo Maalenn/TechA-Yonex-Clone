@@ -1,0 +1,30 @@
+
+.lis {
+    padding-right:10px;
+    width: 50%;
+    display: flex; 
+    align-items: center;
+    margin-bottom: 30px; 
+}
+@media screen and (max-width:767px ) {
+    .lis {
+        width: 100%;
+    }
+}
+
+
+.circle {
+    background: #006cb7;
+    border-radius: 50px;
+    color: #fff;
+    font-family: 'Oswald', 'Lato', sans-serif;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 14px;
+    min-width: 40px;
+    text-align: center;
+}
+html{
+    scroll-behavior: smooth;
+}
