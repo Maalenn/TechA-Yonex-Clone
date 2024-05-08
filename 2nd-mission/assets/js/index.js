@@ -114,7 +114,7 @@ const runningObj = [
     {
         img: "../assets/images/running-images/shoe-orange.webp",
         title: "MEN",
-        link: ""
+        link: "../public/product-review-runningPage.html"
     },
     {
         img: "../assets/images/running-images/shoe-white.webp",
