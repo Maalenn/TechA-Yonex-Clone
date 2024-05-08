@@ -1,29 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+
     <title>Athlete Profile</title>
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/athlete-profile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class=" text-base font-[Oswald] font-6 ">
+
+    <!-- Start Navbar -->
+    <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
+    <nav
+        class="w-full  md:bg-white md:bg-opacity-40 text-[#33333] hover:bg-white hover:text-black bg-white border border-1 top-0 z-50">
+        <div class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10">
+            <!-- Hamburger Icons -->
+            <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()">
+                <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+                <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+                <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+            </div>
+
+            <!-- Logo -->
+            <div>
+                <a href="index.html"><img
+                        src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
+                        alt="" class="w-[140px] Logo ml-3 py-3" /></a>
+                <p class="my-0 text-xs text-center hidden md:block">
+                    far beyond ordinary
+                </p>
+            </div>
+
+            <!-- Center Navigation -->
+            <div class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]">
+                <!-- Badminton Hoverdrop -->
+                <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="hoverDrop()"
+                    onmouseleave="hoverHide()">
+                    <a href="#" class="group-hover:opacity-50 relative top-[7%]">BADMINTON</a>
+                    <!-- Badminton section -->
+                    <section class="w-full bg-white p-[40px] absolute top-[100px] hidden z-[10000] left-0"
+                        id="baminton">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <badminton-component></badminton-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Golf Hoverdrop -->
+                <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="golfDrop()" onmouseleave="golfHide()">
+                    <a href="#" class="group-hover:opacity-50 relative top-[7%]">GOLF</a>
+                    <!-- Golf section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] hidden h-[220px] z-[10000] left-0"
+                        id="golf">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <golf-component></golf-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Tennis Hoverdrop -->
+                <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="tennisDrop()"
+                    onmouseleave="tennisHide()">
+                    <a href="#" class="group-hover:opacity-50 relative top-[7%]">TENNIS</a>
+                    <!-- Tennis section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0" id="tennis">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <tennis-component></tennis-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- running Hoverdrop -->
+                <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="runningDrop()"
+                    onmouseleave="runningHide()">
+                    <a href="#" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
+                    <!-- running section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] h-[220px] hidden z-[10000] left-0"
+                        id="running">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <running-component></running-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- snowboard Hoverdrop -->
+                <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="snowboardDrop()"
+                    onmouseleave="snowboardHide()">
+                    <a href="#" class="group-hover:opacity-50 relative top-[7%]">SNOWBOARDING</a>
+                    <!-- snowboard section -->
+                    <section
+                        class="w-full bg-white p-[30px] absolute top-[100px] justify-center hidden z-[10000] left-0 h-[380px]"
+                        id="snowboard">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3">
+                                <snowboard-component></snowboard-component>
+                                <div class="block">
+                                    <div class="flex flex-col items-center justify-center w-[223px]">
+                                        <a href="" class="bg-[#f7f8f9]"><img
+                                                src="../assets/images/snowboard-images/skate-athlete.webp" alt="" /></a>
+                                        <p class="font-semibold text-[14px] text-black">TEAM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="cursor-pointer hover:opacity-80 h-[30px]">
+                    <a href="" class="pt-[10px]">NEWS</a>
+                </div>
+                <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="aboutDrop()"
+                    onmouseleave="aboutHide()">
+                    <a href="tech-a-project/2nd-mission/public/about-page/about-us.html"
+                        class="group-hover:opacity-80 relative top-[7%]">ABOUT</a>
+                    <!-- about section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0" id="about">
+                        <div id="HoverBox" class="max-w-[1600px] mx-auto flex justify-center">
+                            <about-component></about-component>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="inline-block cursor-pointer md:hidden mr-3">
+                <img src="../assets/images/icons/search-interface-symbol (1).png" alt="" class="size-[20px]" />
+            </div>
+            <div class="w-[120px] fill-slate-100 items-center gap-3 md:flex hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 mb-2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 mb-2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+
+                <img src="../assets/images/icons/accessibility_icon.svg" alt=""
+                    class="size-[50px] cursor-pointer mb-[7.5px]" />
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start SideBar -->
+    <my-sidebar></my-sidebar>
+    <!-- End Sidebar -->
     <div>
-                <!-- start head main -->
+        <!-- start head main -->
         <div class="flex flex-col relative justify-center mb-[110px] ">
             <img class="w-100%" src="../assets/images/athlete-profile.img/CarolinaMarin_main.webp" alt="person">
             <!-- start title  -->
@@ -31,7 +179,8 @@
                 <div class="absolute w-[310px]  md:w-[640px] h-[70px] md:h-[113px] bg-[#006cb7]
                 text-white py-5  px-8 bottom-[-63px] md:bottom-[-80px] text-center ">
                     <div class="name">
-                        <span class="italic text-[24px] mb-[-3px] md:text-4xl tracking-[0.2em] uppercase m-0">Carolina Marin</span>
+                        <span class="italic text-[24px] mb-[-3px] md:text-4xl tracking-[0.2em] uppercase m-0">Carolina
+                            Marin</span>
                     </div>
                     <div class="text-[16px] md:text-lg mb-[12px] font-[Figtree]">
                         <span>Badminton</span>
@@ -50,178 +199,222 @@
                     <ul class=" flex flex-row justify-around lg:flex-col tracking-[2px] text-[#737a7e] ">
                         <li class="mb-[2px] lg:mb-[40px]"><a href="#career">carerr</a></li>
                         <li class="mb-[2px] lg:mb-[40px]"><a href="#achievement">achievements</a></li>
-                        <li class="max-[399px]:hidden sm:mb-[2px] lg:mb-[20px]"><a href="#equipment">Equipment used</a></li>
+                        <li class="max-[399px]:hidden sm:mb-[2px] lg:mb-[20px]"><a href="#equipment">Equipment used</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <!-- end sidebar -->
-        
 
-        <!-- Start carrer content  -->
-        <div class="w-[100%]  lg:pt-[100px] my-[30px] ">
-            
-            <div class="lg:pl-[90px] mt-[40px] lg:m-0  pb-[80px] relative flext flex-row " id="career">
-                
-                <div class=" bg-[#f7f8f9] absolute  bottom-0 right-0  h-[40%] w-[105%]"></div>
-                <!-- content part -->
-                <div class="  text-center lg:text-left">
-                    <!-- block title -->
-                    <h2 class="text-[#1f2427] uppercase text-[26px] tracking-[4px] mb-[30px] ">Career</h2>
-                    <!-- block info -->
-                    <div
-                        class="text-[#737a7e] font-Figtree flex flex-column items-center lg:block lg:max-w-[960px] pb-[80px] relative">
-                        
-                        <div class="box-border max-w-[1000px] text-left mx-auto lg:m-0">
-                            <!-- content box -->
-                            <div
-                                class="flex justify-start flex-col bg-left-top bg-cover bg-no-repeat 
-                                bg-scroll mx-0 mt-0 mb-[10px] px-[10px] py-[10px] box-border border-none border lg:w-[100%]">
-                                <!-- container content -->
+
+            <!-- Start carrer content  -->
+            <div class="w-[100%]  lg:pt-[100px] my-[30px] ">
+                <div class="lg:pl-[90px] mt-[40px] lg:m-0  pb-[80px] relative flext flex-row " id="career">
+
+                    <div class=" bg-[#f7f8f9] absolute  bottom-0 right-0  h-[40%] w-[105%]"></div>
+                    <!-- content part -->
+                    <div class="  text-center lg:text-left">
+                        <!-- block title -->
+                        <h2 class="text-[#1f2427] uppercase text-[26px] tracking-[4px] mb-[30px] ">Career</h2>
+                        <!-- block info -->
+                        <div
+                            class="text-[#737a7e] font-Figtree flex flex-column items-center lg:block lg:max-w-[960px] pb-[80px] relative">
+
+                            <div class="box-border max-w-[1000px] text-left mx-auto lg:m-0">
+                                <!-- content box -->
                                 <div
-                                    class="border-none border flex items-center flex-col px-[30px] py-0 lg:p-0 lg:block lg:mx-0   w-[100%] ">
-                                    <p class=" mb-[24px] ">Carolina Marin is a force of
-                                        nature on the court. With her fiery, never-give-up attitude, she has made
-                                        <br>
-                                        amazing achievements at her young age. She made big splashes early on in her
-                                        career, including <br>
-                                        winning the gold medal at the 2009 European U17 Championships.
-
-                                    </p>
-                                    <p class=" mb-[24px]">
-                                        Carolina has brought about many historic achievements for her home country,
-                                        Spain. She became the <br>
-                                        first Spanish player to win a grand prix gold title at the 2013 London Grand
-                                        Prix Gold. The following <br>
-                                        year, she went on to win the gold medal at the 2014 European Championships,
-                                        and in the same year <br>87/*.
-                                        became the first Spanish badminton player ever to win a gold medal at the
-                                        BWF World <br>
-                                        Championships. At age 21, she also became the youngest European player ever
-                                        to win the gold at the <br>
-                                        tournament.
-                                    </p>
-                                    <p class="mb-[24px]">
-                                        <span class="text-[12px] text-secondary-800 font-Figtree">
-                                            <em>Yonex professional players may play with a customized racquet with
-                                                different specifications to the model displayed.</em>
-                                        </span>
-                                    </p>
-                                    <!-- imag wrapper -->
+                                    class="flex justify-start flex-col bg-left-top bg-cover bg-no-repeat 
+                                bg-scroll mx-0 mt-0 mb-[10px] px-[10px] py-[10px] box-border border-none border lg:w-[100%]">
+                                    <!-- container content -->
                                     <div
-                                        class="relative flex flex-col items-center lg:block lg:right-[15px] mx-auto lg:mx-0 mb-[24px] py-0 px-[30px] lg:p-0  border max-w-[760px] lg:max-w-none lg:w-[100%]">
-                                        <img class="w-[90%] lg:w-[810px]  max-w-[100%] lg:max-w-[90%] h-auto border-0 ml-[10px] "
-                                            src="../assets/images/athlete-profile.img/pinkcover.webp" alt="">
+                                        class="border-none border flex items-center flex-col px-[30px] py-0 lg:p-0 lg:block lg:mx-0   w-[100%] ">
+                                        <p class=" mb-[24px] ">Carolina Marin is a force of
+                                            nature on the court. With her fiery, never-give-up attitude, she has made
+                                            <br>
+                                            amazing achievements at her young age. She made big splashes early on in her
+                                            career, including <br>
+                                            winning the gold medal at the 2009 European U17 Championships.
+
+                                        </p>
+                                        <p class=" mb-[24px]">
+                                            Carolina has brought about many historic achievements for her home country,
+                                            Spain. She became the <br>
+                                            first Spanish player to win a grand prix gold title at the 2013 London Grand
+                                            Prix Gold. The following <br>
+                                            year, she went on to win the gold medal at the 2014 European Championships,
+                                            and in the same year <br>87/*.
+                                            became the first Spanish badminton player ever to win a gold medal at the
+                                            BWF World <br>
+                                            Championships. At age 21, she also became the youngest European player ever
+                                            to win the gold at the <br>
+                                            tournament.
+                                        </p>
+                                        <p class="mb-[24px]">
+                                            <span class="text-[12px] text-secondary-800 font-Figtree">
+                                                <em>Yonex professional players may play with a customized racquet with
+                                                    different specifications to the model displayed.</em>
+                                            </span>
+                                        </p>
+                                        <!-- imag wrapper -->
                                         <div
-                                            class="absolute mx-auto mt-[300px] md:mt-[350px] lg:m-0 lg:top-[53px] lg:right-0 w-[65%] lg:w-[300px]  max-w-[100%] lg:max-w-[35%]  ">
-                                            <img class="mb-[45px] w-[100%] " src="../assets/images/athlete-profile.img/pink.webp" alt="">
-                                            <img class="w-[100%]" src="../assets/images/athlete-profile.img/blue.jpg" alt="">
+                                            class="relative flex flex-col items-center lg:block lg:right-[15px] mx-auto lg:mx-0 mb-[24px] py-0 px-[30px] lg:p-0  border max-w-[760px] lg:max-w-none lg:w-[100%]">
+                                            <img class="w-[90%] lg:w-[810px]  max-w-[100%] lg:max-w-[90%] h-auto border-0 ml-[10px] "
+                                                src="../assets/images/athlete-profile.img/pinkcover.webp" alt="">
+                                            <div
+                                                class="absolute mx-auto mt-[300px] md:mt-[350px] lg:m-0 lg:top-[53px] lg:right-0 w-[65%] lg:w-[300px]  max-w-[100%] lg:max-w-[35%]  ">
+                                                <img class="mb-[45px] w-[100%] "
+                                                    src="../assets/images/athlete-profile.img/pink.webp" alt="">
+                                                <img class="w-[100%]"
+                                                    src="../assets/images/athlete-profile.img/blue.jpg" alt="">
+                                            </div>
                                         </div>
+
                                     </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+
+                </div>
+                <div class="w-[100%] mt-[500px] md:mt-0 ">
+                    <div class="relative md:pr-[15px] md:mt-[400px] lg:mt-0 lg:pl-[100px]  box-border lg:text-left  "
+                        id="achievement">
+                        <!-- background shape -->
+                        <div
+                            class="bg-[#f7f8f9] absolute bottom-0 left-0  lg:text-left lg:h-[65%] lg:w-[44%] lg:z-[-1]">
+                        </div>
+
+                        <div class="text-left lg:pb-[30px]  box-border ">
+                            <!-- block titile-->
+                            <h2
+                                class="md:pt-[100px] text-center lg:text-left text-[#1f2427] uppercase text-[26px] tracking-[4px] mb-[30px] ">
+                                Achievements</h2>
+                            <!-- block info -->
+                            <div class="text-[#737a7e] font-Figtree lg:flex lg:flex-col lg:justify-center">
+                                <!-- row  -->
+                                <div class="border-box max-w-[1280px] mx-auto my-0 ">
+                                    <!-- paralax -->
+                                    <div flex flex-col>
+                                        <!-- html -->
+                                        <div class="text-wrap max-w-[1200px] pl-[3px] mx-[25px] my-0">
+                                            <ul class=" md:flex md:flex-wrap mb-[2.75rem] text-[#1f2427] ">
+                                                <li class="lis">
+                                                    <span class="circle">
+                                                        2x
+                                                    </span>Victor China Open Champion
+                                                    (2018, 2019)
+                                                </li>
+                                                <li class="lis">
+                                                    <span class="circle">2x</span> DAIHATSU YONEX Japan Open Champion
+                                                    (2017, 2018)
+                                                </li>
+                                                <li class="lis">
+                                                    <span class="circle">3x</span>BWF World Championships Gold Medalist
+                                                    (2014, 2015, 2018)
+
+                                                </li>
+                                                <li class="lis"><span class="circle">4x</span>European Championships
+                                                    Gold Medalist
+                                                    (2014, 2016-2018)</li>
+                                                <li class="lis"><span class="circle">2021</span>Thailand Open Champion
+                                                </li>
+                                                <li class="lis"><span class="circle">2019</span>Syed Modi International
+                                                    Badminton Championships Champion
+                                                </li>
+                                                <li class="lis"><span class="circle">2017</span>YONEX German Open
+                                                    Champion</li>
+                                                <li class="lis"><span class="circle">2016</span>Rio Olympic Games Gold
+                                                    Medalist</li>
+                                                <li class="lis"><span class="circle">2015</span>YONEX-SUNRISE Hong Kong
+                                                    Open Champion</li>
+                                                <li class="lis"><span class="circle">2015</span>YONEX French Open
+                                                    Champion</li>
+                                                <li class="lis"><span class="circle">2015</span>The Star Australian Open
+                                                    Champion</li>
+                                                <li class="lis"><span class="circle">2015</span>Maybank Malaysia Open
+                                                    Champion</li>
+                                                <li class="lis"><span class="circle">2015</span>YONEX All England Open
+                                                    Champion</li>
+                                                <li class="lis"><span class="circle">2013</span>London Grand Prix Gold
+                                                    Champion</li>
+                                                <li class="lis"><span class="circle">2013</span>Scottish Open Champion
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-[#1f2427] text-center uppercase lg:pl-[100px]" id="equipment">
+                        <!-- background shape -->
+                        <div></div>
+                        <!-- content-part -->
+                        <div class="max-w-[960px] relative ">
+                            <!-- block title -->
+                            <h2
+                                class="lg:pt-[100px] lg:text-left mb-[50px]  text-[26px] tracking-[4px] uppercase text-center">
+                                <span>Equipment Used</span>
+                            </h2>
+                            <!-- product list -->
+                            <div
+                                class="slideShow  grid grid-cols-[repeat(2,400px)] min-[475px]:grid-cols-[repeat(2,700px)] overflow-auto md:flex md:justify-between my-0 mx-auto max-w-[1160px] ">
+                                <!-- product item -->
+                                <div
+                                    class="slide-list flex flex-col w-[100%] items-center md:max-w[400px] md:mx-[60px] ">
+                                    <a href="#equip"><img class="w-[350px] md:w-[300px]"
+                                            src="../assets/images/athlete-profile.img/nanoflare.webp" alt=""></a>
+                                    <span
+                                        class="h-[50px] text-[18px] md:mt-[26px] md:mr-auto md:mb-[170px] md:ml-auto md:min-h[50px] md:text-center">
+                                        Nanoflare 1000 z
+                                    </span>
+                                </div>
+                                <div
+                                    class="slide-list  flex flex-col w-[100%] items-center md:max-w[400px] md:mx-[60px]  ">
+                                    <a href=""><img class=" w-[350px] md:w-[300px]"
+                                            src="../assets/images/athlete-profile.img/bgab_114_ex_pac_1_1.webp"
+                                            alt=""></a>
+                                    <span
+                                        class="h-[50px] text-[18px] md:mt-[26px] md:mr-auto md:mb-[170px] md:ml-auto md:min-h[50px] md:text-center">
+                                        Aerobite
+                                    </span>
+                                </div>
+
+                                <div class="back absolute top-[55%] right-[30px] bg-[#f3f2f2] p-5 md:hidden"
+                                    onclick="slideArrow(1)">
+                                    <img class="w-[1.5rem]" src="../assets/images/icon/arrow-right.svg" alt="" />
+                                </div>
+                                <div class="next absolute top-[55%] left-[30px] bg-[#f3f2f2] p-5 md:hidden"
+                                    onclick="slideArrow(-1)">
+                                    <img class="w-[1.5rem]" src="../assets/images/icon/arrow-left.svg"" alt="" />
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-            </div>
-            <div class="w-[100%] mt-[500px] md:mt-0 ">
-            <div class="relative md:pr-[15px] md:mt-[400px] lg:mt-0 lg:pl-[100px]  box-border lg:text-left  " id="achievement">
-                <!-- background shape -->
-                <div class="bg-[#f7f8f9] absolute bottom-0 left-0  lg:text-left lg:h-[65%] lg:w-[44%] lg:z-[-1]"></div>
-    
-                <div class="text-left lg:pb-[30px]  box-border ">
-                    <!-- block titile-->
-                    <h2
-                        class="md:pt-[100px] text-center lg:text-left text-[#1f2427] uppercase text-[26px] tracking-[4px] mb-[30px] ">
-                        Achievements</h2>
-                    <!-- block info -->
-                    <div class="text-[#737a7e] font-Figtree lg:flex lg:flex-col lg:justify-center">
-                        <!-- row  -->
-                        <div class="border-box max-w-[1280px] mx-auto my-0 ">
-                            <!-- paralax -->
-                            <div flex flex-col>
-                                <!-- html -->
-                                <div class="text-wrap max-w-[1200px] pl-[3px] mx-[25px] my-0">
-                                    <ul class=" md:flex md:flex-wrap mb-[2.75rem] text-[#1f2427] ">
-                                        <li class="lis">
-                                            <span class="circle">
-                                                2x
-                                            </span>Victor China Open Champion
-                                            (2018, 2019)
-                                        </li>
-                                        <li class="lis">
-                                            <span class="circle">2x</span> DAIHATSU YONEX Japan Open Champion
-                                            (2017, 2018)
-                                        </li>
-                                        <li class="lis">
-                                            <span class="circle">3x</span>BWF World Championships Gold Medalist
-                                            (2014, 2015, 2018)
-                                            
-                                        </li>
-                                        <li class="lis"><span class="circle">4x</span>European Championships Gold Medalist
-                                            (2014, 2016-2018)</li>
-                                        <li class="lis"><span class="circle">2021</span>Thailand Open Champion</li>
-                                        <li class="lis"><span class="circle">2019</span>Syed Modi International Badminton Championships Champion
-                                        </li>
-                                        <li class="lis"><span class="circle">2017</span>YONEX German Open Champion</li>
-                                        <li class="lis"><span class="circle">2016</span>Rio Olympic Games Gold Medalist</li>
-                                        <li class="lis"><span class="circle">2015</span>YONEX-SUNRISE Hong Kong Open Champion</li>
-                                        <li class="lis"><span class="circle">2015</span>YONEX French Open Champion</li>
-                                        <li class="lis"><span class="circle">2015</span>The Star Australian Open Champion</li>
-                                        <li class="lis"><span class="circle">2015</span>Maybank Malaysia Open Champion</li>
-                                        <li class="lis"><span class="circle">2015</span>YONEX All England Open Champion</li>
-                                        <li class="lis"><span class="circle">2013</span>London Grand Prix Gold Champion</li>
-                                        <li class="lis"><span class="circle">2013</span>Scottish Open Champion</li>
-                                    </ul>
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
                 </div>
-    
             </div>
             
-            <div  class="text-[#1f2427] text-center uppercase lg:pl-[100px]" id="equipment">
-                <!-- background shape -->
-                <div></div>
-                <!-- content-part -->
-                <div class="max-w-[960px] relative " >
-                    <!-- block title -->
-                    <h2 class="lg:pt-[100px] lg:text-left mb-[50px]  text-[26px] tracking-[4px] uppercase text-center"> 
-                        <span>Equipment Used</span>
-                    </h2>
-                    <!-- product list -->
-                    <div class="slideShow  grid grid-cols-[repeat(2,400px)] min-[475px]:grid-cols-[repeat(2,700px)] overflow-auto md:flex md:justify-between my-0 mx-auto max-w-[1160px] ">
-                        <!-- product item -->
-                        <div class="slide-list flex flex-col w-[100%] items-center md:max-w[400px] md:mx-[60px] ">
-                            <a href="#equip"><img class="w-[350px] md:w-[300px]" src="../assets/images/athlete-profile.img/nanoflare.webp" alt=""></a>
-                            <span class="h-[50px] text-[18px] md:mt-[26px] md:mr-auto md:mb-[170px] md:ml-auto md:min-h[50px] md:text-center">
-                                Nanoflare 1000 z
-                            </span>
-                        </div >
-                        <div class="slide-list  flex flex-col w-[100%] items-center md:max-w[400px] md:mx-[60px]  ">
-                            <a href=""><img class=" w-[350px] md:w-[300px]" src="../assets/images/athlete-profile.img/bgab_114_ex_pac_1_1.webp" alt=""></a>
-                            <span class="h-[50px] text-[18px] md:mt-[26px] md:mr-auto md:mb-[170px] md:ml-auto md:min-h[50px] md:text-center">
-                                Aerobite
-                            </span>
-                        </div>
-                    
-                        <div class="back absolute top-[55%] right-[30px] bg-[#f3f2f2] p-5 md:hidden" onclick="pushArrow(1)">
-                            <img class="w-[1.5rem]" src="../assets/images/icon/arrow-right.svg" alt="" />
-                        </div>
-                        <div class="next absolute top-[55%] left-[30px] bg-[#f3f2f2] p-5 md:hidden" onclick="pushArrow(-1)">
-                            <img class="w-[1.5rem]" src="../assets/images/icon/arrow-left.svg"" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+
+
+
+
+
+
+        <!-- Start Footer -->
+        <my-footer></my-footer>
+        <!-- End Footer -->
     </div>
-    </div>
-    <script src="../assets/js/athelte-profile.js"></script>
-   
+    
+        <script src=" ../assets/js/index.js"></script>
+                                    <script src="../assets/js/main.js"></script>
+                                    <script src="../assets/js/athelte-profile.js"></script>
+
 </body>
+
 </html>
