@@ -609,7 +609,7 @@ const createAccordionContainer = () => {
   <main class="max-w-[1260px] flex mx-auto">
 
       <!-- start the sticky menu responsive -->
-      <div class="w-[100px] z-[100] hidden lg:block">
+      <div class="w-[100px] z-[50] hidden lg:block">
         <div class="nav__links flex flex-col gap-[20px] sticky top-0 left-0 py-[40px] px-[10px] text-[18px] text-gray-500 font-semibold">
           <a class="hover:underline nav__link" href="#content-1">AMERICA</a>
           <a class="hover:underline nav__link" href="#content-2">EUROPE</a>
@@ -620,7 +620,7 @@ const createAccordionContainer = () => {
 
       <div class="w-[800px] py-[20px] pb-[60px] mx-auto flex flex-col gap-[20px] lg:gap-[50px]">
           <!-- start the sticky menu -->
-          <div class="lg:w-[100px] z-[100] block lg:hidden">
+          <div class="lg:w-[100px] z-[50] block lg:hidden">
               <div class="nav__links-res flex justify-between lg:flex-col gap-[20px] sticky top-0 left-0 lg:py-[40px] px-[50px] lg:px-[10px] text-[18px] text-gray-500 font-semibold">
                   <a class="hover:underline nav__link-res" href="#content-1">AMERICA</a>
                   <a class="hover:underline nav__link-res" href="#content-2">EUROPE</a>

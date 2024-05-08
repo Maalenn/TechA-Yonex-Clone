@@ -154,15 +154,15 @@ const snowboardObj = [
 const aboutObj=[
     {
         title: "ABOUT US",
-        link: "./about-page/about-us.html",
+        link: "../public/about-us.html",
     },
     {
         title: "YONEX GROUP",
-        link: "./about-page/yonex-group.html",
+        link: "../public/yonex-group.html",
     },
     {
         title: "YONEX DISTRIBUTOR",
-        link: "./about-page/yonex-distributors.html",
+        link: "../public/yonex-distributors.html",
     },
     {
         title: "INVESTOR RELATION",
