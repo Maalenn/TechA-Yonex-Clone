@@ -9,9 +9,10 @@
     <!-- Link cdn of tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="font-Oswald">
     <!-- Start Navbar -->
     <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
+    
     <nav
       class="w-full md:bg-neutral-800 md:bg-opacity-40 absolute text-white hover:bg-white hover:text-black bg-white border border-1 md:border-none top-0 z-10"
     >
@@ -27,11 +28,13 @@
 
         <!-- Logo -->
         <div>
-          <a href="index.html"><img
+          <a href="index.html">
+            <img
             src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
             alt=""
-            class="w-[140px] Logo ml-3 py-3"
-          /></a>
+            class="w-[140px] md:w-[100px] Logo ml-3 py-3"
+          />
+        </a>
           <p class="my-0 text-xs text-center hidden md:block">
             far beyond ordinary
           </p>
@@ -111,7 +114,7 @@
             onmouseenter="runningDrop()"
             onmouseleave="runningHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
+            <a href="product-detail-runningPage.html" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
             <!-- running section -->
             <section
               class="w-full bg-white p-[30px] absolute top-[100px] h-[220px] hidden z-[10000] left-0"
@@ -160,7 +163,7 @@
             </section>
           </div>
           <div class="cursor-pointer hover:opacity-80 h-[30px]">
-            <a href="" class="pt-[10px] ">NEWS</a>
+            <a href="./news.html" class="pt-[10px] ">NEWS</a>
           </div>
           <div
             class="group h-full pt-[30px]"
@@ -324,7 +327,7 @@
 
         <section class="mx-auto px-[50px] py-[45px] ">
           <ul
-            class="overflow-x-hidden w-[100%] slideShow relative grid grid-cols-[repeat(5,300px)] ssm:grid-cols-[repeat(34,330px)] smd:grid-cols-[repeat(34,450px)] slg:grid-cols-[repeat(34,399px)] sxl:grid-cols-[repeat(34,300px)] max-sm:grid-cols-[repeat(34,280px)] max-md:grid-cols-[repeat(34,340px)] max-lg:grid-cols-[repeat(34,360px)] overflow-auto font-[Oswald]"
+            class="overflow-x-hidden w-[100%] slideShow relative grid grid-cols-[repeat(5,300px)] ssm:grid-cols-[repeat(5,330px)] smd:grid-cols-[repeat(5,450px)] slg:grid-cols-[repeat(5,399px)] sxl:grid-cols-[repeat(5,300px)] max-sm:grid-cols-[repeat(5,280px)] max-md:grid-cols-[repeat(5,340px)] max-lg:grid-cols-[repeat(5,360px)] overflow-auto font-[Oswald]"
           >
             <li class="slide-list slg:px-[20px]">
               <a href=""> 
@@ -549,7 +552,7 @@
               </p>
               <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold w-fit hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">LEARN MORE</button>
           </div>
-          <div class=" md:flex items-center md:max-w-[1100px] md:min-w-[500px] mt-5 flex-1 ">
+          <div class=" md:flex items-center md:w-[1100px] max:md:w-[500px] mt-5 flex-1 ">
               <img src="../assets/images/main-content-images/badminton-cover.webp" alt="">
           </div>
           <div class="md:hidden block text-center my-[30px]">
@@ -681,13 +684,13 @@
           </ul>
         </section>
         <div
-          class="back absolute md:top-[58%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5 top-[45%]"
+          class="back absolute md:top-[50%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5 top-[45%]"
           onclick="pushArrow1(1)"
         >
           <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
         </div>
         <div
-          class="next absolute md:top-[58%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5 top-[45%]"
+          class="next absolute md:top-[50%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5 top-[45%]"
           onclick="pushArrow1(-1)"
         >
           <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
@@ -712,7 +715,7 @@
               </p>
               <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold w-fit hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]">LEARN MORE</button>
           </div>
-          <div class=" md:flex items-center md:max-w-[1100px] md:min-w-[500px] mt-5 flex-1 ">
+          <div class="md:flex items-center md:w-[1100px] max:md:w-[500px] mt-5 flex-1">
               <img src="../assets/images/main-content-images/ezone-100.webp" alt="">
           </div>
           <div class="md:hidden block text-center my-[30px]">
@@ -909,7 +912,7 @@
               movement in every environment is key to <br>
               achieving peak-performance on the court. <br>
           </p>
-          <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold">LEARN MORE</button>
+          <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold hover:bg-white hover:text-black hover:border-[1px] hover:border-[#1f2427]"">LEARN MORE</button>
       </div>
       <div class="max-w-[1000px]"></div>
     </div>

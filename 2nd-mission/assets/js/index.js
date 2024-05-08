@@ -261,7 +261,7 @@ class RunningComponent extends HTMLElement {
         ${runningObj.map((card) => {
             return `
                 <div class="flex flex-col items-center justify-center gap-2">
-                    <a href="" class="bg-[#f7f8f9]"><img src="${card.img}" alt=""></a>
+                <a href="${card.link}"><img src="${card.img}" alt=""></a>
                     <p class="font-semibold text-[15px] text-black">${card.title}</p>
                 </div>
             `
