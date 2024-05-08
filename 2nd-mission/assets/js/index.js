@@ -354,11 +354,15 @@ function aboutHide(){
 function openNav() {
     document.getElementById("mySidenav").classList.remove('hidden');
     document.getElementById('overlay-blur').classList.toggle('hidden');
+    document.querySelector('body').classList.toggle('overflow-y-hidden');
+    
 }
 
 function closeNav() {
     document.getElementById("mySidenav").classList.add('hidden');
     document.getElementById('overlay-blur').classList.toggle('hidden');
+    document.querySelector('body').classList.toggle('overflow-y-hidden');
+    
 }
 
 
