@@ -213,17 +213,10 @@ const accordionArray = [
             text: "Shimbashi PLACE 2F 1-12-9 Shimbashi, Minato-ku,Tokyo 105-0004, Japan",
           },
           {
-            iconImage:
-              "https://www.yonex.com/static/version1714493650/frontend/Yonex/base/en_US/images/yonex-group/phone_icon.svg",
+            iconImage: "https://www.yonex.com/static/version1714493650/frontend/Yonex/base/en_US/images/yonex-group/phone_icon.svg",
             link: false,
             href: "",
-            text: "81-3-6263-8511",
-          },
-          {
-            // iconImage: "https://www.yonex.com/static/version1714493650/frontend/Yonex/base/en_US/images/yonex-group/fax_icon.svg",
-            link: false,
-            href: "",
-            text: "Hours: 10:00-20:00 (closed at beginning and end of year)",
+            text: "81-3-6263-8511 <br> ours: 10:00-20:00 (closed at beginning and end of year)",
           },
           {
             iconImage: "https://www.yonex.com/static/version1714493650/frontend/Yonex/base/en_US/images/yonex-group/website_icon.svg",
@@ -250,13 +243,7 @@ const accordionArray = [
               "https://www.yonex.com/static/version1714493650/frontend/Yonex/base/en_US/images/yonex-group/phone_icon.svg",
             link: false,
             href: "",
-            text: "81-3-6263-8511",
-          },
-          {
-            // iconImage: "https://www.yonex.com/static/version1714493650/frontend/Yonex/base/en_US/images/yonex-group/fax_icon.svg",
-            link: false,
-            href: "",
-            text: "Hours: 11:00-19:00 (closed at beginning and end of year)",
+            text: "81-3-6263-8511 <br> Hours: 11:00-19:00 (closed at beginning and end of year)",
           },
           {
             iconImage: "https://www.yonex.com/static/version1714493650/frontend/Yonex/base/en_US/images/yonex-group/website_icon.svg",
@@ -664,7 +651,7 @@ const createAccordionContainer = () => {
                               ${accordionItem.content
                                 .map((accordionDropDown) => {
                                   return `
-                                  <div class="flex gap-[20px]">
+                                  <div class="flex items-center gap-[20px]">
                                       <img src="${
                                         accordionDropDown.iconImage
                                       }" alt="icon"/>
