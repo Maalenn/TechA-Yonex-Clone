@@ -4,13 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Badminton</title>
-  <!-- yonex logo -->
-  <link rel="icon" href="../assets/images/icon/yonex.png" type="image/icon type" >
+  <title>Golf</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="../src/input.css">
+   <!-- css link -->
+   <link rel="stylesheet" href="../assets/css/news.css">
 
 
   <!-- tailwind css cdn link -->
@@ -30,202 +29,139 @@
 
 </head>
 
-<body class=" bg-[#F7F8F9] font-Oswald">
+<body class=" bg-[#F7F8F9]">
      <!-- Start Navbar -->
   <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
   <nav
-      class="w-full md:bg-opacity-40 absolute hover:bg-white hover:text-black bg-white border border-1 top-0 z-[100]"
-    >
-      <div
-        class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10"
-      >
-        <!-- Hamburger Icons -->
-        <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()">
-          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
-          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
-          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+    class="w-full text-black hover:bg-white hover:text-black bg-white border border-1 top-0 z-10">
+    <div class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10">
+      <!-- Hamburger Icons -->
+      <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()">
+        <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+        <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+        <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+      </div>
+
+      <!-- Logo -->
+      <div>
+        <a href="index.html"><img
+            src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg" alt=""
+            class="w-[140px] Logo ml-3 py-3" /></a>
+        <p class="my-0 text-xs text-center hidden md:block">
+          far beyond ordinary
+        </p>
+      </div>
+
+      <!-- Center Navigation -->
+      <div class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]">
+        <!-- Badminton Hoverdrop -->
+        <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverHide()">
+          <a href="#" class="group-hover:opacity-50 relative top-[7%]">BADMINTON</a>
+          <!-- Badminton section -->
+          <section class="w-full bg-white p-[40px] absolute top-[100px] hidden z-[10000] left-0" id="baminton">
+            <div id="HoverBox" class="max-w-[95%] mx-auto">
+              <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                <badminton-component></badminton-component>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <!-- Logo -->
-        <div>
-          <a href="index.html">
-            <img
-            src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
-            alt=""
-            class="w-[140px] Logo px-[10px] py-3"
-          />
-        </a>
-          <p class="my-0 text-xs text-center hidden md:block">
-            far beyond ordinary
-          </p>
+        <!-- Golf Hoverdrop -->
+        <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="golfDrop()" onmouseleave="golfHide()">
+          <a href="#" class="group-hover:opacity-50 relative top-[7%]">GOLF</a>
+          <!-- Golf section -->
+          <section class="w-full bg-white p-[30px] absolute top-[100px] hidden h-[220px] z-[10000] left-0" id="golf">
+            <div id="HoverBox" class="max-w-[95%] mx-auto">
+              <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                <golf-component></golf-component>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <!-- Center Navigation -->
-        <div
-          class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]"
-        >
-          <!-- Badminton Hoverdrop -->
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="hoverDrop()"
-            onmouseleave="hoverHide()"
-          >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">BADMINTON</a>
-            <!-- Badminton section -->
-            <section
-              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="baminton"
-            >
-              <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
-                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                  <badminton-component></badminton-component>
-                </div>
+        <!-- Tennis Hoverdrop -->
+        <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="tennisDrop()" onmouseleave="tennisHide()">
+          <a href="#" class="group-hover:opacity-50 relative top-[7%]">TENNIS</a>
+          <!-- Tennis section -->
+          <section class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0" id="tennis">
+            <div id="HoverBox" class="max-w-[95%] mx-auto">
+              <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                <tennis-component></tennis-component>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
+        </div>
 
-          <!-- Tennis Hoverdrop -->
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="tennisDrop()"
-            onmouseleave="tennisHide()"
-          >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">TENNIS</a>
-            <!-- Tennis section -->
-            <section
-            class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="tennis"
-            >
-              <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
-                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                  <tennis-component></tennis-component>
-                </div>
+        <!-- running Hoverdrop -->
+        <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="runningDrop()" onmouseleave="runningHide()">
+          <a href="#" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
+          <!-- running section -->
+          <section class="w-full bg-white p-[30px] absolute top-[100px] h-[220px] hidden z-[10000] left-0" id="running">
+            <div id="HoverBox" class="max-w-[95%] mx-auto">
+              <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                <running-component></running-component>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
+        </div>
 
-          <!-- Golf Hoverdrop -->
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="golfDrop()"
-            onmouseleave="golfHide()"
-          >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">GOLF</a>
-            <!-- Golf section -->
-            <section
-            class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="golf"
-            >
-              <div id="HoverBox" class="max-w-[95%] mx-auto p-[20px]">
-                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                  <golf-component></golf-component>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <!-- running Hoverdrop -->
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="runningDrop()"
-            onmouseleave="runningHide()"
-          >
-            <a href="product-detail-runningPage.html" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
-            <!-- running section -->
-            <section
-              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="running"
-            >
-              <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
-                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                  <running-component></running-component>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <!-- snowboard Hoverdrop -->
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="snowboardDrop()"
-            onmouseleave="snowboardHide()"
-          >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">SNOWBOARDING</a>
-            <!-- snowboard section -->
-            <section
-              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="snowboard"
-            >
-              <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
-                <div
-                  class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3"
-                >
-                  <snowboard-component></snowboard-component>
-                  <div class="block">
-                    <div
-                      class="flex flex-col items-center justify-center w-[223px]"
-                    >
-                      <a href="" class="bg-[#f7f8f9]"
-                        ><img
-                          src="../assets/images/snowboard-images/skate-athlete.webp"
-                          alt=""
-                      /></a>
-                      <p class="font-semibold text-[14px] text-black">TEAM</p>
-                    </div>
+        <!-- snowboard Hoverdrop -->
+        <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="snowboardDrop()"
+          onmouseleave="snowboardHide()">
+          <a href="#" class="group-hover:opacity-50 relative top-[7%]">SNOWBOARDING</a>
+          <!-- snowboard section -->
+          <section
+            class="w-full bg-white p-[30px] absolute top-[100px] justify-center hidden z-[10000] left-0 h-[380px]"
+            id="snowboard">
+            <div id="HoverBox" class="max-w-[95%] mx-auto">
+              <div class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3">
+                <snowboard-component></snowboard-component>
+                <div class="block">
+                  <div class="flex flex-col items-center justify-center w-[223px]">
+                    <a href="" class="bg-[#f7f8f9]"><img src="../assets/images/snowboard-images/skate-athlete.webp"
+                        alt="" /></a>
+                    <p class="font-semibold text-[14px] text-black">TEAM</p>
                   </div>
                 </div>
               </div>
-            </section>
-          </div>
-          <div class="cursor-pointer hover:opacity-80 h-[30px]">
-            <a href="./news.html" class="pt-[10px] ">NEWS</a>
-          </div>
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="aboutDrop()"
-            onmouseleave="aboutHide()"
-          >
-            <a href="../public/about-us.html" class="group-hover:opacity-80 relative top-[7%]">ABOUT</a>
-            <!-- about section -->
-            <section
-              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="about"
-            >
-              <div id="HoverBox" class="max-w-[1600px] mx-auto  flex justify-center p-[40px]">
-                <about-component></about-component>
-              </div>
-            </section>
-          </div>
+            </div>
+          </section>
         </div>
-        <div class="inline-block cursor-pointer md:hidden mr-3">
-          <img
-            src="../assets/images/icons/search-interface-symbol (1).png"
-            alt=""
-            class="size-[20px]"
-          />
+        <div class="cursor-pointer hover:opacity-80 h-[30px]">
+          <a href="" class="pt-[10px] ">NEWS</a>
         </div>
-        <div class="max-w-[120px] fill-slate-100 items-center gap-3 md:flex hidden pl-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
-          </svg>          
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-          </svg>       
-             
-          <img
-            src="../assets/images/icons/accessibility_icon.svg"
-            alt=""
-            class="w-[45px] cursor-pointer mb-[7.5px]"
-          />
+        <div class="group h-full pt-[30px]" id="hoverLink" onmouseenter="aboutDrop()" onmouseleave="aboutHide()">
+          <a href="tech-a-project/2nd-mission/public/about-page/about-us.html"
+            class="group-hover:opacity-80 relative top-[7%]">ABOUT</a>
+          <!-- about section -->
+          <section class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0" id="about">
+            <div id="HoverBox" class="max-w-[1600px] mx-auto  flex justify-center">
+              <about-component></about-component>
+            </div>
+          </section>
         </div>
       </div>
-    </nav>
+      <div class="inline-block cursor-pointer md:hidden mr-3">
+        <img src="../assets/images/icons/search-interface-symbol (1).png" alt="" class="size-[20px]" />
+      </div>
+      <div class="w-[120px] fill-slate-100 items-center gap-3 md:flex hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 mb-2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 mb-2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+
+        <img src="../assets/images/icons/accessibility_icon.svg" alt=""
+          class="size-[50px] cursor-pointer mb-[7.5px]" />
+      </div>
+    </div>
+  </nav>
   <!-- End Navbar -->
 
   <!-- Start SideBar -->
@@ -233,7 +169,7 @@
   <!-- End Sidebar -->
 
 
-    <main class="w-full z-50 box-border mx-auto max-w-[1280px] grow mt-[110px]" class="block">
+    <main class="w-full z-50 box-border mx-auto max-w-[1280px] grow" class="block">
         <!-- start tab menu -->
         <div class=" border-b-[1px] text-[#6e7677] font-[Oswald] uppercase font-[400]">
             <div class="container mx-auto px-4">
@@ -350,6 +286,17 @@
         <!-- end right side  -->
       </div>
       <!-- end top block content -->
+
+      <!--start button  option -->
+      <div class="text-end px-[15px] pt-[80px] md:block hidden ">
+        <select class="blog-post-order__list py-[15px] px-[80px] border" title="Sort By">
+            <option value="recent" class="blog-post-order__list__option text-start " data-url="https://www.yonex.com/news/badminton/?blog_order=recent" selected="selected">
+        Recent            </option>
+            <option value="popular" class="blog-post-order__list__option" data-url="https://www.yonex.com/news/badminton/?blog_order=popular">
+        Popular            </option>
+    </select>
+      </div>
+      <!--end button  option -->
   
       <!-- start latest stories -->
       <!--start h2 latest stories -->
@@ -373,6 +320,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 2 -->
          <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -388,6 +342,13 @@
               aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
+          </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
           </div>
         </div>
         <!-- 3 -->
@@ -405,6 +366,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 4 -->
         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -420,6 +388,13 @@
               aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
+          </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
           </div>
         </div>
         <!-- 5 -->
@@ -437,6 +412,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 6 -->
         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -452,6 +434,13 @@
               aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
+          </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
           </div>
         </div>
       </div>
@@ -481,6 +470,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 2 -->
          <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -497,6 +493,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 3 -->
          <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -512,6 +515,13 @@
               aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
+          </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
           </div>
         </div>
         
@@ -542,6 +552,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 2 -->
          <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -558,6 +575,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 3 -->
          <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -573,6 +597,13 @@
               aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
+          </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
           </div>
         </div>
         
@@ -603,6 +634,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 2 -->
          <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -619,6 +657,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 3 -->
          <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -634,6 +679,13 @@
               aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
+          </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
           </div>
         </div>
         
@@ -665,6 +717,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 2 -->
          <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -681,6 +740,13 @@
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
           </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
+          </div>
         </div>
         <!-- 3 -->
          <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
@@ -696,6 +762,13 @@
               aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
               <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
             </a>
+          </div>
+          <div class="social-logo flex-row justify-between w-[92px] absolute top-[43%] right-3 hidden">
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/facebook-app-symbol.png " alt="facebook's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/twitter.png " alt="twitter's logo"></div>
+            <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full "><img class="w-[16px] h-[16px] " src="../assets/images/news-img/email.png " alt="email's logo"></div>
+  
+  
           </div>
         </div>
         

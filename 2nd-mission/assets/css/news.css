@@ -1,0 +1,15 @@
+.social-logo{
+     display: none;
+}
+
+
+
+.latest-posts__item:hover {
+     filter: drop-shadow(0 0 0.75rem #C7C8CC);
+     .social-logo{
+          display: flex;
+
+     }
+
+}
+
