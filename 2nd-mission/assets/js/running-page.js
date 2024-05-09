@@ -185,13 +185,12 @@ function slider() {
   // console.log(`slide length ${slides.length}`);
 
   const createDots = function () {
-    slides.forEach(function (_, i) {
-      // console.log(i)
+    for (let i = 0; i < maxSlide; i++) {
       dotContainer.insertAdjacentHTML(
         "beforeend",
         `<button class="dots__dot" data-slide="${i}"></button>`
       );
-    });
+    }
   };
 
   const activateDot = function (slide) {
@@ -268,42 +267,34 @@ const specsBtn = document.querySelector('.specsBtn')
 const detailCard = document.querySelector('.detailCard')
 const plusIcon = document.querySelector('.plusIcon')
 const minusIcon = document.querySelector('.minusIcon')
-
-console.log(specsBtn)
-function showCard(){detailCard
-    if (detailCard.classList.contains('hidden')){
-        detailCard.classList.remove('hidden')
-        plusIcon.classList.add('hidden')
-    }
-    else{
-        detailCard.classList.add('hidden')
-        plusIcon.classList.remove('hidden')
-    }
-    
+const tableContainer = document.querySelector('.table-container')
+function showCard(){
+  detailCard.classList.toggle('h-[0px]')
+  detailCard.classList.toggle('overflow-hidden')
+  tableContainer.classList.toggle('hidden')
+  plusIcon.classList.toggle('hidden')
+  
 }
-
-
 specsBtn.addEventListener('click', showCard)
+
 // show modal and close modal
 const stringBtn = document.querySelector('#stringBtn')
 const modal = document.querySelector('#modal')
 const overlay =  document.querySelector('.overlay')
 const closeBtn = document.querySelector('#xBtn')
-
-
 function showModal(){
-    modal.classList.remove('hidden')
-    overlay.classList.remove('hidden')
+    modal.classList.toggle('hidden')
+    overlay.classList.toggle('hidden')
 }
-function closeModal(){
-    console.log('close');
-    modal.classList.add('hidden')
-    overlay.classList.add('hidden')
-}
+// function closeModal(){
+//     console.log('close');
+//     modal.classList.add('hidden')
+//     overlay.classList.add('hidden')
+// }
 stringBtn.addEventListener('click', showModal)
-closeBtn.addEventListener('click', closeModal)
-overlay.addEventListener('click', 
-closeModal)
+closeBtn.addEventListener('click', showModal)
+overlay.addEventListener('click', showModal)
+// Esc key for exit modal
 document.addEventListener('keydown', function (e) {
     // console.log(e.key);
   
