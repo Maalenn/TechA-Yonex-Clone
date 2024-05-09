@@ -3,20 +3,15 @@ const specsBtn = document.querySelector('.specsBtn')
 const detailCard = document.querySelector('.detailCard')
 const plusIcon = document.querySelector('.plusIcon')
 const minusIcon = document.querySelector('.minusIcon')
-function showCard(){detailCard
-    if (detailCard.classList.contains('hidden')){
-        detailCard.classList.remove('hidden')
-        plusIcon.classList.add('hidden')
-    }
-    else{
-        detailCard.classList.add('hidden')
-        plusIcon.classList.remove('hidden')
-    }
-    
+const tableContainer = document.querySelector('.table-container')
+function showCard(){
+  detailCard.classList.toggle('h-[0px]')
+  detailCard.classList.toggle('overflow-hidden')
+  tableContainer.classList.toggle('hidden')
+  
 }
-
-
 specsBtn.addEventListener('click', showCard)
+
 // show modal and close modal
 const stringBtn = document.querySelector('#stringBtn')
 const modal = document.querySelector('#modal')
