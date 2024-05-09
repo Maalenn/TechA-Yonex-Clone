@@ -508,3 +508,21 @@ function pushArrow2(n) {
   currentSlide3 = Math.max(0, Math.min(currentSlide3 + n, images.length - 1));
   carousel.scrollTo({ left: currentSlide3 * imageWidth, behavior: "smooth" });
 }
+
+// function for open search
+function opensearch(){
+    document.getElementById('search-bar').classList.toggle('hidden')
+    document.getElementById('search-bar').classList.toggle('flex')
+}
+function closesearch(){
+    document.getElementById('search-bar').classList.toggle('hidden')
+    document.getElementById('search-bar').classList.toggle('flex')
+}
+function opensearchresponse(){
+    document.getElementById('search-bar2').classList.toggle('hidden')
+    document.getElementById('search-bar2').classList.toggle('flex')
+}
+function closesearchresponse(){
+    document.getElementById('search-bar2').classList.toggle('hidden')
+    document.getElementById('search-bar2').classList.toggle('flex')
+}
