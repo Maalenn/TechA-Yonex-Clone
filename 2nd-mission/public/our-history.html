@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our History</title>
+    <link href="../assets/css/styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- yonex logo -->
+    <link rel="icon" href="../assets/images/icon/yonex.png" type="image/icon type" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
+    <!-- animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head> 
+<body class="font-Oswald h-[300vh]">
+    <!-- Start Navbar -->
+    <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
+    <nav
+      class="w-full md:bg-opacity-40 absolute hover:bg-white hover:text-black bg-white border border-1 top-0 z-[100]"
+    >
+      <div
+        class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10"
+      >
+        <!-- Hamburger Icons -->
+        <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()">
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+          <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
+        </div>
+
+        <!-- Logo -->
+        <div>
+          <a href="index.html">
+            <img
+            src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
+            alt=""
+            class="w-[140px] Logo px-[10px] py-3"
+          />
+        </a>
+          <p class="my-0 text-xs text-center hidden md:block">
+            far beyond ordinary
+          </p>
+        </div>
+
+        <!-- Center Navigation -->
+        <div
+          class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]"
+        >
+          <!-- Badminton Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="hoverDrop()"
+            onmouseleave="hoverHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">BADMINTON</a>
+            <!-- Badminton section -->
+            <section
+              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
+              id="baminton"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <badminton-component></badminton-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Tennis Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="tennisDrop()"
+            onmouseleave="tennisHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">TENNIS</a>
+            <!-- Tennis section -->
+            <section
+            class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
+              id="tennis"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <tennis-component></tennis-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Golf Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="golfDrop()"
+            onmouseleave="golfHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">GOLF</a>
+            <!-- Golf section -->
+            <section
+            class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
+              id="golf"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto p-[20px]">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <golf-component></golf-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- running Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="runningDrop()"
+            onmouseleave="runningHide()"
+          >
+            <a href="product-detail-runningPage.html" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
+            <!-- running section -->
+            <section
+              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
+              id="running"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <running-component></running-component>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- snowboard Hoverdrop -->
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="snowboardDrop()"
+            onmouseleave="snowboardHide()"
+          >
+            <a href="#" class="group-hover:opacity-50 relative top-[7%]">SNOWBOARDING</a>
+            <!-- snowboard section -->
+            <section
+              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
+              id="snowboard"
+            >
+              <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
+                <div
+                  class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3"
+                >
+                  <snowboard-component></snowboard-component>
+                  <div class="block">
+                    <div
+                      class="flex flex-col items-center justify-center w-[223px]"
+                    >
+                      <a href="" class="bg-[#f7f8f9]"
+                        ><img
+                          src="../assets/images/snowboard-images/skate-athlete.webp"
+                          alt=""
+                      /></a>
+                      <p class="font-semibold text-[14px] text-black">TEAM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="cursor-pointer hover:opacity-80 h-[30px]">
+            <a href="./news.html" class="pt-[10px] ">NEWS</a>
+          </div>
+          <div
+            class="group h-full pt-[30px]"
+            id="hoverLink"
+            onmouseenter="aboutDrop()"
+            onmouseleave="aboutHide()"
+          >
+            <a href="../public/about-us.html" class="group-hover:opacity-80 relative top-[7%]">ABOUT</a>
+            <!-- about section -->
+            <section
+              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
+              id="about"
+            >
+              <div id="HoverBox" class="max-w-[1600px] mx-auto  flex justify-center p-[40px]">
+                <about-component></about-component>
+              </div>
+            </section>
+          </div>
+        </div>
+        <button onclick="opensearchresponse()" class="inline-block cursor-pointer md:hidden mr-3">
+          <img src="../assets/images/icons/search-interface-symbol (1).png" alt="" class="size-4"/>
+        </button>
+        <div class="bg-white items-center gap-2 justify-between shadow-md absolute top-0 -left-[2px] w-full py-[15px] hidden" id="search-bar2">
+          <input type="text" placeholder="Search" class="w-full pl-3 h-full">
+          <button onclick="closesearchresponse()" class="size-[30px]">
+            <img src="../assets/images/icons/close.svg" alt="" class="bg-[#6E7677] rounded-[50%] size-[16px]"/>
+          </button>
+        </div>
+        <div class="w-[120px] fill-slate-100 items-center gap-3 md:flex hidden relative">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+          </svg>          
+          <div class="mt-1">
+            <button onclick="opensearch()" >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>       
+            </button>
+            <div class="bg-white items-center gap-2 justify-between shadow-md absolute md:right-16 top-0 md:w-[300px] max-md:px-3 py-4 hidden" id="search-bar">
+              <button class="md:block hidden size-[30px] ml-3 mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>  
+              </button>
+              <input type="text" placeholder="Search" class="pr-20">
+              <button onclick="closesearch()" class="size-[30px]">
+                <img src="../assets/images/icons/close.svg" alt="" class="bg-[#6E7677] rounded-[50%] size-[16px]"/>
+              </button>
+            </div>
+          </div>
+             
+          <img
+            src="../assets/images/icons/accessibility_icon.svg"
+            alt=""
+            class="size-[50px] cursor-pointer mb-[7.5px]"
+          />
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start SideBar -->
+    <my-sidebar></my-sidebar>
+    <!-- End Sidebar -->
+
+    <!-- Start Home/About section-->
+    <section>
+        <div class="hidden md:block font-[oswald] mt-[110px]">
+            <div class="max-w-[680px] md:max-w-[1260px] mx-auto flex gap-[16px] md:py-[40px] px-[16px] text-[13px]">
+                <a class="text-blue-900 hover:underline" href="../public/index.html">Home</a>
+                <p>/</p>
+                <a href="../public/our-history.html">OUR HISTORY</a>
+            </div>
+        </div>
+        <div>
+            <div class="max-w-[1260px] mx-auto flex justify-center pt-[60px] py-[40px] text-[24px] md:text-[36px] font-[oswald]">
+                <h1>OUR HISTORY</h1>
+            </div>
+        </div>
+        <div>
+            <div class="max-w-[680px] md:max-w-[1260px] mx-auto flex justify-center items-center py-[40px] px-[30px] text-[14px] text-center md:text-[20px] font-[oswald]">
+                <a class="border-b-2 border-gray-500 pb-4 px-[70px] text-center md:px-[80px] hover:underline" href="../public/about-us.html">ABOUT US</a>
+                <a href="../public/our-history.html" class="border-b-2 border-blue-600 pb-4 text-gray-500 px-[70px] md:px-[90px] hover:underline">OUR HISTORY</a>
+            </div>
+        </div>
+    <!-- End Home/About section-->
+    </section>
+
+    <main class="flex">
+        <!-- this is a 1 blog content -->
+        <div class="md:flex max-w-[1260px] py-[10px] mx-auto">
+            
+            <div class="max-w-[360px] sm:max-w-full mx-auto md:pr-[15%] sticky top-0 left-0 z-[50] md:bg-inherit bg-white overflow-x-auto md:h-screen">
+                <ul class="nav__links z-[1000] px-[10px] py-[10px] flex md:flex-col gap-[30px] text-[20px] text-gray-600 font-[oswald]">
+                    <li class="nav__item hover:text-black"><a class="nav__link" href="#section--1">1940</a></li>
+                    <li class="nav__item hover:text-black"><a class="nav__link" href="#section--2">1950</a></li>
+                    <li class="nav__item hover:text-black"><a class="nav__link" href="#section--3">1960</a></li>
+                    <li class="nav__item hover:text-black"><a class="nav__link nav__link--btn btn--show-modal" href="#section--4">1970</a></li>
+                    <li class="nav__item hover:text-black"><a class="nav__link" href="#section--5">1980</a></li>
+                    <li class="nav__item hover:text-black"><a class="nav__link" href="#section--6">1990</a></li>
+                    <li class="nav__item hover:text-black"><a class="nav__link" href="#section--7">2000</a></li>
+                    <li class="nav__item hover:text-black"><a class="nav__link nav__link--btn btn--show-modal" href="#section--8">2010</a></li>
+                </ul>
+            </div>
+
+            <div class="max-w-[1200px] mx-auto">
+                <!-- Start the 1st blog -->
+                <div class="flex flex-col md:flex-row max-w-[255px] sm:max-w-full mx-auto items-center gap-[60px] px-[10px]" id="section--1">
+                    <!-- responsive -->
+                    <div class="relative block md:hidden">
+                        <img class="max-w-[360px] md:w-full" src="../assets/images/history-img/first-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute bottom-[-50px] right-[-140px] w-[120px] h-[120px] z-10 bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>   
+                    <!-- paragaph -->
+                    <div class="max-w-[440px]">
+                        <h1 class="text-[30px] pb-[22px]">The One Motor</h1>
+                        <p class="text-[16px] w-[250px] md:w-full text-gray-500">In 1946, just after the end of World War II, Yonex marked its beginnings as Yoneyama Company, Ltd. founded by Minoru Yoneyama, a producer of wooden floats for fishing nets. Yoneyama’s wood-crafting business thrived until modern advancements - namely plastic floats - forced the company out of the business. Frustrated by being pushed aside by advancing technology, he vowed to never be technologically left behind and committed to constant innovation in future endeavors.</p>
+                    </div>
+                    <!-- destop size -->
+                    <div class="relative hidden md:block">
+                        <img class="md:w-full" src="../assets/images/history-img/first-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute lg:bottom-[-80px] lg:right-[-10px] lg:w-[160px] lg:h-[160px] bottom-[-90px] right-[-50px] w-[90px] h-[90px] z-10 md:w-[120px] md:h-[120px] md:right-[-70px] md:bottom-[-80px] bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>  
+                <!-- End the 1st blog --> 
+                </div>
+
+
+                <!-- Start the 2nd blog -->
+                <div class="py-[270px] flex flex-col md:flex-row max-w-[255px] sm:max-w-full mx-auto items-center gap-[60px] px-[10px]" id="section--2">
+                    <!-- responsive -->
+                    <div class="relative">
+                        <img class="max-w-[360px] md:max-w-[200px] lg:max-w-full" src="../assets/images/history-img/second-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute xl:bottom-[90px] xl:left-[-310px] xl:w-[160px] xl:h-[160px] bottom-[-50px] right-[-140px] w-[120px] h-[120px] z-10 lg:w-[140px] lg:h-[140px] lg:left-[-280px] lg:bottom-[70px] md:w-[120px] md:h-[120px] md:left-[-200px] md:bottom-[10px] bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>   
+                    <!-- paragaph -->
+                    <div class="max-w-[440px]">
+                        <h1 class="text-[30px] pb-[22px]">Crafting Wooden Racquets</h1>
+                        <p class="text-[16px] text-gray-500">Relying on strengths in wood crafting, the Yoneyama Company evolved into manufacturing badminton racquets in 1957 as an OEM for the Sanbata racquet brand. Today, Yonex manufactures its own tennis racquets, golf clubs, snowboards, road bikes, tennis and badminton string, and more. Throughout the years, Yonex has learned that “the toughest situations create the greatest chances” - and this spirit carries through in its mission to enrich the world with sports through high quality products.</p>
+                    </div>
+                <!-- End the 2nd blog --> 
+                </div>
+
+
+
+                <!-- Start the 3rd blog -->
+                <div class="flex flex-col md:flex-row max-w-[255px] sm:max-w-full mx-auto items-center gap-[60px] px-[10px]" id="section--3">
+                    <!-- responsive -->
+                    <div class="relative block md:hidden">
+                        <img class="max-w-[360px] md:w-full" src="../assets/images/history-img/third-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute bottom-[-50px] right-[-140px] w-[120px] h-[120px] z-10 bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>   
+                    <!-- paragaph -->
+                    <div class="max-w-[340px]">
+                        <h1 class="text-[30px] pb-[22px]">The First Yoneyama Racquet</h1>
+                        <p class="text-[16px] pb-[20px] text-gray-500">With Sanbata’s bankruptcy in 1961 and Yoneyama’s Manufacturing Headquarters burning down in 1963, the 1960s truly tested the spirit of creating chances within tough situations. Despite these set-backs, Yoneyama established Yoneyama Sports Co., Ltd. to manufacture Yoneyama-branded racquets, rebuilt the factory in three days, and expanded its business to the United States and Europe during this pivotal decade.t.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1965, the Tokyo Factory opened its doors to manufacture shuttlecocks -- now, Yonex is the official tournament shuttle of all Badminton World Federation (BWF) Major Events, as well as the Olympic Games since 1992 in Barcelona.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1968, Yonex developed the world’s first “T-Joint,” which led to Japan’s first aluminum badminton racquet. The “T-Joint” was inspired by a gas tap design that connected the frame and shaft.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1969, Yonex expanded into the tennis industry with the aluminum T-7000 racquet.</p>
+                    </div>
+                    <!-- destop size -->
+                    <div class="relative hidden md:block">
+                        <img class="max-w-[360px] md:max-w-[200px] lg:max-w-full" src="../assets/images/history-img/third-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute lg:bottom-[-80px] lg:right-[-140px] lg:w-[160px] lg:h-[160px] bottom-[-90px] right-[-50px] w-[90px] h-[90px] z-10 md:w-[120px] md:h-[120px] md:right-[-70px] md:bottom-[-80px] bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>  
+                <!-- End the 3rd blog --> 
+                </div>
+
+
+
+                <!-- Start the 4th blog -->
+                <div class="py-[270px] flex flex-col md:flex-row max-w-[255px] sm:max-w-full mx-auto items-center gap-[60px] px-[10px]" id="section--4">
+                    <!-- responsive -->
+                    <div class="relative">
+                        <img class="max-w-[360px] md:max-w-[200px] lg:max-w-full" src="../assets/images/history-img/forth-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute xl:bottom-[90px] xl:left-[-310px] xl:w-[160px] xl:h-[160px] bottom-[-50px] right-[-140px] w-[120px] h-[120px] z-10 lg:w-[140px] lg:h-[140px] lg:left-[-280px] lg:bottom-[70px] md:w-[120px] md:h-[120px] md:left-[-200px] md:bottom-[10px] bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>   
+                    <!-- paragaph -->
+                    <div class="max-w-[440px]">
+                        <h1 class="text-[30px] pb-[22px]">Pushing Structural Limits</h1>
+                        <p class="text-[16px] pb-[20px] text-gray-500">To improve upon the widely popular T-7000, Yonex developed the Oval Pressed Shaft (OPS), which created a stronger, more stable racquet and was implemented in the T-7500.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1973, the “YY Yoneyama” logo is introduced and eight-time (seven consecutive) All England Open Badminton Champion and badminton icon Rudy Hartono began competing with Yonex.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">The following year, Yonex began manufacturing wooden tennis racquets and signed Tony Roche, the fourteen-time major champion from Australia.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1978, the first badminton racquets weighing under 100g launched as B-8500 and CARBONEX 8.</p>
+                    </div>
+                <!-- End the 4th blog --> 
+                </div>
+
+
+                <!-- Start the 5th blog -->
+                <div class=" flex flex-col md:flex-row max-w-[255px] sm:max-w-full mx-auto items-center gap-[60px] px-[10px]" id="section--5">
+                    <!-- responsive -->
+                    <div class="relative block md:hidden">
+                        <img class="max-w-[360px] md:w-full" src="../assets/images/history-img/fith-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute bottom-[-50px] right-[-140px] w-[120px] h-[120px] z-10 bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>   
+                    <!-- paragaph -->
+                    <div class="max-w-[340px]">
+                        <h1 class="text-[30px] pb-[22px]">ISOMETRIC™ Racquets to Longest Drives</h1>
+                        <p class="text-[16px] pb-[20px] text-gray-500">Yonex’s iconic square-shaped ISOMETRIC™ racquet was first introduced in 1980 with the launch of the R-1, R-2, and R-3. The same year, Billie Jean King and Martina Navratilova began competing with Yonex.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">The company was renamed to Yonex Co., Ltd. Utilizing Yonex’s graphite technology, the company entered the golf business.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1983, Navratilova won the Australian Open, Wimbledon, and US Open in both singles and doubles with the best-selling R-22 racquet.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1984, Yonex becomes the title sponsor of the sport’s oldest and most prestigious tournament, the All England Open Badminton Championships.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1989, Yonex introduced the ADX 200 in the United States, the widebody graphite driver that changed the game of golf. The ADX 200 was recorded in the Guinness World Records with the longest drive at 412 yards.</p>
+                    </div>
+                    <!-- destop size -->
+                    <div class="relative hidden md:block">
+                        <img class="md:w-full" src="../assets/images/history-img/fith-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute lg:bottom-[-80px] lg:right-[-140px] lg:w-[160px] lg:h-[160px] bottom-[-90px] right-[-50px] w-[90px] h-[90px] z-10 md:w-[120px] md:h-[120px] md:right-[-70px] md:bottom-[-80px] bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>  
+                <!-- End the 5th blog --> 
+                </div>
+
+
+
+                <!-- Start the 6th blog -->
+                <div class="py-[270px]  flex flex-col md:flex-row max-w-[255px] sm:max-w-full mx-auto items-center gap-[60px] px-[10px]" id="section--6">
+                    <!-- responsive -->
+                    <div class="relative">
+                        <img class="max-w-[360px] md:max-w-full" src="../assets/images/history-img/sixth-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute xl:bottom-[90px] xl:left-[-310px] xl:w-[160px] xl:h-[160px] bottom-[-50px] right-[-140px] w-[120px] h-[120px] z-10 lg:w-[140px] lg:h-[140px] lg:left-[-280px] lg:bottom-[70px] md:w-[120px] md:h-[120px] md:left-[-200px] md:bottom-[10px] bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>   
+                    <!-- paragaph -->
+                    <div class="max-w-[440px]">
+                        <h1 class="text-[30px] pb-[22px]">A Series of World No.1s</h1>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1990, Navratilova claimed her 9th Wimbledon title with the widebody RQ-180 and in 1991, Monica Seles became the youngest female player to achieve a World No.1 Ranking.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">Borrowing from Yonex’s own signature square-shaped tennis racquet frame, the first ISOMETRIC™ badminton racquet in history launched in 1992.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1995, to further push the limits of graphite innovation, Yonex began manufacturing snowboards.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1996, Martina Hingis gained prominence as the youngest major champion in history at 15 years old and continued on with a legendary career with Yonex gear.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1998, Yonex revamped its logo to the current YY Yonex logo.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 1999, Yonex begins hosting the YONEX Ladies Open, a LPGA Japan Tour event (Ladies Professional Golfers' Association of Japan) at the Yonex Country Club.</p>
+                    </div>
+                <!-- End the 6th blog --> 
+                </div>
+
+
+                <!-- Start the 7th blog -->
+                <div class=" flex flex-col md:flex-row max-w-[255px] sm:max-w-full mx-auto items-center gap-[60px] px-[10px]" id="section--7">
+                    <!-- responsive -->
+                    <div class="relative block md:hidden">
+                        <img class="max-w-[360px] md:w-full" src="../assets/images/history-img/seventh-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute bottom-[-50px] right-[-140px] w-[120px] h-[120px] z-10 bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>   
+                    <!-- paragaph -->
+                    <div class="max-w-[340px]">
+                        <h1 class="text-[30px] pb-[22px]">Breaking Records</h1>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In the early 2000s, Lleyton Hewitt became the youngest male World No.1 in history and claimed two major singles titles to his name: Wimbledon and US Open.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 2007, Ryo Aono becomes the first Japanese snowboarder to win a gold medal at the Snowboard World Cup in Halfpipe. Throughout his career, he goes on to win 12 World Cup titles and competes in two Olympic Games.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">In 2009, Yonex became the longest title sponsor of the All England Open Badminton Championships.</p>
+                    </div>
+                    <!-- destop size -->
+                    <div class="relative hidden md:block">
+                        <img class="max-w-[360px] md:max-w-[200px] lg:max-w-full" src="../assets/images/history-img/seventh-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute lg:bottom-[-80px] lg:right-[-140px] lg:w-[160px] lg:h-[160px] bottom-[-90px] right-[-50px] w-[90px] h-[90px] z-10 md:w-[120px] md:h-[120px] md:right-[-70px] md:bottom-[-80px] bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>  
+                <!-- End the 7th blog --> 
+                </div>
+
+
+                <!-- Start the 8th blog -->
+                <div class="py-[270px]  flex flex-col md:flex-row max-w-[255px] sm:max-w-full mx-auto items-center gap-[60px] px-[10px]" id="section--8">
+                    <!-- responsive -->
+                    <div class="relative">
+                        <img class="max-w-[360px] md:max-w-[200px] lg:max-w-full" src="../assets/images/history-img/eight-blog.png" data-aos="zoom-in alt="Image">
+                        <div class="absolute bottom-0 left-[50%]">
+                            <div class="absolute xl:bottom-[90px] xl:left-[-310px] xl:w-[160px] xl:h-[160px] bottom-[-50px] right-[-140px] w-[120px] h-[120px] z-10 lg:w-[140px] lg:h-[140px] lg:left-[-280px] lg:bottom-[70px] md:w-[120px] md:h-[120px] md:left-[-200px] md:bottom-[10px] bg-blue-500 flex justify-center items-center">
+                                <p class="text-center text-[36px] border-b-[3px] text-white border-black pb-[2px]">1940</p>
+                            </div>                            
+                        </div>
+                    </div>   
+                    <!-- paragaph -->
+                    <div class="max-w-[440px]">
+                        <h1 class="text-[30px] pb-[22px]">Enriching the World Through Sports</h1>
+                        <p class="text-[16px] pb-[20px] text-gray-500">Originating in Japan and expanding globally, the Yonex Vamos•J tennis camps begin developing high-performance juniors in 2011. Through unique programs and life experiences, Vamos•J aims to promote tennis and develop young players worldwide.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">Spearheaded by badminton’s greatest players, The Legends’ Vision initiative launches in 2015 to raise the profile of the sport and to inspire the next generation of badminton players. Led by Taufik Hidayat, Peter Gade, Lin Dan, Lee Chong Wei, and Lee Yong Dae, these Legends tour the world to increase badminton awareness and participation.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">Yonex enters two new businesses, sport bikes and wind turbine blades in Japan, further expanding on its carbon graphite technology.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">At the 2016 Australian Open, Yonex becomes the first Japanese brand to provide stringing services for a major tennis tournament through the Yonex Stringing Team.</p>
+                        <p class="text-[16px] pb-[20px] text-gray-500">Today, with the trust of the world’s top athletes - former and current World No.1s - Yonex continues to combine timeless Japanese craftsmanship and cutting-edge technology to give players the tools to succeed.</p>
+                    </div>
+                <!-- End the 8th blog --> 
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+
+
+    <!-- Start footer -->
+    <my-footer></my-footer>
+    
+
+    <!-- animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+
+</body>
+
+<script>
+
+    // scrolling click 
+    document.querySelector('.nav__links').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    // Matching strategy
+    if (e.target.classList.contains('nav__link')) {
+        const id = e.target.getAttribute('href');
+        document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    }
+    });
+
+</script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/index.js"></script>
+</html>
