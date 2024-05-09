@@ -130,7 +130,7 @@ const runningObj = [
 // snowboardobj
 const snowboardObj = [
     {
-        img: "../assets/images/snowboard-images/skate-athlete.webp",
+        img: "../assets/images/snowboard-images/skate.webp",
         title: "BOARD",
         link: ""
     },
@@ -219,7 +219,7 @@ customElements.define("badminton-component", BadmintonComponent);
 class GolfComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <div class="grid grid-cols-4 grid-rows-2 gap-4 max-w-[1600px] items-center w-[900px] flex-1">
+        <div class="grid grid-cols-4  gap-4 max-w-[1600px] items-center w-[900px] flex-1">
         ${golfObj.map((card) => {
             return `
                 <div class="flex flex-col items-center justify-center ">
@@ -309,45 +309,69 @@ class AboutComponent extends HTMLElement{
 customElements.define('about-component', AboutComponent);
 // badminton
 function hoverDrop(){
-    document.querySelector('#baminton').classList.toggle('hidden')
+    document.querySelector('#baminton').classList.toggle('max-h-[500px]')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
 }
 function hoverHide(){
-    document.querySelector('#baminton').classList.toggle('hidden')
+    document.querySelector('#baminton').classList.toggle('max-h-[500px]')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
 }
 // GOLF Hover
 function golfDrop(){
-    document.querySelector('#golf').classList.toggle('hidden')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
+    document.querySelector('#golf').classList.toggle('max-h-[500px]')
 }
 function golfHide(){
-    document.querySelector('#golf').classList.toggle('hidden')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
+    document.querySelector('#golf').classList.toggle('max-h-[500px]')
 }
 // tennis Hover
 function tennisDrop(){
-    document.querySelector('#tennis').classList.toggle('hidden')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
+    document.querySelector('#tennis').classList.toggle('max-h-[500px]')
 }
 function tennisHide(){
-    document.querySelector('#tennis').classList.toggle('hidden')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
+    document.querySelector('#tennis').classList.toggle('max-h-[500px]')
 }
 // running Hover
 function runningDrop(){
-    document.querySelector('#running').classList.toggle('hidden')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
+    document.querySelector('#running').classList.toggle('max-h-[500px]')
 }
 function runningHide(){
-    document.querySelector('#running').classList.toggle('hidden')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
+    document.querySelector('#running').classList.toggle('max-h-[500px]')
 }
 // snowboard Hover
 function snowboardDrop(){
-    document.querySelector('#snowboard').classList.toggle('hidden')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
+    document.querySelector('#snowboard').classList.toggle('max-h-[500px]')
 }
 function snowboardHide(){
-    document.querySelector('#snowboard').classList.toggle('hidden')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
+    document.querySelector('#snowboard').classList.toggle('max-h-[500px]')
 }
 // about Hover
 function aboutDrop(){
-    document.querySelector('#about').classList.toggle('hidden')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
+    document.querySelector('#about').classList.toggle('max-h-[500px]')
 }
 function aboutHide(){
-    document.querySelector('#about').classList.toggle('hidden')
+    document.getElementById('overlay-blur').classList.toggle('hidden');
+
+    document.querySelector('#about').classList.toggle('max-h-[500px]')
 }
 
 // Hamburger Sidebar
@@ -472,7 +496,7 @@ function showSlidesRecent() {
     if (slideIndexRecent > slides.length) {slideIndexRecent = 1}    
     slides[slideIndexRecent-1].style.display = "flex";  
     dots[slideIndexRecent-1].className += " active";
-    setTimeout(showSlidesRecent, 4000);
+    setTimeout(showSlidesRecent, 3000);
 }
 
 // functions for slider3 
