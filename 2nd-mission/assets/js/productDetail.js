@@ -38,6 +38,8 @@ document.addEventListener('keydown', function (e) {
       closeModal();
     }
   });
+
+  
 // img frame 
 const imageClick = document.querySelector('#imageClick')
 const imgZoom = document.querySelector('#imgZoom')
@@ -229,13 +231,12 @@ function slider() {
     // console.log(`slide length ${slides.length}`);
   
     const createDots = function () {
-      slides.forEach(function (_, i) {
-        // console.log(i)
+      for (let i = 0; i < maxSlide; i++) {
         dotContainer.insertAdjacentHTML(
           "beforeend",
           `<button class="dots__dot" data-slide="${i}"></button>`
         );
-      });
+      }
     };
   
     const activateDot = function (slide) {
