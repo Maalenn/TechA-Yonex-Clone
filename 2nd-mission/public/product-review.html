@@ -31,7 +31,7 @@
       />
       <link rel="stylesheet" href="../src/input.css">
     </head>
-    <body class="bg-[white] font-Oswald">
+    <body class="bg-[white] font-Oswald tracking-[1px]">
       <!-- Start Header -->
       <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
       <nav
@@ -204,25 +204,42 @@
             </section>
           </div>
         </div>
-        <div class="inline-block cursor-pointer md:hidden mr-3">
-          <img
-            src="../assets/images/icons/search-interface-symbol (1).png"
-            alt=""
-            class="size-[20px]"
-          />
+        <button onclick="opensearchresponse()" class="inline-block cursor-pointer md:hidden mr-3">
+          <img src="../assets/images/icons/search-interface-symbol (1).png" alt="" class="size-4"/>
+        </button>
+        <div class="bg-white items-center gap-2 justify-between shadow-md absolute top-0 -left-[2px] w-full py-[15px] hidden" id="search-bar2">
+          <input type="text" placeholder="Search" class="w-full pl-3 h-full">
+          <button onclick="closesearchresponse()" class="size-[30px]">
+            <img src="../assets/images/icons/close.svg" alt="" class="bg-[#6E7677] rounded-[50%] size-[16px]"/>
+          </button>
         </div>
-        <div class="max-w-[120px] fill-slate-100 items-center gap-3 md:flex hidden pl-2">
+        <div class="w-[120px] fill-slate-100 items-center gap-3 md:flex hidden relative">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
           </svg>          
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-          </svg>       
+          <div class="mt-1">
+            <button onclick="opensearch()" >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>       
+            </button>
+            <div class="bg-white items-center gap-2 justify-between shadow-md absolute md:right-16 top-0 md:w-[300px] max-md:px-3 py-4 hidden" id="search-bar">
+              <button class="md:block hidden size-[30px] ml-3 mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>  
+              </button>
+              <input type="text" placeholder="Search" class="pr-20">
+              <button onclick="closesearch()" class="size-[30px]">
+                <img src="../assets/images/icons/close.svg" alt="" class="bg-[#6E7677] rounded-[50%] size-[16px]"/>
+              </button>
+            </div>
+          </div>
              
           <img
             src="../assets/images/icons/accessibility_icon.svg"
             alt=""
-            class="w-[45px] cursor-pointer mb-[7.5px]"
+            class="size-[50px] cursor-pointer mb-[7.5px]"
           />
         </div>
       </div>
@@ -275,7 +292,7 @@
             <h1 class="text-[25px]">ATHLETES</h1>
           </div>
   
-          <section class="mx-auto px-[50px] py-[45px]">
+          <section class=" group mx-auto px-[50px] py-[45px]">
             <ul
               class="no-scrollbar w-[100%] slideShow relative grid grid-cols-[repeat(34,300px)] ssm:grid-cols-[repeat(34,330px)] smd:grid-cols-[repeat(34,450px)] slg:grid-cols-[repeat(34,399px)] sxl:grid-cols-[repeat(34,300px)] max-sm:grid-cols-[repeat(34,280px)] max-md:grid-cols-[repeat(34,340px)] max-lg:grid-cols-[repeat(34,360px)] overflow-auto"
             >
@@ -997,19 +1014,20 @@
               
               
             </ul>
-          </section>
-          <div
-            class="back absolute top-[58%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5"
+            <div
+            class="back absolute top-[57%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] hidden p-5 group-hover:block"
             onclick="pushArrows(1)"
           >
             <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
           </div>
           <div
-            class="next absolute top-[58%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5"
+            class="next absolute top-[57%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5 hidden group-hover:block"
             onclick="pushArrows(-1)"
           >
             <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
           </div>
+          </section>
+          
         </section>
       </section>
       <!-- End slider -->
@@ -1041,7 +1059,7 @@
         <section class="max-w-[1280px] mx-auto grid grid-cols-[1fr,3fr] max-md:grid-cols-1 ">
           
           <!-- Start Side bar -->
-          <section class="sm:hidden md:flex max-sm:hidden pl-10 "> 
+          <section class="sm:hidden md:flex max-sm:hidden pl-10 font-sans"> 
               <ul class="flex flex-col gap-6 text-[#575555] w-[100%] ">
                 <li class=""><a href="">All Recquets</a></li>
                 <li class=""><a href="">ASTROX</a></li>
@@ -1069,10 +1087,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                    <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1093,10 +1111,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1117,10 +1135,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1141,10 +1159,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1165,10 +1183,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1189,10 +1207,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1213,10 +1231,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1237,10 +1255,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1261,10 +1279,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1285,10 +1303,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1309,10 +1327,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">
@@ -1333,10 +1351,10 @@
                 <!-- Card -->
                 <aside class="relative ">
                   <div class="pb-1 lg:max-w-[300px] ">
-                    <img  src="../assets/images/product-review/p1.webp" alt=""/>
+                    <img  src="../assets/images/product-review/as88.png" alt=""/>
                   </div>
                   <div class="mt-4 flex justify-center">
-                    <h4 class="">Astrox 88 S PRO</h4>
+                     <h4 class="uppercase">Astrox 88 S GAME</h4>
                   </div>
                   <div class=" mt-2 flex items-center justify-center gap-7 group-hover:opacity-100 opacity-0 ">
                     <div class="">

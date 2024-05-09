@@ -13,153 +13,6 @@
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      .slider {
-        max-width: 100rem;
-        height: 50rem;
-        margin: 0 auto;
-        position: relative;
-
-        /* IN THE END */
-        overflow: hidden;
-      }
-
-      .slide {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 50rem;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        /* THIS creates the animation! */
-        /* transition: transform 1s; */
-      }
-
-      .slide > img {
-        /* Only for images that have different size than slide */
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      /* .slider__btn {
-        position: absolute;
-        top: 50%;
-        z-index: 10;
-
-        border: none;
-        font-family: inherit;
-        color: #333;
-        border-radius: 50%;
-        height: 5.5rem;
-        width: 5.5rem;
-        font-size: 3.25rem;
-        cursor: pointer;
-      }
-
-      .slider__btn--left {
-        left: 6%;
-        transform: translate(-50%, -50%);
-      }
-
-      .slider__btn--right {
-        right: 6%;
-        transform: translate(50%, -50%);
-      } */
-
-      .dots::before {
-        content: "";
-        background-color: #737a7e;
-        height: 99%;
-        left: 48%;
-        position: absolute;
-        width: 2px;
-        z-index: -1;
-      }
-
-      /* .dots {
-        position: absolute;
-        bottom: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        flex-direction: column;
-      } */
-
-      .dots__dot {
-        /* border: none;
-        background-color: #b9b9b9;
-        opacity: 0.7;
-        height: 1rem;
-        width: 1rem;
-        border-radius: 50%;
-        margin-right: 1.75rem;
-        cursor: pointer;
-        transition: all 0.5s; */
-
-        background: radial-gradient(
-          closest-side,
-          #737a7e 35%,
-          rgba(0, 0, 0, 0) 0%
-        );
-        border-radius: 50%;
-        content: "";
-        height: 36px;
-        width: 36px;
-
-        /* Only necessary when overlying images */
-        /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
-      }
-
-      .dots__dot:last-child {
-        margin: 0;
-      }
-
-      .dots__dot--active {
-        background-color: #fff;
-        background-color: #888;
-        opacity: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #006cb7;
-        border: 2px solid #fff;
-        box-shadow: 0 0 0 7px rgba(0, 108, 183, 0.4);
-        color: #fff;
-        font-weight: 700;
-        height: 36px;
-        width: 36px;
-        padding: 5px;
-      }
-
-      .add-compare::before {
-        border: 1px solid #737a7e;
-        position: relative;
-        bottom: 0;
-        left: -25px;
-        background: transparent;
-        border-radius: 3px;
-        content: "";
-        display: inline-block;
-        height: 15px;
-        width: 19px;
-      }
-
-      .add-compare::after {
-        border: 1px dashed #737a7e;
-        position: absolute;
-        left: -20px;
-        background: transparent;
-        border-radius: 3px;
-        content: "";
-        display: inline-block;
-        height: 15px;
-        width: 19px;
-      }
-    </style>
   </head>
   <body class="font-Oswald">
     <!-- Start Navbar -->
@@ -337,25 +190,42 @@
             </section>
           </div>
         </div>
-        <div class="inline-block cursor-pointer md:hidden mr-3">
-          <img
-            src="../assets/images/icons/search-interface-symbol (1).png"
-            alt=""
-            class="size-[20px]"
-          />
+        <button onclick="opensearchresponse()" class="inline-block cursor-pointer md:hidden mr-3">
+          <img src="../assets/images/icons/search-interface-symbol (1).png" alt="" class="size-4"/>
+        </button>
+        <div class="bg-white items-center gap-2 justify-between shadow-md absolute top-0 -left-[2px] w-full py-[15px] hidden" id="search-bar2">
+          <input type="text" placeholder="Search" class="w-full pl-3 h-full">
+          <button onclick="closesearchresponse()" class="size-[30px]">
+            <img src="../assets/images/icons/close.svg" alt="" class="bg-[#6E7677] rounded-[50%] size-[16px]"/>
+          </button>
         </div>
-        <div class="max-w-[120px] fill-slate-100 items-center gap-3 md:flex hidden pl-2">
+        <div class="w-[120px] fill-slate-100 items-center gap-3 md:flex hidden relative">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
           </svg>          
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-          </svg>       
+          <div class="mt-1">
+            <button onclick="opensearch()" >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>       
+            </button>
+            <div class="bg-white items-center gap-2 justify-between shadow-md absolute md:right-16 top-0 md:w-[300px] max-md:px-3 py-4 hidden" id="search-bar">
+              <button class="md:block hidden size-[30px] ml-3 mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>  
+              </button>
+              <input type="text" placeholder="Search" class="pr-20">
+              <button onclick="closesearch()" class="size-[30px]">
+                <img src="../assets/images/icons/close.svg" alt="" class="bg-[#6E7677] rounded-[50%] size-[16px]"/>
+              </button>
+            </div>
+          </div>
              
           <img
             src="../assets/images/icons/accessibility_icon.svg"
             alt=""
-            class="w-[45px] cursor-pointer mb-[7.5px]"
+            class="size-[50px] cursor-pointer mb-[7.5px]"
           />
         </div>
       </div>
@@ -384,9 +254,11 @@
         <a href="../index.html">Home</a>
       </li>
       <p>/</p>
-      <li class="text-primary-100 hover:underline"><a href="">Badminton</a></li>
+      <li class="text-primary-100 hover:underline"><a href="product-review-runningPage.html">Running</a></li>
       <p>/</p>
-      <li class="uppercase">ASTROX 88 Play</li>
+      <li class="text-primary-100 hover:underline"><a href="product-review-runningPage.html">MEN</a></li>
+      <p>/</p>
+      <li class="uppercase">SAFERUN 100X MEN</li>
     </ul>
     <!-- menu link -->
     <main class="max-w-[1280px] mx-auto px-5">
@@ -596,9 +468,9 @@
           <!-- start product detail card -->
 
           <div
-            class="detailCard h-[362px] text-[14px] font-sans bg-white border-[1px] text-secondary-400 mb-6"
+            class="detailCard text-[14px] font-sans bg-white border-[1px] text-secondary-400 mb-6 h-[400px] duration-500"
           >
-            <table class="table-fixed w-[284px]">
+            <table class="table-container w-[284px]">
               <tbody>
                 <tr>
                   <td class="pt-[24px] px-[20px] pb-[11px]">Flex</td>
@@ -686,7 +558,7 @@
 
       <!-- start sticky nav container  -->
       <div
-        class="sticky-nav-container bg-white z-[2] h-[90px] px-[60px] w-full flex items-center justify-center border absolute left-0 max-lg:p-0 max-lg:h-[50px]"
+        class="sticky-nav-container bg-white z-50 h-[90px] px-[60px] w-full flex items-center justify-center border absolute left-0 max-lg:p-0 max-lg:h-[50px]"
       >
         <div class="navigation-bar flex justify-between items-center flex-1">
           <div
@@ -731,7 +603,7 @@
       >
         <!-- technology left side dot nav  -->
         <div
-          class="tech-left absolute flex flex-col justify-center min-h-[600px] w-[50px] max-md:hidden"
+          class="tech-left absolute flex flex-col justify-center min-h-[600px] w-[50px] max-md:hidden z-10"
         >
           <!-- navigation toggle -->
           <!-- <div
@@ -789,7 +661,7 @@
             </div>
 
             <div
-              class="tech-right-content ml-[125px] max-w-[300px] max-md:w-full max-md:ml-0 max-md:max-w-full max-md:text-center max-md:absolute"
+              class="tech-right-content ml-[125px] max-w-[300px] max-md:w-full max-md:ml-0 max-md:max-w-full max-md:text-center max-md:absolute max-md:left-0"
             >
               <img
                 src="../assets/images/running-page/logo_b.png"

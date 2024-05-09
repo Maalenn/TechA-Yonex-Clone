@@ -2,7 +2,6 @@
 
 // horizontal slideshow 
 
-
 // end nav 
 // start footer
 class Footer extends HTMLElement {

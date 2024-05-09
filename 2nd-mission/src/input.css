@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -61,53 +62,108 @@
 }
 /* end sticky nav container in Running Page  */
 
+.slider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  /* transition: transform 1s; */
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 
+.dots::before {
+  content: "";
+  background-color: #757a7d;
+  height: 99%;
+  left: 48%;
+  position: absolute;
+  width: 1.2px;
+  z-index: -1;
+}
 
 
+.dots__dot {
 
+  background: radial-gradient(
+    closest-side,
+    #959494 35%,
+    rgba(0, 0, 0, 0) 0%
+  );
+  border-radius: 50%;
+  content: "";
+  height: 33px;
+  width: 33px;
 
+}
 
+.dots__dot:last-child {
+  margin: 0;
+}
 
+.dots__dot--active {
+  background-color: #fff;
+  background-color: #888;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #006cb7;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 7px rgba(0, 108, 183, 0.4);
+  color: #fff;
+  font-weight: 700;
+  height: 34px;
+  width: 34px;
+  padding: 5px;
+}
 
+.add-compare::before {
+  border: 1px solid #737a7e;
+  position: relative;
+  bottom: 0;
+  left: -25px;
+  background: transparent;
+  border-radius: 3px;
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 19px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.add-compare::after {
+  border: 1px dashed #737a7e;
+  position: absolute;
+  left: -20px;
+  background: transparent;
+  border-radius: 3px;
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 19px;
+}
 
 button {
     background: none;
