@@ -9,21 +9,21 @@ class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <footer class="bg-[#24292b] h-[870px] md:h-[370px] mt-[200px]">
-            <div class="max-w-[1300px] mx-auto">
-                <div class="md:justify-between md:items-center md:flex md:h-[50%]">
+            <div class="max-w-[1300px] mx-auto px-3">
+                <div class="md:justify-between md:items-center md:flex md:h-[50%] md:flex-row flex-col">
                     <div class="flex items-center justify-center">
                         <a href="index.html">
-                        <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg" alt="" class="items-center flex justify-center size-[130px] Logo ml-3">
+                        <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg" alt="" class="items-center flex justify-center size-[130px] Logo">
                         </a>
                     </div>
                     
                     <div
-                class="flex justify-between items-center max-w-[400px] mx-auto md:mr-[30px] md:gap-6"
+                class="flex justify-between items-center md:gap-6 md:px-0 px-3"
             >
                 <img
                 src="../assets/images/icons/facebook-icon.svg"
                 alt="facebook-icon"
-                class="size-[40px] ml-4"
+                class="size-[40px] "
                 />
                 <img
                 src="../assets/images/icons/twitter_icon.svg"
@@ -38,14 +38,14 @@ class Footer extends HTMLElement {
                 <img
                 src="../assets/images/icons/instagram_icon.svg"
                 alt="instagram-icon"
-                class="size-[40px] mr-4"
+                class="size-[40px] "
                 />
             </div>
                 </div>
                 <hr class="my-4 border-gray-500 opacity-30">
                 <div class="md:flex md:justify-between md:items-center">
                     <div>
-                        <ul class="md:flex md:flex-row gap-4 text-[#f5f5f5] text-[15px] py-2 flex flex-col justify-center items-center font-[Oswald]">
+                        <ul class="md:flex md:flex-row gap-4 text-[#f5f5f5] text-[15px] py-2 flex flex-col justify-center items-center font-[Oswald] ">
                             <li class="tracking-[2px]">BADMINTON</li>
                             <li class="tracking-[2px]">GOLF</li>
                             <li class="tracking-[2px]">TENNIS</li>

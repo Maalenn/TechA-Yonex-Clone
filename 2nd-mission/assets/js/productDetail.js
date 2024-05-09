@@ -46,19 +46,22 @@ document.addEventListener('keydown', function (e) {
 const imageClick = document.querySelector('#imageClick')
 const imgZoom = document.querySelector('#imgZoom')
 const xClose = document.querySelector('#xClose')
+const navbar = document.getElementById('navbar')
 
 function showImg() {
     imgZoom.classList.remove('hidden')
+    navbar.classList.add('hidden')
 }
 function closeImg() {
     imgZoom.classList.add('hidden')
+    navbar.classList.remove('hidden')
 }
   
   
   
 let currentZoom = 1; 
 let minZoom = 1; 
-let maxZoom = 3; 
+let maxZoom = 2; 
 let stepSize = 0.1;
 let container = document.querySelector('#image-container'); 
 
