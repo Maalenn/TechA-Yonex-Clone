@@ -8,6 +8,7 @@ function showCard(){
   detailCard.classList.toggle('h-[0px]')
   detailCard.classList.toggle('overflow-hidden')
   tableContainer.classList.toggle('hidden')
+  plusIcon.classList.toggle('hidden')
   
 }
 specsBtn.addEventListener('click', showCard)
@@ -18,18 +19,18 @@ const modal = document.querySelector('#modal')
 const overlay =  document.querySelector('.overlay')
 const closeBtn = document.querySelector('#xBtn')
 function showModal(){
-    modal.classList.remove('hidden')
-    overlay.classList.remove('hidden')
+    modal.classList.toggle('hidden')
+    overlay.classList.toggle('hidden')
 }
-function closeModal(){
-    console.log('close');
-    modal.classList.add('hidden')
-    overlay.classList.add('hidden')
-}
+// function closeModal(){
+//     console.log('close');
+//     modal.classList.add('hidden')
+//     overlay.classList.add('hidden')
+// }
 stringBtn.addEventListener('click', showModal)
-closeBtn.addEventListener('click', closeModal)
-overlay.addEventListener('click', 
-closeModal)
+closeBtn.addEventListener('click', showModal)
+overlay.addEventListener('click', showModal)
+// Esc key for exit modal
 document.addEventListener('keydown', function (e) {
     // console.log(e.key);
   
