@@ -4,12 +4,14 @@ const detailCard = document.querySelector('.detailCard')
 const plusIcon = document.querySelector('.plusIcon')
 const minusIcon = document.querySelector('.minusIcon')
 const tableContainer = document.querySelector('.table-container')
+
+
 function showCard(){
   detailCard.classList.toggle('h-[0px]')
-  detailCard.classList.toggle('overflow-hidden')
+  // detailCard.classList.toggle('overflow-hidden')
   tableContainer.classList.toggle('hidden')
   plusIcon.classList.toggle('hidden')
-  
+
 }
 specsBtn.addEventListener('click', showCard)
 
@@ -18,6 +20,7 @@ const stringBtn = document.querySelector('#stringBtn')
 const modal = document.querySelector('#modal')
 const overlay =  document.querySelector('.overlay')
 const closeBtn = document.querySelector('#xBtn')
+modal.classList.add('hidden')
 function showModal(){
     modal.classList.toggle('hidden')
     overlay.classList.toggle('hidden')
@@ -30,14 +33,6 @@ function showModal(){
 stringBtn.addEventListener('click', showModal)
 closeBtn.addEventListener('click', showModal)
 overlay.addEventListener('click', showModal)
-// Esc key for exit modal
-document.addEventListener('keydown', function (e) {
-    // console.log(e.key);
-  
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-      closeModal();
-    }
-  });
 
   
 // img frame 

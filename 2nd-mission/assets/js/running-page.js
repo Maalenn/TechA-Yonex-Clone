@@ -276,29 +276,3 @@ function showCard(){
   
 }
 specsBtn.addEventListener('click', showCard)
-
-// show modal and close modal
-const stringBtn = document.querySelector('#stringBtn')
-const modal = document.querySelector('#modal')
-const overlay =  document.querySelector('.overlay')
-const closeBtn = document.querySelector('#xBtn')
-function showModal(){
-    modal.classList.toggle('hidden')
-    overlay.classList.toggle('hidden')
-}
-// function closeModal(){
-//     console.log('close');
-//     modal.classList.add('hidden')
-//     overlay.classList.add('hidden')
-// }
-stringBtn.addEventListener('click', showModal)
-closeBtn.addEventListener('click', showModal)
-overlay.addEventListener('click', showModal)
-// Esc key for exit modal
-document.addEventListener('keydown', function (e) {
-    // console.log(e.key);
-  
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-      closeModal();
-    }
-  });
