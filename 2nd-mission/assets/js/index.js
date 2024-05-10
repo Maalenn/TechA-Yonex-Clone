@@ -48,7 +48,7 @@ const golfObj = [
     {
         img: "../assets/images/golf-images/thm_club_ezone.webp",
         title: "CLUBS",
-        link: ""
+        link: "golf.html"
     },
     {
         img: "../assets/images/golf-images/Mega-Menu-Golf-Shaft_1.webp",
@@ -71,7 +71,7 @@ const tennisObj = [
     {
         img: "../assets/images/tennis-images/raquet-tennis.webp",
         title: "RAQUEST",
-        link: ""
+        link: "../public/tennis.html"
     },
     {
         img: "../assets/images/tennis-images/strings-tennis.webp",
@@ -132,7 +132,7 @@ const snowboardObj = [
     {
         img: "../assets/images/snowboard-images/skate.webp",
         title: "BOARD",
-        link: ""
+        link: "snowborading.html"
     },
     {
         img: "../assets/images/snowboard-images/skate-shoe.webp",
@@ -223,7 +223,7 @@ class GolfComponent extends HTMLElement {
         ${golfObj.map((card) => {
             return `
                 <div class="flex flex-col items-center justify-center ">
-                    <a href="" class="bg-[#f7f8f9]"><img src="${card.img}" alt=""></a>
+                    <a href="${card.link}"><img src="${card.img}" alt=""></a>
                     <p class="font-semibold text-[15px] text-black">${card.title}</p>
                 </div>
             `
@@ -242,7 +242,7 @@ class TennisComponent extends HTMLElement {
         ${tennisObj.map((card) => {
             return `
                 <div class="flex flex-col items-center justify-center ">
-                    <a href="" class="bg-[#f7f8f9]"><img src="${card.img}" alt=""></a>
+                    <a href="${card.link}"><img src="${card.img}" alt=""></a>
                     <p class="font-semibold text-[15px] text-black">${card.title}</p>
                 </div>
             `
@@ -280,7 +280,7 @@ class SnowboardComponent extends HTMLElement {
         ${snowboardObj.map((card) => {
             return `
                 <div class="flex flex-col items-center justify-center ">
-                    <a href="" class="bg-[#f7f8f9]"><img src="${card.img}" alt=""></a>
+                    <a href="${card.link}""><img src="${card.img}" alt=""></a>
                     <p class="font-semibold text-[15px] text-black">${card.title}</p>
                 </div>
             `
