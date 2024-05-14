@@ -14,6 +14,8 @@
 
   <!-- tailwind css cdn link -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../src/input.css">
 
   <style>
     .top-block {
@@ -29,11 +31,12 @@
 
 </head>
 
-<body class="bg-[#F7F8F9]">
+<body class="bg-[#F7F8F9] font-['Oswald']">
   <!-- Start Navbar -->
   <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
   <nav
-      class="w-full md:bg-opacity-40 absolute hover:bg-white hover:text-black bg-white border border-1 top-0 z-[100]"
+      id="navbar"
+      class="w-full absolute hover:bg-white hover:text-black bg-white border border-1 top-0 z-[100]"
     >
       <div
         class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10"
@@ -61,7 +64,7 @@
 
         <!-- Center Navigation -->
         <div
-          class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]"
+          class="hidden font-semibold text-[14px] md:flex items-center justify-between h-[100px]"
         >
           <!-- Badminton Hoverdrop -->
           <div
@@ -70,7 +73,7 @@
             onmouseenter="hoverDrop()"
             onmouseleave="hoverHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">BADMINTON</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%] p-4">BADMINTON</a>
             <!-- Badminton section -->
             <section
               class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -91,7 +94,7 @@
             onmouseenter="tennisDrop()"
             onmouseleave="tennisHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">TENNIS</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%] p-4">TENNIS</a>
             <!-- Tennis section -->
             <section
             class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -112,7 +115,7 @@
             onmouseenter="golfDrop()"
             onmouseleave="golfHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">GOLF</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%] p-4">GOLF</a>
             <!-- Golf section -->
             <section
             class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -133,7 +136,7 @@
             onmouseenter="runningDrop()"
             onmouseleave="runningHide()"
           >
-            <a href="product-detail-runningPage.html" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
+            <a href="product-detail-runningPage.html" class="group-hover:opacity-50 relative top-[7%] p-4">RUNNING</a>
             <!-- running section -->
             <section
               class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -154,7 +157,7 @@
             onmouseenter="snowboardDrop()"
             onmouseleave="snowboardHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">SNOWBOARDING</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%] p-4">SNOWBOARDING</a>
             <!-- snowboard section -->
             <section
               class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -181,8 +184,8 @@
               </div>
             </section>
           </div>
-          <div class="cursor-pointer hover:opacity-80 h-[30px]">
-            <a href="./news.html" class="pt-[10px] ">NEWS</a>
+          <div class="cursor-pointer hover:opacity-80 h-full pt-[30px]">
+            <a href="news.html" class="relative top-[7%] p-4">NEWS</a>
           </div>
           <div
             class="group h-full pt-[30px]"
@@ -190,7 +193,7 @@
             onmouseenter="aboutDrop()"
             onmouseleave="aboutHide()"
           >
-            <a href="../public/about-us.html" class="group-hover:opacity-80 relative top-[7%]">ABOUT</a>
+            <a href="#" class="group-hover:opacity-80 relative top-[7%] p-4">ABOUT</a>
             <!-- about section -->
             <section
               class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
