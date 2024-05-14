@@ -8,11 +8,14 @@
     <!-- CSS link  -->
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <!-- yonex logo -->
-    <link rel="icon" href="../assets/images/icon/yonex.png" type="image/icon type" >
+    <link
+      rel="icon"
+      href="../assets/images/icon/yonex.png"
+      type="image/icon type"
+    />
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
   </head>
   <body class="font-Oswald">
     <!-- Start Navbar -->
@@ -21,7 +24,8 @@
       id="overlay-blur"
     ></div>
     <nav
-      class="w-full md:bg-opacity-40 absolute hover:bg-white hover:text-black bg-white border border-1 top-0 z-[100]"
+      id="navbar"
+      class="w-full absolute hover:bg-white hover:text-black bg-white border border-1 top-0 z-[100]"
     >
       <div
         class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10"
@@ -49,7 +53,7 @@
 
         <!-- Center Navigation -->
         <div
-          class="hidden font-semibold text-[14px] gap-4 md:flex items-center justify-between h-[100px]"
+          class="hidden font-semibold text-[14px] md:flex items-center justify-between h-[100px]"
         >
           <!-- Badminton Hoverdrop -->
           <div
@@ -58,7 +62,7 @@
             onmouseenter="hoverDrop()"
             onmouseleave="hoverHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">BADMINTON</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%] p-4">BADMINTON</a>
             <!-- Badminton section -->
             <section
               class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -79,7 +83,7 @@
             onmouseenter="tennisDrop()"
             onmouseleave="tennisHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">TENNIS</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%] p-4">TENNIS</a>
             <!-- Tennis section -->
             <section
             class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -100,7 +104,7 @@
             onmouseenter="golfDrop()"
             onmouseleave="golfHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">GOLF</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%] p-4">GOLF</a>
             <!-- Golf section -->
             <section
             class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -121,7 +125,7 @@
             onmouseenter="runningDrop()"
             onmouseleave="runningHide()"
           >
-            <a href="product-detail-runningPage.html" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
+            <a href="product-detail-runningPage.html" class="group-hover:opacity-50 relative top-[7%] p-4">RUNNING</a>
             <!-- running section -->
             <section
               class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -142,7 +146,7 @@
             onmouseenter="snowboardDrop()"
             onmouseleave="snowboardHide()"
           >
-            <a href="#" class="group-hover:opacity-50 relative top-[7%]">SNOWBOARDING</a>
+            <a href="#" class="group-hover:opacity-50 relative top-[7%] p-4">SNOWBOARDING</a>
             <!-- snowboard section -->
             <section
               class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -169,8 +173,8 @@
               </div>
             </section>
           </div>
-          <div class="cursor-pointer hover:opacity-80 h-[30px]">
-            <a href="./news.html" class="pt-[10px] ">NEWS</a>
+          <div class="cursor-pointer hover:opacity-80 h-full pt-[30px]">
+            <a href="news.html" class="relative top-[7%] p-4">NEWS</a>
           </div>
           <div
             class="group h-full pt-[30px]"
@@ -178,7 +182,7 @@
             onmouseenter="aboutDrop()"
             onmouseleave="aboutHide()"
           >
-            <a href="../public/about-us.html" class="group-hover:opacity-80 relative top-[7%]">ABOUT</a>
+            <a href="#" class="group-hover:opacity-80 relative top-[7%] p-4">ABOUT</a>
             <!-- about section -->
             <section
               class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
@@ -251,12 +255,16 @@
       class="hidden sm:w-[50%] sm:px-5 sm:flex sm:my-[23px] sm:text-[12px] sm:gap-4 sm:font-sans pt-[40px]"
     >
       <li class="text-primary-100 hover:underline">
-        <a href="../index.html">Home</a>
+        <a href="index.html">Home</a>
       </li>
       <p>/</p>
-      <li class="text-primary-100 hover:underline"><a href="product-review-runningPage.html">Running</a></li>
+      <li class="text-primary-100 hover:underline">
+        <a href="product-review-runningPage.html">Running</a>
+      </li>
       <p>/</p>
-      <li class="text-primary-100 hover:underline"><a href="product-review-runningPage.html">MEN</a></li>
+      <li class="text-primary-100 hover:underline">
+        <a href="product-review-runningPage.html">MEN</a>
+      </li>
       <p>/</p>
       <li class="uppercase">SAFERUN 100X MEN</li>
     </ul>
@@ -709,283 +717,6 @@
       <!-- end technology -->
     </main>
     <!-- end product detail in running page  -->
-
-    <!-- start modal -->
-    <section
-      id="modal"
-      class="w-full h-full absolute top-[20%] flex justify-center hidden"
-    >
-      <!-- modal -->
-      <div
-        class="modal bg-white max-w-[710px] max-h-[1835px] md:max-h-[719px] relative"
-      >
-        <!--x button -->
-        <button
-          id="xBtn"
-          class="bg-white absolute right-[-40px] top-[-40px] z-10 w-[30px] h-[30px] rounded-full flex items-center justify-center"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18 18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-        <div class="px-[30px] pb-[30px] flex flex-col gap-5">
-          <!-- upper content -->
-          <div
-            class="flex flex-col md:flex-row md:justify-between font-semibold uppercase my-[35px]"
-          >
-            <div class="flex flex-col items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 490 490"
-                width="25"
-                height="25"
-                fill="#F5EB43"
-              >
-                <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path>
-              </svg>
-              <span>Main start</span>
-            </div>
-            <div class="flex flex-col items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 512 512"
-                width="25"
-                height="25"
-                fill="#F5EB43"
-              >
-                <path
-                  d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"
-                ></path>
-              </svg>
-              <span>Main tie off</span>
-            </div>
-            <div class="flex flex-col items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 490 490"
-                width="25"
-                height="25"
-                fill="#c5d0db"
-              >
-                <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path>
-              </svg>
-              <span>Cross Start</span>
-            </div>
-            <div class="flex flex-col items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 512 512"
-                width="25"
-                height="25"
-                fill="#c5d0db"
-              >
-                <path
-                  d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"
-                ></path>
-              </svg>
-              <span>Cross Tie off</span>
-            </div>
-          </div>
-          <!-- bottom content -->
-          <div class="flex flex-col md:flex-row md:justify-between font-oswald">
-            <div class="flex flex-col">
-              <h3
-                class="mb-[11px] mt-[22px] font-extrabold text-[24px] uppercase"
-              >
-                Astrox 88 D game
-              </h3>
-              <table>
-                <td class="p-[11px] border">
-                  <h5 class="my-[22px] font-semibold uppercase">
-                    Main tie off:
-                  </h5>
-                  <p class="font-sans text-[14px] text-secondary-200">b8, B8</p>
-                </td>
-                <td class="p-[11px] border">
-                  <h5 class="my-[22px] font-semibold uppercase">
-                    Cross tie off:
-                  </h5>
-                  <p class="font-sans text-[14px] text-secondary-200">A5</p>
-                </td>
-              </table>
-              <h4 class="my-[18px] font-bold text-[18px] uppercase">Mains</h4>
-              <p class="font-sans text-[14px] text-secondary-200">
-                Start from top center, keep on stringing until B9 (skip A7, A9 &
-                A11). Go through B12, directly to A16, and then straight to A14,
-                down to B10 and tie off at B8. (Opposite side: the same
-                procedure).
-              </p>
-              <h4 class="my-[18px] font-bold text-[18px] uppercase">Crosses</h4>
-              <p class="font-sans text-[14px] text-secondary-200">
-                Make a knot at B6 and start crosses from B9. Keep on stringing
-                until A7 (skip A12 & A10), then directly to A5 and tie off .
-              </p>
-            </div>
-            <div class="shrink-0">
-              <img
-                src="../assets/images/productPage/stringDetail.png"
-                class="md:w-[345px] md:h-[527px]"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--end modal  -->
-
-    <section
-      id="modal"
-      class="w-full h-full absolute top-[20%] flex justify-center hidden"
-    >
-      <!-- modal -->
-      <div
-        class="modal bg-white max-w-[710px] max-h-[1835px] md:max-h-[719px] relative"
-      >
-        <!--x button -->
-        <button
-          id="xBtn"
-          class="bg-white absolute right-[-40px] top-[-40px] z-10 w-[30px] h-[30px] rounded-full flex items-center justify-center"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18 18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-        <div class="px-[30px] pb-[30px] flex flex-col gap-5">
-          <!-- upper content -->
-          <div
-            class="flex flex-col md:flex-row md:justify-between font-semibold uppercase my-[35px]"
-          >
-            <div class="flex flex-col items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 490 490"
-                width="25"
-                height="25"
-                fill="#F5EB43"
-              >
-                <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path>
-              </svg>
-              <span>Main start</span>
-            </div>
-            <div class="flex flex-col items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 512 512"
-                width="25"
-                height="25"
-                fill="#F5EB43"
-              >
-                <path
-                  d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"
-                ></path>
-              </svg>
-              <span>Main tie off</span>
-            </div>
-            <div class="flex flex-col items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 490 490"
-                width="25"
-                height="25"
-                fill="#c5d0db"
-              >
-                <path d="M490,474.459H0L245.009,15.541L490,474.459z"></path>
-              </svg>
-              <span>Cross Start</span>
-            </div>
-            <div class="flex flex-col items-center gap-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 512 512"
-                width="25"
-                height="25"
-                fill="#c5d0db"
-              >
-                <path
-                  d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"
-                ></path>
-              </svg>
-              <span>Cross Tie off</span>
-            </div>
-          </div>
-          <!-- bottom content -->
-          <div class="flex flex-col md:flex-row md:justify-between font-oswald">
-            <div class="flex flex-col">
-              <h3
-                class="mb-[11px] mt-[22px] font-extrabold text-[24px] uppercase"
-              >
-                Astrox 88 D game
-              </h3>
-              <table>
-                <td class="p-[11px] border">
-                  <h5 class="my-[22px] font-semibold uppercase">
-                    Main tie off:
-                  </h5>
-                  <p class="font-sans text-[14px] text-secondary-200">b8, B8</p>
-                </td>
-                <td class="p-[11px] border">
-                  <h5 class="my-[22px] font-semibold uppercase">
-                    Cross tie off:
-                  </h5>
-                  <p class="font-sans text-[14px] text-secondary-200">A5</p>
-                </td>
-              </table>
-              <h4 class="my-[18px] font-bold text-[18px] uppercase">Mains</h4>
-              <p class="font-sans text-[14px] text-secondary-200">
-                Start from top center, keep on stringing until B9 (skip A7, A9 &
-                A11). Go through B12, directly to A16, and then straight to A14,
-                down to B10 and tie off at B8. (Opposite side: the same
-                procedure).
-              </p>
-              <h4 class="my-[18px] font-bold text-[18px] uppercase">Crosses</h4>
-              <p class="font-sans text-[14px] text-secondary-200">
-                Make a knot at B6 and start crosses from B9. Keep on stringing
-                until A7 (skip A12 & A10), then directly to A5 and tie off .
-              </p>
-            </div>
-            <div class="shrink-0">
-              <img
-                src="../assets/images/productPage/stringDetail.png"
-                class="md:w-[345px] md:h-[527px]"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--end modal  -->
 
     <!-- Start Footer -->
     <my-footer></my-footer>
