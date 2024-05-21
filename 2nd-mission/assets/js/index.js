@@ -10,32 +10,32 @@ const badmintonObj = [
     {
         img: "../assets/images/badminton-images/strings_240306.webp",
         title: "STRINGS",
-        link: ""
+        link: "../public/product-review.html"
     },
     {
         img: "../assets/images/badminton-images/shuttlecocks_img.webp",
         title: "SHUTTLECOCKS",
-        link: ""
+        link: "../public/product-review.html"
     },
     {
         img: "../assets/images/badminton-images/10566_011_520x320.webp",
         title: "APPAREL",
-        link: ""
+        link: "../public/product-review.html"
     },
     {
         img: "../assets/images/badminton-images/shoes_240306.webp",
         title: "SHOES",
-        link: ""
+        link: "../public/product-review.html"
     },
     {
         img: "../assets/images/badminton-images/bag.webp",
         title: "BAGS",
-        link: ""
+        link: "../public/product-review.html"
     },
     {
         img: "../assets/images/badminton-images/accessories_img2.webp",
         title: "ACCESSORIES",
-        link: ""
+        link: "../public/product-review.html"
     },
     {
         img: "../assets/images/badminton-images/athletes_240306.webp",
@@ -53,17 +53,17 @@ const golfObj = [
     {
         img: "../assets/images/golf-images/Mega-Menu-Golf-Shaft_1.webp",
         title: "SHAFTS",
-        link: ""
+        link: "golf.html"
     },
     {
         img: "../assets/images/golf-images/Mega-Golf-Bag.webp",
         title: "GEAR",
-        link: ""
+        link: "golf.html"
     },
     {
         img: "../assets/images/golf-images/golf-athletes.webp",
         title: "ATHLETES",
-        link: ""
+        link: "golf.html"
     }
 ]
 // tennisobj
