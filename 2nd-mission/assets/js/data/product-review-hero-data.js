@@ -1,9 +1,9 @@
-export const heroBedminton = [
+export const heroBadminton = [
   {
     imgLg: "../assets/images/product-review/heroCover.webp",
     imgMd: "../assets/images/product-review/heroCover-breakPoint.webp",
-    productName: "bedminton",
+    productName: "badminton",
     productType: "racquets",
-    productDes: "bedminton racquets"
+    productDes: "badminton racquets"
   }
 ]

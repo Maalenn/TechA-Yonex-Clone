@@ -1,7 +1,7 @@
-import {heroBedminton} from '../data/product-review-hero-data.js'
+import {heroBadminton} from '../data/product-review-hero-data.js'
 
 const dataSources = {
-    'hero-badminton' :  heroBedminton
+    'hero-badminton' :  heroBadminton
 }
 
 const HeroCoverContainer = (heroContents) => {
@@ -57,7 +57,7 @@ const HeroCoverContainer = (heroContents) => {
                 </h5>
             </ul>
             <h1
-                class="max-lg:left-0 absolute left-20 pr-10 w-[70%] bottom-10 uppercase font-[500] text-[1.6rem] tracking-[0.15rem] max-sm:text-[1.6rem] max-sm:p-4 max-lg:text-white max-lg:tracking-[0.5rem] max-md:text-[2.6rem] max-lg:w-full max-lg:bottom-4 max-lg:bg-black max-lg:text-[2.3rem] max-lg:p-10 lg:text-[2.2rem]"
+                class="max-lg:left-0 absolute left-20 pr-10 w-[70%] bottom-10 uppercase font-[500] text-[1.6rem] tracking-[0.15rem] max-sm:text-[1.6rem] max-sm:p-4 max-lg:text-white max-lg:tracking-[0.5rem] max-md:text-[2.6rem] max-lg:w-full max-lg:bottom-0 max-lg:bg-black max-lg:text-[2.3rem] max-lg:p-10 lg:text-[2.2rem]"
             >
             ${item.productDes}
             </h1>
@@ -72,7 +72,7 @@ const HeroCoverContainer = (heroContents) => {
 class HeroCover extends HTMLElement {
     connectedCallback(){
         const dataSource = this.getAttribute('data-source');
-        const data = dataSources[dataSource] || heroBedminton;
+        const data = dataSources[dataSource] || heroBadminton;
         this.innerHTML = HeroCoverContainer(data)
     }
 }
