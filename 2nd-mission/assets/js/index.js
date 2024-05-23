@@ -307,17 +307,60 @@ class AboutComponent extends HTMLElement{
     }
 }
 customElements.define('about-component', AboutComponent);
-// badminton
-function hoverDrop(){
-    document.querySelector('#baminton').classList.toggle('max-h-[500px]')
-    document.getElementById('overlay-blur').classList.toggle('hidden');
+//hover function for 
+function hoverDrop(x){
+    if (x === 1) {
+        document.querySelector('#badminton').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+    if (x === 2) {
+        document.querySelector('#tennis').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+    if (x === 3) {
+        document.querySelector('#golf').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+    if (x === 4) {
+        document.querySelector('#running').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+    if (x === 5) {
+        document.querySelector('#snowboard').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+    if (x === 6) {
+        document.querySelector('#about').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
 
-}
-function hoverHide(){
-    document.querySelector('#baminton').classList.toggle('max-h-[500px]')
-    document.getElementById('overlay-blur').classList.toggle('hidden');
-
-}
+  }
+  function hoverHide(x){
+    if (x === -1) {
+        document.querySelector('#badminton').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+    if (x === -2) {
+        document.querySelector('#tennis').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+    if (x === -3) {
+        document.querySelector('#golf').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+    if (x === -4) {
+        document.querySelector('#running').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+    if (x === -5) {
+        document.querySelector('#snowboard').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+    if (x === -6) {
+        document.querySelector('#about').classList.toggle('max-h-[500px]')
+        document.getElementById('overlay-blur').classList.toggle('hidden');
+    }
+  }
 // GOLF Hover
 function golfDrop(){
     document.getElementById('overlay-blur').classList.toggle('hidden');
@@ -329,50 +372,7 @@ function golfHide(){
 
     document.querySelector('#golf').classList.toggle('max-h-[500px]')
 }
-// tennis Hover
-function tennisDrop(){
-    document.getElementById('overlay-blur').classList.toggle('hidden');
 
-    document.querySelector('#tennis').classList.toggle('max-h-[500px]')
-}
-function tennisHide(){
-    document.getElementById('overlay-blur').classList.toggle('hidden');
-
-    document.querySelector('#tennis').classList.toggle('max-h-[500px]')
-}
-// running Hover
-function runningDrop(){
-    document.getElementById('overlay-blur').classList.toggle('hidden');
-
-    document.querySelector('#running').classList.toggle('max-h-[500px]')
-}
-function runningHide(){
-    document.getElementById('overlay-blur').classList.toggle('hidden');
-
-    document.querySelector('#running').classList.toggle('max-h-[500px]')
-}
-// snowboard Hover
-function snowboardDrop(){
-    document.getElementById('overlay-blur').classList.toggle('hidden');
-
-    document.querySelector('#snowboard').classList.toggle('max-h-[500px]')
-}
-function snowboardHide(){
-    document.getElementById('overlay-blur').classList.toggle('hidden');
-
-    document.querySelector('#snowboard').classList.toggle('max-h-[500px]')
-}
-// about Hover
-function aboutDrop(){
-    document.getElementById('overlay-blur').classList.toggle('hidden');
-
-    document.querySelector('#about').classList.toggle('max-h-[500px]')
-}
-function aboutHide(){
-    document.getElementById('overlay-blur').classList.toggle('hidden');
-
-    document.querySelector('#about').classList.toggle('max-h-[500px]')
-}
 
 // Hamburger Sidebar
 function openNav() {

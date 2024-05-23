@@ -49,140 +49,78 @@
           class="hidden font-semibold text-[14px] md:flex items-center justify-between h-[100px]"
         >
           <!-- Badminton Hoverdrop -->
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="hoverDrop()"
-            onmouseleave="hoverHide()"
-          >
-            <a href="" class="group-hover:opacity-50 relative top-[7%]  p-4">BADMINTON</a>
+          <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(1)"  onmouseleave="hoverHide(-1)">
+            <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">BADMINTON</a>
             <!-- Badminton section -->
-            <section
-              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="baminton"
-            >
+            <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="badminton" >
               <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
                 <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                  <badminton-component></badminton-component>
+                  <card-slide data-source="badminton-obj"></card-slide>
                 </div>
               </div>
             </section>
           </div>
-
-          <!-- Tennis Hoverdrop -->
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="tennisDrop()"
-            onmouseleave="tennisHide()"
-          >
-            <a href="" class="group-hover:opacity-50 relative top-[7%]  p-4">TENNIS</a>
-            <!-- Tennis section -->
-            <section
-            class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="tennis"
-            >
+      
+          <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(2)"  onmouseleave="hoverHide(-2)">
+            <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">TENNIS</a>
+            <!-- Badminton section -->
+            <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="tennis" >
               <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
                 <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                  <tennis-component></tennis-component>
+                  <card-slide data-source="tennis-obj"></card-slide>
                 </div>
               </div>
             </section>
           </div>
-
-          <!-- Golf Hoverdrop -->
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="golfDrop()"
-            onmouseleave="golfHide()"
-          >
-            <a href="" class="group-hover:opacity-50 relative top-[7%]  p-4">GOLF</a>
-            <!-- Golf section -->
-            <section
-            class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="golf"
-            >
-              <div id="HoverBox" class="max-w-[95%] mx-auto p-[20px]">
-                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                  <golf-component></golf-component>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <!-- running Hoverdrop -->
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="runningDrop()"
-            onmouseleave="runningHide()"
-          >
-            <a href="" class="group-hover:opacity-50 relative top-[7%]  p-4">RUNNING</a>
-            <!-- running section -->
-            <section
-              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="running"
-            >
+      
+          <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(3)"  onmouseleave="hoverHide(-3)">
+            <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">GOLF</a>
+            <!-- Badminton section -->
+            <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="golf" >
               <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
                 <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                  <running-component></running-component>
+                  <card-slide data-source="golf-obj"></card-slide>
                 </div>
               </div>
             </section>
           </div>
-
-          <!-- snowboard Hoverdrop -->
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="snowboardDrop()"
-            onmouseleave="snowboardHide()"
-          >
-            <a href="" class="group-hover:opacity-50 relative top-[7%]  p-4">SNOWBOARDING</a>
-            <!-- snowboard section -->
-            <section
-              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="snowboard"
-            >
+          
+          <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(4)"  onmouseleave="hoverHide(-4)">
+            <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">RUNNING</a>
+            <!-- Badminton section -->
+            <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="running" >
               <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
-                <div
-                  class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3"
-                >
-                  <snowboard-component></snowboard-component>
-                  <div class="block">
-                    <div
-                      class="flex flex-col items-center justify-center w-[223px]"
-                    >
-                      <a href="" class="bg-[#f7f8f9]"
-                        ><img
-                          src="../assets/images/snowboard-images/skate-athlete.webp"
-                          alt=""
-                      /></a>
-                      <p class="font-semibold text-[14px] text-black">TEAM</p>
-                    </div>
-                  </div>
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <card-slide data-source="running-obj"></card-slide>
                 </div>
               </div>
             </section>
           </div>
+      
+          <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(5)"  onmouseleave="hoverHide(-5)">
+            <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">SNOWBOARDING</a>
+            <!-- Badminton section -->
+            <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="snowboard" >
+              <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <card-slide data-source="snowboarding-obj"></card-slide>
+                </div>
+              </div>
+            </section>
+          </div>
+      
           <div class="cursor-pointer hover:opacity-80 h-full pt-[30px]">
             <a href="news.html" class="relative top-[7%] p-4">NEWS</a>
           </div>
-          <div
-            class="group h-full pt-[30px]"
-            id="hoverLink"
-            onmouseenter="aboutDrop()"
-            onmouseleave="aboutHide()"
-          >
-            <a href="" class="group-hover:opacity-80 relative top-[7%] p-4">ABOUT</a>
-            <!-- about section -->
-            <section
-              class="w-full bg-white  absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0"
-              id="about"
-            >
-              <div id="HoverBox" class="max-w-[1600px] mx-auto  flex justify-center p-[40px]">
-                <about-component></about-component>
+      
+          <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(6)"  onmouseleave="hoverHide(-6)">
+            <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">ABOUT</a>
+            <!-- Badminton section -->
+            <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="about" >
+              <div id="HoverBox" class="max-w-[95%] mx-auto p-[40px]">
+                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                  <card-slide data-source="about-obj"></card-slide>
+                </div>
               </div>
             </section>
           </div>
@@ -948,6 +886,7 @@
     <script>
       AOS.init();
     </script>
+    <script src="../assets/js/components/nav-component.js" type="module"></script>
   </body>
 
 </html>
