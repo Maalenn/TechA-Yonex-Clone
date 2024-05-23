@@ -270,7 +270,7 @@
     </ul>
     <!-- menu link -->
     <main class="max-w-[1280px] mx-auto px-5">
-      
+
       <!-- start product detail container  -->
       <div class="product-card" id="product-description">
         <shoes-details data-source="shoes1"></shoes-details>
@@ -278,43 +278,13 @@
       <!-- start product detail container  -->
 
       <!-- start sticky nav container  -->
-      <div
-        class="sticky-nav-container bg-white z-50 h-[90px] px-[60px] w-full flex items-center justify-center border absolute left-0 max-lg:p-0 max-lg:h-[50px]"
-      >
-        <div class="navigation-bar flex justify-between items-center flex-1">
-          <div
-            class="product-name text-[#1f2427] text-[20px] uppercase tracking-widest max-lg:hidden"
-          >
-            <span class="">SAFERUN 100X MEN</span>
-          </div>
-          <ul
-            class="sticky-nav-elements flex flex-1 items-center justify-around h-full mx-auto max-w-[700px]"
-          >
-            <li>
-              <a
-                href="#product-description"
-                class="sticky-nav-element text-[#6e7677] relative uppercase transition duration-600 ease-linear"
-                >Discription</a
-              >
-            </li>
-            <li>
-              <a
-                href="#product-technology"
-                class="sticky-nav-element text-[#6e7677] relative uppercase transition duration-600 ease-linear"
-                >Technology</a
-              >
-            </li>
-          </ul>
-        </div>
-        <a
-          class="add-compare relative w-[11%] min-w-[130px] mx-[25px] max-lg:hidden text-nowrap"
-        >
-          <span
-            class="text-[#595959] text-[15px] font-bold relative capitalize font-['Lato']"
-            >Add To Compare</span
-          >
-        </a>
-      </div>
+      <product-sticky-nav
+        prodName="SAFERUN"
+        menuLinks='[
+          {"href": "#product-description", "link": "Description"},
+          {"href": "#product-technology", "link": "Technology"}
+        ]'
+      ></product-sticky-nav>
       <!-- end sticky nav container  -->
 
       <!-- start technology -->
@@ -440,5 +410,6 @@
 
     <script src="../assets/js/running-page.js"></script>
     <script src="../assets/js/components/shoes-detail.js" type="module"></script>
+    <script src="../assets/js/components/product-sticky-nav.js"></script>
   </body>
 </html>
