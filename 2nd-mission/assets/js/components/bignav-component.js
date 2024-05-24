@@ -6,10 +6,10 @@ class Navbar extends HTMLElement {
         class="w-full ${bgColor} absolute md:bg-opacity-40 hover:bg-white hover:text-black bg-white border border-1 md:border-none top-0 z-[100]"
       >
         <div
-          class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] px-10"
+          class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] lg:px-6 px-3"
         >
           <!-- Hamburger Icons -->
-          <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()">
+          <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()"> 
             <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
             <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
             <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
@@ -31,80 +31,86 @@ class Navbar extends HTMLElement {
   
           <!-- Center Navigation -->
           <div
-            class="hidden font-meduim text-[14px] md:flex items-center justify-between h-[100px]"
+            class="hidden font-meduim lg:text-[14px] md:flex items-center justify-between h-[100px] gap-8 max-lg:text-[12px]"
           >
             <!-- Badminton Hoverdrop -->
             <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(1)"  onmouseleave="hoverHide(-1)">
-              <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">BADMINTON</a>
+              <a href="" class="group-hover:opacity-50 relative top-[7%]">BADMINTON</a>
               <!-- Badminton section -->
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="badminton" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="badminton-obj" style-grid'="grid-col-4" ></card-slide>
+                    <card-slide data-source="badminton-obj" grid-style="grid-cols-4"></card-slide>
                   </div>
                 </div>
               </section>
             </div>
         
             <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(2)"  onmouseleave="hoverHide(-2)">
-              <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">TENNIS</a>
+              <a href="" class="group-hover:opacity-50 relative top-[7%]">TENNIS</a>
               <!-- Tennis section -->
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="tennis" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="tennis-obj"></card-slide>
+                    <card-slide data-source="tennis-obj" grid-style="grid-cols-4"></card-slide>
                   </div>
                 </div>
               </section>
             </div>
         
             <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(3)"  onmouseleave="hoverHide(-3)">
-              <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">GOLF</a>
+              <a href="" class="group-hover:opacity-50 relative top-[7%]">GOLF</a>
               <!-- Golf section -->
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="golf" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="golf-obj"></card-slide>
+                    <card-slide data-source="golf-obj" grid-style="grid-cols-4"></card-slide>
                   </div>
                 </div>
               </section>
             </div>
             
             <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(4)"  onmouseleave="hoverHide(-4)">
-              <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">RUNNING</a>
+              <a href="" class="group-hover:opacity-50 relative top-[7%]">RUNNING</a>
               <!-- Running section -->
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="running" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="running-obj"></card-slide>
+                    <card-slide data-source="running-obj" grid-style="grid-cols-3 pl-5"></card-slide>
                   </div>
                 </div>
               </section>
             </div>
         
             <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(5)"  onmouseleave="hoverHide(-5)">
-              <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">SNOWBOARDING</a>
+              <a href="" class="group-hover:opacity-50 relative top-[7%]">SNOWBOARDING</a>
               <!-- Snowboarding section -->
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="snowboard" >
-                <div id="" class="max-w-[95%] mx-auto p-[40px]">
-                  <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="snowboarding-obj"></card-slide>
+                <div id="" class="max-w-[95%] mx-auto p-[40px] pb-[20px]">
+                  <div class="max-w-[900px] mx-auto flex mb-4 justify-center flex-col gap-3">
+                    <card-slide data-source="snowboarding-obj" grid-style="grid-cols-4"></card-slide>
+                    <div class="flex max-w-[1200px] mx-auto">
+                        <div class="flex flex-col items-center justify-center w-[213px]">
+                            <a id="hoverLink" href=""><img src="../assets/images/snowboard-images/skate-athlete.webp" alt=""></a>
+                            <p class="font-semibold text-[15px] text-black">Teams</p>
+                        </div>
+                    </div>
                   </div>
                 </div>
               </section>
             </div>
         
             <div class="cursor-pointer hover:opacity-80 h-full pt-[30px]">
-              <a href="news.html" class="relative top-[7%] p-4">NEWS</a>
+              <a href="news.html" class="relative top-[7%] pb-4">NEWS</a>
             </div>
         
             <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(6)"  onmouseleave="hoverHide(-6)">
-              <a href="" class="group-hover:opacity-50 relative top-[7%] p-4">ABOUT</a>
+              <a href="" class="group-hover:opacity-50 relative top-[7%]">ABOUT</a>
               <!-- About section -->
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="about" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="about-obj"></card-slide>
+                    <card-slide data-source="about-obj" grid-style="grid-cols-6"></card-slide>
                   </div>
                 </div>
               </section>
@@ -131,7 +137,7 @@ class Navbar extends HTMLElement {
               </button>
               <div class="bg-white items-center gap-2 justify-between shadow-md absolute md:right-16 top-0 md:w-[300px] max-md:px-3 py-4 hidden" id="search-bar">
                 <button class="md:block hidden size-[30px] ml-3 mt-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mb-2 flex-none">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                   </svg>  
                 </button>
@@ -145,7 +151,7 @@ class Navbar extends HTMLElement {
             <img
               src="../assets/images/icons/accessibility_icon.svg"
               alt=""
-              class="size-[50px] cursor-pointer mb-[7.5px]"
+              class="max-w-[50px] cursor-pointer mb-[7.5px] flex-shrink"
             />
           </div>
         </div>
