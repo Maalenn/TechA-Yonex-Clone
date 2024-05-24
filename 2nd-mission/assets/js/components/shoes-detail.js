@@ -207,15 +207,10 @@ const ShoesDetailContainer = (contents) => {
           <!-- end product detail card -->
 
           <div
-            class="font-sans font-semibold text-[14px] flex md:hidden text-secondary-400"
+            class="font-sans font-semibold text-[14px] flex md:hidden text-secondary-400 mb-[30px]"
           >
-            <a class="flex gap-2 hover:underline" href="">
-              <img
-                class="w-[30px] h-[27px]"
-                src="../assets/images/icon/compare.svg"
-                alt=""
-              />
-              <span class="">Add to compare</span>
+            <a class="add-compare relative w-[11%] min-w-[130px] mx-[25px] text-nowrap">
+              <span class="text-[#595959] text-[15px] font-bold relative capitalize font-['Lato']">Add To Compare</span>
             </a>
           </div>
 

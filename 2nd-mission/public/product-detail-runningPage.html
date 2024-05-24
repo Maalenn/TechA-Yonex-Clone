@@ -288,116 +288,11 @@
       <!-- end sticky nav container  -->
 
       <!-- start technology -->
-      <div
-        class="slider technology pt-[200px] flex justify-between max-md:block max-md:h-[67rem] relative"
-        id="product-technology"
-      >
-        <!-- technology left side dot nav  -->
-        <div
-          class="tech-left absolute flex flex-col justify-center min-h-[600px] w-[50px] max-md:hidden z-10"
-        >
-          <!-- navigation toggle -->
-          <!-- <div
-                class="dots technology-left-navigation flex flex-col items-center justify-between relative min-h[250px] before:content-[''] before:bg-[#737a7e] before:h-[99%] before:left-[48%] before:absolute before:w-[2px] before:-z-1">
-                <div class="navigation-dot active-technology-dot">01</div>
-              </div> -->
-
-          <div
-            class="dots technology-left-navigation flex flex-col items-center justify-between relative min-h-[250px]"
-          >
-            <!-- <div class="dots__dot--active">01</div> -->
-          </div>
-        </div>
-        <!-- technology left side dot nav -->
-
-        <!-- <button class="dots__dot dots_dot--active" data-slide="1">01</button> -->
-        <div
-          class="slide absolute w-full flex items-center justify-center max-md:block max-md:relative"
-        >
-          <!-- middle content  -->
-          <div
-            class="tech-middle w-[calc(50%-50px)] flex justify-center max-md:w-full"
-          >
-            <div class="technology-middle-img-wrapper relative">
-              <img
-                class="technology-middle-img h-auto min-w-full"
-                id="technology-middle-img"
-                alt="POWER CUSHION +"
-              />
-            </div>
-          </div>
-          <!-- middle content  -->
-
-          <!-- right content  -->
-          <div
-            class="tech-right w-[50%] relative flex flex-col pl-5 max-md:w-[100%]"
-          >
-            <div
-              class="tech-right-numbers text-[#f7f8f9] flex font-extrabold absolute font-['Lato'] max-md:hidden"
-              style="z-index: -1"
-            >
-              <div
-                class="technology-right--numbers-current--slide text-[190px] leading-[150px] text-[#f7f8f9] font-bold"
-                id="current-slide"
-              >
-                01
-              </div>
-              <div
-                class="technology-right--numbers-slide--count text-[24px] text-[#f7f8f9] font-bold"
-                id="slide-count"
-              >
-                / 0
-                <span></span>
-              </div>
-            </div>
-
-            <div
-              class="tech-right-content ml-[125px] max-w-[300px] max-md:w-full max-md:ml-0 max-md:max-w-full max-md:text-center max-md:absolute max-md:left-0"
-            >
-              <img
-                src="../assets/images/running-page/logo_b.png"
-                alt="logo_b"
-                class="technology__right__content__image max-w-full h-auto"
-              />
-              <h3
-                class="tech-right-content-title text-[#1f2427] text-[26px] font-normal tracking-[3px] mt-[2.2rem] mb-[1.1rem] font-Oswald"
-                id="technology-right-title"
-              >
-                POWER CUSHION +
-              </h3>
-              <div
-                class="tech-right-content-description text-[#595959] text-[16px] font-['Lato'] leading-relaxed"
-                id="technology-right-description"
-              >
-                <p class="mb-[1rem]"></p>
-                <p class="mb-[1rem]"></p>
-                <p class="mb-[1rem]">
-                  <span class="text-[10px] sm-description"></span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- right content  -->
-        </div>
-
-        <!-- arrow nav  -->
-        <div
-          class="tech-right-navigation ml-[125px] flex items-end flex-1 pt-[150px] pb-[70px] max-md:ml-0 max-md:pt-0 absolute left-[50%] top-[70%] max-md:top-[90%] max-md:left-[40%]"
-        >
-          <button
-            class="slider__btn slider__btn--left relative h-[40px] w-[50px] mr-[10px] bg-white border border-[#e0e0e0] flex justify-center items-center"
-          >
-            <img src="../assets/images/running-page/carrot_L.svg" alt="" />
-          </button>
-          <button
-            class="slider__btn slider__btn--right relative h-[40px] w-[50px] mr-[10px] bg-white border border-[#e0e0e0] flex justify-center items-center"
-          >
-            <img src="../assets/images/running-page/carrot_R.svg" alt="" />
-          </button>
-        </div>
-        <!-- arrow nav  -->
+      <div id="product-technology">
+        <technology-carousel data-source="shoes1"></technology-carousel>
       </div>
       <!-- end technology -->
+
     </main>
     <!-- end product detail in running page  -->
 
@@ -411,5 +306,6 @@
     <script src="../assets/js/running-page.js"></script>
     <script src="../assets/js/components/shoes-detail.js" type="module"></script>
     <script src="../assets/js/components/product-sticky-nav.js"></script>
+    <script src="../assets/js/components/technology-carousel.js" type="module"></script>
   </body>
 </html>
