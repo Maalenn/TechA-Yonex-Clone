@@ -11,7 +11,7 @@ const dataSources = {
 
 const CreateCard = (cards) => {
     return `
-    <div class="grid grid-cols-4 grid-rows-2 gap-4 max-w-[1600px] items-center w-[900px] flex-1">
+    <div class="grid grid-cols-4 gap-4 max-w-[1600px] items-center w-[900px] flex-1">
         ${cards.map((card) => {
             return `
             <div class="flex flex-col items-center justify-center">
