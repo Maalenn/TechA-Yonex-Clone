@@ -250,37 +250,25 @@
     <!-- End Sidebar -->
     <div>
         <!-- start head main -->
-        <div class="flex flex-col relative justify-center mb-[110px] max-md:mt-[50px] mt-[100px]">
-            <img class="w-100%" src="https://www.yonex.com/media/athletes/tmp/banner/VIKTORAXELSEN_main.jpg" alt="person">
-            <!-- start title  -->
-            <div class="flex relative justify-center ">
-                <div class="absolute w-[310px]  md:w-[640px] h-[70px] md:h-[113px] bg-[#006cb7]
-                text-white py-5  px-8 bottom-[-63px] md:bottom-[-80px] text-center ">
-                    <div class="name">
-                        <span class="italic text-[24px] mb-[-3px] md:text-4xl tracking-[0.2em] uppercase m-0">Victor Axelsen</span>
-                    </div>
-                    <div class="text-[16px] md:text-lg mb-[12px] font-[Figtree]">
-                        <span>Badminton</span>
-                    </div>
-                </div>
-            </div>
+          <cover-component 
+          coverimg="../assets/images/athlete-profile.img/VIKTORAXELSEN_main.webp"
+          athletename="Victor Axelsen"
+          sportype="Badminton"
+          ></cover-component>
             <!-- end title      -->
         </div>
         <!-- end head main -->
         <!-- Start main contents -->
-        <div class=" flex flex-col lg:flex-row mx-auto my-0 lg:text-left h-[100%] ">
+        <div class="flex flex-col lg:flex-row mx-auto my-0 lg:text-left h-[100%] ">
             <!-- Start Sidebar -->
             <div class="lg:w-[40%] lg:pt-[100px] lg:sticky lg:top-0 z-[2] lg:h-[20%]">
-              <div
-                  class="uppercase  border-b lg:border-none lg:w-[200px] lg:ml-auto lg:text-left lg:pl-[40px] lg:pb-[40px] ">
-                  <ul class=" flex flex-row justify-around lg:flex-col tracking-[2px] text-[#737a7e] ">
-                      <li class="mb-[2px] lg:mb-[40px]"><a href="#career">carerr</a></li>
-                      <li class="mb-[2px] lg:mb-[40px]"><a href="#achievement">achievements</a></li>
-                      <li class="max-[399px]:hidden sm:mb-[2px] lg:mb-[20px]"><a href="#equipment">Equipment used</a>
-                      </li>
-                  </ul>
-              </div>
+              <sidebar-component 
+              carrer="career"
+              achievement="achievement"
+              equipment="Equipment Used"
+            ></sidebar-component>
             </div>
+            
             <!-- End Sidebar -->
 
 
@@ -480,7 +468,7 @@
 
         
     </div>
-
+     
     <!-- Start Footer -->
     <my-footer></my-footer>
     <!-- End Footer -->    
@@ -489,6 +477,7 @@
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/athelte-profile.js"></script>
     <script src="../assets/js/components/althlete-cover.js"></script>
+    <script src="../assets/js/components/athlete-sidebar.js"></script>
 
 </body>
 
