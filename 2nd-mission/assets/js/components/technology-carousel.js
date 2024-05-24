@@ -1,7 +1,8 @@
 import { shoes1} from '../data/technology-data.js';
-
+import { BadmintonTechno } from '../data/badminton-data.js';
 const dataSources = {
   'shoes1': shoes1,
+  'badminton-techno' : BadmintonTechno
 };
 
 class TechnologyCarousel extends HTMLElement {
