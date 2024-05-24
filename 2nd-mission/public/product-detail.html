@@ -29,7 +29,7 @@
                 </svg>                             
             </button>
             <!-- x icon -->
-            <button id="xClose" onclick="closeImg()" class="absolute top-0 right-0 p-[10px] z-[1000]">
+            <button id="x-close" class="absolute top-0 right-0 p-[10px] z-[1000]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-[40px] h-[40px] fill-[#A3A3A3]">
                     <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
                 </svg>                                                     
@@ -276,98 +276,13 @@
         <li class="uppercase whitespace-nowrap">Astrox 88 S Game</li>
     </ul>
     <!--start main page -->
-    <main class=" max-w-[625px] md:max-w-[1280px] mx-auto px-5 mt-[110px]">       
-        <div class="box-border md:flex justify-between gap-3 product-card mb-[20rem] max-md:mb-[5rem] " id="product-description">
-            <!-- image container left-side-->
-            <div id="imageClick" onclick="showImg()" class="w-[600px] max-w-[90%] mx-auto relative block cursor-zoom-in ">
-                <img class="max-w-full  top-[50%] " src="../assets/images/productPage/Astrox88.png" alt="Astrox88 Raq">
-            </div>
+    <main class=" max-w-[625px] md:max-w-[1280px] mx-auto px-5 mt-[110px]">  
 
-            <!-- start product detail right-side-->
-            <div class=" md:max-w-[360px] md:w-[40%]">
-                <div class="mt-[32px] max-w-[642px]">
-                    <h1 class="uppercase text-[26px] md:text md:text-[36px] md:text-start text-center font-Oswald">
-                        <span class="tracking-[5px] md:tracking-[7px]">Astrox 88 S Game</span>
-                    </h1>
-                </div>
-                <!-- specs button -->
-                <button class="specsBtn flex justify-between w-full relative mt-[60px] pt-[13px] pb-[15px]">
-                    <span class="font-semibold uppercase text-[14px]">Specs</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="minusIcon w-4 h-6 absolute right-3 top-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
-                    </svg> 
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="plusIcon w-4 h-6 hidden absolute right-3 top-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                    </svg>
-                    
-                </button>                       
-                <!-- start product detail card -->
-                <div class="detailCard text-[12px] font-sans bg-white border-[1px] text-secondary-400 overflow-hidden mb-6 h-[450px] duration-500">
-                    <table class="table-container w-auto">
-                        <tbody>
-                            <tr>
-                                <td class="pt-[24px] px-[15px] pb-[11px]">Flex</td>
-                                <td class="pt-[24px] px-[20px] pb-[11px]">Medium</td>
-                            </tr>
-                            <tr>
-                                <td class=" px-[20px] py-[11px]">Frame</td>
-                                <td class=" px-[20px] py-[11px]">HM Graphite</td>
-                            </tr>
-                            <tr>
-                                <td class="px-[20px] py-[11px]">Shaft</td>
-                                <td class="px-[20px] py-[11px]">HM Graphite, 2G-NANOMESH NEO</td>
-                            </tr>
-                            <tr>
-                                <td class="px-[20px] py-[11px]">Joint</td>
-                                <td class="px-[20px] py-[11px]">Built-in T-Joint</td>
-                            </tr>
-                            <tr>
-                                <td class="px-[20px] py-[11px]">Weight / Grip</td>
-                                <td class="px-[20px] py-[11px]">4U (Avg. 83g) G5,6</td>
-                            </tr>
-                            <tr>
-                                <td class="px-[20px] py-[11px] whitespace-nowrap">Stringing Advice</td>
-                                <td class="px-[20px] py-[11px]">4U: 20 - 28 lbs</td>
-                            </tr>
-                            <tr>
-                                <td class="px-[20px] py-[11px]">Color(s)</td>
-                                <td class="px-[20px] py-[11px]">Silver / Black</td>
-                            </tr>
-                            <tr>
-                                <td class="px-[20px] py-[11px] pb-[24px]">Item Code</td>
-                                <td class="px-[20px] py-[11px] pb-[24px]">3AX88S-G</td>
-                            </tr>
-                        </tbody>  
-                    </table>
-                </div>
-                <!-- end product detail card -->
-                <!-- stringing detail button -->
-                <button id="stringBtn" class="flex gap-3 text-[14px] font-sans font-bold text-secondary-400 my-[15px] cursor-pointe">
-                    <img class="w-[17px] h-6" src="../assets/images/icon/stringing-badminton-icon.svg" alt="">
-                    <span>See Stringing Instructions</span>
-                </button>
-                <div class="font-sans font-semibold text-[14px] flex md:hidden text-secondary-400">
-                    <a class="flex gap-2 hover:underline" href="">
-                        <img class="w-[30px] h-[27px]" src="../assets/images/icon/compare.svg" alt="">
-                        <span>Add to compare</span>
-                    </a>
-                </div>
-                <!-- start icon container -->               
-                <div class="flex justify-center md:justify-start gap-2 max-w-[800px] mx-auto">
-                    <a href="https://www.facebook.com/yonexbadminton">
-                        <img class="w-[30px] h-[30px]" src="../assets/images/icon/icon-facebook.svg" alt="">
-                    </a>
-                    <a href="https://twitter.com/yonex_badminton?">
-                        <img class="w-[30px] h-[30px]" src="../assets/images/icon/icon-twitter.svg" alt="">
-                    </a>
-                    <a href="https://www.yonex.com/badminton/racquets/3ax88s-g">
-                        <img class="w-[30px] h-[30px]" src="../assets/images/icon/icon-link.svg" alt="">
-                    </a>
-                </div> 
-                <!-- end icon container -->                       
-            </div>
-            <!-- end product detail right-side -->
+        <div class="product-card" id="product-description">
+            <product-detail-section data-source="badminton-info"></product-detail-section>
         </div>
+         
+        
         <!-- start sticky nav container  -->
         <div
       class="sticky-nav-container bg-white z-50 h-[90px] px-[60px] w-full flex items-center justify-center border absolute left-0 max-lg:p-0 max-lg:h-[50px] font-Oswald"
@@ -525,7 +440,7 @@
         <!-- modal -->
         <div class="modal bg-white max-w-[710px] max-h-[1835px] md:max-h-[719px] relative shadow-lg">
             <!--x button -->
-            <button id="xBtn" class="bg-white absolute right-[-40px] top-[-40px] z-10 w-[30px] h-[30px] rounded-full flex items-center justify-center">
+            <button id="xBtn" class="bg-white absolute right-[-40px] top-[-40px] z-10 w-[30px] h-[30px] rounded-full flex items-center justify-center cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>                      
@@ -580,8 +495,10 @@
     <!-- overlay for modal-->
     <div id="overlayModal" class="overlay fixed top-0 left-0 w-full h-full z-[100] hidden"></div>
     <my-footer></my-footer>
+    <!-- script link for component and function -->
+    <script type="module" src="../assets/js/components/product-detail.js" ></script>
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/productDetail.js"></script>
+    <!-- <script src="../assets/js/productDetail.js"></script> -->
     <script src="../assets/js/index.js"></script>
 </body>
 </html>
