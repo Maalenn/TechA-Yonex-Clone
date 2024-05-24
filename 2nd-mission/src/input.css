@@ -41,7 +41,7 @@
   @apply top-0;
 }
 
-.sticky-nav-element::after{
+.nav-active::after{
   @apply bg-[#006cb7];
   @apply content-[''];
   @apply block;

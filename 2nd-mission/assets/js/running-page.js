@@ -1,38 +1,3 @@
-// Sticky navigation
-const nav = document.querySelector(".sticky-nav-container");
-const header = document.querySelector(".product-card");
-
-const stickyNav = function (entries) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) nav.classList.add("nav-sticky");
-  else nav.classList.remove("nav-sticky");
-};
-
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-});
-
-headerObserver.observe(header);
-
-// Page navigation
-document
-  .querySelector(".sticky-nav-elements")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-
-    // Matching strategy
-    if (e.target.classList.contains("sticky-nav-element")) {
-      const id = e.target.getAttribute("href");
-      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-
-      const clickedNavItem = document.querySelector(id);
-      console.log("clicked nav items");
-      clickedNavItem.classList.add("active");
-    }
-  });
-
 // start technology slider
 const sliderData = [
   {
