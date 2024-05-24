@@ -21,12 +21,11 @@ module.exports = {
           500: '#53595a',  
           600: '#1f2427',
           700: '#24292b',
-               
         },        
-        fontFamily: {
+      },
+      fontFamily: {
           'Oswald': ['Oswald', 'Lato', 'sans-serif']
         }
-      }
     },
   },
   plugins: [],
