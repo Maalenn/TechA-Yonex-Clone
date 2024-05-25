@@ -37,10 +37,7 @@
     </head>
     <body class="bg-[white] font-Oswald tracking-[1px]">
       <!-- Start Navbar -->
-      <div
-        class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]"
-        id="overlay-blur"
-      ></div>
+      <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]" id="overlay-blur"></div>
       <nav
         id="navbar"
         class="w-full absolute hover:bg-white hover:text-black bg-white border border-1 top-0 z-[100]"
@@ -346,15 +343,10 @@
       <!-- End Silder -->
 
       <!-- Start side bar drop down -->
-      <section
-        class="flex w-full justify-end max-w-[1280px] mx-auto pr-10 sm:flex md:hidden"
-      >
+      <!-- <section class="flex w-full justify-end max-w-[1280px] mx-auto pr-10 sm:flex md:hidden">
         <form class="">
-          <select
-            id="countries"
-            class="text-[16px] p-3 bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full dark:border-[#1b1a1a] dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          >
-            <option selected><a class="">All Racquets</a></option>
+          <select id="countries" class="text-[16px] p-3 bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full dark:border-[#1b1a1a] dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option value="All Racquets"><a class="">All Racquets</a></option>
             <option value="ASTROX"><a href="">ASTROX</a></option>
             <option value="NANORAY"><a href="">NANORAY</a></option>
             <option value="DUORA"><a href=""></a>DUORA</option>
@@ -365,22 +357,18 @@
             <option value="Junior"><a href="">Junior</a></option>
           </select>
         </form>
-      </section>
-      <section
-        class="flex w-full justify-center max-w-[1280px] mx-auto pr-10 sm:flex md:hidden"
-      >
+      </section> -->
+      <sidebar-component data-source="sidebar-badminton"> </sidebar-component>
+
+      <section class="flex w-full justify-center max-w-[1280px] mx-auto pr-10 sm:flex md:hidden">
         <div class="text-[14px] text-[gray]">Item 1-12 of 33</div>
       </section>
       <!-- End side bar drop down -->
 
       <!-- Start Athletes Information section -->
-      <section
-        class="flex flex-col relative w-full justify-center max-lg:w-[100%]"
-      >
+      <section class="flex flex-col relative w-full justify-center max-lg:w-[100%]">
         <!-- Product Shopping Chart -->
-        <section
-          class="max-w-[1280px] mx-auto grid grid-cols-[1fr,3fr] max-md:grid-cols-1"
-        >
+        <section class="max-w-[1280px] mx-auto grid grid-cols-[1fr,3fr] max-md:grid-cols-1">
           <!-- Start Side bar -->
           <section class="sm:hidden md:flex max-sm:hidden pl-10 font-sans">
             <ul class="flex flex-col gap-6 text-[#575555] w-[100%]">
@@ -402,9 +390,7 @@
 
           <!-- Start card container -->
           <section class="p-10">
-            <section
-              class="w-[100%] grid grid-cols-3 max-sm:grid-cols-2 gap-10 mb-20"
-            >
+            <section class="w-[100%] grid grid-cols-3 max-sm:grid-cols-2 gap-10 mb-20">
               <aside
                 class="relative w-[100%] flex flex-col justify-center pt-[1.5rem] pb-5 group z-[1000] mt-10"
               >
@@ -908,6 +894,7 @@
       <script src="../assets/js/main.js"></script>
       <script src="../assets/js/components/product-review-hero.js" type="module"> </script>
       <script src="../assets/js/components/product-review-slider.js" type="module" ></script>
+      <script  src="../assets/js/components/product-review-sidebar.js" type="module"></script>
     </body>
   </html>
 </html>
