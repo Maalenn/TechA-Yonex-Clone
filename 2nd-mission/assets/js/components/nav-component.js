@@ -15,9 +15,9 @@ const CreateCard = (cards, gridStyle) => {
     <div class="grid ${gridStyle} gap-4 max-w-[1600px] items-center w-[900px] flex-1">
         ${cards.map((card) => {
             return `
-            <div class="flex flex-col items-center justify-center w-[213px]">
-                <a id="hoverLink" href="${card.link}"><img src="${card.img}" alt=""></a>
-                <p class="font-semibold text-[15px] text-black">${card.title}</p>
+            <div class="flex flex-col items-center justify-center w-[213px] ">
+                <a id="hoverLink" href="${card.link}" class="bg-[#F7F8FA]"><img src="${card.img}" alt=""></a>
+                <p class="font-semibold text-[15px] text-black tracking-[1px] pt-2">${card.title}</p>
             </div>
             `;
         }).join("")}
