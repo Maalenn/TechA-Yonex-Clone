@@ -1,10 +1,10 @@
 import { cardData } from '../data/ourHistory-data.js';
-        // import { cardData2 } from './card2-data.js';
 
         const dataSources = {
             'card-data': cardData,
         };
 
+        // Start the Card Infomation component
         const CreateCard = (cards) => {
             return `
                 <div class="max-w-[1200px] mx-auto">
@@ -94,3 +94,18 @@ import { cardData } from '../data/ourHistory-data.js';
         }
 
         customElements.define('card-info-component', Card);
+        // End the Card Infomation component
+
+
+
+// Scrolling click (Smooth)
+document
+.querySelector(".nav__links")
+.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (e.target.classList.contains("nav__link")) {
+        const id = e.target.getAttribute("href");
+        document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+});

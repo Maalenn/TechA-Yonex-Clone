@@ -229,7 +229,7 @@
               </button>
             </div>
           </div>
-             
+
           <img
             src="../assets/images/icons/accessibility_icon.svg"
             alt=""
@@ -345,20 +345,7 @@
     </script>
   </body>
 
-  <script>
-    // scrolling click
-    document
-      .querySelector(".nav__links")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-
-        // Matching strategy
-        if (e.target.classList.contains("nav__link")) {
-          const id = e.target.getAttribute("href");
-          document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-        }
-      });
-  </script>
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/index.js"></script>
+
 </html>
