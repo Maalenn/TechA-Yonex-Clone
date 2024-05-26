@@ -2,11 +2,13 @@ import { shoes1} from '../data/technology-data.js';
 import { BadmintonTechno } from '../data/badminton-data.js';
 import { TennisTechno } from '../data/detail-tennis-data.js';
 import { GolfTechno } from '../data/detail-golf-data.js';
+import { SnowboardTechno } from '../data/detail-snowboard.js';
 const dataSources = {
   'shoes1': shoes1,
   'badminton-techno' : BadmintonTechno,
   'tennis-techno': TennisTechno,
-  'golf-techno' : GolfTechno
+  'golf-techno' : GolfTechno,
+  'snowboard-techno': SnowboardTechno
 };
 
 class TechnologyCarousel extends HTMLElement {
