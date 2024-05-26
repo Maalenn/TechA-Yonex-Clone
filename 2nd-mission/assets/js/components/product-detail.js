@@ -1,24 +1,29 @@
-import { Badminton } from "../data/badminton-data.js"
+import { Badminton } from "../data/detail-badminton.js";
 
 const dataSources = {
-    'badminton-info': Badminton
-}
+  "badminton-info": Badminton,
+};
 
 const ProductInfo = (info) => {
-
-    return `
-    ${info.map((dataInfo) => `
+  return `
+    ${info
+      .map(
+        (dataInfo) => `
     <div class="box-border md:flex justify-between gap-3 product-card mb-[20rem] max-md:mb-[5rem]">
     <!-- image container left-side-->
         <div id="imageClick" class="w-[600px] max-w-[90%] mx-auto relative block cursor-zoom-in ">
-            <img class="max-w-full  top-[50%] " src="${dataInfo.img}" alt="Astrox88 Raq">
+            <img class="max-w-full  top-[50%] " src="${
+              dataInfo.img
+            }" alt="Astrox88 Raq">
         </div>
 
         <!-- start product detail right-side-->
         <div class=" md:max-w-[360px] md:w-[40%]">
             <div class="mt-[32px] max-w-[642px]">
                 <h1 class="uppercase text-[26px] md:text md:text-[36px] md:text-start text-center font-Oswald">
-                    <span class="tracking-[5px] md:tracking-[7px]">${dataInfo.title}</span>
+                    <span class="tracking-[5px] md:tracking-[7px]">${
+                      dataInfo.title
+                    }</span>
                 </h1>
             </div>
             <!-- specs button -->
@@ -36,12 +41,16 @@ const ProductInfo = (info) => {
             <div class="detailCard text-[12px] font-sans bg-white border-[1px] text-secondary-400 overflow-hidden mb-6 max-h-[850px] duration-500">
                 <table class="table-container text-[12px] w-auto">
                     <tbody>
-                        ${dataInfo.productSpecs.map((spec)=>`
+                        ${dataInfo.productSpecs
+                          .map(
+                            (spec) => `
                             <tr>
                                 <td class="pt-[10px] px-[15px] pb-[10px]">${spec.specCaption}</td>
                                 <td class="pt-[10px] px-[20px] pb-[10px]">${spec.specInfo}</td>
                             </tr>
-                        `).join('')}
+                        `
+                          )
+                          .join("")}
                     </tbody>  
                 </table>
             </div>
@@ -73,97 +82,97 @@ const ProductInfo = (info) => {
         <!-- end product detail right-side -->
     </div>
     
-    `).join("")}
-`
-}
+    `
+      )
+      .join("")}
+`;
+};
 
 // section component
-class ProductDetail extends HTMLElement{
-    connectedCallback(){
-        const dataAtt = this.getAttribute('data-source')
-        const dataSourceKey = dataSources[dataAtt]
-        this.innerHTML = ProductInfo(dataSourceKey)
-    }
+class ProductDetail extends HTMLElement {
+  connectedCallback() {
+    const dataAtt = this.getAttribute("data-source");
+    const dataSourceKey = dataSources[dataAtt];
+    this.innerHTML = ProductInfo(dataSourceKey);
+  }
 }
 
-customElements.define('product-detail-section',ProductDetail)
+customElements.define("product-detail-section", ProductDetail);
 
 // show card and close card function
-const specsBtn = document.querySelector('.specsBtn')
-const detailCard = document.querySelector('.detailCard')
-const plusIcon = document.querySelector('.plusIcon')
-const minusIcon = document.querySelector('.minusIcon')
-const tableContainer = document.querySelector('.table-container')
+const specsBtn = document.querySelector(".specsBtn");
+const detailCard = document.querySelector(".detailCard");
+const plusIcon = document.querySelector(".plusIcon");
+const minusIcon = document.querySelector(".minusIcon");
+const tableContainer = document.querySelector(".table-container");
 
-function showCard(){
-  detailCard.classList.toggle('max-h-[0px]')
+function showCard() {
+  detailCard.classList.toggle("max-h-[0px]");
   // detailCard.classList.toggle('overflow-hidden')
-  tableContainer.classList.toggle('hidden')
-  plusIcon.classList.toggle('hidden')
-
+  tableContainer.classList.toggle("hidden");
+  plusIcon.classList.toggle("hidden");
 }
-specsBtn.addEventListener('click', showCard)
+specsBtn.addEventListener("click", showCard);
 
 // show modal and close modal function
-const stringBtn = document.querySelector('#stringBtn')
-const modal = document.querySelector('#modal')
-const overlay =  document.querySelector('.overlay')
-const closeBtn = document.querySelector('#xBtn')
-modal.classList.add('hidden')
-function showModal(){
-    modal.classList.toggle('hidden')
-    overlay.classList.toggle('hidden')
+const stringBtn = document.querySelector("#stringBtn");
+const modal = document.querySelector("#modal");
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.querySelector("#xBtn");
+modal.classList.add("hidden");
+function showModal() {
+  modal.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
 }
 
-stringBtn.addEventListener('click', showModal)
-closeBtn.addEventListener('click', showModal)
-overlay.addEventListener('click', showModal)
+stringBtn.addEventListener("click", showModal);
+closeBtn.addEventListener("click", showModal);
+overlay.addEventListener("click", showModal);
 
-  
-// img frame 
-const imageClick = document.querySelector('#imageClick')
-const imgZoom = document.querySelector('#imgZoom')
-const xClose = document.querySelector('#x-close')
-const navbar = document.getElementById('navbar')
+// img frame
+const imageClick = document.querySelector("#imageClick");
+const imgZoom = document.querySelector("#imgZoom");
+const xClose = document.querySelector("#x-close");
+const navbar = document.getElementById("navbar");
 
 // show product image
-imageClick.addEventListener('click', () => {
-    imgZoom.classList.remove('hidden')
-    navbar.classList.add('hidden')
-})
+imageClick.addEventListener("click", () => {
+  imgZoom.classList.remove("hidden");
+  navbar.classList.add("hidden");
+});
 // close product image
-xClose.addEventListener('click', () => {
-    imgZoom.classList.add('hidden')
-    navbar.classList.remove('hidden')
-})
+xClose.addEventListener("click", () => {
+  imgZoom.classList.add("hidden");
+  navbar.classList.remove("hidden");
+});
 
 // Zoom into product image section
-let currentZoom = 1; 
-let minZoom = 1; 
-let maxZoom = 2; 
+let currentZoom = 1;
+let minZoom = 1;
+let maxZoom = 2;
 let stepSize = 0.1;
-let container = document.querySelector('#image-container'); 
+let container = document.querySelector("#image-container");
 
 // Zoom image function
-function zoomImage(direction) { 
-    let newZoom = currentZoom + direction * stepSize; 
+function zoomImage(direction) {
+  let newZoom = currentZoom + direction * stepSize;
 
-    // Limit the zoom level to the minimum and maximum values 
-    if (newZoom < minZoom || newZoom > maxZoom) { 
-        return; 
-    } 
+  // Limit the zoom level to the minimum and maximum values
+  if (newZoom < minZoom || newZoom > maxZoom) {
+    return;
+  }
 
-    currentZoom = newZoom; 
-    console.log(currentZoom);
+  currentZoom = newZoom;
+  console.log(currentZoom);
 
-    // Update the CSS transform of the image to scale it 
-    let image = document.querySelector('#image-container img'); 
-    image.style.transform = 'scale(' + currentZoom + ')'; 
+  // Update the CSS transform of the image to scale it
+  let image = document.querySelector("#image-container img");
+  image.style.transform = "scale(" + currentZoom + ")";
 }
 
-container.addEventListener('wheel', function (event) { 
-    // Zoom in or out based on the scroll direction 
-    let direction = event.deltaY > 0 ? -1 : 1; 
-    // console.log(direction)
-    zoomImage(direction); 
+container.addEventListener("wheel", function (event) {
+  // Zoom in or out based on the scroll direction
+  let direction = event.deltaY > 0 ? -1 : 1;
+  // console.log(direction)
+  zoomImage(direction);
 });
