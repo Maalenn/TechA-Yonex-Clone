@@ -79,7 +79,7 @@ const updateActiveNavOnScroll = function(entries, observer) {
 
     if (entry.isIntersecting) {
       navElements.forEach(navEl => navEl.classList.remove("nav-active"));
-      navEl.classList.add("nav-active");
+      // navEl.classList.add("nav-active");
     }
   });
 };
