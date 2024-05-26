@@ -81,6 +81,7 @@ export const TennisTechno = [
       logo: "../assets/images/productPage/isometric.png", // Replace with actual image path
       logoAlt: "logo_b",
       title: "ISOMETRIC",
+      imgText : "",
       description: [
         "SIGNATURE YONEX TECHNOLOGY SINCE 1980",
         "",
@@ -110,6 +111,7 @@ export const TennisTechno = [
       logo: "../assets/images/detail-tennis/servo.png", // Replace with actual image path
       logoAlt: "logo_b",
       title: "SERVO FILTER",
+      imgText : "",
       description: [
         "A transparent and elastic film placed between graphite layers helps bond the layers while maintaining its elastic characteristics even after the molding process. This unique film absorbs unwanted vibrations, provides fine-tuned flex and snapback to each shot,delivering precise sensory feedback from the ball to the hand.",
         "",
@@ -124,6 +126,7 @@ export const TennisTechno = [
       logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
       logoAlt: "logo_b",
       title: "FLEXCON SYSTEM",
+      imgText : "",
       description: [
         "The tapered and elongated box frame allows the shaft to flex comfortably, extending the ball pocketing duration for more feel and control. The flexibility is enhanced by the \"2G-Namd™ Flex Force,\" a highly elastic graphite that enables 15%* more flexibility on the racquet shaft.",
         "",
