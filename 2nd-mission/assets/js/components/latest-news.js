@@ -30,48 +30,38 @@ const LatestNewsContainer = (newsContents) => {
                 <!-- end left side -->
         
                 <!-- start right side  -->
-                
                 <div class="col-span-4 md:grid">
-        
-                <!--start top right-side  -->
-                ${content.latestNews_Img_right.map((img_right) => `
-                    <div class="top-right-side md:grid">
-                        <div class="flex flex-col bg-[#fff] pb-[10px]">
-                        <div class=" pb-[10px]">
-                            <img src="${img_right}" alt="image" class="top-blocks__item__image">
-                        </div>
-                        <p class="p-[2px] pl-[10px] w-full text[16px] text-[#595959] font-[400] leading-[23px] tracking-[2px]">March
-                            21, 2024</p>
-                        <h3 class="m-[6px] pl-[4px] w-full text-[20px] font-[700] leading-[26px] mb-[10px] text-[#1f2427]">Upgrade
-                            Your Comfort and Fit Experience with the New POWER CUSHION 88 DIAL
-                        </h3>
-                        <a href="https://www.yonex.com/news/badminton/upgrade-your-comfort-and-fit-experience-with-the-new-power-cushion-88-dial/"
+                    ${content.latestNews_content_right.map((item) => `
+                        <div class="md:grid">
+                            <div class="flex flex-col bg-[#fff] pb-[10px]">
+                            <div class="pb-[10px]">
+                                <img src="${item.right_img}" alt="image" class="top-blocks__item__image">
+                            </div>
+
+                            <p class="p-[2px] pl-[10px] w-full text-[16px] text-[#595959] font-[400] leading-[23px] tracking-[2px]">
+                                ${item.right_date}
+                            </p>
+
+                            <h3 class="m-[6px] pl-[4px] w-full text-[20px] font-[700] leading-[26px] mb-[10px] text-[#1f2427]">
+                                ${item.right_des}
+                            </h3>
+                            </div>
+
+                            <a href="https://www.yonex.com/news/badminton/upgrade-your-comfort-and-fit-experience-with-the-new-power-cushion-88-dial/"
                             class="pr-[21px] w-full text-[#006cb7]"
-                            aria-label="Upgrade Your Comfort and Fit Experience  with the New POWER CUSHION 88 DIAL">
+                            aria-label="Upgrade Your Comfort and Fit Experience with the New POWER CUSHION 88 DIAL">
                             <span class="pl-[10px] text-[16px] font-[700] leading-[3px]">Read Full Story ></span>
                             <span class="top-blocks__item__link__gt"></span>
-                        </a>
+                            </a>
                         </div>
-                    </div>
-                `).join("")}
-                
-                <!--end top right-side  -->
-        
+                    `).join("")}
                 </div>
                 <!-- end right side  -->
-            </div> 
-        
-        
-        
-        
+            </div>         
         `).join("")}
-        
-    
     `
 }
- 
 
-// syntax to create component 
 class LatestNews extends HTMLElement {
     connectedCallback(){
         const dataAtt = this.getAttribute('data-source')
