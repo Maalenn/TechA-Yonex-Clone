@@ -13,7 +13,9 @@ export const Tennis = [
           productName: "PERCEPT 97",
           productDes: "New technology and structure combine with innovation to increase string snapback and movement, giving players access to the most spin in Yonex tennis history.For experienced and advanced players looking for a flexible racquet with precision and feel.",
           productColor: "",
-          productColorImgs: [
+          productColorImgs: [ 
+              '../assets/images/detail-tennis/percept-small.png',
+              '../assets/images/detail-tennis/percept-color-small.png'
           ],
         productSpec: [
             {
