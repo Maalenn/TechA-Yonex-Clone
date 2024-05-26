@@ -87,17 +87,17 @@ function golfHide(){
 
 // Hamburger Sidebar
 function openNav() {
-    document.getElementById("mySidenav").classList.remove('hidden');
-    document.getElementById('overlay-blur').classList.toggle('hidden');
-    document.querySelector('body').classList.toggle('overflow-y-hidden');
-    
+    document.getElementById("mySidenav").classList.toggle('w-[80%]');
+    document.getElementById("mySidenav").classList.toggle('overflow-y-auto');
+    document.getElementById('overlay-blur').classList.remove('hidden');
+    document.querySelector('body').classList.add('overflow-y-hidden')
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").classList.add('hidden');
-    document.getElementById('overlay-blur').classList.toggle('hidden');
-    document.querySelector('body').classList.toggle('overflow-y-hidden');
-    
+    document.getElementById("mySidenav").classList.toggle('w-[80%]');
+    document.getElementById("mySidenav").classList.toggle('overflow-y-auto');
+    document.getElementById('overlay-blur').classList.add('hidden');
+    document.querySelector('body').classList.remove('overflow-y-hidden')
 }
 
 
