@@ -17,10 +17,10 @@ const LatestNewsContainer = (newsContents) => {
                                 class="block object-cover h-[100%] w-[100%] max-w-[100%]">
                             </div>
                             
-                            <div class="px-8">
+                            <div class="px-5">
                                 <p class="w-full text-[12px] text-[#595959] font-[400] leading-[23px]">${content.latestNews_Date_left}</p>
                                 <h3 class="w-full text-[18px] font-[700] leading-[26px] text-[#1f2427]">${content.latestNews_Des_left}</h3>
-                                <a href="https://www.yonex.com/news/general/yonex-announces-environmental-vision-2050-to-carry-sport-into-the-future/"
+                                <a href="${content.latestNews_Link_left}"
                                     class="pr-[21px] w-full text-[#006cb7]"
                                     aria-label="Yonex announces “Environmental Vision 2050”:  To carry sport into the future">
                                     <span class="text-[14px] font-[700]">Read Full Story ></span>
@@ -42,7 +42,7 @@ const LatestNewsContainer = (newsContents) => {
                                 <img src="${item.right_img}" alt="image" class="top-blocks__item__image">
                             </div>
 
-                            <div class="px-8">
+                            <div class="px-5">
                                 <p class="w-full text-[12px] text-[#595959] font-[400] leading-[23px]">
                                     ${item.right_date}
                                 </p>
@@ -51,7 +51,7 @@ const LatestNewsContainer = (newsContents) => {
                                     ${item.right_des}
                                 </h3>
 
-                                <a href="" class="w-full text-[#006cb7] mt-10">
+                                <a href="${item.right_link}" class="w-full text-[#006cb7] mt-10">
                                     <span class="text-[14px] font-[700]">Read Full Story ></span>
                                 </a>
                             </div>
