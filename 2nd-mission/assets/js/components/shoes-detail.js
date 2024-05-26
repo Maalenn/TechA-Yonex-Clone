@@ -1,11 +1,13 @@
 import {ShoesMenData} from '../data/shoes-detail-men.js';
 import { Tennis } from "../data/detail-tennis-data.js";
 import { Golf } from '../data/detail-golf-data.js';
+import { Snowboard } from '../data/detail-snowboard.js';
 
 const dataSource  = {
   "shoes1": ShoesMenData,
   'tennis-info': Tennis,
-  'golf-info' : Golf
+  'golf-info' : Golf,
+  'snowboard-info': Snowboard
 }
 
 
