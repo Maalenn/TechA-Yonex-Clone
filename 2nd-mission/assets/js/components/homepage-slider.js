@@ -1,8 +1,9 @@
-import { heroBanner } from '../data/homepage-data.js';
+import { heroBanner, heroRepsonsive } from '../data/homepage-data.js';
 
 //attach the attribute for data
 const dataSources = {
-    'hero-banner': heroBanner[0].imgBanner
+    'hero-banner': heroBanner[0].imgBanner,
+    'hero-responsive': heroRepsonsive[0].imgResponsive,
 };
 
 //hero banner component
@@ -22,6 +23,16 @@ const createSlide = (cards) => {
     `;
 };
 
+//hero banner in responsive
+const cardAutoSlide = (items) => {
+    return `
+        ${items.map((imgRes) => `
+        <div class="mySlides1 fade dot">
+            <img src="${imgRes}" class="w-[100%]" alt="heropicture">
+        </div>
+    `).join('')}
+    `
+}
 
 //Reusable card slide class
 class CardSlide extends HTMLElement {
@@ -58,3 +69,32 @@ class CardSlide extends HTMLElement {
 
 customElements.define('hero-slider', CardSlide);
 
+//Reusable card auto slide in repsonsive
+class CardAutoSlide extends HTMLElement {
+    constructor(){
+        super();
+        this.items = heroRepsonsive[0].imgResponsive
+        this.slideIndex = 1;
+    }
+    connectedCallback () {
+        const dataSource = this.getAttribute('card-data-source');
+        const data = dataSources[dataSource] || []
+        this.innerHTML = cardAutoSlide(data)
+        this.showSlides1();
+    }
+    showSlides1() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides1");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        this.slideIndex++;
+        if (this.slideIndex > slides.length) {this.slideIndex = 1}    
+        slides[this.slideIndex - 1].style.display = "block";  
+        dots[this.slideIndex - 1].className += " active";
+        setTimeout(this.showSlides1.bind(this), 2000); // Use bind to maintain 'this' context
+    }
+}
+
+customElements.define('hero-responsive', CardAutoSlide)
