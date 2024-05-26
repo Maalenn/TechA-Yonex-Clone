@@ -130,24 +130,6 @@ function showDropdown(x){
 }
 
 
-
-let slideIndex1 = 0;
-showSlides1();
-
-function showSlides1() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides1");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex1++;
-    if (slideIndex1 > slides.length) {slideIndex1 = 1}    
-    slides[slideIndex1-1].style.display = "block";  
-    dots[slideIndex1-1].className += " active";
-    setTimeout(showSlides1, 2000);
-}
-
 // functions for slideshow sport
 let currentSlide1 = 0;
 function pushArrow(n) {
