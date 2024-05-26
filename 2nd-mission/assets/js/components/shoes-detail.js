@@ -43,13 +43,7 @@ const ShoesDetailContainer = (contents) => {
                 alt="shr100xm_440_1"
               />
             </div>
-            <div class="product-img-slide relative">
-              <img
-                class="max-w-full top-[50%] h-auto w-full object-cover"
-                src="${mainImage}"
-                alt="shr100xm_440_1"
-              />
-            </div>
+
           `).join('')}
           </div>
           <button
@@ -201,9 +195,7 @@ const ShoesDetailContainer = (contents) => {
                     <td class="pt-[10px] px-[20px] pb-[10px]">${spec.specCaption}</td>
                     <td class="pt-[10px] px-[20px] pb-[10px]">${spec.specInfo}</td>
                   </tr>
-                `).join('')}
-                
-              ${content.productSpec.map((item) => ``).join('')}
+                `).join('')}  
               </tbody>
             </table>
           </div>
@@ -314,6 +306,7 @@ nextBtn.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % 2;
   showImage(currentIndex);
   activeDot(currentIndex);
+
 });
 
 verticalImg1.addEventListener("click", () => {
