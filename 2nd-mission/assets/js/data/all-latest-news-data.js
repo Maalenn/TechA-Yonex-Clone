@@ -89,3 +89,26 @@ export const GolfLatestNews = [
         ],
     },
 ];
+
+export const GeneralLatestNews = [
+    {
+        latestNews_Img_left: "https://www.yonex.com/media/wysiwyg/news/general/news240411_960x600.jpg",
+        latestNews_Date_left: "April 15, 2024",
+        latestNews_Des_left: "Yonex announces “Environmental Vision 2050”: To carry sport into the future",
+        latestNews_Link_left: "",
+        latestNews_content_right:[
+            {
+                right_img: "https://www.yonex.com/media/wysiwyg/news/badminton/news_230808_960x600.jpg",
+                right_date: "August 7, 2023",
+                right_des: "Yonex Opens First Overseas Showroom, The “Yonex Shanghai Showroom” in China",
+                right_link: "",
+            },
+            {
+                right_img: "https://www.yonex.com/media/wysiwyg/news/general/news_2304061500.jpg",
+                right_date: "April 5, 2023",
+                right_des: "Yonex Announces Expansion Plans in Nagaoka to Meet Shifting Demands in Performance and Volume",
+                right_link: "",
+            },
+        ],
+    },
+];
