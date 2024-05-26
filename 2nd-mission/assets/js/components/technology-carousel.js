@@ -1,10 +1,14 @@
-import { shoes1} from '../data/technology-data.js';
-import { BadmintonTechno } from '../data/badminton-data.js';
-import { TennisTechno } from '../data/detail-tennis-data.js';
+import { shoes1 } from "../data/technology-data.js";
+import { BadmintonTechno } from "../data/detail-badminton.js";
+import { TennisTechno } from "../data/detail-tennis-data.js";
+import { GolfTechno } from "../data/detail-golf-data.js";
+import { SnowboardTechno } from "../data/detail-snowboard.js";
 const dataSources = {
-  'shoes1': shoes1,
-  'badminton-techno' : BadmintonTechno,
-  'tennis-techno': TennisTechno
+  shoes1: shoes1,
+  "badminton-techno": BadmintonTechno,
+  "tennis-techno": TennisTechno,
+  "golf-techno": GolfTechno,
+  "snowboard-techno": SnowboardTechno,
 };
 
 class TechnologyCarousel extends HTMLElement {
@@ -57,7 +61,7 @@ class TechnologyCarousel extends HTMLElement {
   }
 
   fetchSliderData() {
-    const dataSource = this.getAttribute('data-source');
+    const dataSource = this.getAttribute("data-source");
     const data = dataSources[dataSource]; // Default to shoes1 if no attribute is found
     this.sliderData = data;
     this.initSlider();
@@ -68,8 +72,12 @@ class TechnologyCarousel extends HTMLElement {
     const currentSlide = this.querySelector("#current-slide");
     const slideCount = this.querySelector("#slide-count span");
     const technologyRightTitle = this.querySelector("#technology-right-title");
-    const technologyRightImgText = this.querySelector("#technology-right-imgText");
-    const technologyRightDescription = this.querySelector("#technology-right-description");
+    const technologyRightImgText = this.querySelector(
+      "#technology-right-imgText"
+    );
+    const technologyRightDescription = this.querySelector(
+      "#technology-right-description"
+    );
     const btnLeft = this.querySelector(".slider__btn--left");
     const btnRight = this.querySelector(".slider__btn--right");
     const dotContainer = this.querySelector(".dots");
@@ -90,7 +98,9 @@ class TechnologyCarousel extends HTMLElement {
       dotContainer.querySelectorAll(".dots__dot").forEach((dot) => {
         dot.classList.remove("dots__dot--active");
       });
-      dotContainer.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add("dots__dot--active");
+      dotContainer
+        .querySelector(`.dots__dot[data-slide="${slide}"]`)
+        .classList.add("dots__dot--active");
     };
 
     const updateSlideInfo = () => {
@@ -105,13 +115,13 @@ class TechnologyCarousel extends HTMLElement {
     };
 
     const nextSlide = () => {
-      curSlide = (curSlide === maxSlide - 1) ? 0 : curSlide + 1;
+      curSlide = curSlide === maxSlide - 1 ? 0 : curSlide + 1;
       updateSlideInfo();
       activateDot(curSlide);
     };
 
     const prevSlide = () => {
-      curSlide = (curSlide === 0) ? maxSlide - 1 : curSlide - 1;
+      curSlide = curSlide === 0 ? maxSlide - 1 : curSlide - 1;
       updateSlideInfo();
       activateDot(curSlide);
     };
@@ -128,4 +138,4 @@ class TechnologyCarousel extends HTMLElement {
   }
 }
 
-customElements.define('technology-carousel', TechnologyCarousel);
+customElements.define("technology-carousel", TechnologyCarousel);

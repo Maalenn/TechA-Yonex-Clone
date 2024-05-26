@@ -46,6 +46,7 @@ export const BadmintonTechno = [
       logo: "../assets/images/productPage/tech-01.png", // Replace with actual image path
       logoAlt: "logo_b",
       title: "AERO+BOX Frame",
+      imgText: "",
       description: [
         "A combination of faster swing speeds and a solid feel.",
       ],
@@ -74,6 +75,7 @@ export const BadmintonTechno = [
       logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
       logoAlt: "logo_b",
       title: "ROTATIONAL GENERATOR SYSTEM + 2G-NANOMESH NEO",
+      imgText: "",
       description: [
         "By applying the counterbalance theory, weight is carefully distributed throughout the grip end, frame top and joint, enabling smooth transition between powerful shots for rapid, successive attacks.",
       'The innovative graphite, "2G-NANOMESH NEO" used in the shaft, characterized by its quick flex and snapback, maximizes shot power and advances the performance of the Rotational Generator System.',
@@ -86,6 +88,7 @@ export const BadmintonTechno = [
       logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
       logoAlt: "logo_b",
       title: "POWER-ASSIST BUMPER",
+      imgText: "",
       description: [
         "Boosted power with a tungsten-infused weighted bumper,",
         "adding 55%* more weight than conventional grommets.",
@@ -113,6 +116,7 @@ export const BadmintonTechno = [
       logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
       logoAlt: "logo_b",
       title: "Energy Boost CAP PLUS",
+      imgText: "",
       description: [
         "Uniquely shaped cap which maximizes shaft performance. The front allows the shaft to flex, while the sides archshaped curve stabilizes the racquet face by preventing the shaft from twisting.",
       ],

@@ -34,21 +34,62 @@ class ProductStickyNav extends HTMLElement {
 customElements.define('product-sticky-nav', ProductStickyNav)
 
 
+const nav = document.querySelector(".sticky-nav-container");
+const header = document.querySelector(".product-card");
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) nav.classList.add("nav-sticky");
+  else nav.classList.remove("nav-sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+});
+
+headerObserver.observe(header);
+
+// Page navigation
 const navElements = document.querySelectorAll(".sticky-nav-element");
+const sections = document.querySelectorAll("section");
+
 // Add an event listener to the parent container of the navigation elements
 document.querySelector(".sticky-nav-elements").addEventListener("click", function (e) {
   e.preventDefault();
 
-  // Remove 'nav-active' class from all navigation elements
   navElements.forEach(navEl => navEl.classList.remove("nav-active"));
 
   // Check if the clicked element has the class 'sticky-nav-element'
   if (e.target.classList.contains("sticky-nav-element")) {
+    // Get the target section ID from the href attribute
     const id = e.target.getAttribute("href");
     
-    // Smooth scroll to the target section
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+
     e.target.classList.add("nav-active");
-    document.querySelector(id).classList.add("active");
   }
+});
+
+// Function to handle scroll and update active navigation element
+const updateActiveNavOnScroll = function(entries, observer) {
+  entries.forEach(entry => {
+    const navEl = document.querySelector(`.sticky-nav-element[href="#${entry.target.id}"]`);
+
+    if (entry.isIntersecting) {
+      navElements.forEach(navEl => navEl.classList.remove("nav-active"));
+      // navEl.classList.add("nav-active");
+    }
+  });
+};
+
+const sectionObserver = new IntersectionObserver(updateActiveNavOnScroll, {
+  root: null,
+  threshold: 0.5,
+});
+
+
+sections.forEach(section => {
+  sectionObserver.observe(section);
 });
