@@ -8,7 +8,7 @@ export const AllLatestNewsData = [
             {
                 right_img: "https://www.yonex.com/media/wysiwyg/news/golf/news240520_960_2.jpg",
                 right_date: "May 20, 2024",
-                right_des: "HHyo Joo Kim Claims Her First Victory on the LET at the Aramco Team Series - Korea",
+                right_des: "Hyo Joo Kim Claims Her First Victory on the LET at the Aramco Team Series - Korea",
                 right_link: "",
             },
             {

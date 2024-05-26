@@ -238,409 +238,377 @@
   <!-- End Sidebar -->
 
 
-    <main class="w-full z-50 box-border mx-auto max-w-[1280px] grow mt-[110px]" class="block">
-        <!-- start tab menu -->
-        <div class=" border-b-[1px] text-[#6e7677] font-[Oswald] uppercase font-[400]">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-center"> 
-                    <ul id="tab-all" class="flex items-center space-x-1 sm:space-x-[40px] md:space-x-[60px] lg:space-x-[90px] text-sm md:text-md lg:text-lg text-[16px]">
-                        <li>
-                            <a href="news.html"
-                               class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
-                               aria-current="page" aria-label="All Stories">All</a>
-                        </li>
-                        <li>
-                            <a href="news-badminton.html"
-                               class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
-                               aria-label="Badminton Stories">Badminton</a>
-                        </li>
-                        <li>
-                            <a href="news-tennis.html"
-                               class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
-                               aria-label="Tennis Stories">Tennis</a>
-                        </li>
-                        <li>
-                            <a href="news-golf.html"
-                               class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
-                               aria-label="Golf Stories">Golf</a>
-                        </li>
-                        <li>
-                            <a href="news-general.html"
-                               class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
-                               aria-label="General Stories">General</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-          </div>
-          <!-- end tab menu-->
+  <main class="w-full z-50 box-border mx-auto max-w-[1280px] grow mt-[110px]" class="block">
+    <!-- start tab menu -->
+    <news-tab-menu></news-tab-menu>
+    <!-- end tab menu-->
 
-          <!-- start h2 -->
-          <div class="blog-posts__title font-[Oswald]">
-            <h2 class="blog-posts__title__text text text-[22px] tracking-[4.7px] mt-[60px] mb-[50px] text-center uppercase text-[#4F4A47]">Latest Stories</h2>
-          </div>
-        <!-- end h2 -->
+    <!-- start h2 -->
+    <div class="blog-posts__title font-[Oswald]">
+      <h2 class="blog-posts__title__text text text-[22px] tracking-[4.7px] mt-[60px] mb-[50px] text-center uppercase text-[#4F4A47]">Latest Stories</h2>
+    </div>
+    <!-- end h2 -->
 
-      <!-- top block content -->
-      <latest-news data-source="golf-latest-news"></latest-news>
-      <!-- end top block content -->
-  
-      <!-- start latest stories -->
-      <!--start h2 latest stories -->
-      <div class="latest-posts flex max-md:block mx-[16px] bg-[#f7f8f9] md:flex-wrap md:justify-between md:mr-[16px] md:clear-left ">
-        <div class="latest-posts__title md:text-[16px] md:w-full">
-          <h2 class="latest-posts__title__text mt-[90px] mb-[40px] text-[24px] font-[400] tracking-[4.7px] uppercase text-[#4f4a47] leading-[1.1] font-[Oswald]"></h2>
+    <!-- top block content -->
+    <latest-news data-source="golf-latest-news"></latest-news>
+    <!-- end top block content -->
+
+    <!-- start latest stories -->
+    <!--start h2 latest stories -->
+    <div class="latest-posts flex max-md:block mx-[16px] bg-[#f7f8f9] md:flex-wrap md:justify-between md:mr-[16px] md:clear-left ">
+      <div class="latest-posts__title md:text-[16px] md:w-full">
+        <h2 class="latest-posts__title__text mt-[90px] mb-[40px] text-[24px] font-[400] tracking-[4.7px] uppercase text-[#4f4a47] leading-[1.1] font-[Oswald]"></h2>
+      </div>
+        <!--end h2 latest stories -->
+        <!-- start content 1-->
+      <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center pb-[25px]">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news240318_960.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
         </div>
-         <!--end h2 latest stories -->
-         <!-- start content 1-->
-        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center pb-[25px]">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news240318_960.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 2 -->
-         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news240312_900.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 3 -->
-         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news_240312_900_2.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 4 -->
-        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news_240501_960.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 5 -->
-        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news240226_960.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 6 -->
-        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news240129_960.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
         </div>
       </div>
-      <!-- end latest stories -->
+      <!-- 2 -->
+        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news240312_900.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 3 -->
+        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news_240312_900_2.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news_240501_960.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news240226_960.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news240129_960.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- end latest stories -->
+    
+    <!-- start badminton section -->
+    <div class="latest-posts flex max-md:block mx-[16px] bg-[#f7f8f9] md:flex-wrap md:justify-between md:mr-[16px] md:clear-left ">
+      <div class="latest-posts__title md:text-[16px] md:w-full items-center flex text-[26px] justify-between pb-[30px] w-full">
+        <h2 class="latest-posts__title__text text-[24px] font-[400] tracking-[4.7px] uppercase text-[#4f4a47] leading-[1.1] font-[Oswald]"></h2>
+
+        <a href="https://www.yonex.com/news/badminton/" class="">
+          <span class="read-all-badminton-stories text-[#006cb7] text-[16px] font-[700] tracking-[.3px]"></span>
+        </a>
+      </div>
+        <!-- start content 1-->
+      <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center pb-[25px]">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news_240322_960.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 2 -->
+        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news240318_960.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 3 -->
+        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news240312_900.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
       
-      <!-- start badminton section -->
-      <div class="latest-posts flex max-md:block mx-[16px] bg-[#f7f8f9] md:flex-wrap md:justify-between md:mr-[16px] md:clear-left ">
-        <div class="latest-posts__title md:text-[16px] md:w-full items-center flex text-[26px] justify-between pb-[30px] w-full">
-          <h2 class="latest-posts__title__text text-[24px] font-[400] tracking-[4.7px] uppercase text-[#4f4a47] leading-[1.1] font-[Oswald]"></h2>
-  
-          <a href="https://www.yonex.com/news/badminton/" class="">
-            <span class="read-all-badminton-stories text-[#006cb7] text-[16px] font-[700] tracking-[.3px]"></span>
-          </a>
-        </div>
-         <!-- start content 1-->
-        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center pb-[25px]">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news_240322_960.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 2 -->
-         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news240318_960.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 3 -->
-         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news240312_900.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        
-      </div>
-      <!-- end badminton section -->
-  
-      <!-- start tennis section -->
-      <div class="latest-posts flex max-md:block mx-[16px] bg-[#f7f8f9] md:flex-wrap md:justify-between md:mr-[16px] md:clear-left ">
-        <div class="latest-posts__title md:text-[16px] md:w-full items-center flex text-[26px] justify-between pb-[30px] w-full">
-          <h2 class="latest-posts__title__text text-[24px] font-[400] tracking-[4.7px] uppercase text-[#4f4a47] leading-[1.1] font-[Oswald]"></h2>
-  
-          <a href="https://www.yonex.com/news/tennis/" class="">
-            <span class="read-all-badminton-stories text-[#006cb7] text-[16px] font-[700] tracking-[.3px]"></span>
-          </a>
-        </div>
-         <!-- start content 1-->
-        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center pb-[25px]">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news_240501_960.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 2 -->
-         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news240226_960.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 3 -->
-         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news240129_960.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        
-      </div>
-      <!-- end tennis section -->
-  
-      <!-- start golf section -->
-      <div class="latest-posts flex max-md:block mx-[16px] bg-[#f7f8f9] md:flex-wrap md:justify-between md:mr-[16px] md:clear-left ">
-        <div class="latest-posts__title md:text-[16px] md:w-full items-center flex text-[26px] justify-between pb-[30px] w-full">
-          <h2 class="latest-posts__title__text text-[24px] font-[400] tracking-[4.7px] uppercase text-[#4f4a47] leading-[1.1] font-[Oswald]"></h2>
-  
-          <a href="https://www.yonex.com/news/badminton/" class="">
-            <span class="read-all-badminton-stories text-[#006cb7] text-[16px] font-[700] tracking-[.3px]"></span>
-          </a>
-        </div>
-         <!-- start content 1-->
-        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center pb-[25px]">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/golf/news240206_960.png" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 2 -->
-         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/golf/news240117_960.png" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 3 -->
-         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/golf/news230907_960_.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        
-      </div>
-      <!-- end golf section -->
-  
-  
-       <!-- start general section -->
-       <div class="latest-posts flex max-md:block mx-[16px] bg-[#f7f8f9] md:flex-wrap md:justify-between md:mr-[16px] md:clear-left ">
-        <div class="latest-posts__title md:text-[16px] md:w-full items-center flex text-[26px] justify-between pb-[30px] w-full">
-          <h2 class="latest-posts__title__text text-[24px] font-[400] tracking-[4.7px] uppercase text-[#4f4a47] leading-[1.1] font-[Oswald]"></h2>
-  
-          <a href="https://www.yonex.com/news/badminton/" class="">
-            <span class="read-all-badminton-stories text-[#006cb7] text-[16px] font-[700] tracking-[.3px]"> </span>
-          </a>
-        </div>
-         <!-- start content 1-->
-        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center pb-[25px]">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/general/news240411_960x600.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 2 -->
-         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news_230808_960x600.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        <!-- 3 -->
-         <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
-          <div class="latest-posts__item__image-wrapper w-full">
-            <img src="https://www.yonex.com/media/wysiwyg/news/general/news_2304061500.jpg" alt="image" title=""
-              class="latest-posts__item__image img-center-auto max-w-auto h-100%">
-          </div>
-          <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
-            <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
-            <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
-            <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
-              class="latest-posts__item__link "
-              aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
-              <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
-            </a>
-          </div>
-        </div>
-        
-      </div>
+    </div>
+    <!-- end badminton section -->
 
-          <!-- end badminton page -->
+    <!-- start tennis section -->
+    <div class="latest-posts flex max-md:block mx-[16px] bg-[#f7f8f9] md:flex-wrap md:justify-between md:mr-[16px] md:clear-left ">
+      <div class="latest-posts__title md:text-[16px] md:w-full items-center flex text-[26px] justify-between pb-[30px] w-full">
+        <h2 class="latest-posts__title__text text-[24px] font-[400] tracking-[4.7px] uppercase text-[#4f4a47] leading-[1.1] font-[Oswald]"></h2>
 
-          <!-- pagination -->
-          <script src="../assets/js/pagination.js"></script>
+        <a href="https://www.yonex.com/news/tennis/" class="">
+          <span class="read-all-badminton-stories text-[#006cb7] text-[16px] font-[700] tracking-[.3px]"></span>
+        </a>
+      </div>
+        <!-- start content 1-->
+      <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center pb-[25px]">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news_240501_960.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 2 -->
+        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news240226_960.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 3 -->
+        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/tennis/news240129_960.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    <!-- end tennis section -->
 
-    </main>
+    <!-- start golf section -->
+    <div class="latest-posts flex max-md:block mx-[16px] bg-[#f7f8f9] md:flex-wrap md:justify-between md:mr-[16px] md:clear-left ">
+      <div class="latest-posts__title md:text-[16px] md:w-full items-center flex text-[26px] justify-between pb-[30px] w-full">
+        <h2 class="latest-posts__title__text text-[24px] font-[400] tracking-[4.7px] uppercase text-[#4f4a47] leading-[1.1] font-[Oswald]"></h2>
+
+        <a href="https://www.yonex.com/news/badminton/" class="">
+          <span class="read-all-badminton-stories text-[#006cb7] text-[16px] font-[700] tracking-[.3px]"></span>
+        </a>
+      </div>
+        <!-- start content 1-->
+      <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center pb-[25px]">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/golf/news240206_960.png" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 2 -->
+        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/golf/news240117_960.png" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 3 -->
+        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/golf/news230907_960_.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    <!-- end golf section -->
+
+
+      <!-- start general section -->
+      <div class="latest-posts flex max-md:block mx-[16px] bg-[#f7f8f9] md:flex-wrap md:justify-between md:mr-[16px] md:clear-left ">
+      <div class="latest-posts__title md:text-[16px] md:w-full items-center flex text-[26px] justify-between pb-[30px] w-full">
+        <h2 class="latest-posts__title__text text-[24px] font-[400] tracking-[4.7px] uppercase text-[#4f4a47] leading-[1.1] font-[Oswald]"></h2>
+
+        <a href="https://www.yonex.com/news/badminton/" class="">
+          <span class="read-all-badminton-stories text-[#006cb7] text-[16px] font-[700] tracking-[.3px]"> </span>
+        </a>
+      </div>
+        <!-- start content 1-->
+      <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center pb-[25px]">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/general/news240411_960x600.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 2 -->
+        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/badminton/news_230808_960x600.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      <!-- 3 -->
+        <div class="latest-posts__item md:mb-[80px] md:max-w-[360px] md:w-[32%] flex flex-col items-center">
+        <div class="latest-posts__item__image-wrapper w-full">
+          <img src="https://www.yonex.com/media/wysiwyg/news/general/news_2304061500.jpg" alt="image" title=""
+            class="latest-posts__item__image img-center-auto max-w-auto h-100%">
+        </div>
+        <div class="latest-posts__item__content-wrapper bg-[#fff] pl-[21px] pb-[44px] relative w-full">
+          <p class="latest-posts__item__date text-[#595959] font-[400] text-[14px] mt-[30px] mb-[10px] tracking-[.2px]">March 17, 2024</p>
+          <h3 class="latest-posts__item__title md:h-[50px] md:overflow-hidden text-[#1f2427] text-[20px] font-[700] leading-[26px] mb-[24px] pr-[10%]">YONEX All England 2024: Team Yonex Collecting titles and trophies</h3>
+          <a href="https://www.yonex.com/news/badminton/yonex-all-england-2024-team-yonex-collecting-titles-and-trophies/"
+            class="latest-posts__item__link "
+            aria-label="YONEX All England 2024:  Team Yonex Collecting titles and trophies">
+            <span class="latest-posts__item__link__text text-[#006cb7] text-[16px] font-[700] tracking-[.3px]">Read Full Story ></span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+
+        <!-- end badminton page -->
+
+        <!-- pagination -->
+        <script src="../assets/js/pagination.js"></script>
+
+  </main>
 
 
 
@@ -650,6 +618,7 @@
   <script src="../assets/js/news.js"></script>
   <script src="../assets/js/index.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/components/news-tab-menu.js"></script>
   <script src="../assets/js/components/latest-news.js" type="module"></script>
 
 </body>

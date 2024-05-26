@@ -11,13 +11,12 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet" href="../src/input.css">
    <!-- css link -->
-   <link rel="stylesheet" href="../assets/css/news.css">
-
 
   <!-- tailwind css cdn link -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- css link -->
   <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link rel="stylesheet" href="../src/input.css">
 </head>
 
 <body class="bg-[#F7F8F9]">
@@ -243,45 +242,12 @@
   <!--start search input form -->
   <main class="w-full z-50 box-border mx-auto max-w-[1280px] grow mt-[110px]" class="block">
     <!-- start tab menu -->
-    <div class=" border-b-[1px] text-[#6e7677] font-[Oswald] uppercase font-[400]">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-center">
-          <ul id="tab-all"
-            class="flex items-center space-x-1 sm:space-x-[40px] md:space-x-[60px] lg:space-x-[90px] text-sm md:text-md lg:text-lg text-[16px]">
-            <li>
-              <a href="news.html"
-                class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
-                aria-current="page" aria-label="All Stories">All</a>
-            </li>
-            <li>
-              <a href="news-badminton.html"
-                class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
-                aria-label="Badminton Stories">Badminton</a>
-            </li>
-            <li>
-              <a href="news-tennis.html"
-                class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
-                aria-label="Tennis Stories">Tennis</a>
-            </li>
-            <li>
-              <a href="news-golf.html"
-                class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
-                aria-label="Golf Stories">Golf</a>
-            </li>
-            <li>
-              <a href="news-general.html"
-                class="inline-block py-3 px-4 md:py-4 md:px-6 lg:px-8 hover:text-[#000000] hover:border-blue-500 border-b-2 border-transparent"
-                aria-label="General Stories">General</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <news-tab-menu></news-tab-menu>
     <!-- end tab menu-->
 
     <!-- start h2 -->
     <div class="blog-posts__title font-[Oswald]">
-      <h2 class="blog-posts__title__text text text-[22px] tracking-[4.7px] mt-[60px] mb-[50px] text-center uppercase text-[#4F4A47]">Latest Stories</h2>
+      <h2 class="blog-posts__title__text text text-[22px] tracking-[4.7px] mb-[50px] text-center uppercase text-[#4F4A47]">Latest Stories</h2>
     </div>
     <!-- end h2 -->
 
@@ -890,8 +856,8 @@
   <script src="../assets/js/news.js"></script>
   <script src="../assets/js/index.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/components/news-tab-menu.js"></script>
   <script src="../assets/js/components/latest-news.js" type="module"></script>
-
 </body>
 
 </html>
