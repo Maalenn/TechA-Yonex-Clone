@@ -66,3 +66,26 @@ export const TennisLatestNews = [
         ],
     },
 ];
+
+export const GolfLatestNews = [
+    {
+        latestNews_Img_left: "https://www.yonex.com/media/wysiwyg/news/golf/news240520_960_2.jpg",
+        latestNews_Date_left: "May 20, 2024",
+        latestNews_Des_left: "Hyo Joo Kim Claims Her First Victory on the LET at the Aramco Team Series - Korea",
+        latestNews_Link_left: "",
+        latestNews_content_right:[
+            {
+                right_img: "https://www.yonex.com/media/wysiwyg/news/golf/news240206_960.png",
+                right_date: "February 5, 2024",
+                right_des: "With the new 4th Generation EZONE GT series the sky is no longer the limit",
+                right_link: "",
+            },
+            {
+                right_img: "https://www.yonex.com/media/wysiwyg/news/golf/news240117_960.png",
+                right_date: "January 17, 2024",
+                right_des: "Forged Irons that make balls fly: The new “EZONE CB901” range",
+                right_link: "",
+            },
+        ],
+    },
+];
