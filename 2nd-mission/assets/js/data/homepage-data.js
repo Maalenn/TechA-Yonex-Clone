@@ -15,3 +15,18 @@ export const heroBanner = [
         ],
     }
 ];
+
+export const heroRepsonsive = [
+    {
+        imgResponsive: [
+            '../assets/images/homePage-hero/responsive/lucas.webp',
+            '../assets/images/homePage-hero/responsive/badminton-1000.webp',
+            '../assets/images/homePage-hero/responsive/beyond-what-i-see.webp',
+            '../assets/images/homePage-hero/responsive/craft.webp',
+            '../assets/images/homePage-hero/responsive/counter-drive.webp',
+            '../assets/images/homePage-hero/responsive/craft.webp',
+            '../assets/images/homePage-hero/responsive/cover.webp',
+            '../assets/images/homePage-hero/responsive/far-beyond.webp'
+        ]
+    }
+]
