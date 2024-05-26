@@ -1,23 +1,29 @@
-import { toggleData } from '../data/about-toggle-data.js';
+import { toggleData, toggleDataSecond } from '../data/about-toggle-data.js';
 
 const dataSources = {
     'toggle-data': toggleData,
+    'toggle-data-2': toggleDataSecond
 };
+
+// Define navigation data
+const navigationLinks = [
+    { title: 'AMERICA', href: '#content-1' },
+    { title: 'EUROPE', href: '#content-2' },
+    { title: 'ASIA', href: '#content-3' },
+    // Add more links as needed
+];
 
 const createAccordionContainer = (accordionArray) => {
     return `
-
-            ${accordionArray
-                .map((accordionSection) => {
-                    return `
+            ${accordionArray.map((accordionSection) => {
+                return `
                     <div class="">
                         <div class="py-[14px] px-[40px] bg-[#1F2427] text-white border font-semibold md:text-[18px]" id="${accordionSection.sectionID}">
                             ${accordionSection.mainTitle}
                         </div>
                         <!-- Accordion Items -->
-                        ${accordionSection.accordion
-                            .map((accordionItem) => {
-                                return `
+                        ${accordionSection.accordion.map((accordionItem) => {
+                            return `
                                 <div class="accordion-item">
                                     <button class="accordion-btn py-[14px] px-[40px] font-semibold md:text-[18px] border-b w-full text-start flex items-center justify-between">
                                         ${accordionItem.title}
@@ -30,25 +36,19 @@ const createAccordionContainer = (accordionArray) => {
                                     </button>
                                     <!-- Accordion Dropdown -->
                                     <div class="accordion-dropdown border-b w-full max-h-[0px] px-[60px] items-center overflow-hidden duration-500 text-gray-500">
-                                        ${accordionItem.content
-                                            .map((accordionDropDown) => {
-                                                return `
+                                        ${accordionItem.content.map((accordionDropDown) => {
+                                            return `
                                                 <div class="flex items-center gap-[20px]">
                                                     <img src="${accordionDropDown.iconImage}" alt="icon"/>
-                                                    ${accordionDropDown.link
-                                                        ? `<a class="text-blue-500 hover:underline" href="${accordionDropDown.href}">${accordionDropDown.text}</a>`
-                                                        : `<p>${accordionDropDown.text}</p>`}
+                                                    ${accordionDropDown.link ? `<a class="text-blue-500 hover:underline" href="${accordionDropDown.href}">${accordionDropDown.text}</a>` : `<p>${accordionDropDown.text}</p>`}
                                                 </div>`;
-                                            })
-                                            .join('')}
+                                        }).join('')}
                                     </div>
                                 </div>`;
-                            })
-                            .join('')}
+                        }).join('')}
                         ${accordionSection.pragraph}
                     </div>`;
-                })
-                .join('')}
+            }).join('')}
         </div>
     </main>`;
 };
@@ -57,7 +57,7 @@ class ToggleComponent extends HTMLElement {
     connectedCallback() {
         const dataSource = this.getAttribute('data-source');
         const data = dataSources[dataSource] || toggleData; // Default to toggleData if no attribute is found
-        this.innerHTML = createAccordionContainer(data);
+        this.innerHTML = createAccordionContainer(data, navigationLinks);
 
         this.addEventListener('click', (event) => {
             if (event.target.closest('.accordion-btn')) {
