@@ -273,10 +273,13 @@
 
 
             <!-- Start  Content  -->
-            <div class="w-[100%]  lg:pt-[100px] my-[30px] ">
-                <!-- Start athlete career  -->
-                <althete-career data-source="badminton-athleteData"></althete-career>
-                <!-- End athlete career  -->
+            <div class="w-[100%]  lg:pt-[100px] my-[30px]  ">
+                <!-- Start Career Content  -->
+                <althete-career
+                 data-source="badminton-athleteData"
+                ></althete-career>
+                <!-- End Athlete Career  -->
+                <!-- Start Achievement content -->
                 <div class="w-[100%] mt-[500px] md:mt-0 ">
                     <div class="relative md:pr-[15px] md:mt-[400px] lg:mt-0 lg:pl-[100px]  box-border lg:text-left  "
                         id="achievement">
@@ -288,56 +291,19 @@
                         <div class="text-left lg:pb-[30px]  box-border ">
                             <!-- block titile-->
                             <h2
-                                class="md:pt-[100px] text-center lg:text-left text-[#1f2427] uppercase text-[26px] tracking-[4px] mb-[30px] ">
+                                class="md:pt-[100px] text-center lg:text-left text-[#1f2427] uppercase text-[28px]  tracking-[4px] mb-[30px] ">
                                 Achievements</h2>
                             <!-- block info -->
-                            <div class="text-[#737a7e] font-Figtree lg:flex lg:flex-col lg:justify-center">
+                            <div class="text-[#737a7e] text-[17px] lg:flex lg:flex-col lg:justify-center">
                                 <!-- row  -->
-                                <div class="border-box max-w-[1280px] mx-auto my-0 ">
+                                <div class="border-box  mx-auto my-0 ">
                                     <!-- paralax -->
                                     <div flex flex-col>
                                         <!-- html -->
-                                        <div class="text-wrap max-w-[1200px] pl-[3px] mx-[25px] my-0">
-                                            <ul class=" md:flex md:flex-wrap mb-[2.75rem] text-[#1f2427] ">
-                                                <li class="lis">
-                                                    <span class="circle">
-                                                        2x
-                                                    </span>Victor China Open Champion (2018, 2019)
-                                                </li>
-                                                <li class="lis">
-                                                    <span class="circle">2x</span> DAIHATSU YONEX Japan Open Champion (2017, 2018)
-                                                </li>
-                                                <li class="lis">
-                                                    <span class="circle">3x</span>BWF World Championships Gold Medalist (2014, 2015, 2018)
-
-                                                </li>
-                                                <li class="lis"><span class="circle">4x</span>European Championships
-                                                    Gold Medalist
-                                                    (2014, 2016-2018)</li>
-                                                <li class="lis"><span class="circle">2021</span>Thailand Open Champion
-                                                </li>
-                                                <li class="lis"><span class="circle">2019</span>Syed Modi International
-                                                    Badminton Championships Champion
-                                                </li>
-                                                <li class="lis"><span class="circle">2017</span>YONEX German Open
-                                                    Champion</li>
-                                                <li class="lis"><span class="circle">2016</span>Rio Olympic Games Gold
-                                                    Medalist</li>
-                                                <li class="lis"><span class="circle">2015</span>YONEX-SUNRISE Hong Kong
-                                                    Open Champion</li>
-                                                <li class="lis"><span class="circle">2015</span>YONEX French Open
-                                                    Champion</li>
-                                                <li class="lis"><span class="circle">2015</span>The Star Australian Open
-                                                    Champion</li>
-                                                <li class="lis"><span class="circle">2015</span>Maybank Malaysia Open
-                                                    Champion</li>
-                                                <li class="lis"><span class="circle">2015</span>YONEX All England Open
-                                                    Champion</li>
-                                                <li class="lis"><span class="circle">2013</span>London Grand Prix Gold
-                                                    Champion</li>
-                                                <li class="lis"><span class="circle">2013</span>Scottish Open Champion
-                                                </li>
-                                            </ul>
+                                        <div class="text-wrap max-w-[1500px] pl-[3px] mx-[25px] my-0">
+                                          <div class="achiev-li text-wrap max-w-[1500px] pl-[3px]  my-0 ">
+                                            <li-achievement data-source="list"></li-achievement>
+                                          </div>
                                         </div>
 
                                     </div>
@@ -412,6 +378,7 @@
     <script src="../assets/js/components/althlete-cover.js"></script>
     <script src="../assets/js/components/athlete-sidebar.js"></script>
     <script src="../assets/js/components/athlete-career.js" type="module"></script>
+    <script src="../assets/js/components/athlete-achievment.js" type="module"></script>
 
 </body>
 
