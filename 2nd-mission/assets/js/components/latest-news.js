@@ -1,7 +1,8 @@
-import {AllLatestNewsData} from '../data/all-latest-news-data.js';
+import {AllLatestNewsData, BadmintonLatestNews} from '../data/all-latest-news-data.js';
 
 const dataSources = {
-    'all-latest-news': AllLatestNewsData
+    'all-latest-news': AllLatestNewsData,
+    'badminton-latest-news': BadmintonLatestNews,
 }
 
 const LatestNewsContainer = (newsContents) => {
