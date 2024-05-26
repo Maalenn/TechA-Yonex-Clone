@@ -25,68 +25,7 @@
     <!-- End Sidebar -->
 
     <!-- Start Hero Banner -->
-    <div class="hidden md:relative md:block">
-
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/Lucas.webp" class="w-full h-auto relative" alt="">
-        <button class=" bg-black absolute top-[50%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-4">WATCH VIDEO</button>
-      </div>
-      
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/badminton-cover.webp" class="w-full h-auto relative object-cover" alt="">
-        <button class=" bg-black absolute top-[50%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-4"">READ MORE</button>
-      </div>
-      
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/badminton-image.webp" class="w-full h-auto object-cover" alt="">
-        <button class=" bg-black absolute top-[50%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-10 px-7"">NEWS</button>
-        <button class=" bg-black absolute top-[65%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-4"">PRODUCT</button>
-      </div>
-
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/beyond-i-see.webp" class="w-full h-auto object-cover" alt="">
-        <button class=" bg-white absolute top-[45%] left-[44%] text-black py-3 hover:bg-black hover:text-white lg:px-8 px-4">WATCH VIDEO</button>
-      </div>
-
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/bwis_manifest_1002.webp" class="w-full h-auto object-cover" alt="">
-      </div>
-
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/counter-drive.webp" class="w-full h-auto object-cover" alt="">
-        <button class=" bg-black absolute top-[50%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-9">NEWS</button>
-        <button class=" bg-black absolute top-[30%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-4">LEARN MORE</button>
-      </div>
-
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/ezong.webp" class="w-full h-auto object-cover" alt="">
-        <button class=" bg-black absolute top-[50%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-4">LEARN MORE</button>
-      </div>
-
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/fly-direction.webp" class="w-full h-auto object-cover" alt="">
-        <button class=" bg-black absolute top-[50%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-4">READ MORE</button>
-      </div>
-
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/made-by-yonex-desktop.webp" class="w-full h-auto object-cover" alt="">
-        <button class=" bg-black absolute top-[50%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-4">LEARN MORE</button>
-      </div>
-
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/new-dawn.webp" class="w-full h-auto object-cover" alt="">
-        <button class=" bg-black absolute top-[50%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-9 px-7">NEWS</button>
-      </div>
-
-      <div class="mySlides fade relative">
-        <img src="../assets/images/homePage-hero/shoes.webp" class="w-full h-auto object-cover" alt="">
-        <button class=" bg-black absolute top-[50%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-4">LEARN MORE</button>
-      </div>
-      
-      <button href="#" class="prev absolute top-1/2 left-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light ml-2 text-white pb-1 pr-1" onclick="plusSlides(-1)">❮</button>
-      <button href="#" class="next absolute top-1/2 right-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light mr-2 text-white pb-1 pl-1" onclick="plusSlides(1)">❯</button>
-      
-    </div>
+    <hero-slider data-source="hero-banner"></hero-slider>
     <!-- End Hero Banner -->
 
     <!-- Start Hero Banner responsive -->
@@ -740,6 +679,7 @@
     </script>
     <script src="../assets/js/components/bignav-component.js"></script>
     <script src="../assets/js/components/nav-component.js" type="module"></script>
+    <script src="../assets/js/components/homepage-slider.js" type="module"></script>
   </body>
 
 </html>
