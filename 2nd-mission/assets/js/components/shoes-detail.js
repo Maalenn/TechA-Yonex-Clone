@@ -1,7 +1,9 @@
 import {ShoesMenData} from '../data/shoes-detail-men.js';
+import { Tennis } from "../data/detail-tennis-data.js"
 
 const dataSource  = {
-  "shoes1": ShoesMenData
+  "shoes1": ShoesMenData,
+  'tennis-info': Tennis
 }
 
 
@@ -33,20 +35,16 @@ const ShoesDetailContainer = (contents) => {
         <!-- Product image  -->
         <div class="w-[600px] max-w-[90%] mx-auto relative">
           <div id="productSlider" class="overflow-x-auto flex">
+          ${content.mainImg.map(mainImage => `
             <div class="product-img-slide relative">
               <img
                 class="top-[50%] h-auto w-full object-cover max-md:scale-140"
-                src="../assets/images/running-page/shr100xm_440_1.webp"
+                src="${mainImage}"
                 alt="shr100xm_440_1"
               />
             </div>
-            <div class="product-img-slide relative">
-              <img
-                class="max-w-full top-[50%] h-auto w-full object-cover"
-                src="https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_sl_2.png?quality=80&fit=bounds&height=819&width=600&canvas=600:819"
-                alt="shr100xm_440_1"
-              />
-            </div>
+
+          `).join('')}
           </div>
           <button
             id="prevBtn"
@@ -197,9 +195,7 @@ const ShoesDetailContainer = (contents) => {
                     <td class="pt-[10px] px-[20px] pb-[10px]">${spec.specCaption}</td>
                     <td class="pt-[10px] px-[20px] pb-[10px]">${spec.specInfo}</td>
                   </tr>
-                `).join('')}
-                
-              ${content.productSpec.map((item) => ``).join('')}
+                `).join('')}  
               </tbody>
             </table>
           </div>
@@ -310,6 +306,7 @@ nextBtn.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % 2;
   showImage(currentIndex);
   activeDot(currentIndex);
+
 });
 
 verticalImg1.addEventListener("click", () => {

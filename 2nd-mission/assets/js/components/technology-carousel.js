@@ -1,8 +1,10 @@
 import { shoes1} from '../data/technology-data.js';
 import { BadmintonTechno } from '../data/badminton-data.js';
+import { TennisTechno } from '../data/detail-tennis-data.js';
 const dataSources = {
   'shoes1': shoes1,
-  'badminton-techno' : BadmintonTechno
+  'badminton-techno' : BadmintonTechno,
+  'tennis-techno': TennisTechno
 };
 
 class TechnologyCarousel extends HTMLElement {
@@ -24,7 +26,7 @@ class TechnologyCarousel extends HTMLElement {
               <div class="technology-right--numbers-slide--count text-[24px] text-[#f7f8f9] font-bold" id="slide-count">/ 0 <span></span></div>
             </div>
             <div class="tech-right-content ml-[125px] max-w-[300px] max-md:w-full max-md:ml-0 max-md:max-w-full max-md:text-center max-md:absolute max-md:left-0">
-              <img src="../assets/images/running-page/logo_b.png" alt="logo_b" class="technology__right__content__image max-w-full h-auto" />
+              <img src="" class="technology__right__content__image max-w-full h-auto" id="technology-right-imgText"/>
               <h3 class="tech-right-content-title text-[#1f2427] text-[26px] font-normal tracking-[3px] mt-[2.2rem] mb-[1.1rem] font-Oswald" id="technology-right-title">POWER CUSHION +</h3>
               <div class="tech-right-content-description text-[#595959] text-[16px] font-['Lato'] leading-relaxed" id="technology-right-description">
                 <p class="mb-[1rem]"></p>
@@ -35,12 +37,19 @@ class TechnologyCarousel extends HTMLElement {
           </div>
         </div>
         <div class="tech-right-navigation ml-[125px] flex items-end flex-1 pt-[150px] pb-[70px] max-md:ml-0 max-md:pt-0 absolute left-[50%] top-[70%] max-md:top-[90%] max-md:left-[40%]">
-          <button class="slider__btn slider__btn--left relative h-[40px] w-[50px] mr-[10px] bg-white border border-[#e0e0e0] flex justify-center items-center">
-            <img src="../assets/images/running-page/carrot_L.svg" alt="" />
-          </button>
-          <button class="slider__btn slider__btn--right relative h-[40px] w-[50px] mr-[10px] bg-white border border-[#e0e0e0] flex justify-center items-center">
-            <img src="../assets/images/running-page/carrot_R.svg" alt="" />
-          </button>
+          <div class="border border-[#e0e0e0] mr-2">
+            <button class="slider__btn slider__btn--left relative h-[40px] w-[50px] bg-white  flex justify-center items-center">
+              <img src="../assets/images/running-page/carrot_L.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="border border-[#e0e0e0]">
+            <button class="slider__btn slider__btn--right relative h-[40px] w-[50px] flex justify-center items-center">
+              <img src="../assets/images/running-page/carrot_R.svg" alt="" />
+            </button>
+          </div>
+          
+          
         </div>
       </div>
     `;
@@ -59,6 +68,7 @@ class TechnologyCarousel extends HTMLElement {
     const currentSlide = this.querySelector("#current-slide");
     const slideCount = this.querySelector("#slide-count span");
     const technologyRightTitle = this.querySelector("#technology-right-title");
+    const technologyRightImgText = this.querySelector("#technology-right-imgText");
     const technologyRightDescription = this.querySelector("#technology-right-description");
     const btnLeft = this.querySelector(".slider__btn--left");
     const btnRight = this.querySelector(".slider__btn--right");
@@ -88,6 +98,7 @@ class TechnologyCarousel extends HTMLElement {
       technologyMiddleImg.src = data.image;
       technologyMiddleImg.alt = data.alt;
       technologyRightTitle.textContent = data.title;
+      technologyRightImgText.src = data.imgText;
       technologyRightDescription.innerHTML = data.description.join("<br>");
       currentSlide.textContent = `0${curSlide + 1}`;
       slideCount.textContent = maxSlide;
