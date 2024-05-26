@@ -1,10 +1,10 @@
-import {ShoesMenData} from '../data/shoes-detail-men.js';
+import {Men} from '../data/detail-running-data.js';
 import { Tennis } from "../data/detail-tennis-data.js";
 import { Golf } from '../data/detail-golf-data.js';
 import { Snowboard } from '../data/detail-snowboard.js';
 
 const dataSource  = {
-  "shoes1": ShoesMenData,
+  "men-info": Men,
   'tennis-info': Tennis,
   'golf-info' : Golf,
   'snowboard-info': Snowboard
@@ -42,7 +42,8 @@ const ShoesDetailContainer = (contents) => {
           ${content.mainImg.map(mainImage => `
             <div class="product-img-slide relative">
               <img
-                class="top-[50%] h-auto w-full object-cover max-md:scale-140"
+                id="imageClick"
+                class="top-[50%] h-auto w-full object-cover max-md:scale-140 cursor-zoom-in"
                 src="${mainImage}"
                 alt="shr100xm_440_1"
               />
@@ -365,3 +366,50 @@ function showCard(){
 }
 specsBtn.addEventListener('click', showCard)
 
+// img frame
+const imageClick = document.querySelector("#imageClick");
+const imgZoom = document.querySelector("#imgZoom");
+const xClose = document.querySelector("#x-close");
+const navbar = document.getElementById("navbar");
+
+// show product image
+imageClick.addEventListener("click", () => {
+  imgZoom.classList.remove("hidden");
+  navbar.classList.add("hidden");
+});
+// close product image
+xClose.addEventListener("click", () => {
+  imgZoom.classList.add("hidden");
+  navbar.classList.remove("hidden");
+});
+
+// Zoom into product image section
+let currentZoom = 1;
+let minZoom = 1;
+let maxZoom = 2;
+let stepSize = 0.1;
+let container = document.querySelector("#image-container");
+
+// Zoom image function
+function zoomImage(direction) {
+  let newZoom = currentZoom + direction * stepSize;
+
+  // Limit the zoom level to the minimum and maximum values
+  if (newZoom < minZoom || newZoom > maxZoom) {
+    return;
+  }
+
+  currentZoom = newZoom;
+  console.log(currentZoom);
+
+  // Update the CSS transform of the image to scale it
+  let image = document.querySelector("#image-container img");
+  image.style.transform = "scale(" + currentZoom + ")";
+}
+
+container.addEventListener("wheel", function (event) {
+  // Zoom in or out based on the scroll direction
+  let direction = event.deltaY > 0 ? -1 : 1;
+  // console.log(direction)
+  zoomImage(direction);
+});

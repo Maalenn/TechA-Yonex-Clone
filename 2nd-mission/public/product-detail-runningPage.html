@@ -18,6 +18,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-Oswald">
+    <!-- start image zoom -->
+      <zoom-img zoomImg = "https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_1.png?quality=80&fit=bounds&height=819&width=600&canvas=600:819"></zoom-img>
+    <!-- end image zoom -->
+
     <!-- Start Navbar -->
     <div
       class="bg-black opacity-50 w-full hidden h-screen fixed z-[90]"
@@ -273,7 +277,7 @@
 
       <!-- start product detail container  -->
       <div class="product-card" id="product-description">
-        <shoes-details data-source="shoes1"></shoes-details>
+        <shoes-details data-source="men-info"></shoes-details>
       </div>
       <!-- start product detail container  -->
 
@@ -289,7 +293,7 @@
 
       <!-- start technology -->
       <div id="product-technology">
-        <technology-carousel data-source="shoes1"></technology-carousel>
+        <technology-carousel data-source="men-techno"></technology-carousel>
       </div>
       <!-- end technology -->
 
@@ -302,8 +306,7 @@
 
     <script src="../assets/js/index.js"></script>
     <script src="../assets/js/main.js"></script>
-
-    <script src="../assets/js/running-page.js"></script>
+    <script src="../assets/js/components/zoom-img.js"></script>
     <script src="../assets/js/components/shoes-detail.js" type="module"></script>
     <script src="../assets/js/components/product-sticky-nav.js"></script>
     <script src="../assets/js/components/technology-carousel.js" type="module"></script>

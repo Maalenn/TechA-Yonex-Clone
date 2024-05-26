@@ -1,4 +1,4 @@
-export const ShoesMenData = [
+export const Men = [
   {
     verticalImgs: [
       {
