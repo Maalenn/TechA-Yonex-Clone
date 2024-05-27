@@ -2,20 +2,30 @@
 class AthleteCover extends HTMLElement {
     connectedCallback() {
         const athleteImages = {
-        badminton: '../assets/images/athletes/Badminton_Athletes_Hero.webp',
-        badminton2: '../assets/images/athletes/Badminton_Athletes_Hero2.webp',
+        BADMINTON: '../assets/images/athletes/Badminton_Athletes_Hero.webp',
+        TENNIS: '../assets/images/athletes/Tennis_Athletes_Hero.webp',
+        GOLF: '../assets/images/athletes/Golf_Athletes_Hero.webp',
+        SNOWBOARDING: '../assets/images/athletes/Snowbord_Athletes_Hero.webp',
         // Add more mappings as needed
 };
+        const title = {
+            BADMINTON: 'YONEX BADMINTON ATHLETES',
+            TENNIS: 'YONEX TENNIS ATHLETES',
+            GOLF: 'YONEX GOLF ATHLETES',
+            SNOWBOARDING: 'TEAM YONEX',
 
+}
     const id = this.getAttribute('id');
+    const sport = this.getAttribute('catSport')
     const imageUrl = athleteImages[id] || '../assets/images/athletes/Badminton_Athletes_Hero.webp';
+    const sportTitle = title[id]
 
     this.innerHTML = `
     <div class="relative">
         <img class="object-cover h-[450px] w-full" src="${imageUrl}" alt="Athlete">
         <div class="flex justify-center">
         <p class="absolute top-[50%] text-white bg-[#00000060] text-4xl p-3 text-center">
-            YONEX BADMINTON ATHLETES
+            ${sportTitle}
         </p>
         <div class="absolute top-[88%] w-full px-[50px] max-md:px-0">
             <div class="bg-white shadow-lg md:flex mx-auto items-center justify-between md:max-w-[830px] py-5 px-[20px]">
