@@ -1,7 +1,10 @@
-import {BadmintonAthleteData} from '../data/athlete-career-data.js'
+import {BadmintonAthleteData, TennisAthleteData, GolfAthleteData, SnowboardAthleteData} from '../data/athlete-career-data.js'
 
 const dataSource = {
-    'badminton-athleteData' : BadmintonAthleteData
+    'badminton-athleteData' : BadmintonAthleteData,
+    'tennis-athleteData' : TennisAthleteData,
+    'golf-athleteData' :    GolfAthleteData,
+    'snowboard-athleteData' : SnowboardAthleteData
 }
 
 const AltheteCareerContainer = (contents) => {

@@ -1,7 +1,9 @@
-import { BadmintonAthleteDataEquipment } from '../data/athlete-equip-data.js'
+
+import { BadmintonAthleteDataEquipment ,TennisAthleteDataEquipment } from '../data/athlete-equip-data.js'
 
 const equipDataSource = {
-    'equipImg' :  BadmintonAthleteDataEquipment
+    'equipBadminton' :  BadmintonAthleteDataEquipment,
+    'equipTennis' : TennisAthleteDataEquipment
 }
 
 const EquipmentContainer = (listEquipments) => {
@@ -11,7 +13,7 @@ const EquipmentContainer = (listEquipments) => {
     <div class="slideShow no-scrollbar grid grid-cols-[repeat(2,400px)] min-[345px]:grid-cols-[repeat(2,500px)] min-[475px]:grid-cols-[repeat(2,700px)]  overflow-auto md:flex md:justify-between my-0 mx-auto max-w-[1160px] ">
         ${listEquipments.map((equipli) =>  `
         <div class="slide-list flex flex-col w-[100%] items-center md:max-w[400px]  ">
-            <a href="#equip"><img class="w-[350px] md:w-[300px] mx-auto" src="${equipli.equipimag}" alt=""></a>
+            <a href="#equip"><img class="w-[350px] mx-[18px] md:w-[300px] " src="${equipli.equipimag}" alt=""></a>
             <span class="h-[50px] text-[18px] md:mt-[26px] md:mr-auto md:mb-[170px] md:ml-auto md:min-h[50px] md:text-center">
                 ${equipli.productname}
             </span>
