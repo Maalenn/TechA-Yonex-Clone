@@ -2,7 +2,7 @@ import { heroBanner, heroRepsonsive , cardSlider, cardSliderAthlete} from '../da
 
 //attach the attribute for data
 const dataSources = {
-    'hero-banner': heroBanner[0].imgBanner,
+    'hero-banner': heroBanner,
     'hero-responsive': heroRepsonsive[0].imgResponsive,
     'card-carousel': cardSlider,
     'athlete-carousel': cardSliderAthlete
@@ -14,9 +14,10 @@ const createSlide = (cards) => {
         <div class="hidden md:relative md:block">
         ${cards.map((imgSrc) => `
             <div class="mySlides fade relative">
-                <img src="${imgSrc}" class="w-full h-auto object-cover" alt="Slide Image">
-                <button class="bg-black absolute top-[50%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-9">NEWS</button>
-                <button class="bg-black absolute top-[30%] left-[44%] text-white py-3 hover:bg-white hover:text-black lg:px-8 px-4">LEARN MORE</button>
+                <img src="${imgSrc.img}" class="w-full h-auto object-cover" alt="Slide Image">
+                <div class="absolute top-[50%] left-[44%] flex flex-col gap-4">
+                    <button class="bg-black text-white py-3 hover:bg-white hover:text-black lg:px-8 px-9">${imgSrc.titleB1}</button>
+                </div>
             </div>
         `).join('')}
         <button class="prev absolute top-1/2 left-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light ml-2 text-white pb-1 pr-1">❮</button>
