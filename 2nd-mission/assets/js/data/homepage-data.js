@@ -30,3 +30,57 @@ export const heroRepsonsive = [
         ]
     }
 ]
+
+export const cardSlider = [
+    {
+        img:"../assets/images/sport-image/badminton.webp",
+        title:"BADMINTON",
+    },
+    {
+        img:"../assets/images/sport-image/golf.webp",
+        title:"GOLF",
+    },
+    {
+        img:"../assets/images/sport-image/orange-shoes.webp",
+        title:"RUNNING",
+    },
+    {
+        img:"../assets/images/sport-image/tennis.webp",
+        title:"TENNIS",
+    },
+    {
+        img:"../assets/images/sport-image/snowboard.webp",
+        title:"SNOWBOARD",
+    },
+]
+export const cardSliderAthlete = [
+    {
+        img:"../assets/images/product-review/al29.webp",
+        title:"KENTO MOMOTA",
+    },
+    {
+        img:"../assets/images/product-review/al3.webp",
+        title:"AKANE YAMAGUCHI",
+    },
+    {
+        img:"../assets/images/product-review/nakashima_570x570.webp",
+        title:" BRANDOM NAKASHIMA",
+    },
+    {
+        img:"../assets/images/product-review/vekic_570x570.webp",
+        title:"DONNA VEKIC"
+    },
+    {
+        img:"../assets/images/product-review/al1.webp",
+        title:"VIKTOR AXELSON",
+    },
+    {
+        img:"../assets/images/product-review/kim_570x570_.webp",
+        title:"HYOO JOO KIM",
+    },
+    {
+        img:"../assets/images/product-review/Osaka_570x570_07.webp",
+        title:"NAOMI OSAKAS",
+    },
+    
+]
