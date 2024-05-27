@@ -1,4 +1,4 @@
-import { Men } from "../data/technology-data.js";
+import { Men} from "../data/technology-data.js";
 import { BadmintonTechno } from "../data/detail-badminton.js";
 import { TennisTechno } from "../data/detail-tennis-data.js";
 import { GolfTechno } from "../data/detail-golf-data.js";

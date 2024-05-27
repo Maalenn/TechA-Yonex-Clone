@@ -1,10 +1,12 @@
-import {Men} from '../data/detail-running-data.js';
+import {Men, Women, Unisex} from '../data/detail-running-data.js';
 import { Tennis } from "../data/detail-tennis-data.js";
 import { Golf } from '../data/detail-golf-data.js';
 import { Snowboard } from '../data/detail-snowboard.js';
 
 const dataSource  = {
   "men-info": Men,
+  "wowen-info": Women,
+  "unisex-info": Unisex,
   'tennis-info': Tennis,
   'golf-info' : Golf,
   'snowboard-info': Snowboard

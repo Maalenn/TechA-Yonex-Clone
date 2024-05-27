@@ -50,35 +50,3 @@ export const Men = [
     ],
   },
 ];
-
-export const  Women = [
-  {
-    image: "../assets/images/running-page/T_Sh_Power_Cushion_Plus.webp",
-    alt: "POWER CUSHION +",
-    logo: "path/to/image/running-page/logo_b.png",
-    logoAlt: "logo_b",
-    title: "POWER CUSHION +",
-    imgText: "",
-    description: [
-      "A raw egg can be dropped from 12 meters above the POWER CUSHION+ mat, rebounding to a height of 6 meters without breaking.**",
-      "<br>POWER CUSHION ™ is a trademark of Yonex Co., Ltd.",
-      "<br><span class=text-[10px]>*Research by the Japan Vehicle Inspection Association & Boken Quality Evaluation (based on JIS standards) in comparison to conventional cushioning material (EVA).**Tested by YONEX</span>",
-    ],
-  },
-
-  {
-    image: "../assets/images/running-page/T_Sh_Power_Cushion_Plus.webp",
-    alt: "POWER CUSHION +",
-    logo: "path/to/image/running-page/logo_b.png",
-    logoAlt: "logo_b",
-    title: "POWER CUSHION +",
-    imgText: "",
-    description: [
-      "A raw egg can be dropped from 12 meters above the POWER CUSHION+ mat, rebounding to a height of 6 meters without breaking.**",
-      "<br>POWER CUSHION ™ is a trademark of Yonex Co., Ltd.",
-      "<br><span class=text-[10px]>*Research by the Japan Vehicle Inspection Association & Boken Quality Evaluation (based on JIS standards) in comparison to conventional cushioning material (EVA).**Tested by YONEX</span>",
-    ],
-  },
-
-  
-];
