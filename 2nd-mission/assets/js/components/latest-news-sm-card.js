@@ -1,8 +1,8 @@
 import { LatestNews, LatestNews2, LatestNews3, LatestNews4, LatestNews5 } from '../data/all-news-data.js';
-import { LatestNewsBat, LatestNewsBat2, LatestNewsBat3, LatestNewsBat4, LatestNewsBat5, LatestNewsBat6 } from '../data/news-badminton-data.js';
-import { LatestNewsTen, LatestNewsTen2, LatestNewsTen3, LatestNewsTen4, LatestNewsTen5, LatestNewsTen6 } from '../data/news-tennis-data.js';
-import { LatestNewsGolf, LatestNewsGolf2, LatestNewsGolf3, LatestNewsGolf4, LatestNewsGolf5, LatestNewsGolf6 } from '../data/news-golf-data.js';
-import { LatestNewsGen, LatestNewsGen2, LatestNewsGen3, LatestNewsGen4, LatestNewsGen5, LatestNewsGen6 } from '../data/news-general-data.js';
+import { LatestNewsBat, LatestNewsBat2, LatestNewsBat3, LatestNewsBat4 } from '../data/news-badminton-data.js';
+import { LatestNewsTen, LatestNewsTen2, LatestNewsTen3, LatestNewsTen4  } from '../data/news-tennis-data.js';
+import { LatestNewsGolf, LatestNewsGolf2, LatestNewsGolf3, LatestNewsGolf4 } from '../data/news-golf-data.js';
+import { LatestNewsGen, LatestNewsGen2, LatestNewsGen3, LatestNewsGen4 } from '../data/news-general-data.js';
 
 
         const dataSources = {
@@ -16,29 +16,21 @@ import { LatestNewsGen, LatestNewsGen2, LatestNewsGen3, LatestNewsGen4, LatestNe
             'news-bat-data2': LatestNewsBat2,
             'news-bat-data3': LatestNewsBat3,
             'news-bat-data4': LatestNewsBat4,
-            'news-bat-data5': LatestNewsBat5,
-            'news-bat-data6': LatestNewsBat6,
 
             'news-ten-data': LatestNewsTen,
             'news-ten-data2': LatestNewsTen2,
             'news-ten-data3': LatestNewsTen3,
             'news-ten-data4': LatestNewsTen4,
-            'news-ten-data5': LatestNewsTen5,
-            'news-ten-data6': LatestNewsTen6,
 
-            'news-ten-data': LatestNewsGolf,
-            'news-ten-data2': LatestNewsGolf2,
-            'news-ten-data3': LatestNewsGolf3,
-            'news-ten-data4': LatestNewsGolf4,
-            'news-ten-data5': LatestNewsGolf5,
-            'news-ten-data6': LatestNewsGolf6,
+            'news-golf-data': LatestNewsGolf,
+            'news-golf-data2': LatestNewsGolf2,
+            'news-golf-data3': LatestNewsGolf3,
+            'news-golf-data4': LatestNewsGolf4,
             
             'news-gen-data': LatestNewsGen,
             'news-gen-data2': LatestNewsGen2,
             'news-gen-data3': LatestNewsGen3,
             'news-gen-data4': LatestNewsGen4,
-            'news-gen-data5': LatestNewsGen5,
-            'news-gen-data6': LatestNewsGen6,
         };
 
   const LatestNewCard = (contents) => {
