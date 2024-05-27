@@ -1,10 +1,10 @@
-import { shoes1 } from "../data/technology-data.js";
+import { Men} from "../data/technology-data.js";
 import { BadmintonTechno } from "../data/detail-badminton.js";
 import { TennisTechno } from "../data/detail-tennis-data.js";
 import { GolfTechno } from "../data/detail-golf-data.js";
 import { SnowboardTechno } from "../data/detail-snowboard.js";
 const dataSources = {
-  shoes1: shoes1,
+  "men-techno": Men,
   "badminton-techno": BadmintonTechno,
   "tennis-techno": TennisTechno,
   "golf-techno": GolfTechno,

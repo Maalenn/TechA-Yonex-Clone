@@ -3,11 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EZONE GT DRIVER TYPE S</title>
+    <title>SAFERUN 100X MEN</title>
 
-    <!-- CSS link  -->
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <!-- yonex logo -->
+    <!-- Yonex logo -->
     <link
       rel="icon"
       href="../assets/images/icon/yonex.png"
@@ -16,7 +14,11 @@
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
+
   <body class="font-Oswald">
     <!-- Start Navbar -->
     <my-navbar bg-color="md:bg-white text-black"></my-navbar>
@@ -34,17 +36,16 @@
 
     <!-- Start Image Zoom -->
     <zoom-img
-      zoomImg="http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/detail-golf/ezone.png"
+      zoomImg="https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_1.png?quality=80&fit=bounds&height=819&width=600&canvas=600:819"
     ></zoom-img>
     <!-- End Image Zoom -->
 
-    <!-- background wrapper in product section -->
+    <!-- Background Wrapper in Product Section -->
     <div class="mb-[100px]">
       <div
         class="absolute z-[-1] h-[1100px] bg-800 left-0 top-0 bg-[#f7f8f9] md:w-[70%] w-full"
       ></div>
     </div>
-    <!-- background wrapper in product section -->
 
     <!-- Start Menu link -->
     <ul
@@ -55,48 +56,43 @@
       </li>
       <p>/</p>
       <li class="text-primary-100 hover:underline">
-        <a href="product-review-runningPage.html">Golfs</a>
+        <a href="product-review-runningPage.html">Running</a>
       </li>
       <p>/</p>
       <li class="text-primary-100 hover:underline">
-        <a href="product-review-runningPage.html">Clubs</a>
+        <a href="detail-men.html">MEN</a>
       </li>
       <p>/</p>
-      <li class="uppercase">EZONE GT DRIVER TYPE S</li>
+      <li class="uppercase">SAFERUN 100X MEN</li>
     </ul>
     <!-- End Menu link -->
 
-    <!-- Start main content -->
+    <!--Start main content -->
     <main class="max-w-[1280px] mx-auto px-5">
-      <!-- start product detail container  -->
+      <!-- Start Product Detail Container -->
       <div class="product-card" id="product-description">
-        <shoes-details data-source="golf-info"></shoes-details>
+        <shoes-details data-source="men-info"></shoes-details>
       </div>
-      <!-- start product detail container  -->
 
-      <!-- start sticky nav container  -->
+      <!-- Start Sticky Nav Container -->
       <product-sticky-nav
-        prodName="EZONE GT DRIVER TYPE S"
+        prodName="SAFERUN"
         menuLinks='[
           {"href": "#product-description", "link": "Description"},
           {"href": "#product-technology", "link": "Technology"}
         ]'
       ></product-sticky-nav>
-      <!-- end sticky nav container  -->
 
-      <!-- start technology -->
+      <!-- Start Technology Section -->
       <div id="product-technology">
-        <technology-carousel data-source="golf-techno"></technology-carousel>
+        <technology-carousel data-source="men-techno"></technology-carousel>
       </div>
-
-      <!-- end technology -->
     </main>
-    <!-- End main content -->
+    <!--End main content -->
 
     <!-- Start Footer -->
     <my-footer></my-footer>
-    <!-- End Footer -->
-
+    <!-- End Footer  -->
 
     <!-- Scripts -->
     <script src="../assets/js/index.js"></script>

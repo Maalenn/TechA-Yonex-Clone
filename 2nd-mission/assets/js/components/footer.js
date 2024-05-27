@@ -1,8 +1,3 @@
-// start nav 
-
-// horizontal slideshow 
-
-// end nav 
 // start footer
 class Footer extends HTMLElement {
     connectedCallback() {
