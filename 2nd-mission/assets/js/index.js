@@ -131,14 +131,7 @@ function showDropdown(x){
 
 
 // functions for slideshow sport
-let currentSlide1 = 0;
-function pushArrow(n) {
-  const carousel = document.querySelector(" .slideShow ");
-  const images = carousel.querySelectorAll(".slide-list");
-  const imageWidth = images[0].clientWidth;
-  currentSlide1 = Math.max(0, Math.min(currentSlide1 + n, images.length - 1));
-  carousel.scrollTo({ left: currentSlide1 * imageWidth, behavior: "smooth" });
-}
+
 // functions for new arrival
 let currentSlide2 = 0;
 function pushArrow1(n) {
@@ -168,14 +161,7 @@ function showSlidesRecent() {
 }
 
 // functions for slider3 
-let currentSlide3 = 0;
-function pushArrow2(n) {
-  const carousel = document.querySelector(" .slideShow2");
-  const images = carousel.querySelectorAll(".slide-list2");
-  const imageWidth = images[0].clientWidth;
-  currentSlide3 = Math.max(0, Math.min(currentSlide3 + n, images.length - 1));
-  carousel.scrollTo({ left: currentSlide3 * imageWidth, behavior: "smooth" });
-}
+
 
 // function for open search
 function opensearch(){

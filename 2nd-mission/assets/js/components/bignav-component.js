@@ -2,6 +2,7 @@ class Navbar extends HTMLElement {
     connectedCallback(){
         const bgColor = this.getAttribute('bg-color')
         this.innerHTML = `
+      <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90] overlay-page" id="overlay-blur" onclick="closeNav()"></div>
         <nav
         class="w-full ${bgColor} absolute md:bg-opacity-40 hover:bg-white hover:text-black bg-white border border-1 md:border-none top-0 z-[100]"
       >
@@ -101,7 +102,7 @@ class Navbar extends HTMLElement {
             </div>
         
             <div class="cursor-pointer hover:opacity-80 h-full pt-[30px]">
-              <a href="news.html" class="relative top-[7%] pb-4">NEWS</a>
+              <a href="news.html" class="relative top-[7%] pb-4 text-[13px] tracking-[1px] font-[500]">NEWS</a>
             </div>
         
             <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(6)"  onmouseleave="hoverHide(-6)">

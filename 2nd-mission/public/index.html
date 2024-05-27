@@ -15,7 +15,7 @@
   </head>
   <body class="font-Oswald">
     <!-- Start Navbar -->
-    <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90] overlay-page" id="overlay-blur"></div>
+    <!-- <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90] overlay-page" id="overlay-blur" onclick="closeNav()"></div> -->
     
     <my-navbar bg-color="md:bg-black  text-white"></my-navbar>
     <!-- End Navbar -->
@@ -37,104 +37,18 @@
     <!-- End Hero Banner responsive -->
 
     <!-- Start shop by sport sections-->
-    <section class="md:flex relative w-full justify-center hidden"> 
-      <section
-        class="relative mx-auto max-w-[1280px] min-w-[300px] h-full max-lg:w-[100%]"
-      >
+    <section class="md:flex relative w-full justify-center hidden">
+      <section class="relative mx-auto max-w-[1280px] min-w-[300px] h-full max-lg:w-[100%]">
         <div class="flex w-[100%] mt-24 justify-center">
-          <h1 class="text-[25px] font-[Oswald]">BROWSE BY SPORTS</h1>
+          <h1 class="text-[25px] font-[Oswald]">
+            BROSWE BY SPORTS
+          </h1>
         </div>
-
-        <section class="mx-auto px-[50px] py-[45px] ">
-          <ul
-            class="overflow-x-hidden w-[100%] slideShow relative grid grid-cols-[repeat(5,300px)] ssm:grid-cols-[repeat(5,330px)] smd:grid-cols-[repeat(5,450px)] slg:grid-cols-[repeat(5,399px)] sxl:grid-cols-[repeat(5,300px)] max-sm:grid-cols-[repeat(5,280px)] max-md:grid-cols-[repeat(5,340px)] max-lg:grid-cols-[repeat(5,360px)] overflow-auto font-[Oswald]"
-          >
-            <li class="slide-list slg:px-[20px]">
-              <a href=""> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/orange-shoes.webp"
-                  alt=""
-                />
-                  <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
-                  >
-                    RUNNING
-                  </h3>
-              </a>
-            </li> 
-            <li class="slide-list slg:px-[20px] ">
-              <a> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/snowboard.webp"
-                  alt=""
-                />
-                <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
-                  >
-                    SNOWBOARDING
-                  </h3>
-              </a>
-            </li>
-            <li class="slide-list slg:px-[20px] ">
-              <a> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/badminton.webp"
-                  alt=""
-                />
-                <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
-                  >
-                    BADMINTON
-                  </h3>
-              </a>
-            </li>
-            <li class="slide-list slg:px-[20px] ">
-              <a> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/tennis.webp"
-                  alt=""
-                />
-                <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
-                  >
-                    TENNIS
-                  </h3>
-              </a>
-            </li>
-            <li class="slide-list slg:px-[20px] ">
-              <a> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/sport-image/golf.webp"
-                  alt=""
-                />
-                <h3
-                    class="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px] "
-                  >
-                    GOLF
-                  </h3>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <div
-          class="back absolute top-[52%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5"
-          onclick="pushArrow(1)"
-        >
-          <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
-        </div>
-        <div
-          class="next absolute top-[52%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5"
-          onclick="pushArrow(-1)"
-        >
-          <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
-        </div>
+        <card-carousel card-slide="card-carousel" text-style="uppercase text-black text-[1.2rem] tracking-[3px] text-center pt-4 font-[4s00] w-[260px]"></card-carousel>
       </section>
     </section>
+    
+    
     <!-- end browse by sport -->
 
     <!-- start recent new section -->
@@ -492,129 +406,15 @@
     <!-- end shoes section -->
 
     <!-- start athlete sections -->
-    <section class="md:flex relative w-full justify-center hidden"> 
-      <section
-        class="relative mx-auto max-w-[1280px] min-w-[300px] h-full max-lg:w-[100%]"
-      >
+    <section class="md:flex relative w-full justify-center hidden">
+      <section class="relative mx-auto max-w-[1280px] min-w-[300px] h-full max-lg:w-[100%]">
         <div class="flex w-[100%] mt-24 justify-center">
-          <h1 class="text-[25px] font-[Oswald]">BROSWE BY ATHLETE</h1>
+          <h1 class="text-[25px] font-[Oswald]">
+            BROSWE BY ATHLETE
+          </h1>
         </div>
-
-        <section class="mx-auto px-[50px] py-[45px] ">
-          <ul
-            class="overflow-x-hidden w-[100%] slideShow2 relative grid grid-cols-[repeat(7,300px)] ssm:grid-cols-[repeat(34,330px)] smd:grid-cols-[repeat(34,450px)] slg:grid-cols-[repeat(34,399px)] sxl:grid-cols-[repeat(34,300px)] max-sm:grid-cols-[repeat(34,280px)] max-md:grid-cols-[repeat(34,340px)] max-lg:grid-cols-[repeat(34,360px)] overflow-auto font-[Oswald]"
-          >
-            <li class="slide-list1 slg:px-[20px]">
-              <a class="relative"> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/product-review/al29.webp"
-                  alt=""
-                />
-                  <h3
-                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
-                  >
-                    KENTO MOMOTA
-                  </h3>
-              </a>
-            </li> 
-            <li class="slide-list2 slg:px-[20px] ">
-              <a class="relative"> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/product-review/al3.webp"
-                  alt=""
-                />
-                <h3
-                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
-                  >
-                    AKANE YAMAGUCHI
-                  </h3>
-              </a>
-            </li>
-            <li class="slide-list2 slg:px-[20px] ">
-              <a class="relative"> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/product-review/nakashima_570x570.webp"
-                  alt=""
-                />
-                <h3
-                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
-                  >
-                    BRANDOM NAKASHIMA
-                  </h3>
-              </a>
-            </li>
-            <li class="slide-list2 slg:px-[20px] ">
-              <a class="relative"> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/product-review/vekic_570x570.webp"
-                  alt=""
-                />
-                <h3
-                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
-                  >
-                    DONNA VEKIC
-                  </h3>
-              </a>
-            </li>
-            <li class="slide-list2 slg:px-[20px] ">
-              <a class="relative"> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/product-review/kim_570x570_.webp"
-                  alt=""
-                />
-                <h3
-                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
-                  >
-                    HYOO JOO KIM
-                  </h3>
-              </a>
-            </li>
-            <li class="slide-list2 slg:px-[20px] ">
-              <a class="relative"> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/product-review/athlete1.webp"
-                  alt=""/>
-                <h3
-                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
-                  >
-                    VIKTOR AXELSON
-                  </h3>
-              </a>
-            </li>
-            <li class="slide-list2 slg:px-[20px] ">
-              <a class="relative"> 
-                <img
-                  class="w-[260px] bg-[#f7f8f9]"
-                  src="../assets/images/product-review/Osaka_570x570_07.webp"
-                  alt=""
-                />
-                <h3
-                    class="uppercase text-white text-[1rem] tracking-[3px] pt-4 font-[4s00] w-[260px] absolute bottom-9 left-2"
-                  >
-                    NAOMI OSAKAS
-                  </h3>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <div
-          class="back absolute top-[58%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5"
-          onclick="pushArrow2(1)"
-        >
-          <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
-        </div>
-        <div
-          class="next absolute top-[58%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5"
-          onclick="pushArrow2(-1)"
-        >
-          <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
-        </div>
+        <card-carousel card-slide="athlete-carousel" text-style="absolute bottom-0 w-[260px] p-5 tracking-[2px] text-white bg-gradient-to-b from-[rgba(12,12,12,0.00001)] to-[black]"></card-carousel>
+        
       </section>
     </section>
     <!-- end athlete sections -->
@@ -640,7 +440,7 @@
     <my-footer></my-footer>
     <!-- End Footer -->
     <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/components/footer.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -652,6 +452,3 @@
   </body>
 
 </html>
-
-
-
