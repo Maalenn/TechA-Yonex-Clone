@@ -1,9 +1,11 @@
-import { heroBanner, heroRepsonsive } from '../data/homepage-data.js';
+import { heroBanner, heroRepsonsive , cardSlider, cardSliderAthlete} from '../data/homepage-data.js';
 
 //attach the attribute for data
 const dataSources = {
     'hero-banner': heroBanner[0].imgBanner,
     'hero-responsive': heroRepsonsive[0].imgResponsive,
+    'card-carousel': cardSlider,
+    'athlete-carousel': cardSliderAthlete
 };
 
 //hero banner component
@@ -33,9 +35,34 @@ const cardAutoSlide = (items) => {
     `).join('')}
     `
 }
+//card carousel in sports section and athlete sections
+const cardCarousel = (cards, pos) =>{
+    return `
+        <section class="mx-auto px-[50px] py-[45px]">
+            <ul class="overflow-x-hidden w-[100%] slideShow relative grid grid-cols-[repeat(${cards.length},300px)] ssm:grid-cols-[repeat(${cards.length},330px)] smd:grid-cols-[repeat(5,450px)] slg:grid-cols-[repeat(5,399px)] sxl:grid-cols-[repeat(5,300px)] max-sm:grid-cols-[repeat(5,280px)] max-md:grid-cols-[repeat(5,340px)] max-lg:grid-cols-[repeat(5,360px)] overflow-auto font-[Oswald]">
+            ${cards.map(card => `
+                <li class="slide-list slg:px-[20px]">
+                    <a href="" class"relative">
+                        <img class="w-[260px] bg-[#f7f8f9]" src="${card.img}" alt=""/>
+                        <h3 class="${pos}">
+                            ${card.title}
+                        </h3>
+                    </a>
+                </li>
+            `).join('')}
+            </ul> 
+            <div class="back absolute top-[52%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5">
+                <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
+            </div>
+            <div class="skip absolute top-[52%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5">
+                <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
+            </div>
+        </section>
+    `;
+}
 
 //Reusable card slide class
-class CardSlide extends HTMLElement {
+class BannerSlide extends HTMLElement {
     constructor() {
         super();
         this.cards = heroBanner[0].imgBanner;
@@ -67,7 +94,7 @@ class CardSlide extends HTMLElement {
     }
 }
 
-customElements.define('hero-slider', CardSlide);
+customElements.define('hero-slider', BannerSlide);
 
 //Reusable card auto slide in repsonsive
 class CardAutoSlide extends HTMLElement {
@@ -98,3 +125,28 @@ class CardAutoSlide extends HTMLElement {
 }
 
 customElements.define('hero-responsive', CardAutoSlide)
+
+//for card carousel
+class CardCarousel extends HTMLElement {
+    constructor(){
+        super();
+        this.currentSlide = 0;
+    }
+    connectedCallback() {
+        const dataSource = this.getAttribute('card-slide');
+        const data = dataSources[dataSource] || []
+        const posStyle = this.getAttribute('text-style')
+        this.innerHTML = cardCarousel(data, posStyle);       
+        this.querySelector('.back').addEventListener('click', () => this.plusSlides(1));
+        this.querySelector('.skip').addEventListener('click', () => this.plusSlides(-1));
+    }
+    plusSlides(n) {
+        const carousel = this.querySelector('.slideShow');
+        const images = carousel.querySelectorAll('.slide-list');
+        const imageWidth = images[0].clientWidth;
+
+        this.currentSlide = Math.max(0, Math.min(this.currentSlide + n, images.length - 1));
+        carousel.scrollTo({ left: this.currentSlide * imageWidth, behavior: 'smooth' });
+    }
+}
+customElements.define('card-carousel', CardCarousel)
