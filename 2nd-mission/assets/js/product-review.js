@@ -6,5 +6,3 @@ function pushArrows(n) {
   currentSlides = Math.max(0, Math.min(currentSlides + n, images.length - 1));
   carousel.scrollTo({ left: currentSlides * imageWidth, behavior: "smooth" });
 }
-
-

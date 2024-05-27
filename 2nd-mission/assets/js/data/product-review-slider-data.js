@@ -192,3 +192,161 @@ export const sliderBadminton = [
     
 
 ]
+export const sliderTennis = [
+    {
+        imgSlide: "../assets/images/product-review/t1.webp",
+        name: "Elena Rybakina",
+        nation: "Kazakhstan"
+    },
+    {
+        imgSlide: "../assets/images/product-review/t2.webp",
+        name: "Casper Ruud",
+        nation: "Norway"
+    },
+    {
+        imgSlide: "../assets/images/product-review/t3.webp",
+        name: "Caroline Garcia",
+        nation: "France"
+    },
+    {
+        imgSlide: "../assets/images/product-review/t4.webp",
+        name: "Nick Kyrgios",
+        nation: "Australia"
+    },
+    {
+        imgSlide: "../assets/images/product-review/t5.webp",
+        name: "Hubert Hurkacz",
+        nation: "Pland"
+    },
+    {
+        imgSlide: "../assets/images/product-review/t6.webp",
+        name: "tommy paul",
+        nation: "Unuited states"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/Osaka_570x570_07.jpg",
+        name: "Naomi osaka",
+        nation: "japan"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/shelton_570_570.jpg",
+        name: "ben shelton",
+        nation: "united states"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/FrancesTiafoe_570x570_240510_.jpg",
+        name: "frances tiafoe",
+        nation: "united states"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/wawrinka_570x570.jpg",
+        name: "stan wawrinka",
+        nation: "switzerland"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/bencic_570x570.jpg",
+        name: "belinda bencic",
+        nation: "switzerland"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/ANGELIQUE_KERBER570x570.png",
+        name: "angelique kerer",
+        nation: "germany"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/Yastremska_570_570.jpg",
+        name: "dayana yastremska",
+        nation: "ukraine"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/shapovalov_570x570.jpg",
+        name: "denis shapovalov",
+        nation: "canda"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/LINDA_NOSKOVA_570x570.jpg",
+        name: "linda noskova",
+        nation: "czech republic"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/munar_570x570.jpg",
+        name: "jaume munar",
+        nation: "spain"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/linette_570x570.jpg",
+        name: "magda linette",
+        nation: "poland"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/nakashima_570x570.jpg",
+        name: "BRANDON NAKASHIMA",
+        nation: "united states"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/oda_570x570.jpg",
+        name: "tokito oda",
+        nation: "japan"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/RYBAKINA_570x570_240517.jpg",
+        name: "elena rybakina",
+        nation: "kazakhstan"
+    }
+]
+
+export const sliderGolf = [
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/kim_570x570_.jpg",
+        name: "hyo joo kim",
+        nation: "korea"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/suzuka_square.jpg",
+        name: "suzuka yamaguchi",
+        nation: "japan"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/akie_iwai_570x570.jpg",
+        name: "akie iwai",
+        nation: "japan"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/chisato_iwai_570x570.jpg",
+        name: "chisato iwai",
+        nation: "japan"
+    }
+]
+
+export const sliderSnowboard = [
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/Yuto-square.jpg",
+        name: "yuto totska",
+        nation: "japan"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/Kunitake_570x570_square.jpg",
+        name: "hiroki kunitake",
+        nation: "japan"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/Ruka-square.jpg",
+        name: "ruka hirano",
+        nation: "japan"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/Sena-square.jpg",
+        name: "sena tomita",
+        nation: "japan"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/Ruki-square.jpg",
+        name: "ruki tomita",
+        nation: "japan"
+    },
+    {
+        imgSlide: "https://www.yonex.com/media/athletes/tmp/square/alessandro_570x570.png",
+        name: "alessandro barbieri",
+        nation: "united states"
+    }
+]
