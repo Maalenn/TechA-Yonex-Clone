@@ -1,7 +1,10 @@
-import { sliderBadminton } from "../data/product-review-slider-data.js";
+import { sliderBadminton, sliderTennis, sliderGolf,sliderSnowborad } from "../data/product-review-slider-data.js";
 
 const dataSources = {
   "slider-badminton": sliderBadminton,
+  "slider-tennis": sliderTennis,
+  "slider-golf": sliderGolf,
+  "slider-snowborad": sliderSnowborad,
 };
 
 const SliderContainer = (sliderContents) => {
@@ -15,7 +18,7 @@ const SliderContainer = (sliderContents) => {
           </div>
 
           <section class="group mx-auto px-[50px] py-[45px] ">
-      <ul class="no-scrollbar w-[100%] slideShow relative grid grid-cols-[repeat(38,300px)] max-[1078px]:grid-cols-[repeat(38,330px)] max-[1153px]:grid-cols-[repeat(38,360px)] max-[1260px]:grid-cols-[repeat(38,399px)] sxl:grid-cols-[repeat(38,300px)]  max-[1009px]:grid-cols-[repeat(38,400px)] max-[767px]:grid-cols-[repeat(38,370px)] max-[735px]:grid-cols-[repeat(38,330px)] overflow-auto">
+      <ul class="no-scrollbar w-[100%] slideShow relative grid grid-cols-[repeat(${sliderContents.length},300px)] max-[1078px]:grid-cols-[repeat(${sliderContents.length},330px)] max-[1153px]:grid-cols-[repeat(${sliderContents.length},360px)] max-[1260px]:grid-cols-[repeat(${sliderContents.length},399px)] sxl:grid-cols-[repeat(${sliderContents.length},300px)]  max-[1009px]:grid-cols-[repeat(${sliderContents.length},400px)] max-[767px]:grid-cols-[repeat(${sliderContents.length},370px)] max-[735px]:grid-cols-[repeat(${sliderContents.length},330px)] overflow-auto">
       ${sliderContents
         .map(
           (item) => `
@@ -28,7 +31,7 @@ const SliderContainer = (sliderContents) => {
               alt=""
           />
           
-          <div class="absolute bottom-0 w-[250px] p-5 ] bg-gradient-to-b from-[rgba(12,12,12,0.00001)] to-[black]">
+          <div class="absolute bottom-0 w-[260px] p-5 ] bg-gradient-to-b from-[rgba(12,12,12,0.00001)] to-[black]">
               <h3 class="uppercase text-[#ffffff] text-[1.1rem] font-[400] tracking-[3px]" >
               ${item.name}
               </h3>
@@ -72,18 +75,10 @@ const SliderContainer = (sliderContents) => {
 class Slider extends HTMLElement {
   connectedCallback() {
     const dataSource = this.getAttribute("data-source");
-    const data = dataSources[dataSource] || sliderBadminton;
+    const data = dataSources[dataSource];
     this.innerHTML = SliderContainer(data);
   }
 }
 
 customElements.define("slider-component", Slider);
 
-let currentSlides = 0;
-function pushArrows(n) {
-  const carousel = document.querySelector(" .slideShow ");
-  const images = carousel.querySelectorAll(".slide-list");
-  const imageWidth = images[0].clientWidth;
-  currentSlides = Math.max(0, Math.min(currentSlides + n, images.length - 1));
-  carousel.scrollTo({ left: currentSlides * imageWidth, behavior: "smooth" });
-}

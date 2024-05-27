@@ -1,7 +1,8 @@
-import {sidebarBadminton} from "../data/product-review-sidebar-data.js";
+import {sidebarBadminton, sidebarTennis} from "../data/product-review-sidebar-data.js";
 
 const dataSources = {
-  "sidebar-badminton": sidebarBadminton[0].badmintonOption
+  "sidebar-badminton": sidebarBadminton,
+  "sidebar-tennis": sidebarTennis
 };
 
 const SideBarContainer = (sidebarContents) => {

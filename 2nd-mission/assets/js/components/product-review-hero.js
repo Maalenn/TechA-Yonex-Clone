@@ -1,14 +1,19 @@
-import {heroBadminton} from '../data/product-review-hero-data.js'
+import { heroBadminton, heroTennis, heroGolf, heroSnowborad } from "../data/product-review-hero-data.js";
 
 const dataSources = {
-    'hero-badminton' :  heroBadminton
-}
+  "hero-badminton": heroBadminton,
+  "hero-tennis": heroTennis,
+  "hero-golf": heroGolf,
+  "hero-snowborad": heroSnowborad,
+};
 
 const HeroCoverContainer = (heroContents) => {
-    return `
-    ${heroContents.map((item) => `
+  return `
+    ${heroContents
+      .map(
+        (item) => `
     
-        <section class="md:top-24 top-14 flex relative w-full justify-center md:mt-[5px] mt-0 mb-40">
+        <section class="md:top-24 top-14 flex relative w-full justify-center md:mt-[5px] mt-0 mb-40 text-${item.textColor}">
             <secton class="w-[100%]">
             <img
                 class="w-full max-lg:hidden"
@@ -46,18 +51,19 @@ const HeroCoverContainer = (heroContents) => {
             </h1>
             </secton>
         </section>
-    `).join("")}
-    
     `
-}
-
+      )
+      .join("")}
+    
+    `;
+};
 
 class HeroCover extends HTMLElement {
-    connectedCallback(){
-        const dataSource = this.getAttribute('data-source');
-        const data = dataSources[dataSource] || heroBadminton;
-        this.innerHTML = HeroCoverContainer(data)
-    }
+  connectedCallback() {
+    const dataSource = this.getAttribute("data-source");
+    const data = dataSources[dataSource];
+    this.innerHTML = HeroCoverContainer(data);
+  }
 }
 
-customElements.define('hero-component', HeroCover)
+customElements.define("hero-component", HeroCover);

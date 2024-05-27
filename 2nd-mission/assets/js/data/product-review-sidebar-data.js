@@ -1,18 +1,24 @@
 export const sidebarBadminton = [
-    {
-        badmintonOption: [
-            "All Racquets",
-            "ASTROX",
-            "NANORAY",
-            "DUORA",
-            "ARCSABER",
-            "ISOMETRIC",
-            "MUSCLE POWER",
-            "B-Series",
-            "Junior"
-        ]
-    }
+    "All Racquets",
+    "ASTROX",
+    "NANORAY",
+    "DUORA",
+    "ARCSABER",
+    "ISOMETRIC",
+    "MUSCLE POWER",
+    "B-Series",
+    "Junior"
 ]
+
+export const sidebarTennis = [
+    "All Racquets",
+    "ASTROX",
+
+]
+
+
+
+
 
 
 
