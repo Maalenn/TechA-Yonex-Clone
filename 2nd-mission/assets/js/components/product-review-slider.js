@@ -77,7 +77,7 @@ class Slider extends HTMLElement {
   }
 }
 
-customElements.define("slider-badminton", Slider);
+customElements.define("slider-component", Slider);
 
 let currentSlides = 0;
 function pushArrows(n) {
