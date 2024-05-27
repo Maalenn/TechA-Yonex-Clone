@@ -1,7 +1,10 @@
-import {badmintonCard} from '../data/product-review-card-data.js'
+import {badmintonCard, tennisCard, golfCard, snowboardCard } from '../data/product-review-card-data.js'
 
 const dataSources = {
-    'badminton-card': badmintonCard
+    'badminton-card': badmintonCard,
+    'tennis-card': tennisCard,
+    'golf-card': golfCard,
+    'snowboard-card': snowboardCard
 }
 
 const CardContainer = (cardContents) =>{
@@ -44,9 +47,9 @@ const CardContainer = (cardContents) =>{
 class CardBadminton extends HTMLElement{
     connectedCallback(){
         const dataSource = this.getAttribute('data-source');
-        const data = dataSources[dataSource] || badmintonCard;
+        const data = dataSources[dataSource];
         this.innerHTML = CardContainer(data)
     }
 }
 
-customElements.define('badminton-card-component', CardBadminton)
+customElements.define('product-card-component', CardBadminton)
