@@ -9,3 +9,17 @@ export const BadmintonAthleteDataEquipment= [
     }
 
 ]
+
+export const TennisAthleteDataEquipment= [
+    {
+        equipimag: "../assets/images/athlete-profile.img/Tennis.webp",
+        productname: "VCORE 100"
+    },
+    {
+        equipimag: "../assets/images/athlete-profile.img/cardtennis.webp",
+        productname: "POLYTOUR FIRE 120/125/130"
+    },
+    
+
+
+]

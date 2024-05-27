@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Golf Athlete Profile</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../src/input.css">
+
+    <link rel="stylesheet" href="../assets/css/athlete-profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+  </head>
+
+  <body class=" text-base font-[Oswald] font-6 ">
+    <!-- Start Navbar -->
+    <my-navbar bg-color="md:bg-white text-black"></my-navbar>
+
+    <!-- Start Sidebar -->
+    <my-sidebar></my-sidebar>
+
+    <!-- Start Hero Banner -->
+    <hero-slider data-source="hero-banner"></hero-slider>
+
+    <!-- Start Hero Banner Responsive -->
+    <div class="md:hidden block">
+      <hero-responsive card-data-source="hero-responsive"></hero-responsive>
+    </div>
+
+    <div>
+      <!-- Start head main -->
+      <cover-component 
+      coverimg="../assets/images/athlete-profile.img/gof-kim.webp"
+      athletename="Hyo joo Kim"
+      sportype="Golf"
+      ></cover-component>
+      
+    
+      <!-- end title      -->
+    </div>
+    <!-- End head main -->
+
+
+    <!-- Start main -->
+    <div class="flex flex-col lg:flex-row mx-auto my-0 lg:text-left h-[100%] ">
+      <!-- Start Sidebar -->
+      <div class="text-[18px] lg:w-[40%] lg:pt-[100px] lg:sticky lg:top-0 z-[2] lg:h-[20%]">
+          <sidebar-component 
+          carrer="career"
+          achievement="achievement"
+          equipment=""
+        ></sidebar-component>
+      </div>
+      
+      <!-- End Sidebar -->
+
+      <!-- Start  Content  -->
+    <div class="w-[100%]  lg:pt-[100px] my-[30px]  ">
+        <!-- Start Career Content  -->
+        <althete-career
+        data-source="golf-athleteData"
+        ></althete-career>
+        <!-- End Athlete Career  -->
+
+        <!-- Start Achievement content -->
+        <div class="w-[100%] mt-[500px] md:mt-0 ">
+            <div class="relative md:pr-[15px] md:mt-[400px] lg:mt-0 lg:pl-[100px]  box-border lg:text-left  "
+                id="achievement">
+                
+                <div
+                    class="bg-[#f7f8f9] absolute bottom-0 left-0  lg:text-left lg:h-[65%] lg:w-[44%] lg:z-[-1]">
+                </div>
+
+                <div class="text-left lg:pb-[30px]  box-border ">
+                    <!-- block titile-->
+                    <h2
+                        class="md:pt-[100px] text-center lg:text-left text-[#1f2427] uppercase text-[28px]  tracking-[4px] mb-[30px] ">
+                        Achievements
+                    </h2>
+                    <!-- block info -->
+                    <div class="text-[#737a7e] text-[17px] lg:flex lg:flex-col lg:justify-center">
+                        <!-- row  -->
+                        <div class="border-box  mx-auto my-0 ">
+                            
+                            <div flex flex-col>
+                               
+                                <div class="text-wrap max-w-[1500px] pl-[3px] mx-[25px] my-0">
+                                  <div class="achiev-li text-wrap max-w-[1500px] pl-[3px]  my-0 ">
+                                    <li-achievement data-source="listGolf-data"></li-achievement>
+                                  </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        <!-- End content -->
+      </div>
+    </div>
+            
+
+          
+  </div>
+
+    
+      
+      <!-- Start Footer -->
+      <my-footer></my-footer>
+      <!-- End Footer -->    
+         
+    <!-- Scripts -->
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/components/bignav-component.js"></script>
+    <script src="../assets/js/components/nav-component.js" type="module"
+    ></script>
+    <script src="../assets/js/components/side-bar-component.js"></script>    
+    <script src="../assets/js/components/althlete-cover.js"></script>
+    <script src="../assets/js/components/athlete-sidebar.js"></script>
+    <script src="../assets/js/components/athlete-career.js" type="module"></script>
+    <script src="../assets/js/components/athlete-achievment.js" type="module"></script>
+    <script src="../assets/js/components/athlete-equipment.js" type="module"></script>
+    <script src="../assets/js/components/footer.js"></script>
+
+  </body>
+
+</html>

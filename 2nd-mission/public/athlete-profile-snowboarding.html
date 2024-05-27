@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Athlete Profile</title>
+    <title>Snow Boarding Athlete Profile</title>
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -41,35 +41,37 @@
     </div>
 
     <div>
-      <!-- start head main -->
+      <!-- Start head main -->
       <cover-component 
-      coverimg="../assets/images/athlete-profile.img/VIKTORAXELSEN_main.webp"
-      athletename="Victor Axelsen"
-      sportype="Badminton"
+      coverimg="../assets/images/athlete-profile.img/Yuto-banner-snowbard.webp"
+      athletename="Yuto Totsuka"
+      sportype="Snowboarding"
       ></cover-component>
+      
+    
       <!-- end title      -->
     </div>
-    <!-- end head main -->
+    <!-- End head main -->
 
 
-    <!-- Start main contents -->
+    <!-- Start main -->
     <div class="flex flex-col lg:flex-row mx-auto my-0 lg:text-left h-[100%] ">
       <!-- Start Sidebar -->
       <div class="text-[18px] lg:w-[40%] lg:pt-[100px] lg:sticky lg:top-0 z-[2] lg:h-[20%]">
           <sidebar-component 
           carrer="career"
           achievement="achievement"
-          equipment="Equipment Used"
+          equipment=""
         ></sidebar-component>
       </div>
       
       <!-- End Sidebar -->
 
       <!-- Start  Content  -->
-      <div class="w-[100%]  lg:pt-[100px] my-[30px]  ">
+    <div class="w-[100%]  lg:pt-[100px] my-[30px]  ">
         <!-- Start Career Content  -->
         <althete-career
-        data-source="badminton-athleteData"
+        data-source="snowboard-athleteData"
         ></althete-career>
         <!-- End Athlete Career  -->
 
@@ -77,7 +79,7 @@
         <div class="w-[100%] mt-[500px] md:mt-0 ">
             <div class="relative md:pr-[15px] md:mt-[400px] lg:mt-0 lg:pl-[100px]  box-border lg:text-left  "
                 id="achievement">
-                <!-- background shape -->
+                
                 <div
                     class="bg-[#f7f8f9] absolute bottom-0 left-0  lg:text-left lg:h-[65%] lg:w-[44%] lg:z-[-1]">
                 </div>
@@ -86,17 +88,18 @@
                     <!-- block titile-->
                     <h2
                         class="md:pt-[100px] text-center lg:text-left text-[#1f2427] uppercase text-[28px]  tracking-[4px] mb-[30px] ">
-                        Achievements</h2>
+                        Achievements
+                    </h2>
                     <!-- block info -->
                     <div class="text-[#737a7e] text-[17px] lg:flex lg:flex-col lg:justify-center">
                         <!-- row  -->
                         <div class="border-box  mx-auto my-0 ">
-                            <!-- paralax -->
+                            
                             <div flex flex-col>
-                                <!-- html -->
+                               
                                 <div class="text-wrap max-w-[1500px] pl-[3px] mx-[25px] my-0">
                                   <div class="achiev-li text-wrap max-w-[1500px] pl-[3px]  my-0 ">
-                                    <li-achievement data-source="list"></li-achievement>
+                                    <li-achievement data-source="listSnowbaord-data"></li-achievement>
                                   </div>
                                 </div>
 
@@ -106,32 +109,17 @@
                 </div>
 
             </div>
-            <!-- Start Equipment content -->
-            <div class="text-[#1f2427] text-center uppercase lg:pl-[100px]" id="equipment">
-                <!-- background shape -->
-                <div></div>
-                <!-- content-part -->
-                <div class="max-w-[960px] relative ">
-                    <!-- block title -->
-                    <h2
-                        class="lg:pt-[100px] lg:text-left mb-[50px]  text-[26px] tracking-[4px] uppercase text-center">
-                        <span>Equipment Used</span>
-                    </h2>
-                    <!-- product list -->
-                    <li-equipment 
-                      data-source="equipImg">
-
-                    </li-equipment>
-                </div>
-            </div>
-            <!-- End Equipment content -->
+            
         </div>
+        <!-- End content -->
       </div>
     </div>
             
-
+    
           
   </div>
+
+    
       
       <!-- Start Footer -->
       <my-footer></my-footer>
@@ -140,9 +128,7 @@
     <!-- Scripts -->
     <script src="../assets/js/index.js"></script>
     <script src="../assets/js/components/bignav-component.js"></script>
-    <script
-      src="../assets/js/components/nav-component.js"
-      type="module"
+    <script src="../assets/js/components/nav-component.js" type="module"
     ></script>
     <script src="../assets/js/components/side-bar-component.js"></script>    
     <script src="../assets/js/components/althlete-cover.js"></script>

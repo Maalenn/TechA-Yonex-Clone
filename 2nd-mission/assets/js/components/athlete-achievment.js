@@ -1,7 +1,10 @@
-import {BadmintonAthleteDataAchivement} from '../data/athlete-achiev-data.js'
+import {BadmintonAthleteDataAchivement, TennisAthleteDataAchivement, GolfAthleteDataAchivement, SnowboardDataAchievement} from '../data/athlete-achiev-data.js'
 
 const achievDataSource = {
-    'list' : BadmintonAthleteDataAchivement
+    'listBadminton-data' : BadmintonAthleteDataAchivement,
+    'listTennis-data' : TennisAthleteDataAchivement,
+    'listGolf-data' : GolfAthleteDataAchivement,
+    'listSnowbaord-data' : SnowboardDataAchievement
 }
 
 const UlistContainer = (listAchievements) => {
