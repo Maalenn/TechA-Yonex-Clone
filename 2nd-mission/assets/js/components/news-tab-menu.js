@@ -24,7 +24,7 @@ const TabMenu = [
 
 const TabMenuContainer = (tabItems) => {
   return `
-    <div class="border-b-[1px] text-[#6e7677] font-[Oswald] uppercase font-[400] mb-[50px]">
+    <div class="border-b-[1px] text-[#6e7677] font-[Oswald] uppercase font-[400] mb-[50px] overflow-x-auto">
       <div class="container mx-auto px-4">
         <div class="flex justify-center">
           <ul id="tab-all" class="flex items-center space-x-1 sm:space-x-[40px] md:space-x-[60px] lg:space-x-[90px] text-sm md:text-md lg:text-lg">
@@ -41,8 +41,9 @@ const TabMenuContainer = (tabItems) => {
         </div>
       </div>
     </div>
-  `
-}
+  `;
+};
+
 
 class NewsTabMenu extends HTMLElement {
   connectedCallback() {
