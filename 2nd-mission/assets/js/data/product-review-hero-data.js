@@ -8,6 +8,7 @@ export const heroBadminton = [
     productDes: "badminton racquets",
   },
 ];
+
 export const heroTennis = [
   {
     textColor: "white",
@@ -15,9 +16,10 @@ export const heroTennis = [
     imgMd: "../assets/images/product-review/tennisBreakpoint.webp",
     productName: "tennis",
     productType: "racquets",
-    productDes: "badminton racquets",
+    productDes: "tennis racquets",
   },
 ];
+
 export const heroGolf = [
   {
     textColor: "white",
@@ -30,11 +32,12 @@ export const heroGolf = [
     productDes: "Golf clubs",
   },
 ];
-export const heroSnowborad = [
+
+export const heroSnowboard = [
   {
-    textColor: "black",
+    textColor: "white",
     imgLg: "https://www.yonex.com/media/catalog/category/header_snow01.jpg",
-    imgMd:"https://www.yonex.com/media/catalog/category/header_snow01_sp.jpg",
+    imgMd: "https://www.yonex.com/media/catalog/category/header_snow01_sp.jpg",
     productName: "snowborading",
     productType: "BOARDS",
     productDes: "Boards",
