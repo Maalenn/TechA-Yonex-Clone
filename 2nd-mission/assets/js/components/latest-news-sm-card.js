@@ -75,15 +75,17 @@ import { LatestNewsGen, LatestNewsGen2, LatestNewsGen3, LatestNewsGen4, LatestNe
             </div>
             
             <div class="social-logo flex justify-between w-[92px] absolute top-[43%] right-3 hidden">
-              <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full">
+
+              <a href="https://www.facebook.com/yonexbadminton/" class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full">
                 <img class="w-[16px] h-[16px]" src="../assets/images/news-img/facebook-app-symbol.png" alt="facebook's logo">
-              </div>
-              <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full">
+              </a>
+              <a href="https://x.com/yonex_com?lang=en" class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full">
                 <img class="w-[16px] h-[16px]" src="../assets/images/news-img/twitter.png" alt="twitter's logo">
-              </div>
-              <div class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full">
+              </a>
+              <a href="#" class="bg-white w-[25px] h-[25px] flex justify-center items-center rounded-full">
                 <img class="w-[16px] h-[16px]" src="../assets/images/news-img/email.png" alt="email's logo">
-              </div>
+              </a>
+
             </div>
           </div>
         `).join('')}
