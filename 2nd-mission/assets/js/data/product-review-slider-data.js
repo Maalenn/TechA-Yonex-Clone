@@ -318,7 +318,7 @@ export const sliderGolf = [
     }
 ]
 
-export const sliderSnowborad = [
+export const sliderSnowboard = [
     {
         imgSlide: "https://www.yonex.com/media/athletes/tmp/square/Yuto-square.jpg",
         name: "yuto totska",
