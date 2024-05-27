@@ -102,7 +102,7 @@ class Navbar extends HTMLElement {
             </div>
         
             <div class="cursor-pointer hover:opacity-80 h-full pt-[30px]">
-              <a href="news.html" class="relative top-[7%] pb-4">NEWS</a>
+              <a href="news.html" class="relative top-[7%] pb-4 text-[13px] tracking-[1px] font-[500]">NEWS</a>
             </div>
         
             <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(6)"  onmouseleave="hoverHide(-6)">
