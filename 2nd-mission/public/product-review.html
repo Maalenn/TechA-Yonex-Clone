@@ -343,50 +343,15 @@
       <!-- End Silder -->
 
       <!-- Start side bar drop down -->
-      <!-- <section class="flex w-full justify-end max-w-[1280px] mx-auto pr-10 sm:flex md:hidden">
-        <form class="">
-          <select id="countries" class="text-[16px] p-3 bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full dark:border-[#1b1a1a] dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option value="All Racquets"><a class="">All Racquets</a></option>
-            <option value="ASTROX"><a href="">ASTROX</a></option>
-            <option value="NANORAY"><a href="">NANORAY</a></option>
-            <option value="DUORA"><a href=""></a>DUORA</option>
-            <option value="ARCSABER"><a href="">ARCSABER</a></option>
-            <option value="ISOMETRIC"><a href="">ISOMETRIC</a></option>
-            <option value="MUSCLE POWER"><a href="">MUSCLE POWER</a></option>
-            <option value="B-Series"><a href="">B-Series</a></option>
-            <option value="Junior"><a href="">Junior</a></option>
-          </select>
-        </form>
-      </section> -->
       <sidebar-component data-source="sidebar-badminton"> </sidebar-component>
-
-      <section class="flex w-full justify-center max-w-[1280px] mx-auto pr-10 sm:flex md:hidden">
-        <div class="text-[14px] text-[gray]">Item 1-12 of 33</div>
-      </section>
       <!-- End side bar drop down -->
 
       <!-- Start Athletes Information section -->
       <section class="flex flex-col relative w-full justify-center max-lg:w-[100%]">
-        <!-- Product Shopping Chart -->
         <section class="max-w-[1280px] mx-auto grid grid-cols-[1fr,3fr] max-md:grid-cols-1">
-          <!-- Start Side bar -->
-          <section class="sm:hidden md:flex max-sm:hidden pl-10 font-sans">
-            <ul class="flex flex-col gap-6 text-[#575555] w-[100%]">
-              <li class=""><a href="">All Recquets</a></li>
-              <li class=""><a href="">ASTROX</a></li>
-              <li class=""><a href="">NANOFLARE</a></li>
-              <li class=""><a href="">DUORA</a></li>
-              <li class=""><a href="">NANORAY</a></li>
-              <li class=""><a href="">ARCSABER</a></li>
-              <li class=""><a href="">ISOMETRIC</a></li>
-              <li class=""><a href="">MUSCLE POWER</a></li>
-              <li class=""><a href="">B-Series</a></li>
-              <li class=""><a href="">Junior</a></li>
-              <h4 class="text-black font-[500]">COMPARE PRODUCTS</h4>
-              <h4>Select up to 5 Products</h4>
-            </ul>
-          </section>
-          <!-- End side bar -->
+          <!--Start Sidebar left -->
+         <sidebarleft-component data-source="sidebarLeft-badminton"> </sidebarleft-component>
+          <!-- End Sidebar left -->
 
           <!-- Start card container -->
           <section class="p-10">
@@ -875,6 +840,7 @@
 
             <!-- End card container -->
           </section>
+          <!-- End card container -->
         </section>
         <!-- End Athletes Information -->
       </section>
@@ -895,6 +861,7 @@
       <script src="../assets/js/components/product-review-hero.js" type="module"> </script>
       <script src="../assets/js/components/product-review-slider.js" type="module" ></script>
       <script  src="../assets/js/components/product-review-sidebar.js" type="module"></script>
+      <script type="module" src="../assets/js/components/product-review-sidebar-left.js"></script>
     </body>
   </html>
 </html>
