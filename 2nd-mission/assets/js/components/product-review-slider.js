@@ -1,7 +1,7 @@
 import { sliderBadminton } from "../data/product-review-slider-data.js";
 
 const dataSources = {
-  "silder-badminton": sliderBadminton,
+  "slider-badminton": sliderBadminton,
 };
 
 const SliderContainer = (sliderContents) => {
@@ -77,7 +77,7 @@ class Slider extends HTMLElement {
   }
 }
 
-customElements.define("silder-component", Slider);
+customElements.define("slider-badminton", Slider);
 
 let currentSlides = 0;
 function pushArrows(n) {
