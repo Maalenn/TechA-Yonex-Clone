@@ -2,6 +2,7 @@ class Navbar extends HTMLElement {
     connectedCallback(){
         const bgColor = this.getAttribute('bg-color')
         this.innerHTML = `
+      <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90] overlay-page" id="overlay-blur" onclick="closeNav()"></div>
         <nav
         class="w-full ${bgColor} absolute md:bg-opacity-40 hover:bg-white hover:text-black bg-white border border-1 md:border-none top-0 z-[100]"
       >
