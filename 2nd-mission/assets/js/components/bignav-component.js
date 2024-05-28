@@ -56,7 +56,7 @@ class Navbar extends HTMLElement {
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="badminton" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="badminton-obj" grid-style="grid-cols-4"></card-slide>
+                    <card-slide data-source="badminton-obj" grid-style="grid-cols-4 gap-4"></card-slide>
                   </div>
                 </div>
               </section>
@@ -68,7 +68,7 @@ class Navbar extends HTMLElement {
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="tennis" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="tennis-obj" grid-style="grid-cols-4"></card-slide>
+                    <card-slide data-source="tennis-obj" grid-style="grid-cols-4 gap-4"></card-slide>
                   </div>
                 </div>
               </section>
@@ -80,7 +80,7 @@ class Navbar extends HTMLElement {
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="golf" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="golf-obj" grid-style="grid-cols-4"></card-slide>
+                    <card-slide data-source="golf-obj" grid-style="grid-cols-4 gap-4"></card-slide>
                   </div>
                 </div>
               </section>
@@ -92,7 +92,7 @@ class Navbar extends HTMLElement {
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="running" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="running-obj" grid-style="grid-cols-3 pl-5"></card-slide>
+                    <card-slide data-source="running-obj" grid-style="grid-cols-3 pl-5 gap-4"></card-slide>
                   </div>
                 </div>
               </section>
@@ -104,7 +104,7 @@ class Navbar extends HTMLElement {
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="snowboard" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px] pb-[20px]">
                   <div class="max-w-[900px] mx-auto flex mb-4 justify-center flex-col gap-3">
-                    <card-slide data-source="snowboarding-obj" grid-style="grid-cols-4"></card-slide>
+                    <card-slide data-source="snowboarding-obj" grid-style="grid-cols-4 gap-4"></card-slide>
                     <div class="flex max-w-[1200px] mx-auto">
                         <div class="flex flex-col items-center justify-center w-[213px]">
                             <a id="hoverLink" href="../public/athletes-snowboarding.html" class="bg-[#F7F8FA]"><img src="../assets/images/snowboard-images/skate-athlete.webp" alt=""></a>
@@ -126,7 +126,7 @@ class Navbar extends HTMLElement {
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="about" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                    <card-slide data-source="about-obj" grid-style="grid-cols-6"></card-slide>
+                    <card-slide data-source="about-obj" grid-style="grid-cols-6 gap-6"></card-slide>
                   </div>
                 </div>
               </section>
