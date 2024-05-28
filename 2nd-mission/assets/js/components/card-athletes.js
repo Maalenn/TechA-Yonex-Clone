@@ -1,4 +1,4 @@
-import { Bedmanton, Tennis, Golf, Snowboarding} from '../athletes/database.js';
+import { Bedmanton, Tennis, Golf, Snowboarding} from '../data/database-athletes.js';
 
 class MyCard extends HTMLElement {
     connectedCallback() {
@@ -28,9 +28,9 @@ class MyCard extends HTMLElement {
         this.innerHTML = `
         <div class="group w-[407px] ${cardHeight}">
             <div class="relative overflow-hidden">
-                <a href="../public/athlete-profile.html">
+                <a href="${cardData.link}">
                     <img src="${cardData.image}" alt="${cardData.name}" class="mt-2 w-[407px] ${cardHeight} object-cover">
-                </a>
+                
                 <div class="absolute ${cardHeight} w-full bg-blue-500/70 flex items-center justify-center group-hover:bottom-0 opacity-0 group-hover:opacity-100 duration-300">
                     <button class="bg-white hover:bg-sky-700 text-black hover:text-white py-2 px-5">View Athlete Profile</button>
                 </div>
@@ -38,6 +38,7 @@ class MyCard extends HTMLElement {
                     <p class="text-[22px]">${cardData.name}</p>
                     <p>${cardData.country}</p>
                 </div>
+                </a>
             </div>
         </div>
         `;

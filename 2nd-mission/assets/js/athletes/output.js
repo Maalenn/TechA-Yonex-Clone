@@ -1,4 +1,4 @@
-import { Bedmanton, Tennis, Golf, Snowboarding } from './database.js';
+import { Bedmanton, Tennis, Golf, Snowboarding } from '../data/database-athletes.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const cardContainer = document.getElementById('card-container');

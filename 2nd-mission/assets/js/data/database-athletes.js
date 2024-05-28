@@ -32,12 +32,33 @@ export function Bedmanton() {
                     "THAILAND", "THAILAND", "KOREA", 
                     "JAPAN", "CHINA", "CHINESE TAIPEI", 
                     "INDIA", "CHINA", "KOREA"];
+    const links = [
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+        "../public/athlete-profile-badminton.html",
+    ]
 
     return names.map((name, index) => ({
         id: index + 1,
         name,
         image: images[index % images.length], // Cycle through images if there are fewer images than names
-        country: countries[index % countries.length] // Assign countries
+        country: countries[index % countries.length], // Assign countries
+        link: links[index % links.length] // Assign links
     }));
 }
 
@@ -76,12 +97,33 @@ export function Tennis() {
                         "JAPAN", "POLAND", "NORWAY",
                         "FRANCE","UNITED STATES","UNITED STATES"
                         ,"SWITZERLAND","GERMANY","CANADA"];
+    const links = [
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+        "../public/athlete-profile-tennis.html",
+    ]
 
     return names.map((name, index) => ({
         id: index + 1,
         name,
         image: images[index % images.length], // Cycle through images if there are fewer images than names
-        country: countries[index % countries.length] // Assign countries
+        country: countries[index % countries.length], // Assign countries
+        link: links[index % links.length] // Assign links
     }));
 }
 
@@ -114,12 +156,33 @@ export function Golf() {
         "../assets/images/athletes/Golf/chisato_iwai_570x570.jpeg",
     ];
     const countries = ["KOREA","JAPAN","JAPAN","JAPAN"];
+    const links = [
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+        "../public/athlete-profile-golf.html",
+]
 
     return names.map((name, index) => ({
         id: index + 1,
         name,
         image: images[index % images.length], // Cycle through images if there are fewer images than names
-        country: countries[index % countries.length] // Assign countries
+        country: countries[index % countries.length], // Assign countries
+        link: links[index % links.length] // Assign links
     }));
 }
 
@@ -159,11 +222,32 @@ export function Snowboarding() {
                         "JAPAN", "JAPAN", "JAPAN", 
                         "JAPAN", "JAPAN", "UNITED STATES", 
                         ];
+    const links = [
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+        "../public/athlete-profile-snowboarding.html",
+]
 
     return names.map((name, index) => ({
         id: index + 1,
         name,
         image: images[index % images.length], // Cycle through images if there are fewer images than names
-        country: countries[index % countries.length] // Assign countries
+        country: countries[index % countries.length], // Assign countries
+        link: links[index % links.length] // Assign links
     }));
 }
