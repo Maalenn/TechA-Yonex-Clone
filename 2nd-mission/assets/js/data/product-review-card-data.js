@@ -304,3 +304,52 @@ export const AllRunningCard = [
     ]
   },
 ];
+
+export const MenRunningCard = [
+  {
+    img: "https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "SAFERUN 100X MEN",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/s/h/shr100xm_w_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr100xm_a.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr100xm_b.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ]
+  },
+  {
+    img: "https://www.yonex.com/media/catalog/product/s/h/shra1m_502_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "SAFERUN AERUS MEN",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/s/h/shra1m_377.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shra1m_651.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shra1m_502.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50"
+    ]
+  },
+  {
+    img: "https://www.yonex.com/media/catalog/product/s/h/shr200xm_011_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "SAFERUN 200X MEN",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/s/h/shr200xm_007_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr200xm_011_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr200xm_472_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50"
+    ]
+  },
+  {
+    img: "https://www.yonex.com/media/catalog/product/s/h/shrfj1m_des_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "GRACE (WOMEN'S)",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_des422_fs_rs_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/_/_/__shrfj1l_324.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_bkw245_fs_rs.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ]
+  },
+  {
+    img: "https://www.yonex.com/media/catalog/product/s/h/shra2m_mag_476_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "CARBON CRUISE AERUS MEN",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/s/h/shra2m_mag_476_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shra2m-l_icgr_326_2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shra2m_bb_118_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ]
+  },
+];

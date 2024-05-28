@@ -1,11 +1,12 @@
-import {badmintonCard, tennisCard, golfCard, snowboardCard , AllRunningCard} from '../data/product-review-card-data.js'
+import {badmintonCard, tennisCard, golfCard, snowboardCard , AllRunningCard, MenRunningCard} from '../data/product-review-card-data.js'
 
 const dataSources = {
     'badminton-card': badmintonCard,
     'tennis-card': tennisCard,
     'golf-card': golfCard,
     'snowboard-card': snowboardCard,
-    'allRunning-card': AllRunningCard
+    'allRunning-card': AllRunningCard,
+    'menRunning-card': MenRunningCard,
 }
 
 const CardContainer = (cardContents) =>{
