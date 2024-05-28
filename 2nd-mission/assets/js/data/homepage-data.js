@@ -59,54 +59,142 @@ export const heroRepsonsive = [
 
 export const cardSlider = [
     {
+        link: "../public/product-review-badminton.html",
         img:"../assets/images/sport-image/badminton.webp",
         title:"BADMINTON",
     },
     {
+        link: "../public/product-review-golf.html",
         img:"../assets/images/sport-image/golf.webp",
         title:"GOLF",
     },
     {
+        link: "../public/product-review-allRunning.html",
         img:"../assets/images/sport-image/orange-shoes.webp",
         title:"RUNNING",
     },
     {
+        link: "../public/product-review-tennis.html",
         img:"../assets/images/sport-image/tennis.webp",
         title:"TENNIS",
     },
     {
+        link: "../public/product-review-snowboarding.html",
         img:"../assets/images/sport-image/snowboard.webp",
         title:"SNOWBOARD",
     },
 ]
+
+export const cardSliderNewArrival = [
+    {
+        link: "../public/detail-golf.html",
+        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/detail-golf/ezone.png",
+        title:"EZONE GT DRIVER TYPE S",
+    },
+    {
+        link: "../public/detail-tennis.html",
+        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/detail-tennis/percept97.png",
+        title:"PERCEPT 97",
+    },
+    {
+        link: "../public/detail-badminton.html",
+        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/productPage/Astrox88.png",
+        title:"ASTROX 88 S GAME",
+    },
+    {
+        link: "../public/detail-snowboarding.html",
+        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/detail-snowboard/regna.png",
+        title:"REGNA",
+    },
+    {
+        link: "../public/detail-women.html",
+        img:"https://www.yonex.com/media/catalog/product/s/h/shr100xl_663_1_1.png?quality=80&fit=bounds&height=819&width=600&canvas=600:819",
+        title:"SAFERUN 100X WOMEN",
+    },
+    {
+        link: "../public/detail-men.html",
+        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/running-page/shr100xm_440_1.webp",
+        title:"SAFERUN 100X MEN",
+    },  
+    {
+        link: "../public/detail-unisex.html",
+        img:"https://www.yonex.com/media/catalog/product/s/h/shr900c_bk007_fs_rs_1.png?quality=80&fit=bounds&height=819&width=600&canvas=600:819",
+        title:"SAFERUN 900C",
+    }
+]
+
+// export const cardSliderNewArrival = [
+//     {
+//         link: "../public/athlete-profile-badminton.html",
+//         img:"../assets/images/product-review/al1.webp",
+//         title:"VIKTOR AXELSON",
+//     },
+//     {
+//         link: "#",
+//         img:"../assets/images/product-review/Osaka_570x570_07.webp",
+//         title:"NAOMI OSAKAS",
+//     },
+//     {
+//         link: "#",
+//         img:"../assets/images/product-review/al29.webp",
+//         title:"KENTO MOMOTA",
+//     },
+//     {
+//         link: "#",
+//         img:"../assets/images/product-review/al3.webp",
+//         title:"AKANE YAMAGUCHI",
+//     },
+//     {
+//         link: "#",
+//         img:"../assets/images/product-review/nakashima_570x570.webp",
+//         title:" BRANDOM NAKASHIMA",
+//     },
+//     {
+//         link: "#",
+//         img:"../assets/images/product-review/vekic_570x570.webp",
+//         title:"DONNA VEKIC"
+//     },
+//     {
+//         link: "#",
+//         img:"../assets/images/product-review/kim_570x570_.webp",
+//         title:"HYOO JOO KIM",
+//     },  
+// ]
+
 export const cardSliderAthlete = [
     {
-        img:"../assets/images/product-review/al29.webp",
-        title:"KENTO MOMOTA",
-    },
-    {
-        img:"../assets/images/product-review/al3.webp",
-        title:"AKANE YAMAGUCHI",
-    },
-    {
-        img:"../assets/images/product-review/nakashima_570x570.webp",
-        title:" BRANDOM NAKASHIMA",
-    },
-    {
-        img:"../assets/images/product-review/vekic_570x570.webp",
-        title:"DONNA VEKIC"
-    },
-    {
+        link: "../public/athlete-profile-badminton.html",
         img:"../assets/images/product-review/al1.webp",
         title:"VIKTOR AXELSON",
     },
     {
-        img:"../assets/images/product-review/kim_570x570_.webp",
-        title:"HYOO JOO KIM",
+        link: "../public/athlete-profile-golf.html",
+        img:"https://www.yonex.com/media/athletes/tmp/square/kim_570x570_.jpg",
+        title:"HYO JOO KIM",
     },
     {
-        img:"../assets/images/product-review/Osaka_570x570_07.webp",
-        title:"NAOMI OSAKAS",
+        link: "../public/athlete-profile-tennis.html",
+        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/product-review/t1.webp",
+        title:"ELENA RYBAKINA",
     },
-    
+    {
+        link: "../public/athlete-profile-snowboarding.html",
+        img:"https://www.yonex.com/media/athletes/tmp/square/Yuto-square.jpg",
+        title:"YUTO TOTSKA",
+    },
+    {
+        link: "#",
+        img:"../assets/images/product-review/nakashima_570x570.webp",
+        title:" BRANDOM NAKASHIMA",
+    },
+    {
+        link: "#",
+        img:"../assets/images/product-review/vekic_570x570.webp",
+        title:"DONNA VEKIC"
+    },
+    {
+        link: "#",
+        img:"../assets/images/product-review/kim_570x570_.webp",
+        title:"HYOO JOO KIM",
+    },  
 ]
