@@ -42,12 +42,65 @@ const createBlog = (data) => {
                     </div>
                 </div>
             </div>
+
             <!-- Additional content loop -->
-            ${blog.additionalContent.map(content => `
-                <div class="article text-[16px] mb-[16px] max-w-full text-[#737A7E] font-sans mx-[13px]">
-                    <p>${content}</p>
+            <div class="content flex md:max-w-[950px] mx-auto justify-between">
+                <div class="socail-media max-lg:hidden mr-20">
+                    <div class="social-logo w-[46px] h-[135px]">
+                        <div class="bg-[#F9FAFB] w-[40px] h-[40px] flex justify-center items-center rounded-full mb-2"><a href=""><img
+                                class="w-[20px] h-[20px] hover:opacity-45" src="../assets/images/news-img/facebook-app-symbol.png "
+                                alt="facebook's logo" ></a>
+                        </div>
+                        <div class="bg-[#F9FAFB] w-[40px] h-[40px] flex justify-center items-center rounded-full mb-2"><a href=""><img
+                                class="w-[20px] h-[20px] hover:opacity-45" src="../assets/images/news-img/twitter.png "
+                                alt="twitter's logo"></div ></a>
+                        <div class="bg-[#F9FAFB] w-[40px] h-[40px] flex justify-center items-center rounded-full mb-2"><a href=""><img
+                                class="w-[20px] h-[20px] hover:opacity-45" src="../assets/images/news-img/email.png " alt="email's logo"></a>
+                        </div >
+                    </div>
                 </div>
-            `).join('')}
+            ${blog.additionalContent.map(content => `
+                <div class="article md:max-w-[950px] px-[20px] mx-auto text-[16px] mb-[16px] text-[#737A7E] font-sans">
+                    <p class="mb-[20px]">${content.info}</p>
+                    <p class="mb-[20px]">${content.info2}</p>
+                    <p class="mb-[20px]">${content.info3}</p>
+                    <p class="mb-[20px]">${content.info4}</p>
+                    <p class="mb-[20px]">${content.info5}</p>
+
+                    <p class="mb-[5px] font-bold">${content.infoTitle}</p>
+                    <p>${content.infoSubTitle}
+                        <a class="text-blue-500" href="#">${content.infoLink}</a>
+                    </p>
+                    <p>${content.infoSubTitle2}
+                        <a class="text-blue-500" href="#">${content.infoLink2}</a>
+                    </p>
+                    <p>${content.infoSubTitle3}
+                        <a class="text-blue-500" href="#">${content.infoLink3}</a>
+                    </p>
+
+                    <div class="socail-media flex mt-[80px] gap-6">
+                            <h3 class="font-bold text-black">SHARE:</h3>
+                            <div class="flex gap-3">
+                                <div class=" w-[30px] h-[30px] flex justify-center items-center rounded-full mb-2"><a href="">
+                                    <img
+                                            class="w-[30px] h-[30px] hover:opacity-45" src="../assets/images/icons/facebook-icon.svg"
+                                            alt="facebook's logo" ></a>
+                                    </div>
+                                    <div class=" w-[30px] h-[30px] flex justify-center items-center rounded-full mb-2"><a href="">
+                                        <img
+                                            class="w-[30px] h-[30px] hover:opacity-45" src="../assets/images/icons/twitter_icon.svg"
+                                            alt="twitter's logo"></div ></a>
+                                    <div class=" w-[30px] h-[30px] flex justify-center items-center rounded-full mb-2"><a href=""><img
+                                            class="w-[30px] h-[30px] hover:opacity-45" src="../assets/images/icons/mail_icon.svg" alt="email's logo"></a>
+                                    </div >
+                            </div>
+                                    
+                        </div> 
+
+                </div>
+            `).join('')}   
+            </div> 
+        </div>
         `).join('')}
     `;
 };
