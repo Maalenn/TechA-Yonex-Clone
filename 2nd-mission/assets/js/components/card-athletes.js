@@ -20,10 +20,8 @@ class MyCard extends HTMLElement {
         }
 
         if (!cardData) return;
-
         const namebox = cardData.id % 2 === 0 ? 'top-[80%]' : 'top-[85%]';
         const cardHeight = cardData.id % 2 === 0 ? 'h-[360px]' : 'h-[506px]';
-
         this.innerHTML = `
         <div class="group w-[407px] ${cardHeight}">
             <div class="relative overflow-hidden">
