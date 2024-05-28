@@ -43,7 +43,7 @@ const ShoesDetailContainer = (contents) => {
         <div class="w-[600px] max-w-[90%] mx-auto relative">
           <div id="productSlider" class="overflow-x-auto flex">
           ${content.mainImg.map(mainImage => `
-            <div class="product-img-slide relative">
+            <div class="product-img-slide relative z-[1]">
               <img
                 id="imageClick"
                 class="top-[50%] h-auto w-full object-cover max-md:scale-140 cursor-zoom-in"
@@ -56,7 +56,7 @@ const ShoesDetailContainer = (contents) => {
           </div>
           <button
             id="prevBtn"
-            class="absolute w-[80px] left-0 top-1/2 transform -translate-y-1/2 hidden z-[10000]"
+            class="bg-white opacity-50 absolute h-[75vh] d-flex justify-center items-center w-[80px] left-10 top-1/2 transform -translate-y-1/2 hidden z-[10000] cursor-pointer"
           >
             <img
               src="../assets/images/running-page/carrot_L.svg"
@@ -66,7 +66,7 @@ const ShoesDetailContainer = (contents) => {
           </button>
           <button
             id="nextBtn"
-            class="absolute w-[80px] right-0 top-1/2 transform -translate-y-1/2 hidden z-[10000]"
+            class="bg-white opacity-50 absolute h-[75vh] d-flex justify-center items-center w-[80px] right-0 top-1/2 transform -translate-y-1/2 hidden z-[10000] cursor-pointer"
           >
             <img
               src="../assets/images/running-page/carrot_R.svg"
