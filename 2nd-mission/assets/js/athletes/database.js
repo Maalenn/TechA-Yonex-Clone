@@ -85,21 +85,16 @@ export function Tennis() {
     }));
 }
 
-export function Running() {
-    const names = ["Usain", "Mo", "Eliud", 
-                    "Paula", "Haile", "Florence", 
-                    "Kenenisa", "David", "Sifan", 
-                    "Almaz"];
+export function Golf() {
+    const names = ["HYO JOO KIM", "CHISATO IWAI", "SUZUKA YAMAGUCHI", 
+                    "AKIE IWAI"];
     const images = [
-        "./assets/images/athletes/running/usain.jpeg",
-        "./assets/images/athletes/running/mo.jpeg",
-        "./assets/images/athletes/running/eliud.jpeg",
-        // Repeat images if necessary
+        "../assets/images/athletes/Golf/akie_iwai_570x570.jpeg",
+        "../assets/images/athletes/Golf/chisato_iwai_570x570.jpeg",
+        "../assets/images/athletes/Golf/kim_570x570_.jpeg",
+        "../assets/images/athletes/Golf/suzuka_square.jpeg",
     ];
-    const countries = ["Jamaica", "UK", "Kenya", 
-                        "UK", "Ethiopia", "Kenya", 
-                        "Ethiopia", "Kenya", "Netherlands", 
-                        "Ethiopia"];
+    const countries = ["KOREA","JAPAN","JAPAN","JAPAN"];
 
     return names.map((name, index) => ({
         id: index + 1,
@@ -110,20 +105,21 @@ export function Running() {
 }
 
 export function Snowboarding() {
-    const names = ["Usain", "Mo", "Eliud", 
-                    "Paula", "Haile", "Florence", 
-                    "Kenenisa", "David", "Sifan", 
-                    "Almaz"];
+    const names = ["YUTO TOSTUKA", "SENA TOMITA", "HIROAKI KUNITAKE", 
+                    "RUKI TOMITA", "RUKA HIRANO", "ALESSANDRO BARBIERI", 
+                    ];
     const images = [
-        "./assets/images/athletes/running/usain.jpeg",
-        "./assets/images/athletes/running/mo.jpeg",
-        "./assets/images/athletes/running/eliud.jpeg",
+        "../assets/images/athletes/snowboarding/alessandro_570x570.png",
+        "../assets/images/athletes/snowboarding/Kunitake_570x570_square.jpeg",
+        "../assets/images/athletes/snowboarding/Ruka-square.jpeg",
+        "../assets/images/athletes/snowboarding/Ruki-square.jpeg",
+        "../assets/images/athletes/snowboarding/Sena-square.jpeg",
+        "../assets/images/athletes/snowboarding/Yuto-square.jpeg",
         // Repeat images if necessary
     ];
-    const countries = ["Jamaica", "UK", "Kenya", 
-                        "UK", "Ethiopia", "Kenya", 
-                        "Ethiopia", "Kenya", "Netherlands", 
-                        "Ethiopia"];
+    const countries = ["JAPAN", "JAPAN", "JAPAN", 
+                        "JAPAN", "JAPAN", "UNITED STATES", 
+                        ];
 
     return names.map((name, index) => ({
         id: index + 1,

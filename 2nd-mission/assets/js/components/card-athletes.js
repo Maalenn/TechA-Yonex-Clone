@@ -1,4 +1,4 @@
-import { Bedmanton, Tennis, Running } from '../athletes/database.js';
+import { Bedmanton, Tennis, Golf, Snowboarding} from '../athletes/database.js';
 
 class MyCard extends HTMLElement {
     connectedCallback() {
@@ -10,8 +10,11 @@ class MyCard extends HTMLElement {
             case 'tennis':
                 cardData = Tennis().find(card => card.id === parseInt(id, 10));
                 break;
-            case 'running':
-                cardData = Running().find(card => card.id === parseInt(id, 10));
+            case 'snowboarding':
+                cardData = Snowboarding().find(card => card.id === parseInt(id, 10));
+                break;
+            case 'golf':
+                cardData = Golf().find(card => card.id === parseInt(id, 10));
                 break;
             case 'bedmanton':
             default:
