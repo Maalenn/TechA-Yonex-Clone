@@ -8,22 +8,22 @@ const blogData = {
 const createBlog = (data) => {
     return `
         ${data.map((blog) => `
-            <div class="w-full h-[100px] mt-[150px] mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-[16px] font-sans max-md:mt-0">
+            <div class="w-full h-[100px] mt-[150px] mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-[13px] font-sans max-md:mt-0">
                 <div class="flex-wrap gap-4 hidden sm:flex">
                     <div>
-                        <a href="" class="text-blue-800">Home</a>
-                        <span class="m-[7px]">/</span>
+                        <a href="" class="text-blue-800 mr-[5px] hover:underline">Home</a>
+                        <span class="mr-[5px]">/</span>
                     </div>
                     <div>
-                        <a href="" class="text-blue-800">News</a>
-                        <span class="m-[7px]">/</span>
+                        <a href="" class="text-blue-800 mr-[5px] hover:underline">News</a>
+                        <span class="mr-[5px]">/</span>
                     </div>
                     <div>
-                        <a href="" class="text-blue-800">${blog.titleCatgories}</a>
-                        <span class="m-[7px]">/</span>
+                        <a href="" class="text-blue-800 mr-[5px] hover:underline">${blog.titleCatgories}</a>
+                        <span class="mr-[5px]">/</span>
                     </div>
                     <div>
-                        <div>${blog.titleSubCatgories}</div>
+                        <div class="uppercase">${blog.titleSubCatgories}</div>
                     </div>
                 </div>
             </div>
@@ -47,14 +47,14 @@ const createBlog = (data) => {
             <div class="content flex md:max-w-[950px] mx-auto justify-between">
                 <div class="socail-media max-lg:hidden mr-20">
                     <div class="social-logo w-[46px] h-[135px]">
-                        <div class="bg-[#F9FAFB] w-[40px] h-[40px] flex justify-center items-center rounded-full mb-2"><a href=""><img
+                        <div class="bg-gray-100 w-[40px] h-[40px] flex justify-center items-center rounded-full mb-2"><a href=""><img
                                 class="w-[20px] h-[20px] hover:opacity-45" src="../assets/images/news-img/facebook-app-symbol.png "
                                 alt="facebook's logo" ></a>
                         </div>
-                        <div class="bg-[#F9FAFB] w-[40px] h-[40px] flex justify-center items-center rounded-full mb-2"><a href=""><img
+                        <div class="bg-gray-100 w-[40px] h-[40px] flex justify-center items-center rounded-full mb-2"><a href=""><img
                                 class="w-[20px] h-[20px] hover:opacity-45" src="../assets/images/news-img/twitter.png "
                                 alt="twitter's logo"></div ></a>
-                        <div class="bg-[#F9FAFB] w-[40px] h-[40px] flex justify-center items-center rounded-full mb-2"><a href=""><img
+                        <div class="bg-gray-100 w-[40px] h-[40px] flex justify-center items-center rounded-full mb-2"><a href=""><img
                                 class="w-[20px] h-[20px] hover:opacity-45" src="../assets/images/news-img/email.png " alt="email's logo"></a>
                         </div >
                     </div>
@@ -69,34 +69,32 @@ const createBlog = (data) => {
 
                     <p class="mb-[5px] font-bold">${content.infoTitle}</p>
                     <p>${content.infoSubTitle}
-                        <a class="text-blue-500" href="#">${content.infoLink}</a>
+                        <a class="text-blue-700 hover:underline" href="#">${content.infoLink}</a>
                     </p>
                     <p>${content.infoSubTitle2}
-                        <a class="text-blue-500" href="#">${content.infoLink2}</a>
+                        <a class="text-blue-700 hover:underline" href="#">${content.infoLink2}</a>
                     </p>
                     <p>${content.infoSubTitle3}
-                        <a class="text-blue-500" href="#">${content.infoLink3}</a>
+                        <a class="text-blue-700 hover:underline" href="#">${content.infoLink3}</a>
                     </p>
 
-                    <div class="socail-media flex mt-[80px] gap-6">
+                    <div class="socail-media flex items-center mt-[80px] gap-6">
                             <h3 class="font-bold text-black">SHARE:</h3>
                             <div class="flex gap-3">
                                 <div class=" w-[30px] h-[30px] flex justify-center items-center rounded-full mb-2"><a href="">
                                     <img
-                                            class="w-[30px] h-[30px] hover:opacity-45" src="../assets/images/icons/facebook-icon.svg"
-                                            alt="facebook's logo" ></a>
-                                    </div>
-                                    <div class=" w-[30px] h-[30px] flex justify-center items-center rounded-full mb-2"><a href="">
+                                    class="w-[30px] h-[30px] hover:opacity-45" src="../assets/images/icons/facebook-icon.svg"
+                                    alt="facebook's logo" ></a>
+                                </div>
+                                <div class=" w-[30px] h-[30px] flex justify-center items-center rounded-full mb-2"><a href="">
                                         <img
-                                            class="w-[30px] h-[30px] hover:opacity-45" src="../assets/images/icons/twitter_icon.svg"
-                                            alt="twitter's logo"></div ></a>
-                                    <div class=" w-[30px] h-[30px] flex justify-center items-center rounded-full mb-2"><a href=""><img
-                                            class="w-[30px] h-[30px] hover:opacity-45" src="../assets/images/icons/mail_icon.svg" alt="email's logo"></a>
-                                    </div >
-                            </div>
-                                    
+                                        class="w-[30px] h-[30px] hover:opacity-45" src="../assets/images/icons/twitter_icon.svg"
+                                        alt="twitter's logo"></div></a>
+                                <div class=" w-[30px] h-[30px] flex justify-center items-center rounded-full mb-2"><a href=""><img
+                                        class="w-[30px] h-[30px] hover:opacity-45" src="../assets/images/icons/mail_icon.svg" alt="email's logo"></a>
+                                </div >
+                            </div>       
                         </div> 
-
                 </div>
             `).join('')}   
             </div> 
