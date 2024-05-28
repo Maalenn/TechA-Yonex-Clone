@@ -40,7 +40,7 @@ export const badmintonObj = [
     {
         img: "../assets/images/badminton-images/athletes_240306.webp",
         title: "ATHLETES",
-        link: "../public/athletes.html"
+        link: "athletes-badminton.html"
     },
 ]
 // golfobj
@@ -63,7 +63,7 @@ export const golfObj = [
     {
         img: "../assets/images/golf-images/golf-athletes.webp",
         title: "ATHLETES",
-        link: "#"
+        link: "athletes-golf.html"
     }
 ]
 // tennisobj
@@ -106,7 +106,7 @@ export const tennisObj = [
     {
         img: "../assets/images/tennis-images/tennis-athlete.webp",
         title: "ATHLETES",
-        link: "#"
+        link: "athletes-tennis.html"
     },
 ]
 // runningobj

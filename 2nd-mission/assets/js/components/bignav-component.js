@@ -92,7 +92,7 @@ class Navbar extends HTMLElement {
                     <card-slide data-source="snowboarding-obj" grid-style="grid-cols-4"></card-slide>
                     <div class="flex max-w-[1200px] mx-auto">
                         <div class="flex flex-col items-center justify-center w-[213px]">
-                            <a id="hoverLink" href=""><img src="../assets/images/snowboard-images/skate-athlete.webp" alt=""></a>
+                            <a id="hoverLink" href="../public/athletes-snowboarding.html"><img src="../assets/images/snowboard-images/skate-athlete.webp" alt=""></a>
                             <p class="font-semibold text-[15px] text-black">Teams</p>
                         </div>
                     </div>
