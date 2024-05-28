@@ -1,9 +1,10 @@
 class Sidebar extends HTMLElement {
     connectedCallback(){
         this.innerHTML = `
+        <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90] overlay-page md:hidden" id="overlay-blur1" onclick="closeNav()"></div>
         <div
         id="mySidenav"
-        class=" bg-white absolute z-[100] w-0 h-screen left-0 top-0 duration-500 overflow-hidden"
+        class=" bg-white absolute z-[100] w-0 h-screen left-0 top-0 duration-500 overflow-hidden md:hidden"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
