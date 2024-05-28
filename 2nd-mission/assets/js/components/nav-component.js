@@ -12,12 +12,12 @@ const dataSources = {
 const CreateCard = (cards, gridStyle) => {
     
     return `
-    <div class="grid ${gridStyle} gap-4 max-w-[1600px] items-center w-[900px] flex-1">
+    <div class="grid ${gridStyle} max-w-[1600px] items-center flex-1">
         ${cards.map((card) => {
             return `
-            <div class="flex flex-col items-center justify-center w-[213px] ">
+            <div class="flex flex-col items-center justify-center max-w-[213px] ">
                 <a id="hoverLink" href="${card.link}" class="bg-[#F7F8FA]"><img src="${card.img}" alt=""></a>
-                <a href="${card.link}" class="text-[14px] text-black tracking-[1.5px] pt-2">${card.title}</a>
+                <a href="${card.link}" class="text-[16px] text-black tracking-[1.5px] pt-2">${card.title}</a>
             </div>
             `;
         }).join("")}

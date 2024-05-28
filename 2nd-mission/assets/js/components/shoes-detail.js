@@ -1,4 +1,4 @@
-import {Men, Women, Unisex} from '../data/detail-running-data.js';
+import {Men, Women, Unisex, AllRunning} from '../data/detail-running-data.js';
 import { Tennis } from "../data/detail-tennis-data.js";
 import { Golf } from '../data/detail-golf-data.js';
 import { Snowboard } from '../data/detail-snowboard.js';
@@ -9,7 +9,8 @@ const dataSource  = {
   "unisex-info": Unisex,
   'tennis-info': Tennis,
   'golf-info' : Golf,
-  'snowboard-info': Snowboard
+  'snowboard-info': Snowboard,
+  'allRunning-info': AllRunning
 }
 
 
@@ -42,7 +43,7 @@ const ShoesDetailContainer = (contents) => {
         <div class="w-[600px] max-w-[90%] mx-auto relative">
           <div id="productSlider" class="overflow-x-auto flex">
           ${content.mainImg.map(mainImage => `
-            <div class="product-img-slide relative">
+            <div class="product-img-slide relative z-[1]">
               <img
                 id="imageClick"
                 class="top-[50%] h-auto w-full object-cover max-md:scale-140 cursor-zoom-in"
@@ -55,7 +56,7 @@ const ShoesDetailContainer = (contents) => {
           </div>
           <button
             id="prevBtn"
-            class="absolute w-[80px] left-0 top-1/2 transform -translate-y-1/2 hidden z-[10000]"
+            class="bg-white opacity-50 absolute h-[75vh] d-flex justify-center items-center w-[80px] left-10 top-1/2 transform -translate-y-1/2 hidden z-[10000] cursor-pointer"
           >
             <img
               src="../assets/images/running-page/carrot_L.svg"
@@ -65,7 +66,7 @@ const ShoesDetailContainer = (contents) => {
           </button>
           <button
             id="nextBtn"
-            class="absolute w-[80px] right-0 top-1/2 transform -translate-y-1/2 hidden z-[10000]"
+            class="bg-white opacity-50 absolute h-[75vh] d-flex justify-center items-center w-[80px] right-0 top-1/2 transform -translate-y-1/2 hidden z-[10000] cursor-pointer"
           >
             <img
               src="../assets/images/running-page/carrot_R.svg"
@@ -402,8 +403,6 @@ function zoomImage(direction) {
   }
 
   currentZoom = newZoom;
-  console.log(currentZoom);
-
   // Update the CSS transform of the image to scale it
   let image = document.querySelector("#image-container img");
   image.style.transform = "scale(" + currentZoom + ")";

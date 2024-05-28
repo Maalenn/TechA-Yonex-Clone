@@ -24,7 +24,7 @@ const createAccordionContainer = (accordionArray) => {
                         <!-- Accordion Items -->
                         ${accordionSection.accordion.map((accordionItem) => {
                             return `
-                                <div class="accordion-item">
+                                <div class="accordion-item font-sans">
                                     <button class="accordion-btn py-[14px] px-[40px] font-semibold md:text-[18px] border-b w-full text-start flex items-center justify-between">
                                         ${accordionItem.title}
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 plus-icon">
@@ -35,7 +35,7 @@ const createAccordionContainer = (accordionArray) => {
                                         </svg>
                                     </button>
                                     <!-- Accordion Dropdown -->
-                                    <div class="accordion-dropdown border-b w-full max-h-[0px] px-[60px] items-center overflow-hidden duration-500 text-gray-500">
+                                    <div class="accordion-dropdown border-b w-full max-h-[0px] px-[60px] items-center overflow-hidden duration-500 text-gray-500 text-[14px]">
                                         ${accordionItem.content.map((accordionDropDown) => {
                                             return `
                                                 <div class="flex items-center gap-[20px]">

@@ -91,6 +91,8 @@ function openNav() {
     document.getElementById("mySidenav").classList.toggle('overflow-y-auto');
     document.getElementById('overlay-blur1').classList.remove('hidden');
     document.querySelector('body').classList.add('overflow-y-hidden')
+    document.querySelector('#hamburger-logo').classList.add('hidden')
+    document.querySelector('#close-sidebar').classList.remove('hidden')
 }
 
 function closeNav() {
@@ -98,6 +100,8 @@ function closeNav() {
     document.getElementById("mySidenav").classList.toggle('overflow-y-auto');
     document.getElementById('overlay-blur1').classList.add('hidden');
     document.querySelector('body').classList.remove('overflow-y-hidden')
+    document.querySelector('#hamburger-logo').classList.remove('hidden')
+    document.querySelector('#close-sidebar').classList.add('hidden')
 }
 
 

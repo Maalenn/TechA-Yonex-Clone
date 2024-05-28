@@ -102,5 +102,3 @@ const pageNumbers = (total, max, current) => {
   paginationButtons.onChange(e => {
     console.log('-- changed', e.target.value)
   });
-
-

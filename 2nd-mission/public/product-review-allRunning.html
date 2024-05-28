@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Running Products</title>
+      <link rel="stylesheet" href="../assets/css/styles.css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      />
+      <link rel="stylesheet" href="../src/input.css" />
+          <!-- yonex logo -->
+    <link
+    rel="icon"
+    href="../assets/images/icon/yonex.png"
+    type="image/icon type"
+  />
+    </head>
+    <body class="font-Oswald bg-[white]">
+    <!-- Start Navbar -->
+    <my-navbar bg-color="md:bg-white  text-black"></my-navbar>
+    <!-- End Navbar -->
+
+    <!-- Start SideBar -->
+    <my-sidebar></my-sidebar>
+    <!-- End Sidebar -->
+
+      <!-- Start Hero Cover -->
+      <section class="md:top-24 top-14 flex relative w-full justify-center md:mt-[5px] mt-0">
+        <secton class="w-[100%]">
+          <img
+            class="w-full max-lg:hidden"
+            src="https://www.yonex.com/media/catalog/category/CCAerus_PC.jpeg"
+            alt=""
+          />
+          <img
+            class="w-full hidden max-lg:block"
+            src="https://www.yonex.com/media/catalog/category/CCAERUS_mobile.jpeg"
+            alt=""
+          />
+          <ul
+            class="top-10 left-20 absolute flex gap-5 text-[0.75rem] justify-center"
+          >
+            <li class="flex gap-5 max-lg:text-[1.5rem]">
+              <a
+                href="index.html"
+                class="hover:border-b-[1px] border-[#050505] max-sm:text-[1.3rem] lg:text-[1.5rem]"
+              >
+                Home
+              </a>
+              <span
+                class="text-[0.75rem] max-lg:text-[1.5rem] max-sm:text-[1.3rem] lg:text-[1.5rem]"
+                >/</span
+              >
+            </li>
+            <li class="flex gap-5 ] max-lg:text-[1.5rem]">
+              <a
+                href="product-review-allRunning.html"
+                class="max-sm:text-[1.3rem] lg:text-[1.5rem] hover:border-b-[1px] border-[#080707]"
+            >
+                RUNNING
+              </a>
+
+
+          </ul>
+          <h1
+            class="absolute bottom-[47%] left-[47%] pr-10 w-[100%] uppercase text-[0.8rem] tracking-[0.4rem] max-sm:text-[1.6rem] max-sm:p-4 max-lg:text-white max-lg:tracking-[0.5rem] max-md:text-[2.6rem] max-lg:w-full max-lg:bottom-0 max-lg:left-0 max-lg:bg-black max-lg:text-[2.3rem] max-lg:p-10 lg:text-[2.2rem]"
+          >
+            Running
+          </h1>
+        </secton>
+      </section>
+
+      <!-- End Hero Cover -->
+
+      <!-- Start side bar drop down -->
+      <div class="mt-[100px]">
+        <sidebar-component data-source="sidebar-running"> </sidebar-component>
+      </div>
+      <!-- End side bar drop down -->
+
+      <!-- Start Athletes Information section -->
+      <section class="flex flex-col relative w-full justify-center max-lg:w-[100%] mt-[140px]">
+        <!-- Product Shopping Chart -->
+        <section class="max-w-[1280px] mx-auto grid grid-cols-[1fr,3fr] max-md:grid-cols-1">
+          <!--Start Sidebar left -->
+          <sidebarleft-component data-source="sidebarLeft-running"></sidebarleft-component>
+          <!-- End Sidebar left -->
+
+          <!-- Start card container -->
+          <product-card-component data-source="allRunning-card">
+
+        </section>
+        <!-- End Athletes Information -->
+      </section>
+      <!--End Athletes Information section   -->
+
+      <!-- Start Pagination -->
+      <script src="../assets/js/pagination.js"></script>
+      <!-- End pagination -->
+
+      <!-- Start footer -->
+      <my-footer></my-footer>
+      <!-- End footer -->
+
+          <!-- Js link for navbar -->
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/components/bignav-component.js"></script>
+    <script
+      src="../assets/js/components/nav-component.js"
+      type="module"
+    ></script>
+    <script src="../assets/js/components/side-bar-component.js"></script>
+      <!-- Js link for component of sidebar dropdown -->
+      <script
+      src="../assets/js/components/product-review-sidebar.js"
+      type="module"
+      ></script>
+      <!-- Js link for component sidebar left -->
+      <script
+      src="../assets/js/components/product-review-sidebar-left.js"
+      type="module"
+      ></script>
+      <script
+      src="../assets/js/components/product-review-card.js"
+      type="module"
+      ></script>
+      <script src="../assets/js/components/footer.js"></script>
+  </body>
+
+</html>

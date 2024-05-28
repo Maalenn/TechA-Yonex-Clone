@@ -1,11 +1,12 @@
-import { heroBanner, heroRepsonsive , cardSlider, cardSliderAthlete} from '../data/homepage-data.js';
+import { heroBanner, heroRepsonsive , cardSlider, cardSliderAthlete, cardSliderNewArrival} from '../data/homepage-data.js';
 
 //attach the attribute for data
 const dataSources = {
     'hero-banner': heroBanner,
     'hero-responsive': heroRepsonsive[0].imgResponsive,
     'card-carousel': cardSlider,
-    'athlete-carousel': cardSliderAthlete
+    'athlete-carousel': cardSliderAthlete,
+    'new-arrival-carousel': cardSliderNewArrival
 };
 
 //hero banner component
@@ -40,10 +41,10 @@ const cardAutoSlide = (items) => {
 const cardCarousel = (cards, pos) =>{
     return `
         <section class="mx-auto px-[50px] py-[45px]">
-            <ul class="overflow-x-hidden w-[100%] slideShow relative grid grid-cols-[repeat(${cards.length},300px)] ssm:grid-cols-[repeat(${cards.length},330px)] smd:grid-cols-[repeat(5,450px)] slg:grid-cols-[repeat(5,399px)] sxl:grid-cols-[repeat(5,300px)] max-sm:grid-cols-[repeat(5,280px)] max-md:grid-cols-[repeat(5,340px)] max-lg:grid-cols-[repeat(5,360px)] overflow-auto font-[Oswald]">
+        <ul class="overflow-x-hidden w-[100%] slideShow relative grid grid-cols-[repeat(${cards.length},300px)] ssm:grid-cols-[repeat(${cards.length},330px)] smd:grid-cols-[repeat(${cards.length},450px)] slg:grid-cols-[repeat(${cards.length},399px)] sxl:grid-cols-[repeat(${cards.length},300px)] max-sm:grid-cols-[repeat(${cards.length},280px)] max-md:grid-cols-[repeat(${cards.length},340px)] max-lg:grid-cols-[repeat(${cards.length},360px)] overflow-auto font-[Oswald]">
             ${cards.map(card => `
                 <li class="slide-list slg:px-[20px]">
-                    <a href="" class"relative">
+                    <a href="${card.link}" class"relative">
                         <img class="w-[260px] bg-[#f7f8f9]" src="${card.img}" alt=""/>
                         <h3 class="${pos}">
                             ${card.title}
@@ -53,10 +54,10 @@ const cardCarousel = (cards, pos) =>{
             `).join('')}
             </ul> 
             <div class="back absolute top-[52%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5">
-                <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
+                <img class="w-[1.5rem]" src="/tech-a-project/2nd-mission/assets/images/product-review/right-arrow.svg" alt="" />
             </div>
             <div class="skip absolute top-[52%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5">
-                <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
+                <img class="w-[1.5rem]" src="/tech-a-project/2nd-mission/assets/images/product-review/left-arrow.svg" alt="" />
             </div>
         </section>
     `;

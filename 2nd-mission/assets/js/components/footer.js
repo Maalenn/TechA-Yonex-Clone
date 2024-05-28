@@ -15,22 +15,22 @@ class Footer extends HTMLElement {
                 class="flex justify-between items-center md:gap-6 md:px-0 px-3"
             >
                 <img
-                src="../assets/images/icons/facebook-icon.svg"
+                src="/tech-a-project/2nd-mission/assets/images/icons/facebook-icon.svg"
                 alt="facebook-icon"
                 class="size-[40px] "
                 />
                 <img
-                src="../assets/images/icons/twitter_icon.svg"
+                src="/tech-a-project/2nd-mission/assets/images/icons/twitter_icon.svg"
                 alt="twittter-icon"
                 class="size-[40px]"
                 />
                 <img
-                src="../assets/images/icons/youtube_icon.svg"
+                src="/tech-a-project/2nd-mission/assets/images/icons/youtube_icon.svg"
                 alt="youtube-icon"
                 class="size-[40px]"
                 />
                 <img
-                src="../assets/images/icons/instagram_icon.svg"
+                src="/tech-a-project/2nd-mission/assets/images/icons/instagram_icon.svg"
                 alt="instagram-icon"
                 class="size-[40px] "
                 />

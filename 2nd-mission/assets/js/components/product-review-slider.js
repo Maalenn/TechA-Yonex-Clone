@@ -20,7 +20,7 @@ const SliderContainer = (sliderContents) => {
               .map(
                 (item) => `
               <li class="slide-list slg:px-[20px] max-[500px]:px-[40px]">
-                <a href="athlete-profile.html">
+                <a href="${item.link}">
                 <div> 
                 <img
                     class="w-[260px] shadow-[inset_0_0_50px_rgba(0,0,0,1)]"
