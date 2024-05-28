@@ -403,8 +403,6 @@ function zoomImage(direction) {
   }
 
   currentZoom = newZoom;
-  console.log(currentZoom);
-
   // Update the CSS transform of the image to scale it
   let image = document.querySelector("#image-container img");
   image.style.transform = "scale(" + currentZoom + ")";
