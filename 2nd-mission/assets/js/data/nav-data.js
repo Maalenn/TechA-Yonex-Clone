@@ -114,17 +114,17 @@ export const runningObj = [
     {
         img: "../assets/images/running-images/shoe-orange.webp",
         title: "MEN",
-        link: "../public/product-review-allRunning.html"
+        link: "../public/product-review-men.html"
     },
     {
         img: "../assets/images/running-images/shoe-white.webp",
         title: "WOMEN",
-        link: "#"
+        link: "../public/product-review-women.html"
     },
     {
         img: "../assets/images/running-images/shoe-brown.webp",
         title: "UNISEX",
-        link: "#"
+        link: "../public/product-review-unisex.html"
     },
 ]
 // snowboardobj
