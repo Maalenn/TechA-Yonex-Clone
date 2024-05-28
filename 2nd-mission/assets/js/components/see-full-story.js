@@ -1,7 +1,8 @@
-import { categories } from "../data/see-full-story-data.js"
+import { categories, categoriesRoland } from "../data/see-full-story-data.js"
 
 const blogData = {
     'categories' : categories,
+    'categories-roland' : categoriesRoland,
 
 }
 
@@ -61,11 +62,17 @@ const createBlog = (data) => {
                 </div>
             ${blog.additionalContent.map(content => `
                 <div class="article md:max-w-[950px] px-[20px] mx-auto text-[16px] mb-[16px] text-[#737A7E] font-sans">
-                    <p class="mb-[20px]">${content.info}</p>
-                    <p class="mb-[20px]">${content.info2}</p>
-                    <p class="mb-[20px]">${content.info3}</p>
-                    <p class="mb-[20px]">${content.info4}</p>
-                    <p class="mb-[20px]">${content.info5}</p>
+                    <p class="mb-[40px]">${content.info}</p>
+                    <p class="mb-[40px]">${content.info2}</p>
+                    <p class="mb-[40px]">${content.info3}</p>
+                    <p class="mb-[40px]">${content.info4}</p>
+                    <p class="mb-[40px]">${content.info5}</p>
+                    <p class="mb-[40px]">${content.info6}</p>
+                    <p class="mb-[40px]">${content.info7}</p>
+                    <p class="mb-[40px]">${content.info8}</p>
+                    <p class="mb-[40px]">${content.info9}</p>
+                    <p class="mb-[40px]">${content.info10}</p>
+                    <p class="mb-[40px]">${content.info11}</p>
 
                     <p class="mb-[5px] font-bold">${content.infoTitle}</p>
                     <p>${content.infoSubTitle}
