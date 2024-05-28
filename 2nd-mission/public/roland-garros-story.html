@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roland-Garros 2024: Story</title>
+    <link rel="icon" href="../assets/images/icon/yonex.png" type="image/icon type" />
+    <!-- google icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- tailwind css cdn link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../src/input.css" />
+
+    <style>
+        .top-block {
+            grid-template-areas:
+                "main ."
+                "main .";
+        }
+
+        /* .active {
+    border-bottom: ;
+  } */
+    </style>
+</head>
+
+<body class="font-Oswald bg-[#F7F8F9]">
+    <!-- Start Navbar -->
+    <my-navbar bg-color="md:bg-white  text-black"></my-navbar>
+    <!-- End Navbar -->
+
+    <!-- Start SideBar -->
+    <my-sidebar></my-sidebar>
+    <!-- End Sidebar -->
+
+    <!-- start read full story -->
+    <title-categories categories="categories-roland"></title-categories>
+    <!-- end read full story -->
+
+    <!-- Start Footer -->
+    <my-footer></my-footer>
+    <!-- End Footer -->
+    
+    <script src="../assets/js/components/bignav-component.js"></script>
+    <script src="../assets/js/components/nav-component.js" type="module"></script>
+    <script type="module" src="../assets/js/components/see-full-story.js"></script>
+    <script src="../assets/js/components/side-bar-component.js"></script>
+    <script src="../assets/js/components/footer.js"></script>
+    <script src="../assets/js/news.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <!-- feature/33-newsPage-navBar-footer -->
+</body>
+
+</html>
