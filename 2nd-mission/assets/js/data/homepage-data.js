@@ -88,22 +88,22 @@ export const cardSlider = [
 export const cardSliderNewArrival = [
     {
         link: "../public/detail-golf.html",
-        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/detail-golf/ezone.png",
+        img:"../assets/images/detail-golf/ezone.png",
         title:"EZONE GT DRIVER TYPE S",
     },
     {
         link: "../public/detail-tennis.html",
-        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/detail-tennis/percept97.png",
+        img:"../assets/images/detail-tennis/percept97.png",
         title:"PERCEPT 97",
     },
     {
         link: "../public/detail-badminton.html",
-        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/productPage/Astrox88.png",
+        img:"../assets/images/productPage/Astrox88.png",
         title:"ASTROX 88 S GAME",
     },
     {
-        link: "../public/detail-snowboarding.html",
-        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/detail-snowboard/regna.png",
+        link: "../public/detail-snowboard.html",
+        img:"../assets/images/detail-snowboard/regna.png",
         title:"REGNA",
     },
     {
@@ -113,7 +113,7 @@ export const cardSliderNewArrival = [
     },
     {
         link: "../public/detail-men.html",
-        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/running-page/shr100xm_440_1.webp",
+        img:"../assets/images/running-page/shr100xm_440_1.webp",
         title:"SAFERUN 100X MEN",
     },  
     {
@@ -136,7 +136,7 @@ export const cardSliderAthlete = [
     },
     {
         link: "../public/athlete-profile-tennis.html",
-        img:"http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/product-review/t1.webp",
+        img:"../assets/images/product-review/t1.webp",
         title:"ELENA RYBAKINA",
     },
     {
