@@ -123,44 +123,6 @@ export const cardSliderNewArrival = [
     }
 ]
 
-// export const cardSliderNewArrival = [
-//     {
-//         link: "../public/athlete-profile-badminton.html",
-//         img:"../assets/images/product-review/al1.webp",
-//         title:"VIKTOR AXELSON",
-//     },
-//     {
-//         link: "#",
-//         img:"../assets/images/product-review/Osaka_570x570_07.webp",
-//         title:"NAOMI OSAKAS",
-//     },
-//     {
-//         link: "#",
-//         img:"../assets/images/product-review/al29.webp",
-//         title:"KENTO MOMOTA",
-//     },
-//     {
-//         link: "#",
-//         img:"../assets/images/product-review/al3.webp",
-//         title:"AKANE YAMAGUCHI",
-//     },
-//     {
-//         link: "#",
-//         img:"../assets/images/product-review/nakashima_570x570.webp",
-//         title:" BRANDOM NAKASHIMA",
-//     },
-//     {
-//         link: "#",
-//         img:"../assets/images/product-review/vekic_570x570.webp",
-//         title:"DONNA VEKIC"
-//     },
-//     {
-//         link: "#",
-//         img:"../assets/images/product-review/kim_570x570_.webp",
-//         title:"HYOO JOO KIM",
-//     },  
-// ]
-
 export const cardSliderAthlete = [
     {
         link: "../public/athlete-profile-badminton.html",
