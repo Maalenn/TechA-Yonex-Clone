@@ -205,6 +205,7 @@ export const snowboardCard = [
 
 export const AllRunningCard = [
   {
+    linkPage: "../public/detail-allRunning.html",
     img: "https://www.yonex.com/media/catalog/product/s/h/shra2m_mag_476_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "CARBON CRUISE AERUS MEN",
     productColorsOpt: [
@@ -214,6 +215,7 @@ export const AllRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shra2l_icgr_326.jpg?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "CARBON CRUISE AERUS WOMEN",
     productColorsOpt: [
@@ -222,6 +224,7 @@ export const AllRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shra1m_502_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN AERUS MEN",
     productColorsOpt: [
@@ -231,6 +234,7 @@ export const AllRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shra1l_377_.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN AERUS WOMEN",
     productColorsOpt: [
@@ -239,6 +243,7 @@ export const AllRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN 100X MEN",
     productColorsOpt: [
@@ -249,6 +254,7 @@ export const AllRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shr100xl_663_1_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN 100X WOMEN",
     productColorsOpt: [
@@ -259,6 +265,7 @@ export const AllRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shr200xm_011_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN 200X MEN",
     productColorsOpt: [
@@ -268,6 +275,7 @@ export const AllRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/j/p/jpn_shr200xl_245-2_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN 200X WOMEN",
     productColorsOpt: [
@@ -276,6 +284,7 @@ export const AllRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shrfj1m_des_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "GRACE (WOMEN'S)",
     productColorsOpt: [
@@ -285,6 +294,7 @@ export const AllRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/_/_/__shrfj1l_324_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN FITJOG WOMEN",
     productColorsOpt: [
@@ -294,6 +304,7 @@ export const AllRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shr900c_bk.jpg?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN 900C",
     productColorsOpt: [
@@ -307,6 +318,7 @@ export const AllRunningCard = [
 
 export const MenRunningCard = [
   {
+    linkPage: "../public/detail-men.html",
     img: "https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN 100X MEN",
     productColorsOpt: [
@@ -317,6 +329,7 @@ export const MenRunningCard = [
     ]
   },
   {
+    linkPage: "../public/detail-men.html",
     img: "https://www.yonex.com/media/catalog/product/s/h/shra1m_502_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN AERUS MEN",
     productColorsOpt: [
@@ -326,6 +339,7 @@ export const MenRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shr200xm_011_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "SAFERUN 200X MEN",
     productColorsOpt: [
@@ -335,6 +349,7 @@ export const MenRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shrfj1m_des_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "GRACE (WOMEN'S)",
     productColorsOpt: [
@@ -344,12 +359,79 @@ export const MenRunningCard = [
     ]
   },
   {
+    linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shra2m_mag_476_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "CARBON CRUISE AERUS MEN",
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/s/h/shra2m_mag_476_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra2m-l_icgr_326_2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra2m_bb_118_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ]
+  },
+];
+
+export const WomenRunningCard = [
+  {
+    linkPage: "../public/detail-women.html",
+    img: "https://www.yonex.com/media/catalog/product/s/h/shr100xl_663_1_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "SAFERUN 100X WOMEN",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/s/h/shr100xm_w_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr100xm_a.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr100xl_663_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr100xl_b.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50"
+    ]
+  },
+  {
+    linkPage: "#",
+    img: "https://www.yonex.com/media/catalog/product/s/h/shra1l_377_.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "SAFERUN AERUS WOMEN",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/s/h/shra1l_131.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shra1l_377.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ]
+  },
+  {
+    linkPage: "#",
+    img: "https://www.yonex.com/media/catalog/product/j/p/jpn_shr200xl_245-2_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "SAFERUN 200X WOMEN",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/j/p/jpn_shr200xl_245-2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/j/p/jpn_shr200xl_623-2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ]
+  },
+  {
+    linkPage: "#",
+    img: "https://www.yonex.com/media/catalog/product/_/_/__shrfj1l_324_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "SAFERUN FITJOG WOMEN",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_des422_fs_rs_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/_/_/__shrfj1l_324.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_bkw245_fs_rs.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ]
+  },
+  
+  {
+    linkPage: "#",
+    img: "https://www.yonex.com/media/catalog/product/s/h/shra2l_icgr_326.jpg?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "CARBON CRUISE AERUS WOMEN",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/s/h/shra2l_icgr_326.jpg?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shra2l_pe_025.jpg?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ]
+  },
+];
+
+export const UnisexRunningCard = [
+  {
+    linkPage: "../public/detail-unisex.html",
+    img: "https://www.yonex.com/media/catalog/product/s/h/shr900c_bk.jpg?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
+    productName: "SAFERUN 900C",
+    productColorsOpt: [
+      "https://www.yonex.com/media/catalog/product/s/h/shr900c_bk007_fs_rs.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr900c_nb019_fs_rs_.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr900c_lg_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+      "https://www.yonex.com/media/catalog/product/s/h/shr900c_br_015_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
     ]
   },
 ];

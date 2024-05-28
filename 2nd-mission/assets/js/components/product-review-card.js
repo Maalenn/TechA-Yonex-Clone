@@ -1,4 +1,13 @@
-import {badmintonCard, tennisCard, golfCard, snowboardCard , AllRunningCard, MenRunningCard} from '../data/product-review-card-data.js'
+import {
+    badmintonCard, 
+    tennisCard, 
+    golfCard, 
+    snowboardCard , 
+    AllRunningCard, 
+    MenRunningCard,
+    WomenRunningCard,
+    UnisexRunningCard,
+} from '../data/product-review-card-data.js'
 
 const dataSources = {
     'badminton-card': badmintonCard,
@@ -7,6 +16,8 @@ const dataSources = {
     'snowboard-card': snowboardCard,
     'allRunning-card': AllRunningCard,
     'menRunning-card': MenRunningCard,
+    'womenRunning-card': WomenRunningCard,
+    'unisexRunning-card': UnisexRunningCard,
 }
 
 const CardContainer = (cardContents) =>{
@@ -15,7 +26,7 @@ const CardContainer = (cardContents) =>{
             <section class="w-[100%] grid grid-cols-3 max-sm:grid-cols-2 gap-10 mb-20">
             ${cardContents.map((items) => `
                 <aside class="relative w-[100%] flex flex-col justify-center pt-[1.5rem] pb-5 group z-[1000] mt-10">    
-                    <a href="product-detail.html">
+                    <a href="${items.linkPage}">
                         <!-- scale background -->
                             <div role="hidden" class="absolute w-full h-full group-hover:shadow-2xl bg-[white] group-hover:-scale-x-125"></div>
                         <!-- Card -->

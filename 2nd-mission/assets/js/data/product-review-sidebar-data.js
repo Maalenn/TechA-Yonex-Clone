@@ -1,49 +1,148 @@
 export const sidebarBadminton = [
-    "All Racquets",
-    "ASTROX",
-    "NANORAY",
-    "DUORA",
-    "ARCSABER",
-    "ISOMETRIC",
-    "MUSCLE POWER",
-    "B-Series",
-    "Junior"
+    {
+        title: "All Racquets",
+        link: "#"
+    },
+    {
+        title: "ASTROX",
+        link: "#"
+    },
+    {
+        title: "NANORAY",
+        link: "#"
+    },
+    {
+        title: "DUORA",
+        link: "#"
+    },
+    {
+        title: "ARCSABER",
+        link: "#"
+    },
+    {
+        title: "ISOMETRIC",
+        link: "#"
+    },
+    {
+        title: "MUSCLE POWER",
+        link: "#"
+    },
+    {
+        title: "B-Series",
+        link: "#"
+    },
+    {
+        title: "Junior",
+        link: "#"
+    },
 ]
 
 export const sidebarTennis = [
-    "All Racquets",
-    "PERCEPT – Control",
-    "EZONE - Power",
-    "VCORE - Spin",
-    "ASTREL - Comfort",
-    "Junior"
+    {
+        title: "All Racquets",
+        link: "#"
+    },
+    {
+        title: "PERCEPT – Control",
+        link: "#"
+    },
+    {
+        title: "EZONE - Power",
+        link: "#"
+    },
+    {
+        title: "VCORE - Spin",
+        link: "#"
+    },
+    {
+        title: "ASTREL - Comfort",
+        link: "#"
+    },
+    {
+        title: "Junior",
+        link: "#"
+    },
 ]
 
 export const sidebarGolf = [
-    "All Clubs",
-    "EZONE GT",
-    "FORGED IRONS",
-    "Royal EZONE",
-    "EZONE ELITE",
-    "FioreE PO",
-    "EZONE PUTTERS / TP PUTTERS",
-    "Junior"
+    {
+        title: "All Clubs",
+        link: "#"
+    },
+    {
+        title: "EZONE GT",
+        link: "#"
+    },
+    {
+        title: "FORGED IRONS",
+        link: "#"
+    },
+    {
+        title: "Royal EZONE",
+        link: "#"
+    },
+    {
+        title: "EZONE ELITE",
+        link: "#"
+    },
+    {
+        title: "FioreE PO",
+        link: "#"
+    },
+    {
+        title: "EZONE PUTTERS / TP PUTTERS",
+        link: "#"
+    },
+    {
+        title: "Junior",
+        link: "#"
+    }
 ]
 
 export const sidebarSnowboard = [
-    "All Boards",
-    "FREE RIDE",
-    "FREESTYLE",
-    "ALL-AROUND",
-    "ALPINE",
-    "CARVING"
+    {
+        title: "All Boards",
+        link: "#"
+    },
+    {
+        title: "FREE RIDE",
+        link: "#"
+    },
+    {
+        title: "FREESTYLE",
+        link: "#"
+    },
+    {
+        title: "ALL-AROUND",
+        link: "#"
+    },
+    {
+        title: "ALPINE",
+        link: "#"
+    },
+    {
+        title: "CARVING",
+        link: "#"
+    }
 ]
 
 export const sidebarRunning = [
-    "All Running",
-    "MEN",
-    "WOMEN",
-    "UNISEX",
+    {
+        title: "All Running",
+        link: "../public/product-review-allRunning.html"
+    },
+    {
+        title: "MEN",
+        link: "../public/product-review-men.html"
+    },
+    {
+        title: "WOMEN",
+        link: "../public/product-review-women.html"
+    },
+    {
+        title: "UNISEX",
+        link: "../public/product-review-unisex.html"
+    }
 ]
 
 

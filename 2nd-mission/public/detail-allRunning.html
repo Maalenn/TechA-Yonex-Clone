@@ -3,34 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SAFERUN 100X WOMEN</title>
+    <title>CARBON CRUISE AERUS MEN</title>
 
-    <!-- yonex logo -->
-    <link
-    rel="icon"
-    href="../assets/images/icon/yonex.png"
-    type="image/icon type"
-    />
-    
+    <!-- Yonex logo -->
+    <link rel="icon" href="../assets/images/icon/yonex.png" type="image/icon type"/>
+
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- CSS link  -->
+    <!-- CSS link -->
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
+
   <body class="font-Oswald">
-    <!-- Start Navbar -->
-    <my-navbar bg-color="md:bg-white text-black"></my-navbar>
-
-    <!-- Start Sidebar -->
-    <my-sidebar></my-sidebar>
-
-    <!-- start image zoom -->
-    <zoom-img
-      zoomImg="https://www.yonex.com/media/catalog/product/s/h/shr100xl_663_1_1.png?quality=80&fit=bounds&height=819&width=600&canvas=600:819"
-    ></zoom-img>
-    <!-- end image zoom -->
-
     <!-- Start Navbar -->
     <my-navbar bg-color="md:bg-white text-black"></my-navbar>
 
@@ -45,13 +30,18 @@
       <hero-responsive card-data-source="hero-responsive"></hero-responsive>
     </div>
 
-    <!-- background wrapper in product section -->
+    <!-- Start Image Zoom -->
+    <zoom-img
+      zoomImg="https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_1.png?quality=80&fit=bounds&height=819&width=600&canvas=600:819"
+    ></zoom-img>
+    <!-- End Image Zoom -->
+
+    <!-- Background Wrapper in Product Section -->
     <div class="mb-[100px]">
       <div
         class="absolute z-[-1] h-[1100px] bg-800 left-0 top-0 bg-[#f7f8f9] md:w-[70%] w-full"
       ></div>
     </div>
-    <!-- background wrapper in product section -->
 
     <!-- Start Menu link -->
     <ul
@@ -62,46 +52,65 @@
       </li>
       <p>/</p>
       <li class="text-primary-100 hover:underline">
-        <a href="product-review-allRunning.html">Running</a>
+        <a href="tech-a-project/2nd-mission/public/product-review-allRunning.html">Running</a>
       </li>
       <p>/</p>
       <li class="text-primary-100 hover:underline">
-        <a href="product-review-women.html">WOMEN</a>
+        <a href="detail-men.html">MEN</a>
       </li>
       <p>/</p>
-      <li class="uppercase">SAFERUN 100X WOMEN</li>
+      <li class="uppercase">SAFERUN 100X MEN</li>
     </ul>
     <!-- End Menu link -->
 
-    <!-- Start main content -->
+    <!--Start main content -->
     <main class="max-w-[1280px] mx-auto px-5">
-      <!-- start product detail container  -->
+      <!-- Start Product Detail Container -->
       <div class="product-card" id="product-description">
-        <shoes-details data-source="wowen-info"></shoes-details>
+        <shoes-details data-source="allRunning-info"></shoes-details>
       </div>
-      <!-- start product detail container  -->
 
-      <!-- start sticky nav container  -->
+      <!-- Start Sticky Nav Container -->
       <product-sticky-nav
-        prodName="SAFERUN 100X WOMEN"
+        prodName="CARBON CRUISE AERUS MEN"
         menuLinks='[
           {"href": "#product-description", "link": "Description"},
-          {"href": "#product-technology", "link": "Technology"}
+          {"href": "#product-technology", "link": "Technology"},
+          {"href": "#product-specifications", "link": "Specifications"}
         ]'
       ></product-sticky-nav>
-      <!-- end sticky nav container  -->
 
-      <!-- start technology -->
+      <!-- Start Technology Section -->
       <div id="product-technology">
         <technology-carousel data-source="men-techno"></technology-carousel>
       </div>
-      <!-- end technology -->
+
+      <!-- start specification  -->
+      <div id="product-specifications" class="pt-[200px]">
+        <product-specifications
+          specImg="https://www.yonex.com/media/wysiwyg/PDPs/3dpowercarbon.jpg"
+          specTitle="3D POWER CARBON"
+          specDes="A full-length carbon structure optimized for speed running. </br>
+          Designed with an upward-curved front to enhance a natural feel when stepping forward."
+        >
+        </product-specifications>
+
+        <product-specifications
+          specImg="https://www.yonex.com/media/wysiwyg/PDPs/waveshoelace.jpg"
+          specTitle="WAVE SHOELACE"
+          specDes="An intricate wave-like design that keeps the shoelaces securely fastened."
+        >
+        </product-specifications>
+      </div>
+    <!-- end specification  -->
     </main>
-    <!-- End main content -->
+    <!--End main content -->
+
+
 
     <!-- Start Footer -->
     <my-footer></my-footer>
-    <!-- End Footer -->
+    <!-- End Footer  -->
 
     <!-- Scripts -->
     <script src="../assets/js/index.js"></script>
@@ -121,6 +130,7 @@
       src="../assets/js/components/technology-carousel.js"
       type="module"
     ></script>
+    <script src="../assets/js/components/product-specification.js"></script>
     <script src="../assets/js/components/footer.js"></script>
   </body>
 </html>
