@@ -35,7 +35,7 @@ export const heroGolf = [
 
 export const heroSnowboard = [
   {
-    textColor: "white",
+    textColor: "black",
     imgLg: "https://www.yonex.com/media/catalog/category/header_snow01.jpg",
     imgMd: "https://www.yonex.com/media/catalog/category/header_snow01_sp.jpg",
     productName: "snowborading",

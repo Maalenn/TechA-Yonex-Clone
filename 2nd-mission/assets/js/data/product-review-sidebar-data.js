@@ -39,6 +39,13 @@ export const sidebarSnowboard = [
     "CARVING"
 ]
 
+export const sidebarRunning = [
+    "All Running",
+    "MEN",
+    "WOMEN",
+    "UNISEX",
+]
+
 
 
 
