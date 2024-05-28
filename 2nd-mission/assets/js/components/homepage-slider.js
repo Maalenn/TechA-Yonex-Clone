@@ -54,10 +54,10 @@ const cardCarousel = (cards, pos) =>{
             `).join('')}
             </ul> 
             <div class="back absolute top-[52%] right-[30px] max-sm:right-0 md:right-[20px]  bg-[#f3f2f2] p-5">
-                <img class="w-[1.5rem]" src="../assets/images/product-review/right-arrow.svg" alt="" />
+                <img class="w-[1.5rem]" src="/tech-a-project/2nd-mission/assets/images/product-review/right-arrow.svg" alt="" />
             </div>
             <div class="skip absolute top-[52%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5">
-                <img class="w-[1.5rem]" src="../assets/images/product-review/left-arrow.svg" alt="" />
+                <img class="w-[1.5rem]" src="/tech-a-project/2nd-mission/assets/images/product-review/left-arrow.svg" alt="" />
             </div>
         </section>
     `;

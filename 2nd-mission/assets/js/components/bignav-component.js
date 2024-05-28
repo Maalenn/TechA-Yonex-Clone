@@ -133,12 +133,12 @@ class Navbar extends HTMLElement {
             </div>
           </div>
           <button onclick="opensearchresponse()" class="inline-block cursor-pointer md:hidden mr-3">
-            <img src="../assets/images/icons/search-interface-symbol (1).png" alt="" class="size-4"/>
+            <img src="/tech-a-project/2nd-mission/assets/images/icons/search-interface-symbol (1).png" alt="" class="size-4"/>
           </button>
           <div class="bg-white items-center gap-2 justify-between shadow-md absolute top-0 -left-[2px] w-full py-[15px] hidden" id="search-bar2">
             <input type="text" placeholder="Search" class="w-full pl-3 h-full">
             <button onclick="closesearchresponse()" class="size-[30px]">
-              <img src="../assets/images/icons/close.svg" alt="" class="bg-[#6E7677] rounded-[50%] size-[16px]"/>
+              <img src="/tech-a-project/2nd-mission/assets/images/icons/close.svg" alt="" class="bg-[#6E7677] rounded-[50%] size-[16px]"/>
             </button>
           </div>
           <div class="w-[120px] fill-slate-100 items-center gap-3 md:flex hidden relative">
@@ -159,13 +159,13 @@ class Navbar extends HTMLElement {
                 </button>
                 <input type="text" placeholder="Search" class="pr-20">
                 <button onclick="closesearch()" class="size-[30px]">
-                  <img src="../assets/images/icons/close.svg" alt="" class="bg-[#6E7677] rounded-[50%] size-[16px]"/>
+                  <img src="/tech-a-project/2nd-mission/assets/images/icons/close.svg" alt="" class="bg-[#6E7677] rounded-[50%] size-[16px]"/>
                 </button>
               </div>
             </div>
                
             <img
-              src="../assets/images/icons/accessibility_icon.svg"
+              src="/tech-a-project/2nd-mission/assets/images/icons/accessibility_icon.svg"
               alt=""
               class="max-w-[50px] cursor-pointer mb-[7.5px] flex-shrink"
             />
