@@ -1,26 +1,12 @@
 class Sidebar extends HTMLElement {
     connectedCallback(){
         this.innerHTML = `
-        <div class="bg-black opacity-50 w-full hidden h-screen fixed z-[90] overlay-page md:hidden" id="overlay-blur1" onclick="closeNav()"></div>
+        <div class="bg-black opacity-50 w-full hidden h-screen top-[62px] fixed z-[9000] overlay-page md:hidden" id="overlay-blur1" onclick="closeNav()"></div>
         <div
         id="mySidenav"
-        class=" bg-white absolute z-[100] w-0 h-screen left-0 top-0 duration-500 overflow-hidden md:hidden"
+        class="bg-white absolute z-[9000] w-0 h-screen left-0 top-[62px] duration-500 overflow-hidden md:hidden"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="relative left-3 right-0 w-[35px] top-2"
-          onclick="closeNav()"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18 18 6M6 6l12 12"
-          />
-        </svg>
+        
         <ul class="mt-4 ml-4 flex-col gap-[24px] flex font-[Oswald]">
           <li class="border-b">
             <div class="flex justify-between">
@@ -44,20 +30,20 @@ class Sidebar extends HTMLElement {
               class="max-h-0 overflow-y-hidden duration-300 pl-10 bg-[#F7F8F9] font-[Oswald] mt-4"
               id="badminton-drop"
             >
-              <li class="tracking-[2px] pb-2"><a href="../public/product-review.html">RAQUEST</a></li>
+              <li class="tracking-[2px] pb-2"><a href="../public/product-review-badminton.html">RAQUEST</a></li>
               <li class="tracking-[2px] pb-2"><a href="">STRINGS</a></li>
               <li class="tracking-[2px] pb-2"><a href="">SHUTTLECOCKS</a></li>
               <li class="tracking-[2px] pb-2"><a href="">APPAREL</a></li>
               <li class="tracking-[2px] pb-2"><a href="">SHOES</a></li>
               <li class="tracking-[2px] pb-2"><a href="">BAGS</a></li>
               <li class="tracking-[2px] pb-2"><a href="">ACCESSORIES</a></li>
-              <li class="tracking-[2px] pb-2"><a href="../public/athletes.html">ATHLETES</a></li>
+              <li class="tracking-[2px] pb-2"><a href="../public/athletes-badminton.html">ATHLETES</a></li>
             </ul>
           </li>
           <li class="border-b">
             <div class="flex justify-between">
               <a
-                href="#"
+                href="../public/product-review-golf.html"
                 class="py-2 px-4 block text-[#1f2427] transition duration-300 tracking-[1px] text-[18px]"
                 >GOLF</a
               >
@@ -76,7 +62,7 @@ class Sidebar extends HTMLElement {
               class="max-h-0 overflow-y-hidden duration-300 pl-10 bg-[#F7F8F9] font-[Oswald] mt-4"
               id="golf-drop"
             >
-              <li class="tracking-[2px] pb-2"><a href="golf.html">CLUBS</a></li>
+              <li class="tracking-[2px] pb-2"><a href="../public/product-review-golf.html">CLUBS</a></li>
               <li class="tracking-[2px] pb-2"><a href="">SHAFTS</a></li>
               <li class="tracking-[2px] pb-2"><a href="">GEAR</a></li>
               <li class="tracking-[2px] pb-2"><a href="">ATHLETES</a></li>
@@ -104,14 +90,14 @@ class Sidebar extends HTMLElement {
               class="max-h-0 overflow-y-hidden duration-300 pl-10 bg-[#F7F8F9] font-[Oswald] mt-4"
               id="tennis-drop"
             >
-              <li class="tracking-[2px] pb-2"><a href="../public/tennis.html">RAQUEST</a></li>
+              <li class="tracking-[2px] pb-2"><a href="../public/product-review-tennis.html">RAQUEST</a></li>
               <li class="tracking-[2px] pb-2"><a href="">STRINGS</a></li>
               <li class="tracking-[2px] pb-2"><a href="">BALLS</a></li>
               <li class="tracking-[2px] pb-2"><a href="">APPAREL</a></li>
               <li class="tracking-[2px] pb-2"><a href="">FOOTWEAR</a></li>
               <li class="tracking-[2px] pb-2"><a href="">BAGS</a></li>
               <li class="tracking-[2px] pb-2"><a href="">ACCESSORIES</a></li>
-              <li class="tracking-[2px] pb-2"><a href="">ATHLETES</a></li>
+              <li class="tracking-[2px] pb-2"><a href="../public/athletes-tennis.html">ATHLETES</a></li>
             </ul>
           </li>
           <li class="border-b">
@@ -136,9 +122,9 @@ class Sidebar extends HTMLElement {
               class="max-h-0 overflow-y-hidden duration-300 pl-10 bg-[#F7F8F9] font-[Oswald] mt-4"
               id="running-drop"
             >
-              <li class="tracking-[2px] pb-2"><a href="../public/product-review-runningPage.html">MEN</a></li>
-              <li class="tracking-[2px] pb-2"><a href="">WOMEN</a></li>
-              <li class="tracking-[2px] pb-2"><a href="">UNISEX</a></li>
+              <li class="tracking-[2px] pb-2"><a href="../public/product-review-men.html">MEN</a></li>
+              <li class="tracking-[2px] pb-2"><a href="../public/product-review-women.html">WOMEN</a></li>
+              <li class="tracking-[2px] pb-2"><a href="../public/product-review-unisex.html">UNISEX</a></li>
             </ul>
           </li>
           <li class="border-b">
@@ -163,11 +149,11 @@ class Sidebar extends HTMLElement {
               class="max-h-0 overflow-y-hidden duration-300 pl-10 bg-[#F7F8F9] font-[Oswald] mt-4"
               id="snowboard-drop"
             >
-              <li class="tracking-[2px] pb-2"><a href="snowborading.html">BOARDS</a></li>
+              <li class="tracking-[2px] pb-2"><a href="../public/product-review-snowborading.html">BOARDS</a></li>
               <li class="tracking-[2px] pb-2"><a href="">BOOTS & BINDING</a></li>
               <li class="tracking-[2px] pb-2"><a href="">APPAREL</a></li>
               <li class="tracking-[2px] pb-2"><a href="">ACCESSORIES</a></li>
-              <li class="tracking-[2px] pb-2"><a href="">TEAM</a></li>
+              <li class="tracking-[2px] pb-2"><a href="../public/athletes-snowboarding.html">TEAM</a></li>
             </ul>
           </li>
           <li class="border-b">
@@ -180,7 +166,7 @@ class Sidebar extends HTMLElement {
           <li class="border-b">
             <div class="flex justify-between">
               <a
-                href="#"
+                href="../public/about-us.html"
                 class="py-2 px-4 block text-[#1f2427] transition duration-300 tracking-[1px] text-[18px]"
                 >ABOUT</a
               >

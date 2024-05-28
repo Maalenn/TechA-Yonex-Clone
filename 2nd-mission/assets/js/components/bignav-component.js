@@ -10,12 +10,27 @@ class Navbar extends HTMLElement {
           class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] lg:px-6 px-3"
         >
           <!-- Hamburger Icons -->
-          <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()"> 
+          <div class="block cursor-pointer md:hidden ml-3" onclick="openNav()" id="hamburger-logo"> 
             <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
             <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
             <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
           </div>
-  
+          <div class="hidden" id="close-sidebar" onclick="closeNav()">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="relative right-0 w-[35px] top-0"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+          </div>
           <!-- Logo -->
           <div>
             <a href="index.html">
@@ -32,13 +47,13 @@ class Navbar extends HTMLElement {
   
           <!-- Center Navigation -->
           <div
-            class="hidden font-meduim lg:text-[14px] md:flex items-center justify-between h-[100px] gap-8 max-lg:text-[12px]"
+            class="hidden font-meduim lg:text-[14px] md:flex items-center justify-between h-[100px] max-lg:text-[12px]"
           >
             <!-- Badminton Hoverdrop -->
-            <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(1)"  onmouseleave="hoverHide(-1)">
+            <div  class="group h-full pt-[30px] px-5 max-[940px]:px-2"  id="hoverLink"  onmouseenter="hoverDrop(1)"  onmouseleave="hoverHide(-1)">
               <a href="../public/product-review-badminton.html" class="group-hover:opacity-50 text-[13px] tracking-[1px] font-[500] relative top-[7%]">BADMINTON</a>
               <!-- Badminton section -->
-              <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="badminton" >
+              <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="badminton" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
                     <card-slide data-source="badminton-obj" grid-style="grid-cols-4"></card-slide>
@@ -47,10 +62,10 @@ class Navbar extends HTMLElement {
               </section>
             </div>
         
-            <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(2)"  onmouseleave="hoverHide(-2)">
+            <div  class="group h-full pt-[30px] px-5 max-[940px]:px-2"  id="hoverLink"  onmouseenter="hoverDrop(2)"  onmouseleave="hoverHide(-2)">
               <a href="../public/product-review-tennis.html" class="group-hover:opacity-50 text-[13px] tracking-[1px] font-[500] relative top-[7%]">TENNIS</a>
               <!-- Tennis section -->
-              <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="tennis" >
+              <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="tennis" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
                     <card-slide data-source="tennis-obj" grid-style="grid-cols-4"></card-slide>
@@ -59,10 +74,10 @@ class Navbar extends HTMLElement {
               </section>
             </div>
         
-            <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(3)"  onmouseleave="hoverHide(-3)">
+            <div  class="group h-full pt-[30px] px-5 max-[940px]:px-2"  id="hoverLink"  onmouseenter="hoverDrop(3)"  onmouseleave="hoverHide(-3)">
               <a href="../public/product-review-golf.html" class="group-hover:opacity-50 text-[13px] tracking-[1px] font-[500] relative top-[7%]">GOLF</a>
               <!-- Golf section -->
-              <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="golf" >
+              <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="golf" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
                     <card-slide data-source="golf-obj" grid-style="grid-cols-4"></card-slide>
@@ -71,10 +86,10 @@ class Navbar extends HTMLElement {
               </section>
             </div>
             
-            <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(4)"  onmouseleave="hoverHide(-4)">
+            <div  class="group h-full pt-[30px] px-5 max-[940px]:px-2"  id="hoverLink"  onmouseenter="hoverDrop(4)"  onmouseleave="hoverHide(-4)">
               <a href="../public/product-review-allRunning.html" class="group-hover:opacity-50 text-[13px] tracking-[1px] font-[500] relative top-[7%]">RUNNING</a>
               <!-- Running section -->
-              <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="running" >
+              <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="running" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
                   <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
                     <card-slide data-source="running-obj" grid-style="grid-cols-3 pl-5"></card-slide>
@@ -83,17 +98,17 @@ class Navbar extends HTMLElement {
               </section>
             </div>
         
-            <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(5)"  onmouseleave="hoverHide(-5)">
+            <div  class="group h-full pt-[30px] px-5 max-[940px]:px-2"  id="hoverLink"  onmouseenter="hoverDrop(5)"  onmouseleave="hoverHide(-5)">
               <a href="../public/product-review-snowboarding.html" class="group-hover:opacity-50 text-[13px] tracking-[1px] font-[500] relative top-[7%]">SNOWBOARDING</a>
               <!-- Snowboarding section -->
-              <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="snowboard" >
+              <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="snowboard" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px] pb-[20px]">
                   <div class="max-w-[900px] mx-auto flex mb-4 justify-center flex-col gap-3">
                     <card-slide data-source="snowboarding-obj" grid-style="grid-cols-4"></card-slide>
                     <div class="flex max-w-[1200px] mx-auto">
                         <div class="flex flex-col items-center justify-center w-[213px]">
-                            <a id="hoverLink" href="../public/athletes-snowboarding.html"><img src="../assets/images/snowboard-images/skate-athlete.webp" alt=""></a>
-                            <p class="font-semibold text-[15px] text-black">Teams</p>
+                            <a id="hoverLink" href="../public/athletes-snowboarding.html" class="bg-[#F7F8FA]"><img src="../assets/images/snowboard-images/skate-athlete.webp" alt=""></a>
+                            <p class="text-[16px] text-black tracking-[1.5px] pt-2">TEAM</p>
                         </div>
                     </div>
                   </div>
@@ -101,11 +116,11 @@ class Navbar extends HTMLElement {
               </section>
             </div>
         
-            <div class="cursor-pointer hover:opacity-80 h-full pt-[30px]">
+            <div class="cursor-pointer hover:opacity-80 h-full pt-[30px] px-5 max-[940px]:px-2">
               <a href="news.html" class="relative top-[7%] pb-4 text-[13px] tracking-[1px] font-[500]">NEWS</a>
             </div>
         
-            <div  class="group h-full pt-[30px]"  id="hoverLink"  onmouseenter="hoverDrop(6)"  onmouseleave="hoverHide(-6)">
+            <div  class="group h-full pt-[30px] px-5 max-[940px]:px-2"  id="hoverLink"  onmouseenter="hoverDrop(6)"  onmouseleave="hoverHide(-6)">
               <a href="#" class="group-hover:opacity-50 text-[13px] tracking-[1px] font-[500] relative top-[7%]">ABOUT</a>
               <!-- About section -->
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-300 ease-in-out z-[10000] left-0" id="about" >

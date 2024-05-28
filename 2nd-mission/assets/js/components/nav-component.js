@@ -17,7 +17,7 @@ const CreateCard = (cards, gridStyle) => {
             return `
             <div class="flex flex-col items-center justify-center w-[213px] ">
                 <a id="hoverLink" href="${card.link}" class="bg-[#F7F8FA]"><img src="${card.img}" alt=""></a>
-                <a href="${card.link}" class="text-[14px] text-black tracking-[1.5px] pt-2">${card.title}</a>
+                <a href="${card.link}" class="text-[16px] text-black tracking-[1.5px] pt-2">${card.title}</a>
             </div>
             `;
         }).join("")}
