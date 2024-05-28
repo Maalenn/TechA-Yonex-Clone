@@ -87,12 +87,31 @@ export function Tennis() {
 
 export function Golf() {
     const names = ["HYO JOO KIM", "CHISATO IWAI", "SUZUKA YAMAGUCHI", 
-                    "AKIE IWAI"];
+                    "AKIE IWAI","HYO JOO KIM", "CHISATO IWAI", 
+                    "SUZUKA YAMAGUCHI", "AKIE IWAI","HYO JOO KIM", 
+                    "CHISATO IWAI", "SUZUKA YAMAGUCHI", "AKIE IWAI",
+                    "HYO JOO KIM", "CHISATO IWAI", "SUZUKA YAMAGUCHI", 
+                    "AKIE IWAI","HYO JOO KIM", "CHISATO IWAI",
+                    ];
     const images = [
         "../assets/images/athletes/Golf/akie_iwai_570x570.jpeg",
         "../assets/images/athletes/Golf/chisato_iwai_570x570.jpeg",
         "../assets/images/athletes/Golf/kim_570x570_.jpeg",
         "../assets/images/athletes/Golf/suzuka_square.jpeg",
+        "../assets/images/athletes/Golf/akie_iwai_570x570.jpeg",
+        "../assets/images/athletes/Golf/chisato_iwai_570x570.jpeg",
+        "../assets/images/athletes/Golf/kim_570x570_.jpeg",
+        "../assets/images/athletes/Golf/suzuka_square.jpeg",
+        "../assets/images/athletes/Golf/akie_iwai_570x570.jpeg",
+        "../assets/images/athletes/Golf/chisato_iwai_570x570.jpeg",
+        "../assets/images/athletes/Golf/kim_570x570_.jpeg",
+        "../assets/images/athletes/Golf/suzuka_square.jpeg",
+        "../assets/images/athletes/Golf/akie_iwai_570x570.jpeg",
+        "../assets/images/athletes/Golf/chisato_iwai_570x570.jpeg",
+        "../assets/images/athletes/Golf/kim_570x570_.jpeg",
+        "../assets/images/athletes/Golf/suzuka_square.jpeg",
+        "../assets/images/athletes/Golf/akie_iwai_570x570.jpeg",
+        "../assets/images/athletes/Golf/chisato_iwai_570x570.jpeg",
     ];
     const countries = ["KOREA","JAPAN","JAPAN","JAPAN"];
 
@@ -106,6 +125,10 @@ export function Golf() {
 
 export function Snowboarding() {
     const names = ["YUTO TOSTUKA", "SENA TOMITA", "HIROAKI KUNITAKE", 
+                    "RUKI TOMITA", "RUKA HIRANO", "ALESSANDRO BARBIERI",
+                    "YUTO TOSTUKA", "SENA TOMITA", "HIROAKI KUNITAKE", 
+                    "RUKI TOMITA", "RUKA HIRANO", "ALESSANDRO BARBIERI",
+                    "YUTO TOSTUKA", "SENA TOMITA", "HIROAKI KUNITAKE", 
                     "RUKI TOMITA", "RUKA HIRANO", "ALESSANDRO BARBIERI", 
                     ];
     const images = [
@@ -115,9 +138,25 @@ export function Snowboarding() {
         "../assets/images/athletes/snowboarding/Ruki-square.jpeg",
         "../assets/images/athletes/snowboarding/Sena-square.jpeg",
         "../assets/images/athletes/snowboarding/Yuto-square.jpeg",
+        "../assets/images/athletes/snowboarding/alessandro_570x570.png",
+        "../assets/images/athletes/snowboarding/Kunitake_570x570_square.jpeg",
+        "../assets/images/athletes/snowboarding/Ruka-square.jpeg",
+        "../assets/images/athletes/snowboarding/Ruki-square.jpeg",
+        "../assets/images/athletes/snowboarding/Sena-square.jpeg",
+        "../assets/images/athletes/snowboarding/Yuto-square.jpeg",
+        "../assets/images/athletes/snowboarding/alessandro_570x570.png",
+        "../assets/images/athletes/snowboarding/Kunitake_570x570_square.jpeg",
+        "../assets/images/athletes/snowboarding/Ruka-square.jpeg",
+        "../assets/images/athletes/snowboarding/Ruki-square.jpeg",
+        "../assets/images/athletes/snowboarding/Sena-square.jpeg",
+        "../assets/images/athletes/snowboarding/Yuto-square.jpeg",
         // Repeat images if necessary
     ];
     const countries = ["JAPAN", "JAPAN", "JAPAN", 
+                        "JAPAN", "JAPAN", "UNITED STATES",
+                        "JAPAN", "JAPAN", "JAPAN", 
+                        "JAPAN", "JAPAN", "UNITED STATES",
+                        "JAPAN", "JAPAN", "JAPAN", 
                         "JAPAN", "JAPAN", "UNITED STATES", 
                         ];
 
