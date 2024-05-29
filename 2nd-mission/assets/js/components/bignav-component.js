@@ -15,7 +15,7 @@ class Navbar extends HTMLElement {
             <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
             <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
           </div>
-          <div class="md:hidden" id="close-sidebar" onclick="closeNav()">
+          <div class="hidden" id="close-sidebar" onclick="closeNav()">
             <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
