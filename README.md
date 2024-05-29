@@ -23,7 +23,6 @@ This project aims to clone the Yonex website to practice and demonstrate front-e
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [Conclusion](#conclusion)
 
