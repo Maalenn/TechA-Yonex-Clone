@@ -38,7 +38,7 @@ const createAccordionContainer = (accordionArray) => {
                                     <div class="accordion-dropdown border-b w-full max-h-[0px] px-[60px] items-center overflow-hidden duration-500 text-gray-500 text-[14px]">
                                         ${accordionItem.content.map((accordionDropDown) => {
                                             return `
-                                                <div class="flex items-center gap-[20px]">
+                                                <div class="flex items-center pb-[10px] gap-[20px]">
                                                     <img src="${accordionDropDown.iconImage}" alt="icon"/>
                                                     ${accordionDropDown.link ? `<a class="text-blue-500 hover:underline" href="${accordionDropDown.href}">${accordionDropDown.text}</a>` : `<p>${accordionDropDown.text}</p>`}
                                                 </div>`;
@@ -67,7 +67,7 @@ class ToggleComponent extends HTMLElement {
                 const plusIcon = btn.querySelector('.plus-icon');
                 const closeIcon = btn.querySelector('#close-icon');
 
-                dropdown.classList.toggle('max-h-[100px]');
+                dropdown.classList.toggle('max-h-[500px]');
                 closeIcon.classList.toggle('hidden');
                 plusIcon.classList.toggle('hidden');
             }

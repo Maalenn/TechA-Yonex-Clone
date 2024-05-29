@@ -40,7 +40,7 @@ export const badmintonObj = [
     {
         img: "/tech-a-project/2nd-mission/assets/images/badminton-images/athletes_240306.webp",
         title: "ATHLETES",
-        link: "athletes-badminton.html"
+        link: "/tech-a-project/2nd-mission/public/athletes-badminton.html"
     },
 ]
 // golfobj
@@ -63,7 +63,7 @@ export const golfObj = [
     {
         img: "/tech-a-project/2nd-mission/assets/images/golf-images/golf-athletes.webp",
         title: "ATHLETES",
-        link: "athletes-golf.html"
+        link: "/tech-a-project/2nd-mission/public/athletes-golf.html"
     }
 ]
 // tennisobj
@@ -71,7 +71,7 @@ export const tennisObj = [
     {
         img: "/tech-a-project/2nd-mission/assets/images/tennis-images/raquet-tennis.webp",
         title: "RAQUEST",
-        link: "../public/product-review-tennis.html"
+        link: "/tech-a-project/2nd-mission/public/product-review-tennis.html"
     },
     {
         img: "/tech-a-project/2nd-mission/assets/images/tennis-images/strings-tennis.webp",
@@ -106,7 +106,7 @@ export const tennisObj = [
     {
         img: "/tech-a-project/2nd-mission/assets/images/tennis-images/tennis-athlete.webp",
         title: "ATHLETES",
-        link: "athletes-tennis.html"
+        link: "/tech-a-project/2nd-mission/public/athletes-tennis.html"
     },
 ]
 // runningobj
@@ -114,17 +114,17 @@ export const runningObj = [
     {
         img: "/tech-a-project/2nd-mission/assets/images/running-images/shoe-orange.webp",
         title: "MEN",
-        link: "../public/product-review-men.html"
+        link: "/tech-a-project/2nd-mission/public/product-review-men.html"
     },
     {
         img: "/tech-a-project/2nd-mission/assets/images/running-images/shoe-white.webp",
         title: "WOMEN",
-        link: "../public/product-review-women.html"
+        link: "/tech-a-project/2nd-mission/public/product-review-women.html"
     },
     {
         img: "/tech-a-project/2nd-mission/assets/images/running-images/shoe-brown.webp",
         title: "UNISEX",
-        link: "../public/product-review-unisex.html"
+        link: "/tech-a-project/2nd-mission/public/product-review-unisex.html"
     },
 ]
 // snowboardobj
@@ -132,7 +132,7 @@ export const snowboardObj = [
     {
         img: "/tech-a-project/2nd-mission/assets/images/snowboard-images/skate.webp",
         title: "BOARD",
-        link: "../public/product-review-snowboarding.html"
+        link: "/tech-a-project/2nd-mission/public/product-review-snowboarding.html"
     },
     {
         img: "/tech-a-project/2nd-mission/assets/images/snowboard-images/skate-shoe.webp",
