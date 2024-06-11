@@ -1,12 +1,12 @@
-import { categories, categoriesRoland } from "../data/see-full-story-data.js"
+import { Categories, CategoriesRoland } from "../data/see-full-story-data.js"
 
 const blogData = {
-    'categories' : categories,
-    'categories-roland' : categoriesRoland,
+    'categories' : Categories,
+    'categories-roland' : CategoriesRoland,
 
 }
 
-const createBlog = (data) => {
+const CreateBlogContainer = (data) => {
     return `
         ${data.map((blog) => `
             <div class="w-full h-[100px] mt-[150px] mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-[13px] font-sans max-md:mt-0">
@@ -116,7 +116,7 @@ class CreateBlog extends HTMLElement {
     connectedCallback () {
         const dataSource = this.getAttribute("categories")
         const data = blogData[dataSource] || []
-        this.innerHTML = createBlog(data)
+        this.innerHTML = CreateBlogContainer(data)
 
 
     }
