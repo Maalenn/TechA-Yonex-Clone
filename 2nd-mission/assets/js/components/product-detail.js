@@ -148,7 +148,7 @@ const ShoesDetailContainer = (contents) => {
   `;
 }
 
-class ShoesDetails extends HTMLElement {
+class ProductDetail extends HTMLElement {
   connectedCallback() {
     const dataAtt = this.getAttribute("data-source");
     const dataSourceKey = dataSource[dataAtt];
@@ -156,7 +156,7 @@ class ShoesDetails extends HTMLElement {
   }
 }
 
-customElements.define('shoes-details', ShoesDetails);
+customElements.define('product-details', ProductDetail);
 
 // Product slider functionality
 const productSlider = document.getElementById("productSlider");
