@@ -260,7 +260,7 @@ export const AllRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shra2m_mag_476_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra2m-l_icgr_326_2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra2m_bb_118_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "#",
@@ -269,7 +269,7 @@ export const AllRunningCard = [
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/s/h/shra2l_icgr_326.jpg?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra2l_pe_025.jpg?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "#",
@@ -278,8 +278,8 @@ export const AllRunningCard = [
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/s/h/shra1m_377.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra1m_651.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-      "https://www.yonex.com/media/catalog/product/s/h/shra1m_502.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50"
-    ]
+      "https://www.yonex.com/media/catalog/product/s/h/shra1m_502.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ],
   },
   {
     linkPage: "#",
@@ -288,7 +288,7 @@ export const AllRunningCard = [
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/s/h/shra1l_131.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra1l_377.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "#",
@@ -299,7 +299,7 @@ export const AllRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr100xm_a.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr100xm_b.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "#",
@@ -309,8 +309,8 @@ export const AllRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shr100xm_w_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr100xm_a.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr100xl_663_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-      "https://www.yonex.com/media/catalog/product/s/h/shr100xl_b.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50"
-    ]
+      "https://www.yonex.com/media/catalog/product/s/h/shr100xl_b.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ],
   },
   {
     linkPage: "#",
@@ -319,8 +319,8 @@ export const AllRunningCard = [
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/s/h/shr200xm_007_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr200xm_011_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-      "https://www.yonex.com/media/catalog/product/s/h/shr200xm_472_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50"
-    ]
+      "https://www.yonex.com/media/catalog/product/s/h/shr200xm_472_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ],
   },
   {
     linkPage: "#",
@@ -329,7 +329,7 @@ export const AllRunningCard = [
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/j/p/jpn_shr200xl_245-2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/j/p/jpn_shr200xl_623-2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "#",
@@ -339,7 +339,7 @@ export const AllRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_des422_fs_rs_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/_/_/__shrfj1l_324.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_bkw245_fs_rs.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "#",
@@ -349,7 +349,7 @@ export const AllRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_des422_fs_rs_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/_/_/__shrfj1l_324.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_bkw245_fs_rs.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "#",
@@ -360,7 +360,7 @@ export const AllRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shr900c_nb019_fs_rs_.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr900c_lg_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr900c_br_015_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
 ];
 
@@ -374,7 +374,7 @@ export const MenRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shr100xm_440_2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr100xm_a.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr100xm_b.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "../public/detail-men.html",
@@ -383,8 +383,8 @@ export const MenRunningCard = [
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/s/h/shra1m_377.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra1m_651.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-      "https://www.yonex.com/media/catalog/product/s/h/shra1m_502.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50"
-    ]
+      "https://www.yonex.com/media/catalog/product/s/h/shra1m_502.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ],
   },
   {
     linkPage: "#",
@@ -393,8 +393,8 @@ export const MenRunningCard = [
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/s/h/shr200xm_007_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr200xm_011_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-      "https://www.yonex.com/media/catalog/product/s/h/shr200xm_472_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50"
-    ]
+      "https://www.yonex.com/media/catalog/product/s/h/shr200xm_472_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ],
   },
   {
     linkPage: "#",
@@ -404,7 +404,7 @@ export const MenRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_des422_fs_rs_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/_/_/__shrfj1l_324.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_bkw245_fs_rs.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "#",
@@ -414,7 +414,7 @@ export const MenRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shra2m_mag_476_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra2m-l_icgr_326_2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra2m_bb_118_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
 ];
 
@@ -427,8 +427,8 @@ export const WomenRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shr100xm_w_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr100xm_a.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr100xl_663_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-      "https://www.yonex.com/media/catalog/product/s/h/shr100xl_b.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50"
-    ]
+      "https://www.yonex.com/media/catalog/product/s/h/shr100xl_b.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
+    ],
   },
   {
     linkPage: "#",
@@ -437,7 +437,7 @@ export const WomenRunningCard = [
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/s/h/shra1l_131.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra1l_377.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "#",
@@ -446,7 +446,7 @@ export const WomenRunningCard = [
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/j/p/jpn_shr200xl_245-2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/j/p/jpn_shr200xl_623-2.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
   {
     linkPage: "#",
@@ -456,9 +456,9 @@ export const WomenRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_des422_fs_rs_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/_/_/__shrfj1l_324.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shrfj1l_bkw245_fs_rs.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
-  
+
   {
     linkPage: "#",
     img: "https://www.yonex.com/media/catalog/product/s/h/shra2l_icgr_326.jpg?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
@@ -466,7 +466,7 @@ export const WomenRunningCard = [
     productColorsOpt: [
       "https://www.yonex.com/media/catalog/product/s/h/shra2l_icgr_326.jpg?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shra2l_pe_025.jpg?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
 ];
 
@@ -480,6 +480,6 @@ export const UnisexRunningCard = [
       "https://www.yonex.com/media/catalog/product/s/h/shr900c_nb019_fs_rs_.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr900c_lg_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
       "https://www.yonex.com/media/catalog/product/s/h/shr900c_br_015_1.png?quality=80&fit=bounds&height=50&width=50&canvas=50:50",
-    ]
+    ],
   },
 ];
