@@ -1,4 +1,4 @@
-export const sliderBadminton = [
+export const SliderBadminton = [
   {
     link: "../public/athlete-profile-badminton.html",
     imgSlide: "../assets/images/product-review/al1.webp",
@@ -228,7 +228,7 @@ export const sliderBadminton = [
     nation: "chinese taipei",
   },
 ];
-export const sliderTennis = [
+export const SliderTennis = [
   {
     link: "../public/athlete-profile-tennis.html",
     imgSlide: "../assets/images/product-review/t1.webp",
@@ -364,7 +364,7 @@ export const sliderTennis = [
   },
 ];
 
-export const sliderGolf = [
+export const SliderGolf = [
   {
     link: "../public/athlete-profile-golf.html",
     imgSlide:
@@ -395,7 +395,7 @@ export const sliderGolf = [
   },
 ];
 
-export const sliderSnowboard = [
+export const SliderSnowboard = [
   {
     link: "../public/athlete-profile-snowboarding.html",
     imgSlide: "https://www.yonex.com/media/athletes/tmp/square/Yuto-square.jpg",

@@ -1,10 +1,10 @@
-import { heroBadminton, heroTennis, heroGolf, heroSnowboard } from "../data/product-review-hero-data.js";
+import { HeroBadminton, HeroTennis, HeroGolf, HeroSnowboard } from "../data/product-review-hero-data.js";
 
 const dataSources = {
-  "hero-badminton": heroBadminton,
-  "hero-tennis": heroTennis,
-  "hero-golf": heroGolf,
-  "hero-snowboard": heroSnowboard,
+  "hero-badminton": HeroBadminton,
+  "hero-tennis": HeroTennis,
+  "hero-golf": HeroGolf,
+  "hero-snowboard": HeroSnowboard,
 };
 
 const HeroCoverContainer = (heroContents) => {

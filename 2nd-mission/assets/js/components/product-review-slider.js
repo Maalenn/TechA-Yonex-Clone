@@ -1,10 +1,10 @@
-import { sliderBadminton, sliderTennis, sliderGolf, sliderSnowboard } from "../data/product-review-slider-data.js";
+import { SliderBadminton, SliderTennis, SliderGolf, SliderSnowboard } from "../data/product-review-slider-data.js";
 
 const dataSources = {
-  "slider-badminton": sliderBadminton,
-  "slider-tennis": sliderTennis,
-  "slider-golf": sliderGolf,
-  "slider-snowboard": sliderSnowboard,
+  "slider-badminton": SliderBadminton,
+  "slider-tennis": SliderTennis,
+  "slider-golf": SliderGolf,
+  "slider-snowboard": SliderSnowboard,
 };
 
 const SliderContainer = (sliderContents) => {

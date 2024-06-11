@@ -1,4 +1,4 @@
-export const heroBadminton = [
+export const HeroBadminton = [
   {
     textColor: "black",
     imgLg: "../assets/images/product-review/heroCover.webp",
@@ -9,7 +9,7 @@ export const heroBadminton = [
   },
 ];
 
-export const heroTennis = [
+export const HeroTennis = [
   {
     textColor: "white",
     imgLg: "../assets/images/product-review/tennisCover.webp",
@@ -20,7 +20,7 @@ export const heroTennis = [
   },
 ];
 
-export const heroGolf = [
+export const HeroGolf = [
   {
     textColor: "white",
     imgLg:
@@ -33,7 +33,7 @@ export const heroGolf = [
   },
 ];
 
-export const heroSnowboard = [
+export const HeroSnowboard = [
   {
     textColor: "black",
     imgLg: "https://www.yonex.com/media/catalog/category/header_snow01.jpg",
