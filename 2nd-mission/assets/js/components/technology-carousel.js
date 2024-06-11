@@ -25,7 +25,7 @@ class TechnologyCarousel extends HTMLElement {
             </div>
           </div>
           <div class="tech-right w-[50%] relative flex flex-col pl-5 max-md:w-[100%]">
-            <div class="tech-right-numbers text-[#f7f8f9] flex font-extrabold absolute font-['Lato'] max-md:hidden" style="z-index: -1">
+            <div class="tech-right-numbers text-[#f7f8f9] flex font-extrabold absolute font-['Lato'] max-md:hidden z-[-1]">
               <div class="technology-right--numbers-current--slide text-[190px] leading-[150px] text-[#f7f8f9] font-bold" id="current-slide">01</div>
               <div class="technology-right--numbers-slide--count text-[24px] text-[#f7f8f9] font-bold" id="slide-count">/ 0 <span></span></div>
             </div>
