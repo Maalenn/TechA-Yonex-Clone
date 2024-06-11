@@ -1,16 +1,16 @@
-import { heroBanner, heroRepsonsive , cardSlider, cardSliderAthlete, cardSliderNewArrival} from '../data/homepage-data.js';
+import { HeroBanner, HeroRepsonsive , CardSlider, CardSliderAthlete, CardSliderNewArrival } from '../data/homepage-data.js';
 
 //attach the attribute for data
 const dataSources = {
-    'hero-banner': heroBanner,
-    'hero-responsive': heroRepsonsive[0].imgResponsive,
-    'card-carousel': cardSlider,
-    'athlete-carousel': cardSliderAthlete,
-    'new-arrival-carousel': cardSliderNewArrival
+    'hero-banner': HeroBanner,
+    'hero-responsive': HeroRepsonsive[0].imgResponsive,
+    'card-carousel': CardSlider,
+    'athlete-carousel': CardSliderAthlete,
+    'new-arrival-carousel': CardSliderNewArrival
 };
 
 //hero banner component
-const createSlide = (cards) => {
+const CreateSlide = (cards) => {
     return `
         <div class="hidden md:relative md:block">
         ${cards.map((imgSrc) => `
@@ -28,7 +28,7 @@ const createSlide = (cards) => {
 };
 
 //hero banner in responsive
-const cardAutoSlide = (items) => {
+const CardAutoSlide = (items) => {
     return `
         ${items.map((imgRes) => `
         <div class="mySlides1 fade dot">
@@ -38,7 +38,7 @@ const cardAutoSlide = (items) => {
     `
 }
 //card carousel in sports section and athlete sections
-const cardCarousel = (cards, pos) =>{
+const CardCarousel = (cards, pos) =>{
     return `
         <section class="mx-auto px-[50px] py-[45px]">
         <ul class="overflow-x-hidden w-[100%] slideShow relative grid grid-cols-[repeat(${cards.length},300px)] ssm:grid-cols-[repeat(${cards.length},330px)] smd:grid-cols-[repeat(${cards.length},450px)] slg:grid-cols-[repeat(${cards.length},399px)] sxl:grid-cols-[repeat(${cards.length},300px)] max-sm:grid-cols-[repeat(${cards.length},280px)] max-md:grid-cols-[repeat(${cards.length},340px)] max-lg:grid-cols-[repeat(${cards.length},360px)] overflow-auto font-[Oswald]">
@@ -67,14 +67,14 @@ const cardCarousel = (cards, pos) =>{
 class BannerSlide extends HTMLElement {
     constructor() {
         super();
-        this.cards = heroBanner[0].imgBanner;
+        this.cards = HeroBanner[0].imgBanner;
         this.slideIndex = 1;
     }
 
     connectedCallback() {
         const dataSource = this.getAttribute('data-source');
         const data = dataSources[dataSource] || [];
-        this.innerHTML = createSlide(data);
+        this.innerHTML = CreateSlide(data);
         this.showSlides(this.slideIndex);
 
         this.querySelector('.prev').addEventListener('click', () => this.plusSlides(-1));
@@ -99,16 +99,16 @@ class BannerSlide extends HTMLElement {
 customElements.define('hero-slider', BannerSlide);
 
 //Reusable card auto slide in repsonsive
-class CardAutoSlide extends HTMLElement {
+class CardAutoSlides extends HTMLElement {
     constructor(){
         super();
-        this.items = heroRepsonsive[0].imgResponsive
+        this.items = HeroRepsonsive[0].imgResponsive
         this.slideIndex = 1;
     }
     connectedCallback () {
         const dataSource = this.getAttribute('card-data-source');
         const data = dataSources[dataSource] || []
-        this.innerHTML = cardAutoSlide(data)
+        this.innerHTML = CardAutoSlide(data)
         this.showSlides1();
     }
     showSlides1() {
@@ -126,10 +126,10 @@ class CardAutoSlide extends HTMLElement {
     }
 }
 
-customElements.define('hero-responsive', CardAutoSlide)
+customElements.define('hero-responsive', CardAutoSlides)
 
 //for card carousel
-class CardCarousel extends HTMLElement {
+class CardCarousels extends HTMLElement {
     constructor(){
         super();
         this.currentSlide = 0;
@@ -138,7 +138,7 @@ class CardCarousel extends HTMLElement {
         const dataSource = this.getAttribute('card-slide');
         const data = dataSources[dataSource] || []
         const posStyle = this.getAttribute('text-style')
-        this.innerHTML = cardCarousel(data, posStyle);       
+        this.innerHTML = CardCarousel(data, posStyle);       
         this.querySelector('.back').addEventListener('click', () => this.plusSlides(1));
         this.querySelector('.skip').addEventListener('click', () => this.plusSlides(-1));
     }
@@ -151,4 +151,4 @@ class CardCarousel extends HTMLElement {
         carousel.scrollTo({ left: this.currentSlide * imageWidth, behavior: 'smooth' });
     }
 }
-customElements.define('card-carousel', CardCarousel)
+customElements.define('card-carousel', CardCarousels)
