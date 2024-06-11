@@ -1,4 +1,4 @@
-export const categories = [
+export const Categories = [
   {
     titleCatgories: "Tennis",
     titleSubCatgories: "Yonex announces “Environmental Vision 2050”: To carry sport into the future",
@@ -34,7 +34,7 @@ export const categories = [
   
 
 
-export const categoriesRoland = [
+export const CategoriesRoland = [
   {
     titleCatgories: "Tennis",
     titleSubCatgories: "Roland-Garros 2024: Ruud and Rybakina lead Team Yonex in Paris",

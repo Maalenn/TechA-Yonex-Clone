@@ -1,8 +1,8 @@
-import { categories, categoriesRoland } from "../data/see-full-story-data.js"
+import { Categories, CategoriesRoland } from "../data/see-full-story-data.js"
 
 const blogData = {
-    'categories' : categories,
-    'categories-roland' : categoriesRoland,
+    'categories' : Categories,
+    'categories-roland' : CategoriesRoland,
 
 }
 
