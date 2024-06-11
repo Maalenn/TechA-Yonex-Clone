@@ -1,8 +1,8 @@
 import {
-    badmintonCard, 
-    tennisCard, 
-    golfCard, 
-    snowboardCard , 
+    BadmintonCard, 
+    TennisCard, 
+    GolfCard, 
+    SnowboardCard , 
     AllRunningCard, 
     MenRunningCard,
     WomenRunningCard,
@@ -10,10 +10,10 @@ import {
 } from '../data/product-review-card-data.js'
 
 const dataSources = {
-    'badminton-card': badmintonCard,
-    'tennis-card': tennisCard,
-    'golf-card': golfCard,
-    'snowboard-card': snowboardCard,
+    'badminton-card': BadmintonCard,
+    'tennis-card': TennisCard,
+    'golf-card': GolfCard,
+    'snowboard-card': SnowboardCard,
     'allRunning-card': AllRunningCard,
     'menRunning-card': MenRunningCard,
     'womenRunning-card': WomenRunningCard,
