@@ -41,9 +41,9 @@ export const Badminton = [
 ]
 export const BadmintonTechno = [
     {
-      image: "../assets/images/productPage/tech-01.png", // Replace with actual image path
+      image: "../assets/images/productPage/tech-01.png",
       alt: "Box frame",
-      logo: "../assets/images/productPage/tech-01.png", // Replace with actual image path
+      logo: "../assets/images/productPage/tech-01.png",
       logoAlt: "logo_b",
       title: "AERO+BOX Frame",
       imgText: "",
@@ -53,9 +53,9 @@ export const BadmintonTechno = [
     },
   
     {
-      image: "../assets/images/productPage/tech-02.png", // Replace with actual image path
+      image: "../assets/images/productPage/tech-02.png",
       alt: "ISOMETRIC",
-      logo: "../assets/images/productPage/isometric.png", // Replace with actual image path
+      logo: "../assets/images/productPage/isometric.png",
       logoAlt: "logo_b",
       title: "ISOMETRIC",
       imgText : "../assets/images/productPage/isometric.png",
@@ -70,9 +70,9 @@ export const BadmintonTechno = [
     },
   
     {
-      image: "../assets/images/productPage/logo_b.png", // Replace with actual image path
+      image: "../assets/images/productPage/logo_b.png",
       alt: "POWER CUSHION +",
-      logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
+      logo: "path/to/image/running-page/logo_b.png",
       logoAlt: "logo_b",
       title: "ROTATIONAL GENERATOR SYSTEM + 2G-NANOMESH NEO",
       imgText: "",
@@ -83,9 +83,9 @@ export const BadmintonTechno = [
     },
   
     {
-      image: "../assets/images/productPage/logo_b.png", // Replace with actual image path
+      image: "../assets/images/productPage/logo_b.png",
       alt: "POWER CUSHION +",
-      logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
+      logo: "path/to/image/running-page/logo_b.png",
       logoAlt: "logo_b",
       title: "POWER-ASSIST BUMPER",
       imgText: "",
@@ -99,9 +99,9 @@ export const BadmintonTechno = [
     },
   
     {
-      image: "../assets/images/productPage/tech-05.png", // Replace with actual image path
+      image: "../assets/images/productPage/tech-05.png",
       alt: "POWER CUSHION +",
-      logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
+      logo: "path/to/image/running-page/logo_b.png",
       logoAlt: "logo_b",
       title: "Super Slim Shaft",
       imgText : "../assets/images/productPage/slim-shaft.png",
@@ -111,9 +111,9 @@ export const BadmintonTechno = [
       ],
     },
     {
-      image: "../assets/images/productPage/logo_b.png", // Replace with actual image path
+      image: "../assets/images/productPage/logo_b.png",
       alt: "POWER CUSHION +",
-      logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
+      logo: "path/to/image/running-page/logo_b.png",
       logoAlt: "logo_b",
       title: "Energy Boost CAP PLUS",
       imgText: "",
