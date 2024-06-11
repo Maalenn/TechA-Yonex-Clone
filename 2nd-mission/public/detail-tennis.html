@@ -1,150 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PERCEPT 97</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PERCEPT 97</title>
 
-    <!-- CSS link  -->
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <!-- yonex logo -->
-    <link
-      rel="icon"
-      href="../assets/images/icon/yonex.png"
-      type="image/icon type"
-    />
+        <!-- CSS link  -->
+        <link rel="stylesheet" href="../assets/css/styles.css" />
+        <!-- yonex logo -->
+        <link rel="icon" href="../assets/images/icon/yonex.png" type="image/icon type" />
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="font-Oswald">
-    <!-- Start Navbar -->
-    <my-navbar bg-color="md:bg-white text-black"></my-navbar>
-
-    <!-- Start Sidebar -->
-    <my-sidebar></my-sidebar>
-
-    <!-- Start Hero Banner -->
-    <hero-slider data-source="hero-banner"></hero-slider>
-
-    <!-- Start Hero Banner Responsive -->
-    <div class="md:hidden block">
-      <hero-responsive card-data-source="hero-responsive"></hero-responsive>
-    </div>
-
-    <!-- Start Image Zoom -->
-    <zoom-img
-      zoomImg="http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/detail-tennis/percept97.png"
-    ></zoom-img>
-    <!-- End Image Zoom -->
-
-    <!-- background wrapper in product section -->
-    <div class="mb-[100px]">
-      <div
-        class="absolute z-[-1] h-[1100px] bg-800 left-0 top-0 bg-[#f7f8f9] md:w-[70%] w-full"
-      ></div>
-    </div>
-    <!-- background wrapper in product section -->
-
-    <!-- Start Menu link -->
-    <ul
-      class="hidden sm:w-[50%] sm:px-5 sm:flex sm:my-[23px] sm:text-[12px] sm:gap-4 sm:font-sans pt-[40px]"
-    >
-      <li class="text-primary-100 hover:underline">
-        <a href="index.html">Home</a>
-      </li>
-      <p>/</p>
-      <li class="text-primary-100 hover:underline">
-        <a href="product-review-runningPage.html">Tennis</a>
-      </li>
-      <p>/</p>
-      <li class="text-primary-100 hover:underline">
-        <a href="product-review-runningPage.html">Raccquets</a>
-      </li>
-      <p>/</p>
-      <li class="uppercase">PERCEPT 97</li>
-    </ul>
-    <!-- End Menu link -->
-
-    <!--Start main content -->
-    <main class="max-w-[1280px] mx-auto px-5">
-      <!-- start product detail container  -->
-      <div class="product-card" id="product-description">
-        <shoes-details data-source="tennis-info"></shoes-details>
-      </div>
-      <!-- start product detail container  -->
-
-      <!-- start sticky nav container  -->
-      <product-sticky-nav
-        prodName="PERCEPT 97"
-        menuLinks='[
-          {"href": "#product-description", "link": "Description"},
-          {"href": "#product-technology", "link": "Technology"},
-          {"href": "#product-athetes", "link": "ATHlETES"}
-        ]'
-      ></product-sticky-nav>
-      <!-- end sticky nav container  -->
-
-      <!-- start technology -->
-      <div id="product-technology">
-        <technology-carousel data-source="tennis-techno"></technology-carousel>
-      </div>
-      <!-- Atheletes card section -->
-      <div id="product-athetes">
-        <div class="p-[10px] group max-w-[407px]">
-          <div class="relative overflow-hidden">
-            <a href="#">
-              <img
-                class="bg object-cover w-full h-[560px]"
-                src="../assets/images/detail-tennis/daniel.png"
-                alt=""
-              />
-              <div
-                class="absolute h-full w-full bg-blue-500/70 flex items-center justify-center group-hover:bottom-0 opacity-0 group-hover:opacity-100 duration-300"
-              >
-                <button
-                  class="bg-white hover:bg-sky-700 text-black hover:text-white py-2 px-5"
-                >
-                  View Athlete Profile
-                </button>
-              </div>
-              <div
-                class="bg-black/45 absolute inset-0 top-[85%] w-auto pl-5 z-50 text-white"
-              >
-                <p class="bg text-[22px]">DANIEL ALTMAIER</p>
-                <p class="  ">GERMANY</p>
-              </div>
-            </a>
-          </div>
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="font-Oswald">
+        <!-- Start Navbar -->
+        <my-navbar bg-color="md:bg-white text-black"></my-navbar>
+    
+        <!-- Start Sidebar -->
+        <my-sidebar></my-sidebar>
+    
+        <!-- Start Image Zoom -->
+        <zoom-img zoomImg="http://127.0.0.1:5506/tech-a-project/2nd-mission/assets/images/detail-tennis/percept97.png">
+        </zoom-img>
+        <!-- End Image Zoom -->
+    
+        <!-- background wrapper in product section -->
+        <div class="mb-[100px]">
+            <div class="absolute z-[-1] h-[1100px] bg-800 left-0 top-0 bg-[#f7f8f9] md:w-[70%] w-full"></div>
         </div>
-      </div>
-
-      <!-- end technology -->
-    </main>
-    <!--End main content -->
-
-    <!-- Start Footer -->
-    <my-footer></my-footer>
-    <!-- End Footer -->
-
-    <!-- Scripts -->
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/components/bignav-component.js"></script>
-    <script
-      src="../assets/js/components/nav-component.js"
-      type="module"
-    ></script>
-    <script src="../assets/js/components/side-bar-component.js"></script>
-    <script src="../assets/js/components/zoom-img.js"></script>
-    <script
-      src="../assets/js/components/shoes-detail.js"
-      type="module"
-    ></script>
-    <script src="../assets/js/components/product-sticky-nav.js"></script>
-    <script
-      src="../assets/js/components/technology-carousel.js"
-      type="module"
-    ></script>
-    <script src="../assets/js/components/footer.js"></script>
-  </body>
+        <!-- background wrapper in product section -->
+    
+        <!-- Start Menu link -->
+        <ul class="hidden sm:w-[50%] sm:px-5 sm:flex sm:my-[23px] sm:text-[12px] sm:gap-4 sm:font-sans pt-[40px]">
+            <li class="text-primary-100 hover:underline">
+                <a href="index.html">Home</a>
+            </li>
+            <p>/</p>
+            <li class="text-primary-100 hover:underline">
+                <a href="product-review-runningPage.html">Tennis</a>
+            </li>
+            <p>/</p>
+            <li class="text-primary-100 hover:underline">
+                <a href="product-review-runningPage.html">Raccquets</a>
+            </li>
+            <p>/</p>
+            <li class="uppercase">PERCEPT 97</li>
+        </ul>
+        <!-- End Menu link -->
+    
+        <!--Start main content -->
+        <main class="max-w-[1280px] mx-auto px-5">
+            <!-- start product detail container  -->
+            <div class="product-card" id="product-description">
+                <shoes-details data-source="tennis-info"></shoes-details>
+            </div>
+            <!-- start product detail container  -->
+    
+            <!-- start sticky nav container  -->
+            <product-sticky-nav prodName="PERCEPT 97" menuLinks='[
+                          {"href": "#product-description", "link": "Description"},
+                          {"href": "#product-technology", "link": "Technology"},
+                          {"href": "#product-athetes", "link": "ATHlETES"}
+                        ]'>
+            </product-sticky-nav>
+            <!-- end sticky nav container  -->
+    
+            <!-- start technology -->
+            <div id="product-technology">
+                <technology-carousel data-source="tennis-techno"></technology-carousel>
+            </div>
+            <!-- Atheletes card section -->
+            <div id="product-athetes">
+                <div class="p-[10px] group max-w-[407px]">
+                    <div class="relative overflow-hidden">
+                        <a href="#">
+                            <img class="bg object-cover w-full h-[560px]" src="../assets/images/detail-tennis/daniel.png"
+                                alt="" />
+                            <div
+                                class="absolute h-full w-full bg-blue-500/70 flex items-center justify-center group-hover:bottom-0 opacity-0 group-hover:opacity-100 duration-300">
+                                <button class="bg-white hover:bg-sky-700 text-black hover:text-white py-2 px-5">
+                                    View Athlete Profile
+                                </button>
+                            </div>
+                            <div class="bg-black/45 absolute inset-0 top-[85%] w-auto pl-5 z-50 text-white">
+                                <p class="bg text-[22px]">DANIEL ALTMAIER</p>
+                                <p class="  ">GERMANY</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- end technology -->
+        </main>
+        <!--End main content -->
+    
+        <!-- Start Footer -->
+        <my-footer></my-footer>
+        <!-- End Footer -->
+    
+        <!-- Scripts -->
+        <script src="../assets/js/index.js"></script>
+        <script src="../assets/js/components/bignav-component.js"></script>
+        <script src="../assets/js/components/nav-component.js" type="module"></script>
+        <script src="../assets/js/components/side-bar-component.js"></script>
+        <script src="../assets/js/components/zoom-img.js"></script>
+        <script src="../assets/js/components/shoes-detail.js" type="module"></script>
+        <script src="../assets/js/components/product-sticky-nav.js"></script>
+        <script src="../assets/js/components/technology-carousel.js" type="module"></script>
+        <script src="../assets/js/components/footer.js"></script>
+    </body>
 </html>
