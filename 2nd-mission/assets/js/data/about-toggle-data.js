@@ -1,5 +1,5 @@
 // start the yonex-group data
-export const toggleData = [
+export const ToggleData = [
   // AMERICA
   {
     sectionID: "content-1",
@@ -611,7 +611,7 @@ export const toggleData = [
 // end the yonex-group data
 
 // start the yonex-distributors data
-export const toggleDataSecond = [
+export const ToggleDataSecond = [
   // AMERICA
   {
     sectionID: "content-1",

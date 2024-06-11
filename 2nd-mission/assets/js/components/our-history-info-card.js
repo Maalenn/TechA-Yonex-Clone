@@ -1,12 +1,12 @@
-import { cardData } from "../data/ourHistory-data.js";
+import { CardData } from "../data/our-history-data.js";
 
 const dataSources = {
-  "card-data": cardData,
+	"card-data": CardData,
 };
 
 // Start the Card Infomation component
 const CreateCard = (cards) => {
-  return `
+	return `
 		<div class="max-w-[1200px] mx-auto">
 				${cards
 					.map((item) => `
@@ -81,15 +81,15 @@ const CreateCard = (cards) => {
 					`
 			).join("")}
 		</div>
-  `;
+	`;
 };
 
 class Card extends HTMLElement {
-  connectedCallback() {
+	connectedCallback() {
     const dataSource = this.getAttribute("data-source");
     const data = dataSources[dataSource] || cardData; // Default to cardData if no attribute is found
     this.innerHTML = CreateCard(data);
-  }
+	}
 }
 
 customElements.define("card-info-component", Card);
@@ -97,10 +97,10 @@ customElements.define("card-info-component", Card);
 
 // Scrolling click (Smooth)
 document.querySelector(".nav__links").addEventListener("click", function (e) {
-  e.preventDefault();
+	e.preventDefault();
 
-  if (e.target.classList.contains("nav__link")) {
-    const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-  }
+	if (e.target.classList.contains("nav__link")) {
+		const id = e.target.getAttribute("href");
+		document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+	}
 });

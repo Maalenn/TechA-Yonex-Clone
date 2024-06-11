@@ -44,8 +44,8 @@ const SliderContainer = (sliderContents) => {
               .join("")}
             </ul>
             <div
+              id="next-button"
               class="back absolute top-[57%] right-[30px] max-sm:right-0 md:right-[20px] bg-[#f3f2f2] hidden p-5 group-hover:block"
-              onclick="pushArrows(1)"
             >
               <img
                 class="w-[1.5rem]"
@@ -54,8 +54,8 @@ const SliderContainer = (sliderContents) => {
               />
             </div>
             <div
+              id="prev-button"
               class="next absolute top-[57%] left-[30px] max-sm:left-0 max-lg:left-[10px] bg-[#f3f2f2] p-5 hidden group-hover:block"
-              onclick="pushArrows(-1)"
             >
               <img
                 class="w-[1.5rem]"
@@ -73,9 +73,24 @@ class Slider extends HTMLElement {
   connectedCallback() {
     const dataSource = this.getAttribute("data-source");
     const data = dataSources[dataSource];
+    let currentSlides = 0;
+
     this.innerHTML = SliderContainer(data);
+
+    const pushArrows = (n) => {
+      const carousel = this.querySelector(".slideShow");
+      const images = carousel.querySelectorAll(".slide-list");
+      const imageWidth = images[0].clientWidth;
+      currentSlides = Math.max(0, Math.min(currentSlides + n, images.length - 1));
+      carousel.scrollTo({ left: currentSlides * imageWidth, behavior: "smooth" });
+    };
+
+    const nextButton = this.querySelector("#next-button");
+    const prevButton = this.querySelector("#prev-button");
+
+    nextButton.addEventListener("click", () => pushArrows(1));
+    prevButton.addEventListener("click", () => pushArrows(-1));
   }
 }
 
 customElements.define("slider-component", Slider);
-
