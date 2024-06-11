@@ -1,4 +1,4 @@
-export const badmintonCard = [
+export const BadmintonCard = [
   {
     linkPage: "../public/detail-badminton.html",
     img: "https://www.yonex.com/media/catalog/product/3/a/3ax88s-p_417-1_02.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
@@ -61,7 +61,7 @@ export const badmintonCard = [
   },
 ];
 
-export const tennisCard = [
+export const TennisCard = [
   {
     linkPage: "../public/detail-tennis.html",
     img: "https://www.yonex.com/media/catalog/product/i/n/int_01pe97_268-1_1.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
@@ -125,7 +125,7 @@ export const tennisCard = [
   },
 ];
 
-export const golfCard = [
+export const GolfCard = [
   {
     linkPage: "../public/detail-golf.html",
     img: "https://www.yonex.com/media/catalog/product/0/4/04ezone_gt_driver_types_head_men.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
@@ -188,7 +188,7 @@ export const golfCard = [
   },
 ];
 
-export const snowboardCard = [
+export const SnowboardCard = [
   {
     linkPage: "../public/detail-snowboard.html",
     img: "https://www.yonex.com/media/catalog/product/r/e/regna_24_deck.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
