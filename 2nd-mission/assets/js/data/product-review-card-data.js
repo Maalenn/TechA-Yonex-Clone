@@ -253,7 +253,7 @@ export const snowboardCard = [
 
 export const AllRunningCard = [
   {
-    linkPage: "../public/detail-allRunning.html",
+    linkPage: "../public/detail-all-running.html",
     img: "https://www.yonex.com/media/catalog/product/s/h/shra2m_mag_476_2.png?quality=80&fit=bounds&height=300&width=240&canvas=240:300",
     productName: "CARBON CRUISE AERUS MEN",
     productColorsOpt: [

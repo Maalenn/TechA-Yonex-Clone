@@ -1,4 +1,4 @@
-import { Badminton } from "../data/detail-badminton.js";
+import { Badminton } from "../data/detail-badminton-data.js";
 
 const dataSources = {
   "badminton-info": Badminton,

@@ -1,8 +1,8 @@
-import { Men} from "../data/technology-data.js";
-import { BadmintonTechno } from "../data/detail-badminton.js";
+import { Men } from "../data/technology-data.js";
+import { BadmintonTechno } from "../data/detail-badminton-data.js";
 import { TennisTechno } from "../data/detail-tennis-data.js";
 import { GolfTechno } from "../data/detail-golf-data.js";
-import { SnowboardTechno } from "../data/detail-snowboard.js";
+import { SnowboardTechno } from "../data/detail-snowboard-data.js";
 const dataSources = {
   "men-techno": Men,
   "badminton-techno": BadmintonTechno,
