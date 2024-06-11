@@ -1,12 +1,12 @@
-import { badmintonObj, golfObj, snowboardObj, runningObj, aboutObj, tennisObj } from "../data/nav-data.js";
+import { BadmintonObj, GolfObj, SnowboardObj, RunningObj, AboutObj, TennisObj } from "../data/nav-data.js";
 
 const dataSources = {
-    'badminton-obj': badmintonObj,
-    'tennis-obj': tennisObj,
-    'golf-obj': golfObj,
-    'running-obj': runningObj,
-    'snowboarding-obj': snowboardObj,
-    'about-obj': aboutObj
+    'badminton-obj': BadmintonObj,
+    'tennis-obj': TennisObj,
+    'golf-obj': GolfObj,
+    'running-obj': RunningObj,
+    'snowboarding-obj': SnowboardObj,
+    'about-obj': AboutObj
 };
 
 const CreateCard = (cards, gridStyle) => {
