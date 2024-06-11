@@ -87,7 +87,7 @@ class Navbar extends HTMLElement {
             </div>
             
             <div  class="group h-full pt-[30px] px-5 max-[940px]:px-2"  id="hoverLink"  onmouseenter="hoverDrop(4)"  onmouseleave="hoverHide(-4)">
-              <a href="/tech-a-project/2nd-mission/public/product-review-allRunning.html" class="group-hover:opacity-50 text-[13px] tracking-[1px] font-[500] relative top-[7%]">RUNNING</a>
+              <a href="/tech-a-project/2nd-mission/public/product-review-all-running.html" class="group-hover:opacity-50 text-[13px] tracking-[1px] font-[500] relative top-[7%]">RUNNING</a>
               <!-- Running section -->
               <section class="w-full bg-white absolute top-[100px] max-h-[0px] overflow-hidden duration-500 ease-in-out z-[10000] left-0" id="running" >
                 <div id="" class="max-w-[95%] mx-auto p-[40px]">
