@@ -1,4 +1,4 @@
-export const sidebarBadminton = [
+export const SidebarBadminton = [
     {
         title: "All Racquets",
         link: "#"
@@ -37,7 +37,7 @@ export const sidebarBadminton = [
     },
 ]
 
-export const sidebarTennis = [
+export const SidebarTennis = [
     {
         title: "All Racquets",
         link: "#"
@@ -64,7 +64,7 @@ export const sidebarTennis = [
     },
 ]
 
-export const sidebarGolf = [
+export const SidebarGolf = [
     {
         title: "All Clubs",
         link: "#"
@@ -99,7 +99,7 @@ export const sidebarGolf = [
     }
 ]
 
-export const sidebarSnowboard = [
+export const SidebarSnowboard = [
     {
         title: "All Boards",
         link: "#"
@@ -126,7 +126,7 @@ export const sidebarSnowboard = [
     }
 ]
 
-export const sidebarRunning = [
+export const SidebarRunning = [
     {
         title: "All Running",
         link: "../public/product-review-allRunning.html"
