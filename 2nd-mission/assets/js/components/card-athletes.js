@@ -1,4 +1,4 @@
-import { Bedmanton, Tennis, Golf, Snowboarding} from '../data/database-athletes.js';
+import { Bedmanton, Tennis, Golf, Snowboarding} from '../data/athletes-data.js';
 
 class MyCard extends HTMLElement {
     connectedCallback() {
@@ -21,7 +21,7 @@ class MyCard extends HTMLElement {
                 cardData = Bedmanton().find(card => card.id === parseInt(id, 10));
                 break;
         }
-
+// Check and defined data according to it size
         if (!cardData) return;
         const namebox = cardData.id % 2 === 0 ? 'top-[80%]' : 'top-[85%]';
         const cardHeight = cardData.id % 2 === 0 ? 'h-[360px]' : 'h-[506px]';
@@ -46,42 +46,3 @@ class MyCard extends HTMLElement {
 }
 
 customElements.define('my-card', MyCard);
-
-
-/* import { Bedmanton, Tennis, Running } from './database.js';
-
-class MyCard extends HTMLElement {
-    connectedCallback() {
-        const id = this.getAttribute('id');
-        const sport = this.parentElement.parentElement.getAttribute('sport');
-
-        let cardData;
-        switch (sport) {
-            case 'tennis':
-                cardData = Tennis().find(card => card.id === parseInt(id, 10));
-                break;
-            case 'running':
-                cardData = Running().find(card => card.id === parseInt(id, 10));
-                break;
-            case 'bedmanton':
-            default:
-                cardData = Bedmanton().find(card => card.id === parseInt(id, 10));
-                break;
-        }
-
-        if (!cardData) return;
-
-        const cardColor = cardData.id % 2 === 0 ? 'bg-purple-500' : 'bg-pink-500';
-        const cardHeight = cardData.id % 2 === 0 ? 'h-[506px]' : 'h-[360px]';
-
-        this.innerHTML = `
-            <div class="p-4 ${cardColor} ${cardHeight} w-[407px] text-white rounded-lg shadow-md ">
-                <h2 class="text-lg font-bold">${cardData.name}</h2>
-                <p>ID: ${cardData.id}</p>
-                <img src="${cardData.image}" alt="${cardData.name}" class="mt-2 w-[407px] ${cardHeight} object-cover">
-            </div>
-        `;
-    }
-}
-
-customElements.define('my-card', MyCard); */
