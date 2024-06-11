@@ -1,4 +1,4 @@
-export const cardData = [
+export const CardData = [
   {
     imgMobile: "../assets/images/history-img/first-blog.png",
     title: "The One Motor",

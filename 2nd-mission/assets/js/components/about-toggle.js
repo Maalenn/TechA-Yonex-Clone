@@ -1,8 +1,8 @@
-import { toggleData, toggleDataSecond } from '../data/about-toggle-data.js';
+import { ToggleData, ToggleDataSecond } from '../data/about-toggle-data.js';
 
 const dataSources = {
-    'toggle-data': toggleData,
-    'toggle-data-2': toggleDataSecond
+    'toggle-data': ToggleData,
+    'toggle-data-2': ToggleDataSecond
 };
 
 // Define navigation data
