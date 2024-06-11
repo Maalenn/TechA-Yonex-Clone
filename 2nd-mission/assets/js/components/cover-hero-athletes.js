@@ -38,41 +38,41 @@ class AthleteCover extends HTMLElement {
                 <select class="w-full h-[40px] px-[20px] py-[5px] max-md:grow">
                     <option value="">[Representing - All]</option>
                     <option value="Canada">
-                                                Canada                        
-                                            </option>
-                                            <option value="China">
-                                                China                        
-                                            </option>
-                                            <option value="Chinese Taipei">
-                                                Chinese Taipei                        
-                                            </option>
-                                            <option value="Denmark">
-                                                Denmark                        
-                                            </option>
-                                            <option value="France">
-                                                France                        
-                                            </option>
-                                            <option value="India">
-                                                India                        
-                                            </option>
-                                            <option value="Indonesia">
-                                                    Indonesia                        
-                                                </option>
-                                            <option value="Japan">
-                                                Japan                        
-                                            </option>
-                                            <option value="Korea">
-                                                Korea                        
-                                            </option>
-                                            <option value="Malaysia">
-                                                Malaysia                        
-                                            </option>
-                                            <option value="Spain">
-                                                Spain                        
-                                            </option>
-                                            <option value="Thailand">
-                                                Thailand                        
-                                            </option>
+                        Canada                        
+                    </option>
+                    <option value="China">
+                        China                        
+                    </option>
+                    <option value="Chinese Taipei">
+                        Chinese Taipei                        
+                    </option>
+                    <option value="Denmark">
+                        Denmark                        
+                    </option>
+                    <option value="France">
+                        France                        
+                    </option>
+                    <option value="India">
+                        India                        
+                    </option>
+                    <option value="Indonesia">
+                            Indonesia                        
+                        </option>
+                    <option value="Japan">
+                        Japan                        
+                    </option>
+                    <option value="Korea">
+                        Korea                        
+                    </option>
+                    <option value="Malaysia">
+                        Malaysia                        
+                    </option>
+                    <option value="Spain">
+                        Spain                        
+                    </option>
+                    <option value="Thailand">
+                        Thailand                        
+                    </option>
                 </select>
                 </div>
             </div>
@@ -82,41 +82,41 @@ class AthleteCover extends HTMLElement {
                 <select class="w-full h-[40px] px-[20px] py-[5px] max-md:grow">
                     <option value="">[Representing - All]</option>
                     <option value="Canada">
-                                                Canada                        
-                                            </option>
-                                            <option value="China">
-                                                China                        
-                                            </option>
-                                            <option value="Chinese Taipei">
-                                                Chinese Taipei                        
-                                            </option>
-                                            <option value="Denmark">
-                                                Denmark                        
-                                            </option>
-                                            <option value="France">
-                                                France                        
-                                            </option>
-                                            <option value="India">
-                                                India                        
-                                            </option>
-                                            <option value="Indonesia">
-                                                    Indonesia                        
-                                                </option>
-                                            <option value="Japan">
-                                                Japan                        
-                                            </option>
-                                            <option value="Korea">
-                                                Korea                        
-                                            </option>
-                                            <option value="Malaysia">
-                                                Malaysia                        
-                                            </option>
-                                            <option value="Spain">
-                                                Spain                        
-                                            </option>
-                                            <option value="Thailand">
-                                                Thailand                        
-                                            </option>
+                        Canada                        
+                    </option>
+                    <option value="China">
+                        China                        
+                    </option>
+                    <option value="Chinese Taipei">
+                        Chinese Taipei                        
+                    </option>
+                    <option value="Denmark">
+                        Denmark                        
+                    </option>
+                    <option value="France">
+                        France                        
+                    </option>
+                    <option value="India">
+                        India                        
+                    </option>
+                    <option value="Indonesia">
+                            Indonesia                        
+                        </option>
+                    <option value="Japan">
+                        Japan                        
+                    </option>
+                    <option value="Korea">
+                        Korea                        
+                    </option>
+                    <option value="Malaysia">
+                        Malaysia                        
+                    </option>
+                    <option value="Spain">
+                        Spain                        
+                    </option>
+                    <option value="Thailand">
+                        Thailand                        
+                    </option>
                 </select>
                 </div>
             </div>
