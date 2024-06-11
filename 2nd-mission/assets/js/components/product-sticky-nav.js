@@ -75,11 +75,8 @@ document.querySelector(".sticky-nav-elements").addEventListener("click", functio
 // Function to handle scroll and update active navigation element
 const updateActiveNavOnScroll = function(entries, observer) {
   entries.forEach(entry => {
-    const navEl = document.querySelector(`.sticky-nav-element[href="#${entry.target.id}"]`);
-
     if (entry.isIntersecting) {
       navElements.forEach(navEl => navEl.classList.remove("nav-active"));
-      // navEl.classList.add("nav-active");
     }
   });
 };

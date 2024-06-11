@@ -1,4 +1,4 @@
-import { Badminton } from "../data/detail-badminton.js";
+import { Badminton } from "../data/detail-badminton-data.js";
 
 const dataSources = {
   "badminton-info": Badminton,
@@ -103,7 +103,6 @@ customElements.define("product-detail-section", ProductDetail);
 const specsBtn = document.querySelector(".specsBtn");
 const detailCard = document.querySelector(".detailCard");
 const plusIcon = document.querySelector(".plusIcon");
-const minusIcon = document.querySelector(".minusIcon");
 const tableContainer = document.querySelector(".table-container");
 
 function showCard() {

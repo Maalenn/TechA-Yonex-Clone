@@ -1,7 +1,7 @@
 import {Men, Women, Unisex, AllRunning} from '../data/detail-running-data.js';
 import { Tennis } from "../data/detail-tennis-data.js";
 import { Golf } from '../data/detail-golf-data.js';
-import { Snowboard } from '../data/detail-snowboard.js';
+import { Snowboard } from '../data/detail-snowboard-data.js';
 
 const dataSource  = {
   "men-info": Men,

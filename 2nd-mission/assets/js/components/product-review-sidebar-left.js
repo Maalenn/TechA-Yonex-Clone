@@ -1,11 +1,11 @@
-import {sidebarBadminton, sidebarTennis, sidebarGolf, sidebarSnowboard, sidebarRunning} from "../data/product-review-sidebar-data.js";
+import {SidebarBadminton, SidebarTennis, SidebarGolf, SidebarSnowboard, SidebarRunning} from "../data/product-review-sidebar-data.js";
 
 const dataSources = {
-  "sidebarLeft-badminton": sidebarBadminton,
-  "sidebarLeft-tennis": sidebarTennis,
-  "sidebarLeft-golf": sidebarGolf,
-  "sidebarLeft-snowboard": sidebarSnowboard,
-  "sidebarLeft-running": sidebarRunning
+  "sidebarLeft-badminton": SidebarBadminton,
+  "sidebarLeft-tennis": SidebarTennis,
+  "sidebarLeft-golf": SidebarGolf,
+  "sidebarLeft-snowboard": SidebarSnowboard,
+  "sidebarLeft-running": SidebarRunning
 };
 
 const SideBarContainer = (sidebarLeftContents) => {

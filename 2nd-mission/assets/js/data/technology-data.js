@@ -14,9 +14,9 @@ export const Men = [
   },
 
   {
-    image: "../assets/images/running-page/R_3D_Power_Graphite_.webp", 
+    image: "../assets/images/running-page/R_3D_Power_Graphite_.webp",
     alt: "POWER CUSHION +",
-    logo: "path/to/image/running-page/logo_b.png", 
+    logo: "path/to/image/running-page/logo_b.png",
     logoAlt: "logo_b",
     title: "3D Power Graphite",
     imgText: "",
