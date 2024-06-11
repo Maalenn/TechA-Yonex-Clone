@@ -1,7 +1,7 @@
 class ProductModal extends HTMLElement {
     connectedCallback(){
         this.innerHTML = `
-            <section id="modal" class="w-full h-full fixed top-[20%] flex justify-center z-[100] hidden">
+            <section id="modal" class="w-full h-full fixed top-[20%] flex justify-center z-[100]">
                 <!-- modal -->
                 <div class="modal bg-white max-w-[710px] max-h-[1835px] md:max-h-[719px] relative shadow-lg">
                     <!-- x button -->
