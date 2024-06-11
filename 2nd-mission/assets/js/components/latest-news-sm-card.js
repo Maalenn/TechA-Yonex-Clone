@@ -1,48 +1,81 @@
-import { LatestNews, LatestNews2, LatestNews3, LatestNews4, LatestNews5 } from '../data/all-news-data.js';
-import { LatestNewsBat, LatestNewsBat2, LatestNewsBat3, LatestNewsBat4 } from '../data/news-badminton-data.js';
-import { LatestNewsTen, LatestNewsTen2, LatestNewsTen3, LatestNewsTen4  } from '../data/news-tennis-data.js';
-import { LatestNewsGolf, LatestNewsGolf2, LatestNewsGolf3, LatestNewsGolf4 } from '../data/news-golf-data.js';
-import { LatestNewsGen, LatestNewsGen2, LatestNewsGen3, LatestNewsGen4 } from '../data/news-general-data.js';
+import {
+  LatestNews,
+  LatestNews2,
+  LatestNews3,
+  LatestNews4,
+  LatestNews5,
+} from "../data/all-news-data.js";
 
+import {
+  LatestNewsBat,
+  LatestNewsBat2,
+  LatestNewsBat3,
+  LatestNewsBat4,
+} from "../data/news-badminton-data.js";
 
-        const dataSources = {
-            'card-data': LatestNews,
-            'card-data2': LatestNews2,
-            'card-data3': LatestNews3,
-            'card-data4': LatestNews4,
-            'card-data5': LatestNews5,
+import {
+  LatestNewsTen,
+  LatestNewsTen2,
+  LatestNewsTen3,
+  LatestNewsTen4,
+} from "../data/news-tennis-data.js";
 
-            'news-bat-data': LatestNewsBat,
-            'news-bat-data2': LatestNewsBat2,
-            'news-bat-data3': LatestNewsBat3,
-            'news-bat-data4': LatestNewsBat4,
+import {
+  LatestNewsGolf,
+  LatestNewsGolf2,
+  LatestNewsGolf3,
+  LatestNewsGolf4,
+} from "../data/news-golf-data.js";
 
-            'news-ten-data': LatestNewsTen,
-            'news-ten-data2': LatestNewsTen2,
-            'news-ten-data3': LatestNewsTen3,
-            'news-ten-data4': LatestNewsTen4,
+import {
+  LatestNewsGen,
+  LatestNewsGen2,
+  LatestNewsGen3,
+  LatestNewsGen4,
+} from "../data/news-general-data.js";
 
-            'news-golf-data': LatestNewsGolf,
-            'news-golf-data2': LatestNewsGolf2,
-            'news-golf-data3': LatestNewsGolf3,
-            'news-golf-data4': LatestNewsGolf4,
-            
-            'news-gen-data': LatestNewsGen,
-            'news-gen-data2': LatestNewsGen2,
-            'news-gen-data3': LatestNewsGen3,
-            'news-gen-data4': LatestNewsGen4,
-        };
+const dataSources = {
+  "card-data": LatestNews,
+  "card-data2": LatestNews2,
+  "card-data3": LatestNews3,
+  "card-data4": LatestNews4,
+  "card-data5": LatestNews5,
 
-  const LatestNewCard = (contents) => {
-    // Split contents into chunks of 3 items each
-    const chunkedContents = [];
-    for (let i = 0; i < contents.length; i += 3) {
-      chunkedContents.push(contents.slice(i, i + 3));
-    }
-  
-    return chunkedContents.map(chunk => `
+  "news-bat-data": LatestNewsBat,
+  "news-bat-data2": LatestNewsBat2,
+  "news-bat-data3": LatestNewsBat3,
+  "news-bat-data4": LatestNewsBat4,
+
+  "news-ten-data": LatestNewsTen,
+  "news-ten-data2": LatestNewsTen2,
+  "news-ten-data3": LatestNewsTen3,
+  "news-ten-data4": LatestNewsTen4,
+
+  "news-golf-data": LatestNewsGolf,
+  "news-golf-data2": LatestNewsGolf2,
+  "news-golf-data3": LatestNewsGolf3,
+  "news-golf-data4": LatestNewsGolf4,
+
+  "news-gen-data": LatestNewsGen,
+  "news-gen-data2": LatestNewsGen2,
+  "news-gen-data3": LatestNewsGen3,
+  "news-gen-data4": LatestNewsGen4,
+};
+
+const LatestNewCard = (contents) => {
+  // Split contents into chunks of 3 items each
+  const chunkedContents = [];
+  for (let i = 0; i < contents.length; i += 3) {
+    chunkedContents.push(contents.slice(i, i + 3));
+  }
+
+  return chunkedContents
+    .map(
+      (chunk) => `
       <div class="latest-posts__group md:mb-[80px] md:flex justify-between gap-[20px] items-center pb-[25px]">
-        ${chunk.map(content => `
+        ${chunk
+          .map(
+            (content) => `
           <div class="md:max-w-[360px] relative latest-posts__item shadow-md hover:shadow-xl transition-shadow duration-300">
             <div class="latest-posts__item__image-wrapper bg-white">
               <img
@@ -80,28 +113,31 @@ import { LatestNewsGen, LatestNewsGen2, LatestNewsGen3, LatestNewsGen4 } from '.
 
             </div>
           </div>
-        `).join('')}
+        `
+          )
+          .join("")}
       </div>
-    `).join('');
-  };
-  
-  class LatestNewsSmCard extends HTMLElement {
-    connectedCallback() {
-      const dataSource = this.getAttribute('data-source');
-      const data = dataSources[dataSource] || LatestNews;
-      this.innerHTML = LatestNewCard(data);
-  
-      // Add hover event listeners for all groups and items
-      this.querySelectorAll('.latest-posts__item').forEach(item => {
-        item.addEventListener('mouseenter', () => {
-          item.querySelector('.social-logo').classList.remove('hidden');
-        });
-        item.addEventListener('mouseleave', () => {
-          item.querySelector('.social-logo').classList.add('hidden');
-        });
+    `
+    )
+    .join("");
+};
+
+class LatestNewsSmCard extends HTMLElement {
+  connectedCallback() {
+    const dataSource = this.getAttribute("data-source");
+    const data = dataSources[dataSource] || LatestNews;
+    this.innerHTML = LatestNewCard(data);
+
+    // Add hover event listeners for all groups and items
+    this.querySelectorAll(".latest-posts__item").forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        item.querySelector(".social-logo").classList.remove("hidden");
       });
-    }
+      item.addEventListener("mouseleave", () => {
+        item.querySelector(".social-logo").classList.add("hidden");
+      });
+    });
   }
-  
-  customElements.define('latest-news-sm-card', LatestNewsSmCard);
-  
+}
+
+customElements.define("latest-news-sm-card", LatestNewsSmCard);
