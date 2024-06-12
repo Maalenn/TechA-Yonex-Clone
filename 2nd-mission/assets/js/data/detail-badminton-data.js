@@ -1,43 +1,74 @@
 export const Badminton = [
   {
-    img: "../assets/images/productPage/Astrox88.png",
-    title: "Astrox 88 S Game",
-    productSpecs: [
+    mainImg: [
+      "../assets/images/productPage/Astrox88.png",
+      // "../assets/images/detail-tennis/side-percept97.png",
+    ],
+    productName: "Astrox 88 S Game",
+    productDes:
+      "New technology and structure combine with innovation to increase string snapback and movement, giving players access to the most spin in Yonex tennis history.For experienced and advanced players looking for a flexible racquet with precision and feel.",
+    productColor: "",
+    productSpec: [
       {
-        specCaption: "Flex",
-        specInfo: "Medium",
+        specCaption: "Head Size",
+        specInfo: "97 sq.in.",
       },
       {
-        specCaption: "Frame",
-        specInfo: "HM Graphite",
+        specCaption: "Weight",
+        specInfo: "310 g / 10.9 oz",
       },
       {
-        specCaption: "Shaft",
-        specInfo: "HM Graphite, 2G-NANOMESH NEO",
+        specCaption: "Grip Size",
+        specInfo: "1 - 5",
       },
       {
-        specCaption: "Joint",
-        specInfo: "Built-in T-Joint",
+        specCaption: "Length",
+        specInfo: "27 in.",
       },
       {
-        specCaption: "Weight / Grip",
-        specInfo: "4U (Avg. 83g) G5,6",
+        specCaption: "Width Range",
+        specInfo: "21 mm - 21 mm - 21 mm",
       },
       {
-        specCaption: "Stringing Advice",
+        specCaption: "Balance Point",
         specInfo: "4U: 20 - 28 lbs",
       },
       {
+        specCaption: "Material",
+        specInfo: "HM GRAPHITE / 2G-Namd™ Flex Force / SERVO FILTER",
+      },
+      {
         specCaption: "Color(s)",
-        specInfo: "Silver / Black",
+        specInfo: "OLIVE GREEN",
+      },
+      {
+        specCaption: "Recommended String",
+        specInfo:
+          "POLYTOUR REV\
+                POLYTOUR STRIKE\
+                REXIS SPEED",
+      },
+      {
+        specCaption: "Stringing Pattern",
+        specInfo: "16 x 19",
+      },
+      {
+        specCaption: "Stringing Advice",
+        specInfo: "45 - 60 lbs",
+      },
+      {
+        specCaption: "Made In",
+        specInfo: "Japan",
       },
       {
         specCaption: "Item Code",
-        specInfo: "3AX88S-G",
+        specInfo: "01PE97",
       },
     ],
+    productModal: true
   },
 ];
+
 export const BadmintonTechno = [
   {
     image: "../assets/images/productPage/tech-01.png",

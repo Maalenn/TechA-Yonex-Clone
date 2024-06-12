@@ -53,16 +53,18 @@
         <main class="max-w-[1280px] mx-auto px-5">
             <!-- start product detail container  -->
             <div class="product-card" id="product-description">
-                <shoes-details data-source="tennis-info"></shoes-details>
+                <product-details data-source="tennis-info"></product-details>
             </div>
             <!-- start product detail container  -->
     
             <!-- start sticky nav container  -->
-            <product-sticky-nav prodName="PERCEPT 97" menuLinks='[
-                          {"href": "#product-description", "link": "Description"},
-                          {"href": "#product-technology", "link": "Technology"},
-                          {"href": "#product-athetes", "link": "ATHlETES"}
-                        ]'>
+            <product-sticky-nav 
+                prodName="PERCEPT 97" 
+                menuLinks='[
+                    {"href": "#product-description", "link": "Description"},
+                    {"href": "#product-technology", "link": "Technology"},
+                    {"href": "#product-athetes", "link": "ATHlETES"}
+            ]'>
             </product-sticky-nav>
             <!-- end sticky nav container  -->
     
@@ -106,7 +108,7 @@
         <script src="../assets/js/components/nav-component.js" type="module"></script>
         <script src="../assets/js/components/side-bar-component.js"></script>
         <script src="../assets/js/components/zoom-img.js"></script>
-        <script src="../assets/js/components/shoes-detail.js" type="module"></script>
+        <script src="../assets/js/components/product-detail.js" type="module"></script>
         <script src="../assets/js/components/product-sticky-nav.js"></script>
         <script src="../assets/js/components/technology-carousel.js" type="module"></script>
         <script src="../assets/js/components/footer.js"></script>

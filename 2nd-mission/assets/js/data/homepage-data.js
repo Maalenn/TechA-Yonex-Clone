@@ -68,7 +68,7 @@ export const CardSlider = [
         title: "GOLF",
     },
     {
-        link: "/tech-a-project/2nd-mission/public/product-review-allRunning.html",
+        link: "/tech-a-project/2nd-mission/public/product-review-all-running.html",
         img: "/tech-a-project/2nd-mission/assets/images/sport-image/orange-shoes.webp",
         title: "RUNNING",
     },
