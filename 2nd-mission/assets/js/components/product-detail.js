@@ -163,13 +163,21 @@ const productSlider = document.getElementById("productSlider");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const productImgSlide = productSlider.querySelectorAll(".product-img-slide");
+const dotContainer = document.querySelector(".bottom-navigation")
 const dots = document.querySelectorAll(".dot-status");
 let currentIndex = 0;
+
+
 
 function showImage(index) {
   productImgSlide.forEach((slide, i) => {
     slide.style.display = i === index ? "block" : "none";
   });
+}
+
+// Condition for checking if mainImg == 1 => dots are hidden
+if(productImgSlide.length === 1){
+  dotContainer.classList.add('hidden')
 }
 
 function activeDot(index) {
