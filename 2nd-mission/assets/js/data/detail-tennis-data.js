@@ -79,9 +79,9 @@ export const Tennis = [
 ];
 export const TennisTechno = [
   {
-    image: "../assets/images/detail-tennis/isometric.png", // Replace with actual image path
+    image: "../assets/images/detail-tennis/isometric.png", 
     alt: "Box frame",
-    logo: "../assets/images/productPage/isometric.png", // Replace with actual image path
+    logo: "../assets/images/productPage/isometric.png", 
     logoAlt: "logo_b",
     title: "ISOMETRIC",
     imgText: "",
@@ -95,9 +95,9 @@ export const TennisTechno = [
   },
 
   {
-    image: "../assets/images/productPage/logo_b.png", // Replace with actual image path
+    image: "../assets/images/productPage/logo_b.png", 
     alt: "2G-NAMD™ FLEX FORCE",
-    logo: "../assets/images/productPage/isometric.png", // Replace with actual image path
+    logo: "../assets/images/productPage/isometric.png", 
     logoAlt: "logo_b",
     title: "ISOMETRIC",
     imgText: "../assets/images/productPage/isometric.png",
@@ -109,9 +109,9 @@ export const TennisTechno = [
   },
 
   {
-    image: "../assets/images/detail-tennis/servo-img.png", // Replace with actual image path
+    image: "../assets/images/detail-tennis/servo-img.png", 
     alt: "POWER CUSHION +",
-    logo: "../assets/images/detail-tennis/servo.png", // Replace with actual image path
+    logo: "../assets/images/detail-tennis/servo.png", 
     logoAlt: "logo_b",
     title: "SERVO FILTER",
     imgText: "",
@@ -124,9 +124,9 @@ export const TennisTechno = [
   },
 
   {
-    image: "../assets/images/detail-tennis/flexcon.png", // Replace with actual image path
+    image: "../assets/images/detail-tennis/flexcon.png", 
     alt: "POWER CUSHION +",
-    logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
+    logo: "path/to/image/running-page/logo_b.png", 
     logoAlt: "logo_b",
     title: "FLEXCON SYSTEM",
     imgText: "",
@@ -138,9 +138,9 @@ export const TennisTechno = [
   },
 
   {
-    image: "../assets/images/detail-tennis/stiff.png", // Replace with actual image path
+    image: "../assets/images/detail-tennis/stiff.png", 
     alt: "POWER CUSHION +",
-    logo: "path/to/image/running-page/logo_b.png", // Replace with actual image path
+    logo: "path/to/image/running-page/logo_b.png", 
     logoAlt: "logo_b",
     title: "STIFF RACQUET FACE DESIGN",
     imgText: "../assets/images/productPage/slim-shaft.png",

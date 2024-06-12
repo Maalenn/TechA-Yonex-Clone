@@ -168,7 +168,7 @@ const dots = document.querySelectorAll(".dot-status");
 let currentIndex = 0;
 
 
-
+// Show image function
 function showImage(index) {
   productImgSlide.forEach((slide, i) => {
     slide.style.display = i === index ? "block" : "none";
@@ -180,6 +180,7 @@ if(productImgSlide.length === 1){
   dotContainer.classList.add('hidden')
 }
 
+// function for create active dot 
 function activeDot(index) {
   dots.forEach((dot, i) => {
     dot.classList.toggle("dot-active", i === index);
@@ -203,6 +204,8 @@ nextBtn.addEventListener("click", () => {
   activeDot(currentIndex);
 });
 
+
+// clicking the vertical images
 document.querySelectorAll(".vertical-product-img").forEach((verticalImg, index) => {
   verticalImg.addEventListener("click", () => {
     currentIndex = index;
