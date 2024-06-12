@@ -33,7 +33,7 @@ class Navbar extends HTMLElement {
           </div>
           <!-- Logo -->
           <div>
-            <a href="index.html">
+            <a href="/tech-a-project/2nd-mission/index.html">
               <img
               src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg"
               alt=""
