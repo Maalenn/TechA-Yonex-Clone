@@ -12,15 +12,15 @@ const CreateBlogContainer = (data) => {
             <div class="w-full h-[100px] mt-[150px] mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-[13px] font-sans max-md:mt-0">
                 <div class="flex-wrap gap-4 hidden sm:flex">
                     <div>
-                        <a href="" class="text-blue-800 mr-[5px] hover:underline">Home</a>
+                        <a href="/tech-a-project/2nd-mission/index.html" class="text-blue-800 mr-[5px] hover:underline">Home</a>
                         <span class="mr-[5px]">/</span>
                     </div>
                     <div>
-                        <a href="" class="text-blue-800 mr-[5px] hover:underline">News</a>
+                        <a href="/tech-a-project/2nd-mission/public/news.html" class="text-blue-800 mr-[5px] hover:underline">News</a>
                         <span class="mr-[5px]">/</span>
                     </div>
                     <div>
-                        <a href="" class="text-blue-800 mr-[5px] hover:underline">${blog.titleCatgories}</a>
+                        <a href="#" class="text-blue-800 mr-[5px] hover:underline">${blog.titleCatgories}</a>
                         <span class="mr-[5px]">/</span>
                     </div>
                     <div>
